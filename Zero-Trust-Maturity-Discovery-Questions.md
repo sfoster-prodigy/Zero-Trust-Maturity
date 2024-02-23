@@ -13,7 +13,7 @@ Questions in the following sections are designed to help us understand your curr
 
 ### Cloud Identity Federates with On-premises Identity Systems
 
-### Connect all of your users to Microsoft Entra ID and federate with on-premises identity systems:
+#### Connect all of your users to Microsoft Entra ID and federate with on-premises identity systems:
 
   - Are Microsoft Entra ID and your existing on-premises identity systems integrated to ensure seamless access for users across environments?
     - Legacy: Cloud identity is not federated with on-premises Active Directory using Microsoft Entra Connect. Users manage separate identities for cloud and on-premises environments, leading to inefficiencies and increased security risks due to the lack of centralized identity management.
