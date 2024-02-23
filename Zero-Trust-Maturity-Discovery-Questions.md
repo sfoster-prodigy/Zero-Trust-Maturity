@@ -13,7 +13,7 @@ Questions in the following sections are designed to help us understand your curr
 
 ### Cloud Identity Federates with On-premises Identity Systems
 
-#### Connect all of your users to Microsoft Entra ID and federate with on-premises identity systems:
+### Connect all of your users to Microsoft Entra ID and federate with on-premises identity systems:
 
   - Are Microsoft Entra ID and your existing on-premises identity systems integrated to ensure seamless access for users across environments?
     - Legacy: Cloud identity is not federated with on-premises Active Directory using Microsoft Entra Connect. Users manage separate identities for cloud and on-premises environments, leading to inefficiencies and increased security risks due to the lack of centralized identity management.
@@ -33,14 +33,14 @@ Questions in the following sections are designed to help us understand your curr
     - Advanced: A systematic approach is in place to identify and exclude unnecessary on-premises identities from cloud federation. Automated tools and processes are used to regularly audit on-premises identities, with specific criteria for determining which identities are federated to the cloud. Most non-essential service accounts and privileged roles are excluded.
     - Optimal: Comprehensive and dynamic management of on-premises identities ensures that only necessary identities are federated to the cloud. Advanced automation and intelligence tools are employed to continuously evaluate and adjust which on-premises identities are federated, based on real-time analysis of role necessity, security posture, and usage patterns. Unnecessary service accounts and privileged roles are proactively identified and excluded, ensuring optimal security and efficiency.
 
-##### Establish your Identity Foundation with Microsoft Entra ID:
+#### Establish your Identity Foundation with Microsoft Entra ID:
   - In what ways have you ensured that every access request passes through Microsoft Entra ID to leverage its policy decision points for enforcing access policies?
     - Legacy: Access requests are not consistently managed or enforced through Microsoft Entra ID. There is no centralized control over access requests, leading to fragmented security policies and potential vulnerabilities in access management.
     - Traditional: Some access requests are configured to pass through Microsoft Entra ID, but the implementation is partial or inconsistent. Basic access enforcement is in place, utilizing a limited set of policies within Microsoft Entra ID for certain applications or user groups.
     - Advanced: The majority of access requests are configured to go through Microsoft Entra ID, leveraging its policy decision point capabilities for robust access enforcement. Advanced policies are applied more broadly, though some legacy systems or applications may not yet be fully integrated.
     - Optimal: Every access request is meticulously configured to pass through Microsoft Entra ID, fully utilizing its comprehensive policy decision point capabilities for access enforcement across the entire organization. This setup ensures that all access is governed by dynamic, context-aware policies that adapt to evolving security landscapes and organizational needs.
 
-##### Integrate all your applications with Microsoft Entra ID:
+#### Integrate all your applications with Microsoft Entra ID:
   - How have you integrated both modern and legacy applications with Microsoft Entra ID for single sign-on and consistent identity and access management?
     - Legacy: Neither modern nor legacy applications are integrated with Microsoft Entra ID for single sign-on (SSO) or identity and access management. Applications operate in silos, each with its own access management protocols, leading to inconsistent user experiences and heightened security risks.
     - Traditional: Modern applications are partially integrated with Microsoft Entra ID for SSO, but legacy applications remain disconnected, leading to a split in the user experience and access management. Efforts to unify identity management are underway, but not all applications are covered.
@@ -53,7 +53,7 @@ Questions in the following sections are designed to help us understand your curr
     - Advanced: Significant progress has been made in consolidating IAM engines, with the majority now integrated into a unified Microsoft Entra ID environment. This consolidation covers most modern and legacy applications, greatly enhancing security and user experience through consistent access management practices.
     - Optimal: A fully consolidated IAM environment has been achieved, with all identity and access management functions integrated into Microsoft Entra ID. This ensures a seamless and secure user experience across the entire application portfolio, with advanced security measures applied consistently.
 
-##### Verify explicitly with strong authentication:
+#### Verify explicitly with strong authentication:
   - What strategies have you implemented to roll out Microsoft Entra multifactor authentication (MFA) across your organization?
     - Legacy: Microsoft Entra MFA has not been deployed, leaving the organization reliant on basic, single-factor authentication methods. This lack of MFA exposes the organization to increased security risks, such as unauthorized access and compromised user sessions.
     - Traditional: Microsoft Entra MFA has been partially deployed in the organization. Key systems or sensitive roles may be protected by MFA, but it is not uniformly applied across all users and applications. This partial deployment offers improved security over the Legacy stage but leaves significant gaps in protection.
