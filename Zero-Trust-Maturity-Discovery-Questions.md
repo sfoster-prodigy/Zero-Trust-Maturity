@@ -66,6 +66,140 @@ Questions in the following sections are designed to help us understand your curr
     - Advanced: Significant progress has been made in blocking legacy authentication methods across the majority of the organization's systems and applications. Efforts include transitioning to modern authentication protocols and applying conditional access policies to enforce these standards. Some legacy systems may still use older methods due to technical limitations.
     - Optimal: The organization has achieved comprehensive blocking of all legacy authentication methods, fully embracing modern authentication protocols without exceptions. This includes enforcing strict access policies that require secure authentication mechanisms, effectively eliminating the risks associated with legacy methods.
 
+### Conditional Access Policies Gate Access and Provide Remediation Activities
+  - Are Conditional Access policies tailored to control and gate access to resources effectively implemented and actively managed within your organization?
+    - Legacy: Conditional Access policies are virtually absent or only rudimentarily implemented, failing to meet the nuanced access control needs. There's a glaring absence of proactive management or review, leaving the system open to unnecessary risk without the benefits of dynamic access control or strategic remediation avenues.
+    - Traditional: While basic Conditional Access policies are in place, they're applied broadly, lacking the granularity needed for effective security management. Updates and reviews are sporadic, indicating a reactive rather than a strategically proactive approach to securing access based on current security landscapes and operational demands.
+    - Advanced: There's a clear effort to develop Conditional Access policies that consider multiple variables for access decisions, including user roles, device status, and application sensitivity. Regular reviews and updates are in place, yet there's room for improvement, especially in integrating real-time threat intelligence and automating the response to access challenges.
+    - Optimal: Conditional Access policies are meticulously tailored and dynamically managed, incorporating real-time risk assessments, user behavior analytics, and automated remediation strategies. These policies are continually refined, leveraging the latest in security threat intelligence and operational feedback, ensuring both robust security measures and minimal disruption to user productivity.
+ 
+  - In cases where access is restricted by Conditional Access policies, is there a structured remediation process for users to follow to regain access, and how is this oversight conducted?
+    - Legacy: There is no structured remediation process in place for users who are denied access by Conditional Access policies. Oversight of such incidents is minimal or non-existent, leading to potential disruptions in productivity and lack of clear guidance for users on how to address access issues.
+    - Traditional: A basic remediation process exists for users denied access, but it is generic and not well communicated. Oversight is sporadic and often reactive, with limited tracking or analysis of denied access incidents. This approach results in inconsistent user experiences and missed opportunities for improving access management based on real-world challenges.
+    - Advanced: The organization has developed a structured remediation process for users impacted by Conditional Access policies, including clear steps for users to regain access. Oversight is more consistent, with some level of tracking and analysis of denied access incidents. However, there could be further improvements in automating remediation processes and enhancing real-time oversight.
+    - Optimal: A highly structured and user-friendly remediation process is actively managed, providing immediate guidance and support for users denied access. Oversight is comprehensive, utilizing real-time tracking, analysis, and feedback mechanisms to continuously refine access controls and remediation processes. Automation and user-centric design ensure efficient resolution of access issues, minimizing disruption and bolstering security posture.
+
+  - Is there a comprehensive strategy in place for planning, testing, and customizing Conditional Access policies to ensure they align with security needs while minimizing impact on user experience?
+    - Legacy: There is no comprehensive strategy for planning, testing, or customizing Conditional Access policies. Policies are often created reactively, without thorough testing or consideration for user experience, leading to potential security vulnerabilities and significant disruptions in user productivity.
+    - Traditional: A basic strategy exists for the planning and implementation of Conditional Access policies, but it lacks depth in testing and customization. While some efforts are made to align policies with security needs, the impact on user experience is not thoroughly evaluated, leading to potential friction or resistance from users.
+    - Advanced: The organization has developed a more structured strategy for planning, testing, and customizing Conditional Access policies, considering both security requirements and user experience. Policies undergo regular review and testing phases, with adjustments made to better meet security objectives while striving to reduce user impact. However, there remains room for further integration of user feedback and continuous improvement processes.
+    - Optimal: A comprehensive and dynamic strategy is in place for the planning, testing, and customizing of Conditional Access policies, fully integrating security needs with a focus on optimizing user experience. This strategy includes proactive engagement with stakeholders, iterative testing with real-world scenarios, and continuous feedback loops to refine policies. Automation and advanced analytics are leveraged to ensure policies are both effective and minimally intrusive.
+
+#### Register devices with Microsoft Entra ID to restrict access from vulnerable and compromised devices
+  - Are devices registered with Microsoft Entra ID to ensure that access from vulnerable and compromised devices is appropriately restricted?
+    - Legacy: Devices are not consistently registered with Microsoft Entra ID, leading to a lack of control over access from vulnerable or compromised devices. This absence of device registration and management exposes the organization to increased security risks, with no effective mechanism to restrict access based on the device's security posture.
+    - Traditional: Some devices are registered with Microsoft Entra ID, but the process is not comprehensive or uniformly enforced across the organization. While there is an attempt to restrict access from vulnerable devices, the lack of a consistent and thorough device management strategy results in gaps in security coverage and potential access by compromised devices.
+    - Advanced: A majority of devices are registered with Microsoft Entra ID, and there are structured processes in place to manage device security and restrict access from those identified as vulnerable or compromised. While comprehensive measures are taken to ensure device compliance, occasional lapses in enforcement or updates may still occur, indicating room for further optimization.
+    - Optimal: All devices are comprehensively registered with Microsoft Entra ID, ensuring a robust framework to restrict access from any vulnerable or compromised devices effectively. The organization employs a proactive and dynamic approach to device management, leveraging continuous monitoring, real-time threat intelligence, and automated compliance checks to maintain optimal security posture and minimize risks.
+
+  - Is there a system in place to evaluate the health and compliance of devices before granting access to corporate resources, leveraging Microsoft Entra ID capabilities?
+    - Legacy: There is no established system for evaluating the health and compliance of devices. As a result, devices may access corporate resources without any assessment of their security posture, significantly increasing the risk of exposing the organization to vulnerabilities and breaches through compromised or non-compliant devices.
+    - Traditional: 
+    - Advanced: 
+    - Optimal:  
+
+  - How are hybrid join or Microsoft Entra join and mobile device management through Intune utilized to manage access and security policies across all user devices?
+    - Legacy: Hybrid join and Microsoft Entra join, alongside mobile device management (MDM) through Intune, are not effectively utilized, if at all. This lack of utilization results in a disjointed approach to managing access and security policies across devices, leading to inconsistent security postures and potential vulnerabilities in device management and access control.
+    - Traditional: There is a basic implementation of hybrid join, Microsoft Entra join, and MDM through Intune. However, these tools are underutilized or not fully integrated, leading to a piecemeal approach in managing access and security policies. While some devices may be managed and secured, comprehensive coverage and policy consistency across all user devices are not achieved.
+    - Advanced: Hybrid join, Microsoft Entra join, and MDM through Intune are utilized to a significant extent, providing a structured approach to managing access and security policies across user devices. While there is good coverage and integration, occasional challenges in policy consistency or enforcement may arise, indicating areas for further refinement and optimization.
+    - Optimal: The organization leverages hybrid join, Microsoft Entra join, and MDM through Intune comprehensively, ensuring a seamless and fully integrated approach to managing access and security policies across all user devices. This optimal use includes advanced policy enforcement, real-time compliance checks, and automated remediation actions, ensuring consistent security posture and compliance across the device ecosystem.
+
+### Analytics Improve Visibility
+
+#### Configure your logging and reporting to improve visibility
+  - Is logging and reporting configured to capture detailed information on authentication, authorization, and provisioning events?
+    - Legacy: Logging and reporting mechanisms are either not configured or are minimally implemented, resulting in a lack of visibility into authentication, authorization, and provisioning activities. This gap hinders the ability to effectively monitor and respond to security incidents.
+    - Traditional: Basic logging and reporting are in place, capturing some information on authentication, authorization, and provisioning. While this provides a level of visibility, it may not be sufficiently detailed or comprehensive to support robust security analysis.
+    - Advanced: Detailed logging and reporting are configured for most authentication, authorization, and provisioning events, providing a high level of visibility. This advanced implementation supports effective security monitoring and incident response but may exclude some less critical systems.
+    - Optimal: Logging and reporting are fully optimized, capturing detailed and comprehensive information on all authentication, authorization, and provisioning activities across the organization. This optimal configuration ensures maximum visibility, supporting the highest standards of security monitoring and analysis.
+
+### Identities and access privileges are managed with identity governance
+
+#### Secure privileged access with Privileged Identity Management
+  - Is Privileged Identity Management utilized to control and monitor access to privileged operations and roles?
+    - Legacy: No utilization of Privileged Identity Management (PIM) tools or processes. Privileged accounts are managed manually, leading to significant security risks due to the lack of oversight and control over these critical access points.
+    - Traditional: Partial utilization of Privileged Identity Management for certain critical roles or systems. While some privileged accounts are under PIM control, comprehensive coverage across all privileged roles and operations is lacking, leading to inconsistent security enforcement.
+    - Advanced: Advanced utilization of Privileged Identity Management, covering a broad spectrum of privileged roles and operations. Most privileged accounts are managed through PIM, significantly enhancing security, though minor exceptions may exist for legacy or specialized systems.
+    - Optimal: Full utilization of Privileged Identity Management across all privileged roles and operations without exceptions. This optimal state ensures the highest level of security and control over privileged access, with sophisticated monitoring, auditing, and real-time response mechanisms.
+
+#### Restrict user consent to applications
+  - Are mechanisms in place to restrict user consent for applications, thereby preventing unauthorized data access?
+    - Legacy: No mechanisms in place to restrict user consent for applications, allowing users to grant application permissions without oversight. This lack of control leads to potential over-privileging and unauthorized data access.
+    - Traditional: Basic mechanisms to restrict user consent for applications are implemented, requiring approval for certain high-risk permissions. However, this control is applied inconsistently, and many applications can still access data without sufficient oversight.
+    - Advanced: Advanced mechanisms are in place to restrict user consent for applications, with a comprehensive approval process for all application permissions. This significantly reduces the risk of unauthorized data access, though some legacy or third-party applications may not be fully covered.
+    - Optimal: Complete and optimal control over user consent for applications, ensuring that no application can access data without thorough vetting and approval. This state represents the highest level of data protection and compliance with organizational policies.
+
+#### Manage entitlement
+  - Are access packages used to manage entitlements and streamline the access request and approval process?
+    - Legacy: 
+    - Traditional: 
+    - Advanced: 
+    - Optimal: 
+
+#### Use passwordless authentication to reduce the risk of phishing and password attacks
+
+### User, device, location, and behavior is analyzed in real time to determine risk and deliver ongoing protection
+
+  - Is real-time analysis being conducted to evaluate risk and protect against it based on user, device, location, and behavior?
+  - Has Microsoft Entra Password Protection been enabled for users in the cloud and on-premises to prevent weak passwords and password spray attacks?
+  - Is Identity Protection enabled to provide granular session/user risk signals for investigating risk and confirming or dismissing compromise signals?
+
+#### Deploy Microsoft Entra Password Protection
+  - Is there a comprehensive strategy in place for deploying Microsoft Entra Password Protection to prevent weak or compromised password usage, tailored to meet the organization's security policies and user compliance?
+
+#### Enable Identity Protection
+  - Has the organization established a systematic approach for utilizing Microsoft Identity Protection to detect and mitigate identity threats, including the customization of risk policies according to the organization's risk management framework?
+#### Enable Microsoft Defender for Cloud Apps integration with Identity Protection
+  - Is there an integrated strategy for leveraging Microsoft Defender for Cloud Apps with Identity Protection to enhance threat detection capabilities, focusing on the utilization of shared signals and data to bolster the organization's security posture?
+
+#### Enable Conditional Access integration with Microsoft Defender for Cloud Apps
+#### Enable restricted session for use in access decisions
+
+### Integrate threat signals from other security solutions to improve detection, protection, and response
+
+#### Integrate Microsoft Defender for Identity with Microsoft Defender for Cloud Apps
+#### Enable Microsoft Defender for Endpoint
+  - Are threat signals from Microsoft Defender for Cloud Apps integrated with Identity Protection to enrich security insights and response capabilities?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    - Legacy: 
+    - Traditional: 
+    - Advanced: 
+    - Optimal:  
+
+    - Legacy: 
+    - Traditional: 
+    - Advanced: 
+    - Optimal:  
+
+    - Legacy: 
+    - Traditional: 
+    - Advanced: 
+    - Optimal:  
+
+    - Legacy: 
+    - Traditional: 
+    - Advanced: 
+    - Optimal:  
+
+    - Legacy: 
+    - Traditional: 
+    - Advanced: 
+    - Optimal:  
+
+
 ## Devices and Workstations
 
 ### 
