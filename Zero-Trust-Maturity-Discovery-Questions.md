@@ -94,9 +94,9 @@ Questions in the following sections are designed to help us understand your curr
 
   - Is there a system in place to evaluate the health and compliance of devices before granting access to corporate resources, leveraging Microsoft Entra ID capabilities?
     - Legacy: There is no established system for evaluating the health and compliance of devices. As a result, devices may access corporate resources without any assessment of their security posture, significantly increasing the risk of exposing the organization to vulnerabilities and breaches through compromised or non-compliant devices.
-    - Traditional: 
-    - Advanced: 
-    - Optimal:  
+    - Traditional: A basic system exists for evaluating device health and compliance, but it is not comprehensive or fully leveraged. While some devices are assessed for compliance, the process lacks depth and consistency, potentially allowing vulnerable devices to access corporate resources.
+    - Advanced: A structured system is in place to evaluate the health and compliance of devices using Microsoft Entra ID capabilities. Most devices are assessed before access is granted, reducing the risk of exposure from vulnerable devices. However, continuous improvements and tighter integration could further enhance security.
+    - Optimal: A comprehensive and fully integrated system is established to evaluate the health and compliance of all devices leveraging Microsoft Entra ID capabilities. This system ensures rigorous assessments and real-time compliance checks, effectively restricting access from vulnerable devices and significantly enhancing the organization's security posture.
 
   - How are hybrid join or Microsoft Entra join and mobile device management through Intune utilized to manage access and security policies across all user devices?
     - Legacy: Hybrid join and Microsoft Entra join, alongside mobile device management (MDM) through Intune, are not effectively utilized, if at all. This lack of utilization results in a disjointed approach to managing access and security policies across devices, leading to inconsistent security postures and potential vulnerabilities in device management and access control.
@@ -130,37 +130,82 @@ Questions in the following sections are designed to help us understand your curr
     - Optimal: Complete and optimal control over user consent for applications, ensuring that no application can access data without thorough vetting and approval. This state represents the highest level of data protection and compliance with organizational policies.
 
 #### Manage entitlement
-  - Are access packages used to manage entitlements and streamline the access request and approval process?
-    - Legacy: 
-    - Traditional: 
-    - Advanced: 
-    - Optimal: 
+  - Is there a comprehensive system in place for managing entitlements that ensures users have appropriate access rights to resources based on their roles and responsibilities?
+    - Legacy: No comprehensive system is in place for managing entitlements. Users often have inappropriate access rights, leading to potential security risks and operational inefficiencies.
+    - Traditional: A basic system exists for managing entitlements, but it lacks the depth to ensure users always have access rights aligned with their roles. While there are attempts to match access with responsibilities, inconsistencies and gaps remain.
+    - Advanced: There is a structured system for managing entitlements, ensuring users have access rights that largely match their roles and responsibilities. Regular improvements are made, but opportunities for further refinement exist to achieve optimal alignment and security.
+    - Optimal: A comprehensive and fully optimized system for managing entitlements is in place, guaranteeing access rights are perfectly aligned with user roles and responsibilities. The system ensures high operational efficiency and security, with access rights dynamically adjusted as roles change.
+  - Are regular reviews and audits of user access and entitlements conducted to ensure compliance with security policies and to prevent privilege creep?
+    - Legacy: Regular reviews and audits of user access and entitlements are not conducted, leading to unchecked privilege creep and non-compliance with security policies.
+    - Traditional: Reviews and audits are conducted sporadically, offering some oversight but lacking the regularity and depth needed to fully ensure compliance and prevent privilege creep.
+    - Advanced: Regular reviews and audits of user access and entitlements are conducted, significantly reducing the risk of privilege creep and enhancing compliance with security policies. While effective, the process could be further optimized for efficiency and coverage.
+    - Optimal: A comprehensive and fully automated process for regular reviews and audits is established, ensuring complete compliance with security policies and effectively preventing privilege creep. The process is optimized for efficiency, coverage, and timely response to any discrepancies.
+  - Is the process for granting, modifying, and revoking access rights streamlined and automated to minimize delays and reduce the risk of manual errors?
+    - Legacy: The process for granting, modifying, and revoking access rights is manual and cumbersome, leading to significant delays and a high risk of errors.
+    - Traditional: Some efforts are made to streamline and automate the access rights management process, but these are partial and not fully effective. Delays and manual errors are reduced but not eliminated.
+    - Advanced: The process for managing access rights is significantly streamlined and automated, leading to reduced delays and a lower risk of manual errors. While highly effective, there's still room for further enhancements in automation and process efficiency.
+    - Optimal: A fully optimized and automated process for managing access rights is in place, minimizing delays and virtually eliminating the risk of manual errors. The process is highly efficient, ensuring timely and accurate granting, modifying, and revoking of access rights.
+  - Are there mechanisms in place for monitoring and reporting on entitlement management to detect and respond to unauthorized access attempts or non-compliance with policies?
+    - Legacy: There are no mechanisms in place for monitoring and reporting on entitlement management, leaving unauthorized access attempts and non-compliance issues undetected.
+    - Traditional: Basic mechanisms for monitoring and reporting on entitlement management exist but lack the depth and automation needed for effective oversight and response to unauthorized access or non-compliance.
+    - Advanced: Structured mechanisms are in place for monitoring and reporting on entitlement management, providing a good level of oversight and enabling responses to unauthorized access attempts or non-compliance. While effective, there's potential for further optimization and automation.
+    - Optimal: Comprehensive and fully automated mechanisms for monitoring and reporting on entitlement management are established, ensuring exceptional oversight and rapid response to any unauthorized access attempts or policy non-compliance. The system is optimized for efficiency and effectiveness.
 
 #### Use passwordless authentication to reduce the risk of phishing and password attacks
 
 ### User, device, location, and behavior is analyzed in real time to determine risk and deliver ongoing protection
 
-  - Is real-time analysis being conducted to evaluate risk and protect against it based on user, device, location, and behavior?
-  - Has Microsoft Entra Password Protection been enabled for users in the cloud and on-premises to prevent weak passwords and password spray attacks?
-  - Is Identity Protection enabled to provide granular session/user risk signals for investigating risk and confirming or dismissing compromise signals?
-
 #### Deploy Microsoft Entra Password Protection
   - Is there a comprehensive strategy in place for deploying Microsoft Entra Password Protection to prevent weak or compromised password usage, tailored to meet the organization's security policies and user compliance?
+    - Legacy: No strategy is in place for deploying Microsoft Entra Password Protection, leaving the organization vulnerable to weak or compromised password usage. Security policies do not adequately address password protection, leading to a higher risk of breach due to inadequate password management practices.
+    - Traditional: Microsoft Entra Password Protection is deployed in a basic form, but the strategy is not comprehensive or fully aligned with the organization's security policies. Efforts to prevent weak password usage are present but not optimized for maximum protection or user compliance.
+    - Advanced: A structured strategy is in place for deploying Microsoft Entra Password Protection, with efforts to tailor the deployment to the organization's security policies. While significant steps are taken to prevent weak or compromised password usage, continuous refinement and alignment with user compliance are needed.
+    - Optimal: The organization employs a comprehensive and fully integrated strategy for deploying Microsoft Entra Password Protection, perfectly tailored to meet stringent security policies and ensure user compliance. Advanced measures are in place to prevent any weak or compromised password usage, significantly enhancing the organization's security posture.
 
 #### Enable Identity Protection
   - Has the organization established a systematic approach for utilizing Microsoft Identity Protection to detect and mitigate identity threats, including the customization of risk policies according to the organization's risk management framework?
+    - Legacy: There is no systematic approach for utilizing Microsoft Identity Protection. The organization lacks customization of risk policies, leaving identity threats undetected and unmitigated.
+    - Traditional: Microsoft Identity Protection is used, but the approach is not fully systematic or tailored to the organization's risk management framework. Some identity threats may be detected, but the mitigation process is not optimized.
+    - Advanced: The organization has established a more systematic approach to utilizing Microsoft Identity Protection, including some customization of risk policies. While many identity threats are effectively detected and mitigated, there's room for further refinement to fully align with the organization's risk management framework.
+    - Optimal: A comprehensive and fully tailored strategy is in place for utilizing Microsoft Identity Protection, with risk policies customized to fit precisely within the organization's risk management framework. This approach ensures the highest level of detection and mitigation of identity threats, significantly bolstering the organization's security posture.
+
 #### Enable Microsoft Defender for Cloud Apps integration with Identity Protection
   - Is there an integrated strategy for leveraging Microsoft Defender for Cloud Apps with Identity Protection to enhance threat detection capabilities, focusing on the utilization of shared signals and data to bolster the organization's security posture?
+    - Legacy: There is no integration of Microsoft Defender for Cloud Apps with Identity Protection, missing opportunities to enhance threat detection capabilities through shared signals and data.
+    - Traditional: Basic integration of Microsoft Defender for Cloud Apps with Identity Protection exists, but the strategy is not fully developed or optimized. Shared signals and data are underutilized, providing limited enhancements to threat detection capabilities.
+    - Advanced: A structured strategy is in place for integrating Microsoft Defender for Cloud Apps with Identity Protection, leveraging shared signals and data to enhance threat detection. While significant improvements are seen, the strategy could be further refined for maximum security posture enhancement.
+    - Optimal: The organization employs a comprehensive and fully optimized strategy for integrating Microsoft Defender for Cloud Apps with Identity Protection. This integration maximizes the utilization of shared signals and data, significantly bolstering the organization's security posture with advanced threat detection capabilities.
+
 
 #### Enable Conditional Access integration with Microsoft Defender for Cloud Apps
+  - Is there a comprehensive strategy in place for planning, testing, and customizing Conditional Access policies, integrated with Microsoft Defender for Cloud Apps, to ensure they align with security needs while minimizing impact on user experience?
+    - Legacy: There is no strategy for integrating Conditional Access policies with Microsoft Defender for Cloud Apps. This lack of integration leads to missed opportunities in aligning security measures with organizational needs and minimizing impact on user experience.
+    - Traditional: A basic level of integration exists between Conditional Access policies and Microsoft Defender for Cloud Apps, but the strategy is not comprehensive. While some alignment with security needs is achieved, the impact on user experience is not fully considered.
+    - Advanced: There's a structured approach to integrating Conditional Access policies with Microsoft Defender for Cloud Apps, focusing on aligning with security needs. Efforts to minimize impact on user experience are evident, though continuous improvement is necessary for optimal alignment.
+    - Optimal: A comprehensive strategy is in place for integrating Conditional Access policies with Microsoft Defender for Cloud Apps, ensuring perfect alignment with security needs and minimizing impact on user experience. This strategy includes planning, testing, and customization for maximum security efficiency and user satisfaction.
+
 #### Enable restricted session for use in access decisions
+  - Does the organization employ a strategic approach to defining and implementing restricted session policies within its access control framework, particularly for high-risk scenarios, to balance security requirements with user productivity?
+    - Legacy: There is no strategic approach to defining or implementing restricted session policies. High-risk scenarios are not adequately addressed, compromising the balance between security requirements and user productivity.
+    - Traditional: A basic strategy for implementing restricted session policies exists, but it's not fully developed or consistently applied. While some efforts to balance security and productivity are made, effectiveness in high-risk scenarios is limited.
+    - Advanced: The organization has a structured approach to restricted session policies, particularly for high-risk scenarios, demonstrating a commitment to balancing security with user productivity. While substantial progress is made, further refinement is needed for optimal effectiveness.
+    - Optimal: A comprehensive and highly strategic approach is employed for defining and implementing restricted session policies, especially in high-risk scenarios. This approach perfectly balances stringent security requirements with user productivity, ensuring robust security measures that are user-friendly and efficient.
 
 ### Integrate threat signals from other security solutions to improve detection, protection, and response
 
 #### Integrate Microsoft Defender for Identity with Microsoft Defender for Cloud Apps
-#### Enable Microsoft Defender for Endpoint
-  - Are threat signals from Microsoft Defender for Cloud Apps integrated with Identity Protection to enrich security insights and response capabilities?
+  - Is there an established process for integrating Microsoft Defender for Identity with Microsoft Defender for Cloud Apps to enhance threat detection, protection, and response capabilities across your identity and application security landscape?
+    - Legacy: No established process exists for integrating Microsoft Defender for Identity with Microsoft Defender for Cloud Apps. This absence limits the organization's capability to enhance threat detection, protection, and response across the identity and application security landscape.
+    - Traditional: There's a basic integration process, but it lacks depth and sophistication. Attempts to enhance threat detection and response are evident, yet the effectiveness of these measures is constrained by the absence of a comprehensive integration strategy.
+    - Advanced: A structured process is in place for integrating Microsoft Defender for Identity with Microsoft Defender for Cloud Apps, leading to improved threat detection, protection, and response. Optimization is needed to fully leverage the potential of both tools in enhancing the security landscape.
+    - Optimal: A comprehensive and fully optimized integration process is established, maximizing threat detection, protection, and response capabilities. This offers a unified and robust security posture across the identity and application landscape, leveraging the full potential of both Microsoft Defender for Identity and Microsoft Defender for Cloud Apps.
 
+#### Enable Microsoft Defender for Endpoint
+  - Are there protocols in place for leveraging Microsoft Defender for Endpoint to improve your organization’s ability to detect, investigate, and respond to advanced threats against endpoints?
+    - Legacy: There are no protocols in place for leveraging Microsoft Defender for Endpoint, significantly limiting the organization's capability to detect, investigate, and respond to advanced threats against endpoints.
+    - Traditional: Basic protocols exist for utilizing Microsoft Defender for Endpoint, offering some level of improvement in threat detection and response. However, these protocols are not fully realized, indicating a need for further development in endpoint security capabilities.
+    - Advanced: Structured protocols are in place for leveraging Microsoft Defender for Endpoint, enhancing the organization's capability to address threats. Integration into the organization’s security framework improves detection and response capabilities, with room for further refinement to achieve even better security outcomes.
+    - Optimal: Comprehensive and fully optimized protocols are established for leveraging Microsoft Defender for Endpoint, ensuring the highest level of protection against advanced threats. This approach guarantees robust capabilities to detect, investigate, and respond to threats against endpoints, significantly enhancing the organization's security posture.
 
 
 
