@@ -8,7 +8,6 @@ Embarking on the journey of Microsoft Sentinel onboarding necessitates a meticul
 
 Questions in the following sections are designed to help us understand your current security tools and data sources. When a question is not about a specific tool or product, please list your implemented tools or remark there are none (e.g., "None", "N/A", etc.) . If you are unsure of the answer, please indicate that in your response. If you have any questions, please reach out to your Prodigy representative.
 
-
 ## Identities
 
 ### Cloud Identity Federates with On-premises Identity Systems
