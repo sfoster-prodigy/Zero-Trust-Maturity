@@ -124,9 +124,26 @@ Questions in the following sections are designed to help us understand your curr
 #### Restrict user consent to applications
   - Is user consent to applications restricted to prevent unnecessary exposure of organization data?
     - Legacy: No mechanisms in place to restrict user consent for applications, allowing users to grant application permissions without oversight. This lack of control leads to potential over-privileging and unauthorized data access.
+      - Indicators:
+        - Users can consent to any application without administrative oversight.
+        - High risk of unauthorized data access due to lack of application vetting.
+        - Potential for over-privileging of applications with no checks in place.
     - Traditional: Basic restrictions on user consent for applications are introduced, such as allowing consent only for apps from verified publishers and for selected permissions. While this introduces a layer of control, it's applied selectively, leaving gaps that could still allow unauthorized applications to access data without comprehensive oversight.
+      - Indicators:
+        - Approval is required for certain high-risk permissions, but not uniformly enforced.
+        - Some level of administrative oversight, but inconsistencies leave gaps in protection.
+        - Applications can still access data without comprehensive scrutiny or consistent policy application.
     - Advanced: Advanced mechanisms for restricting user consent are employed, including the admin consent workflow, which enables users to request administrator approval for application permissions directly. Education on the permissions and consent framework for administrators, along with auditing and monitoring of apps and permissions, enhances security. However, the system might still have exceptions for certain business-critical or legacy applications.
+      - Indicators:
+        - Detailed education and training for administrators on permissions and consent.
+        - Auditing and monitoring of applications and permissions to identify and mitigate risks.
+        - Business-critical and legacy applications may have exceptions, requiring careful management.
     - Optimal: A comprehensive and proactive approach to controlling user consent for applications is established, ensuring thorough vetting and approval of all applications before access is granted. This includes proactive administrator consent for high-usage applications, stringent evaluation of applications for tenant-wide admin consent, and limiting user access even when admin consent has been granted. This tier represents the pinnacle of preventing unauthorized data access and ensuring adherence to strict organizational policies and security standards.
+      - Indicators:
+        - Proactive granting of administrator consent for trusted, high-usage applications.
+        - Stringent evaluation and approval process for tenant-wide admin consent to applications.
+        - User access to applications is limited, even with admin consent, through mechanisms like requiring user assignment.
+        - Use of advanced tools for auditing and monitoring consent-related activities, ensuring continuous oversight and compliance.
 
 #### Manage entitlement
   - Is there a comprehensive system in place for managing entitlements that ensures users have appropriate access rights to resources based on their roles and responsibilities?
