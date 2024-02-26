@@ -1,12 +1,12 @@
-# Zero Trust Maturity: Determine your maturity level.
+# Microsoft Zero Trust Maturity: Determine a clients maturity level.
 
 ## Summary
 
-Embarking on the journey of Microsoft Sentinel onboarding necessitates a meticulous understanding of the existing cybersecurity landscape within an organization. The subsequent discovery questions are crafted to unravel crucial insights about your current security posture, data sources, and technological stack. This exploratory phase is pivotal to sculpting a robust and tailored security information and event management (SIEM) strategy with Microsoft Sentinel. By delving into the specifics of your existing security solutions, such as Microsoft Defender products and any third-party tools in use, we aim to seamlessly integrate them, ensuring that your transition is both smooth and strategically aligned with organizational security objectives. Your detailed responses will pave the way for us to craft a bespoke implementation plan, ensuring that Microsoft Sentinel is configured and optimized to safeguard your digital estate effectively.
 
-## Microsoft Zero Trust Maturity Level (also defined as pillars) Questions
 
-Questions in the following sections are designed to help us understand your current security tools and data sources. When a question is not about a specific tool or product, please list your implemented tools or remark there are none (e.g., "None", "N/A", etc.) . If you are unsure of the answer, please indicate that in your response. If you have any questions, please reach out to your Prodigy representative.
+## Microsoft Zero Trust Maturity Level Discovery Questions
+
+Questions in the following sections are designed to help us understand a clients current Zero Trust maturity level following the Microsoft Zero Trust Maturity framework. The following 
 
 ## Identities
 
@@ -16,7 +16,7 @@ Questions in the following sections are designed to help us understand your curr
 
   - Are Microsoft Entra ID and your existing on-premises identity systems integrated to ensure seamless access for users across environments?
     - Legacy: Cloud identity is not federated with on-premises Active Directory using Microsoft Entra Connect. Users manage separate identities for cloud and on-premises environments, leading to inefficiencies and increased security risks due to the lack of centralized identity management.
-    - Traditional: Cloud identity is federated with on-premises Active Directory using Microsoft Entra Connect pass-through authentication. This setup allows for real-time authentication requests to be passed directly to the on-premises Active Directory, enabling users to use their existing credentials for cloud services.
+    - Traditional: Cloud identity is federated with on-premises Active Directory using Microsoft Entra Connect pass-through authentication or ADFS integration. This setup allows for real-time authentication requests to be passed directly to the on-premises Active Directory, enabling users to use their existing credentials for cloud services.
     - Advanced: Cloud identity is federated with on-premises Active Directory using Microsoft Entra Connect password hash synchronization. This approach synchronizes user password hashes from the on-premises Active Directory to the cloud, allowing for rapid authentication without direct access to the on-premises AD at the time of sign-in.
     - Optimal: Cloud identity is fully integrated with on-premises Active Directory through Microsoft Entra Connect, utilizing both password hash synchronization and seamless SSO with Conditional Access policies. This optimal setup leverages the best aspects of both advanced authentication mechanisms and introduces dynamic access controls based on user behavior, location, device health, and other risk factors. 
 
@@ -101,25 +101,65 @@ Questions in the following sections are designed to help us understand your curr
     - Legacy: Hybrid join and Microsoft Entra join, alongside mobile device management (MDM) through Intune, are not effectively utilized, if at all. This lack of utilization results in a disjointed approach to managing access and security policies across devices, leading to inconsistent security postures and potential vulnerabilities in device management and access control.
     - Traditional: There is a basic implementation of hybrid join, Microsoft Entra join, and MDM through Intune. However, these tools are underutilized or not fully integrated, leading to a piecemeal approach in managing access and security policies. While some devices may be managed and secured, comprehensive coverage and policy consistency across all user devices are not achieved.
     - Advanced: Hybrid join, Microsoft Entra join, and MDM through Intune are utilized to a significant extent, providing a structured approach to managing access and security policies across user devices. While there is good coverage and integration, occasional challenges in policy consistency or enforcement may arise, indicating areas for further refinement and optimization.
+      - Indicators:
+        - 
+        - 
+        - 
     - Optimal: The organization leverages hybrid join, Microsoft Entra join, and MDM through Intune comprehensively, ensuring a seamless and fully integrated approach to managing access and security policies across all user devices. This optimal use includes advanced policy enforcement, real-time compliance checks, and automated remediation actions, ensuring consistent security posture and compliance across the device ecosystem.
+      - Indicators:
+        - 
+        - 
+        - 
 
 ### Analytics Improve Visibility
 
 #### Configure your logging and reporting to improve visibility
   - Is logging and reporting configured to capture detailed information on authentication, authorization, and provisioning events?
     - Legacy: Logging and reporting mechanisms are either not configured or are minimally implemented, resulting in a lack of visibility into authentication, authorization, and provisioning activities. This gap hinders the ability to effectively monitor and respond to security incidents.
+      - Indicators:
+        - 
+        - 
+        - 
     - Traditional: Basic logging and reporting are in place, capturing some information on authentication, authorization, and provisioning. While this provides a level of visibility, it may not be sufficiently detailed or comprehensive to support robust security analysis.
+      - Indicators:
+        - 
+        - 
+        - 
     - Advanced: Detailed logging and reporting are configured for most authentication, authorization, and provisioning events, providing a high level of visibility. This advanced implementation supports effective security monitoring and incident response but may exclude some less critical systems.
+      - Indicators:
+        - 
+        - 
+        - 
     - Optimal: Logging and reporting are fully optimized, capturing detailed and comprehensive information on all authentication, authorization, and provisioning activities across the organization. This optimal configuration ensures maximum visibility, supporting the highest standards of security monitoring and analysis.
+      - Indicators:
+        - 
+        - 
+        - 
 
 ### Identities and access privileges are managed with identity governance
 
 #### Secure privileged access with Privileged Identity Management
   - Is Privileged Identity Management utilized to control and monitor access to privileged operations and roles?
     - Legacy: No mechanisms are in place to restrict user consent for applications, allowing users to freely grant permissions to any application. This open approach significantly increases the risk of data exposure and unauthorized access, as there is no oversight or control over the applications accessing organizational data.
+      - Indicators:
+        - 
+        - 
+        - 
     - Traditional: Partial utilization of Privileged Identity Management for certain critical roles or systems. While some privileged accounts are under PIM control, comprehensive coverage across all privileged roles and operations is lacking, leading to inconsistent security enforcement.
+      - Indicators:
+        - 
+        - 
+        - 
     - Advanced: Advanced utilization of Privileged Identity Management, covering a broad spectrum of privileged roles and operations. Most privileged accounts are managed through PIM, significantly enhancing security, though minor exceptions may exist for legacy or specialized systems.
+      - Indicators:
+        - 
+        - 
+        - 
     - Optimal: Full utilization of Privileged Identity Management across all privileged roles and operations without exceptions. This optimal state ensures the highest level of security and control over privileged access, with sophisticated monitoring, auditing, and real-time response mechanisms.
+      - Indicators:
+        - 
+        - 
+        - 
 
 #### Restrict user consent to applications
   - Is user consent to applications restricted to prevent unnecessary exposure of organization data?
@@ -144,7 +184,27 @@ Questions in the following sections are designed to help us understand your curr
         - Stringent evaluation and approval process for tenant-wide admin consent to applications.
         - User access to applications is limited, even with admin consent, through mechanisms like requiring user assignment.
         - Use of advanced tools for auditing and monitoring consent-related activities, ensuring continuous oversight and compliance.
-
+  - Are organization consent grants reviewed on a weekly basis for signs or indicators of attack?
+    - Traditional: Weekly reviews of organization consent grants are not conducted, leaving the organization vulnerable to illicit consent grant attacks. There is a lack of awareness and mechanisms to detect or respond to unauthorized application consents, making it difficult to identify or mitigate potential security breaches. This approach significantly heightens the risk of data exposure through overlooked malicious applications gaining unauthorized access.
+      - Indicators:
+        - 
+        - 
+        - 
+    - Initial: The organization conducts manual reviews of consent grants on an ad hoc basis, possibly in response to specific incidents or when reminded of security best practices. This sporadic review process introduces a basic level of oversight but lacks the consistency needed to effectively monitor and control application permissions across the organization. Although this represents a step towards better security, the infrequency of reviews may still allow for unnoticed exploitation of consent permissions.
+      - Indicators
+        - Reviews are triggered by specific incidents rather than being routine.
+        - Some applications are scrutinized, but the process is not comprehensive.
+        - Manual checks of consent grants without the support of automation tools.
+    - Advanced: Regular, scheduled weekly reviews of organization consent grants are implemented, utilizing manual checks alongside some basic automated alerts to identify potential indicators of attack. This system enhances the organization's ability to detect and respond to illicit consent grants more effectively than ad hoc or unscheduled reviews. The process includes scrutinizing audit logs for unusual consent patterns and verifying admin consent actions, improving security but still relying on manual processes that may not catch all anomalies.
+      - Indicators:
+        - Scheduled audit log reviews to identify unusual consent patterns.
+        - Implementation of basic automated alerts for certain consent-related activities.
+        - Manual verification of admin consent actions, with occasional oversight of anomalies.
+    - Optimal: A comprehensive strategy encompasses automated monitoring systems, integrated with advanced security tools, to conduct continuous and real-time analysis of consent grants. This approach includes proactive measures, such as automated alerts for suspicious activities, and requires administrator approval for new application consents, ensuring a thorough review process. Weekly reviews are part of a broader, integrated security posture that includes education, policy enforcement, and incident response strategies, representing the highest standard for managing and mitigating risks associated with illicit consent grants.
+      - Indicators:
+        - No established protocol for reviewing application consents.
+        - Absence of alerts or logs review related to application permissions.
+        - Unauthorized applications can gain access without detection.
 #### Manage entitlement
   - Is there a comprehensive system in place for managing entitlements that ensures users have appropriate access rights to resources based on their roles and responsibilities?
     - Legacy: No comprehensive system is in place for managing entitlements. Users often have inappropriate access rights, leading to potential security risks and operational inefficiencies.
