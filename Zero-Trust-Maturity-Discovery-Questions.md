@@ -140,26 +140,26 @@ Questions in the following sections are designed to help us understand a clients
 
 #### Secure privileged access with Privileged Identity Management
   - Is Privileged Identity Management utilized to control and monitor access to privileged operations and roles?
-    - Legacy: No mechanisms are in place to restrict user consent for applications, allowing users to freely grant permissions to any application. This open approach significantly increases the risk of data exposure and unauthorized access, as there is no oversight or control over the applications accessing organizational data.
+    - Legacy: No utilization of Privileged Identity Management (PIM) tools or processes. Privileged accounts are managed manually, leading to significant security risks due to the lack of oversight and control over these critical access points.
       - Indicators:
-        - 
-        - 
-        - 
+        - Manual management of privileged accounts without automated controls or oversight.
+        - Increased risk of unauthorized access to critical systems and data through privileged accounts.
+        - Lack of auditing and real-time monitoring for privileged account activities.
     - Initial: Partial utilization of Privileged Identity Management for certain critical roles or systems. While some privileged accounts are under PIM control, comprehensive coverage across all privileged roles and operations is lacking, leading to inconsistent security enforcement.
       - Indicators:
-        - 
-        - 
-        - 
+        - Selective application of PIM controls, leaving gaps in privileged account management.
+        - Moderate improvement in securing privileged access but with notable vulnerabilities due to incomplete coverage.
+        - Some level of auditing and monitoring for privileged activities, though not universally applied.
     - Advanced: Advanced utilization of Privileged Identity Management, covering a broad spectrum of privileged roles and operations. Most privileged accounts are managed through PIM, significantly enhancing security, though minor exceptions may exist for legacy or specialized systems.
       - Indicators:
-        - 
-        - 
-        - 
+        - Broad coverage of privileged accounts under PIM control, with comprehensive policies and procedures.
+        - Significant reduction in risks associated with privileged access, with enhanced auditing and real-time monitoring capabilities.
+        - Occasional exceptions for certain privileged roles or operations, with plans for future inclusion.
     - Optimal: Full utilization of Privileged Identity Management across all privileged roles and operations without exceptions. This optimal state ensures the highest level of security and control over privileged access, with sophisticated monitoring, auditing, and real-time response mechanisms.
       - Indicators:
-        - 
-        - 
-        - 
+        - Universal application of PIM controls across all privileged accounts, systems, and data.
+        - Maximum security posture for privileged access, with zero trust enforcement and adaptive controls.
+        - Comprehensive auditing, real-time monitoring, and automated response to any suspicious privileged activities.
 
 #### Restrict user consent to applications
   - Are user consents to applications being restricted to manage and prevent unnecessary data exposure?
@@ -185,26 +185,27 @@ Questions in the following sections are designed to help us understand a clients
         - User access to applications is limited, even with admin consent, through mechanisms like requiring user assignment.
         - Use of advanced tools for auditing and monitoring consent-related activities, ensuring continuous oversight and compliance.
   - Are successful application authorizations monitored?
-    - Legacy: 
+    - Legacy: No mechanisms are in place to monitor successful application consent authorizations, leaving organizations blind to which applications users are granting access. This lack of visibility and control significantly increases the risk of unauthorized data access and potential data breaches, as there is no system to track or review the consents given across the organization.
       - Indicators:
-        - 
-        - 
-        - 
-    - Initial: 
+        - Users can grant consent to any application without oversight.
+        - No centralized tracking or review of application consents.
+        - Increased risk of unauthorized data access and potential breaches.
+    - Initial: Basic monitoring of application consent authorizations is introduced, enabling organizations to track and review consents for a subset of applications, typically focusing on those deemed high-risk or high-impact. While this represents a step toward better consent management, it remains limited in scope and depth, often relying on manual review processes and lacking real-time monitoring capabilities.
       - Indicators
-        - 
-        - 
-        - 
-    - Advanced: 
+        - Tracking and review of consents for high-risk or high-impact applications.
+        - Manual review processes for a subset of applications.
+        - Limited scope and depth in monitoring, with significant gaps remaining.
+    - Advanced: Comprehensive mechanisms for monitoring application consent authorizations are employed, including automated tools and processes for tracking, reviewing, and auditing consents across all applications. This approach enhances visibility and control over application consents, allowing for timely detection and remediation of unauthorized or risky consents. However, there may still be challenges in fully automating the review process for all types of applications, particularly those with complex consent requirements.
       - Indicators:
-        - 
-        - 
-        - 
-    - Optimal: 
+        - Automated tools and processes for tracking, reviewing, and auditing consents.
+        - Enhanced visibility and control over application consents.
+        - Timely detection and remediation of unauthorized or risky consents, though some automation challenges persist.
+    - Optimal: A proactive and fully integrated approach to monitoring application consent authorizations is established, leveraging advanced analytics, real-time monitoring, and automated remediation processes. This tier ensures that all application consents are continuously reviewed and validated against organizational policies and security standards, with immediate action taken on any unauthorized or suspicious consent activities. This comprehensive strategy represents the highest level of control and security in managing application consent authorizations, minimizing the risk of data exposure and unauthorized access to the fullest extent possible.
       - Indicators:
-        - 
-        - 
-        - 
+        - Advanced analytics and real-time monitoring of all application consents.
+        - Automated remediation processes for unauthorized or suspicious consent activities.
+        - Continuous review and validation of consents against organizational policies and security standards.
+        - Minimized risk of data exposure and unauthorized access through comprehensive control and security measures.
 #### Manage entitlement
   - Is there a comprehensive system in place for managing entitlements that ensures users have appropriate access rights to resources based on their roles and responsibilities?
     - Legacy: No comprehensive system is in place for managing entitlements. Users often have inappropriate access rights, leading to potential security risks and operational inefficiencies.
