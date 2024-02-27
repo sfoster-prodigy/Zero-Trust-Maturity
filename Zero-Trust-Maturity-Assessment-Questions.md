@@ -10,9 +10,9 @@ Questions in the following sections are designed to help us understand a clients
 
 ## Identities
 
-### Cloud Identity Federates with On-premises Identity Systems
+## Cloud Identity Federates with On-premises Identity Systems
 
-#### Connect all of your users to Microsoft Entra ID and federate with on-premises identity systems:
+### Connect all of your users to Microsoft Entra ID and federate with on-premises identity systems:
 
   - Are Microsoft Entra ID and your existing on-premises identity systems integrated to ensure seamless access for users across environments?
     - Legacy: Cloud identity is not federated with on-premises Active Directory using Microsoft Entra Connect. Users manage separate identities for cloud and on-premises environments, leading to inefficiencies and increased security risks due to the lack of centralized identity management.
@@ -32,14 +32,14 @@ Questions in the following sections are designed to help us understand a clients
     - Advanced: A systematic approach is in place to identify and exclude unnecessary on-premises identities from cloud federation. Automated tools and processes are used to regularly audit on-premises identities, with specific criteria for determining which identities are federated to the cloud. Most non-essential service accounts and privileged roles are excluded.
     - Optimal: Comprehensive and dynamic management of on-premises identities ensures that only necessary identities are federated to the cloud. Advanced automation and intelligence tools are employed to continuously evaluate and adjust which on-premises identities are federated, based on real-time analysis of role necessity, security posture, and usage patterns. Unnecessary service accounts and privileged roles are proactively identified and excluded, ensuring optimal security and efficiency.
 
-#### Establish your Identity Foundation with Microsoft Entra ID:
+### Establish your Identity Foundation with Microsoft Entra ID:
   - Are all access requests passing through Microsoft Entra ID to leverage its policy decision points for enforcing access policies?
     - Legacy: Access requests are not consistently managed or enforced through Microsoft Entra ID. There is no centralized control over access requests, leading to fragmented security policies and potential vulnerabilities in access management.
     - Initial: Some access requests are configured to pass through Microsoft Entra ID, but the implementation is partial or inconsistent. Basic access enforcement is in place, utilizing a limited set of policies within Microsoft Entra ID for certain applications or user groups.
     - Advanced: The majority of access requests are configured to go through Microsoft Entra ID, leveraging its policy decision point capabilities for robust access enforcement. Advanced policies are applied more broadly, though some legacy systems or applications may not yet be fully integrated.
     - Optimal: Every access request is meticulously configured to pass through Microsoft Entra ID, fully utilizing its comprehensive policy decision point capabilities for access enforcement across the entire organization. This setup ensures that all access is governed by dynamic, context-aware policies that adapt to evolving security landscapes and organizational needs.
 
-#### Integrate all your applications with Microsoft Entra ID:
+### Integrate all your applications with Microsoft Entra ID:
   - Are both modern and legacy applications integrated with Microsoft Entra ID for single sign-on and consistent identity and access management?
     - Legacy: Neither modern nor legacy applications are integrated with Microsoft Entra ID for single sign-on (SSO) or identity and access management. Applications operate in silos, each with its own access management protocols, leading to inconsistent user experiences and heightened security risks.
     - Initial: Modern applications are partially integrated with Microsoft Entra ID for SSO, but legacy applications remain disconnected, leading to a split in the user experience and access management. Efforts to unify identity management are underway, but not all applications are covered.
@@ -52,7 +52,7 @@ Questions in the following sections are designed to help us understand a clients
     - Advanced: Significant progress has been made in consolidating IAM engines, with the majority now integrated into a unified Microsoft Entra ID environment. This consolidation covers most modern and legacy applications, greatly enhancing security and user experience through consistent access management practices.
     - Optimal: A fully consolidated IAM environment has been achieved, with all identity and access management functions integrated into Microsoft Entra ID. This ensures a seamless and secure user experience across the entire application portfolio, with advanced security measures applied consistently.
 
-#### Verify explicitly with strong authentication:
+### Verify explicitly with strong authentication:
   - Is Microsoft Entra multifactor authentication (MFA) fully deployed and enforced across the entire organization without exception?
     - Legacy: Microsoft Entra MFA has not been deployed, leaving the organization reliant on basic, single-factor authentication methods. This lack of MFA exposes the organization to increased security risks, such as unauthorized access and compromised user sessions.
     - Initial: Microsoft Entra MFA has been partially deployed in the organization. Key systems or sensitive roles may be protected by MFA, but it is not uniformly applied across all users and applications. This partial deployment offers improved security over the Legacy stage but leaves significant gaps in protection.
@@ -65,7 +65,7 @@ Questions in the following sections are designed to help us understand a clients
     - Advanced: Significant progress has been made in blocking legacy authentication methods across the majority of the organization's systems and applications. Efforts include transitioning to modern authentication protocols and applying conditional access policies to enforce these standards. Some legacy systems may still use older methods due to technical limitations.
     - Optimal: The organization has achieved comprehensive blocking of all legacy authentication methods, fully embracing modern authentication protocols without exceptions. This includes enforcing strict access policies that require secure authentication mechanisms, effectively eliminating the risks associated with legacy methods.
 
-### Conditional Access Policies Gate Access and Provide Remediation Activities
+## Conditional Access Policies Gate Access and Provide Remediation Activities
   - Is there is a structured remediation process in place for users who are denied access by Conditional Access policies?
     - Legacy: Conditional Access policies are virtually absent or only rudimentarily implemented, failing to meet the nuanced access control needs. There's a glaring absence of proactive management or review, leaving the system open to unnecessary risk without the benefits of dynamic access control or strategic remediation avenues.
     - Initial: While basic Conditional Access policies are in place, they're applied broadly, lacking the granularity needed for effective security management. Updates and reviews are sporadic, indicating a reactive rather than a strategically proactive approach to securing access based on current security landscapes and operational demands.
@@ -84,7 +84,7 @@ Questions in the following sections are designed to help us understand a clients
     - Advanced: The organization has developed a more structured strategy for planning, testing, and customizing Conditional Access policies, considering both security requirements and user experience. Policies undergo regular review and testing phases, with adjustments made to better meet security objectives while striving to reduce user impact. However, there remains room for further integration of user feedback and continuous improvement processes.
     - Optimal: A comprehensive and dynamic strategy is in place for the planning, testing, and customizing of Conditional Access policies, fully integrating security needs with a focus on optimizing user experience. This strategy includes proactive engagement with stakeholders, iterative testing with real-world scenarios, and continuous feedback loops to refine policies. Automation and advanced analytics are leveraged to ensure policies are both effective and minimally intrusive.
 
-#### Register devices with Microsoft Entra ID to restrict access from vulnerable and compromised devices
+### Register devices with Microsoft Entra ID to restrict access from vulnerable and compromised devices
   - Are devices registered with Microsoft Entra ID to ensure that access from vulnerable and compromised devices is appropriately restricted?
     - Legacy: Devices are not consistently registered with Microsoft Entra ID, leading to a lack of control over access from vulnerable or compromised devices. This absence of device registration and management exposes the organization to increased security risks, with no effective mechanism to restrict access based on the device's security posture.
     - Initial: Some devices are registered with Microsoft Entra ID, but the process is not comprehensive or uniformly enforced across the organization. While there is an attempt to restrict access from vulnerable devices, the lack of a consistent and thorough device management strategy results in gaps in security coverage and potential access by compromised devices.
@@ -113,7 +113,7 @@ Questions in the following sections are designed to help us understand a clients
 
 ### Analytics Improve Visibility
 
-#### Configure your logging and reporting to improve visibility
+### Configure your logging and reporting to improve visibility
   - Is logging and reporting configured to capture detailed information on authentication, authorization, and provisioning events?
     - Legacy: Logging and reporting mechanisms are either not configured or are minimally implemented, resulting in a lack of visibility into authentication, authorization, and provisioning activities. This gap hinders the ability to effectively monitor and respond to security incidents.
       - Indicators:
@@ -136,9 +136,9 @@ Questions in the following sections are designed to help us understand a clients
         - 
         - 
 
-### Identities and access privileges are managed with identity governance
+## Identities and access privileges are managed with identity governance
 
-#### Secure privileged access with Privileged Identity Management
+### Secure privileged access with Privileged Identity Management
   - Is Privileged Identity Management utilized to control and monitor access to privileged operations and roles?
     - Legacy: No utilization of Privileged Identity Management (PIM) tools or processes. Privileged accounts are managed manually, leading to significant security risks due to the lack of oversight and control over these critical access points.
       - Indicators:
@@ -161,7 +161,7 @@ Questions in the following sections are designed to help us understand a clients
         - Maximum security posture for privileged access, with zero trust enforcement and adaptive controls.
         - Comprehensive auditing, real-time monitoring, and automated response to any suspicious privileged activities.
 
-#### Restrict user consent to applications
+### Restrict user consent to applications
   - Are user consents to applications being restricted to manage and prevent unnecessary data exposure?
     - Legacy: No mechanisms in place to restrict user consent for applications, allowing users to grant application permissions without oversight. This lack of control leads to potential over-privileging and unauthorized data access.
       - Indicators:
@@ -206,7 +206,7 @@ Questions in the following sections are designed to help us understand a clients
         - Automated remediation processes for unauthorized or suspicious consent activities.
         - Continuous review and validation of consents against organizational policies and security standards.
         - Minimized risk of data exposure and unauthorized access through comprehensive control and security measures.
-#### Manage entitlement
+### Manage entitlement
   - Is there a comprehensive system in place for managing entitlements that ensures users have appropriate access rights to resources based on their roles and responsibilities?
     - Legacy: No comprehensive system is in place for managing entitlements. Users often have inappropriate access rights, leading to potential security risks and operational inefficiencies.
     - Initial: A basic system exists for managing entitlements, but it lacks the depth to ensure users always have access rights aligned with their roles. While there are attempts to match access with responsibilities, inconsistencies and gaps remain.
@@ -223,37 +223,37 @@ Questions in the following sections are designed to help us understand a clients
     - Advanced: Structured mechanisms are in place for monitoring and reporting on entitlement management, providing a good level of oversight and enabling responses to unauthorized access attempts or non-compliance. While effective, there's potential for further optimization and automation.
     - Optimal: Comprehensive and fully automated mechanisms for monitoring and reporting on entitlement management are established, ensuring exceptional oversight and rapid response to any unauthorized access attempts or policy non-compliance. The system is optimized for efficiency and effectiveness.
 
-#### Use passwordless authentication to reduce the risk of phishing and password attacks
+### Use passwordless authentication to reduce the risk of phishing and password attacks
   - Is passwordless authentication implemented to minimize the risk associated with phishing and password attacks?
     - Legacy: Passwordless authentication is not implemented, leaving the organization heavily reliant on traditional password-based authentication methods. This reliance increases the risk of falling victim to phishing and password spray attacks, as there are no advanced authentication technologies in place to mitigate these threats.
     - Initial: Basic passwordless authentication methods are in place, such as limited use of Microsoft Authenticator. However, the implementation is not widespread across the organization, and more advanced technologies like Windows Hello and FIDO2 are not yet utilized. This partial implementation offers some protection against phishing and password attacks but leaves gaps in security coverage.
     - Advanced: Passwordless authentication is implemented using a variety of technologies, including Windows Hello, Microsoft Authenticator, and possibly FIDO2, among others. The implementation covers a significant portion of the organization, substantially reducing the risk associated with phishing and password attacks. However, there may be areas or user groups within the organization that are not fully covered, indicating room for broader implementation and integration.
     - Optimal: The organization has fully implemented passwordless authentication, utilizing a comprehensive range of technologies such as Windows Hello, Microsoft Authenticator, and FIDO2 across all areas. This widespread implementation ensures maximum protection against phishing and password attacks, significantly enhancing the security posture by eliminating reliance on passwords and reducing the risk of such attacks to nearly zero.
 
-### User, device, location, and behavior is analyzed in real time to determine risk and deliver ongoing protection
+## User, device, location, and behavior is analyzed in real time to determine risk and deliver ongoing protection
 
-#### Deploy Microsoft Entra Password Protection
+### Deploy Microsoft Entra Password Protection
   - Has Microsoft Entra Password Protection been enabled for users in the cloud and on-premises to prevent weak passwords and password spray attacks?
     - Legacy: Microsoft Entra Password Protection is not deployed, leaving the organization vulnerable to weak or compromised password usage. Security policies do not adequately address password protection, leading to a higher risk of breach due to inadequate password management practices.
     - Initial: Microsoft Entra Password Protection is deployed in a basic form, but the strategy is not comprehensive or fully aligned with the organization's security policies. Efforts to prevent weak password usage are present but not optimized for maximum protection or user compliance.
     - Advanced: Microsoft Entra Password Protection is deployed in a more advanced form, with efforts to tailor the deployment to the organization's security policies. While significant steps are taken to prevent weak or compromised password usage, continuous refinement and alignment with user compliance are needed.
     - Optimal: The organization employs a comprehensive and fully integrated strategy for deploying Microsoft Entra Password Protection, perfectly tailored to meet stringent security policies and ensure user compliance. Advanced measures are in place to prevent any weak or compromised password usage, significantly enhancing the organization's security posture.
 
-#### Enable Identity Protection
+### Enable Identity Protection
   - Is Identity Protection enabled to provide granular session/user risk signals for investigating risk and confirming or dismissing compromise signals?
     - Legacy: There is no systematic approach for utilizing Microsoft Identity Protection. The organization lacks customization of risk policies, leaving identity threats undetected and unmitigated.
     - Initial: Microsoft Identity Protection is used, but the approach is not fully systematic or tailored to the organization's risk management framework. Some identity threats may be detected, but the mitigation process is not optimized.
     - Advanced: The organization has established a more systematic approach to utilizing Microsoft Identity Protection, including some customization of risk policies. While many identity threats are effectively detected and mitigated, there's room for further refinement to fully align with the organization's risk management framework.
     - Optimal: A comprehensive and fully tailored strategy is in place for utilizing Microsoft Identity Protection, with risk policies customized to fit precisely within the organization's risk management framework. This approach ensures the highest level of detection and mitigation of identity threats, significantly bolstering the organization's security posture.
 
-#### Enable Microsoft Defender for Cloud Apps integration with Identity Protection
+### Enable Microsoft Defender for Cloud Apps integration with Identity Protection
   - Are threat signals from Microsoft Defender for Cloud Apps integrated with Identity Protection to improve detection and response to suspicious user behaviors?
     - Legacy: There is no integration of Microsoft Defender for Cloud Apps with Identity Protection, missing opportunities to enhance threat detection capabilities through shared signals and data.
     - Initial: Basic integration of Microsoft Defender for Cloud Apps with Identity Protection exists, but the strategy is not fully developed or optimized. Shared signals and data are underutilized, providing limited enhancements to threat detection capabilities.
     - Advanced: A structured strategy is in place for integrating Microsoft Defender for Cloud Apps with Identity Protection, leveraging shared signals and data to enhance threat detection. While significant improvements are seen, the strategy could be further refined for maximum security posture enhancement.
     - Optimal: The organization employs a comprehensive and fully optimized strategy for integrating Microsoft Defender for Cloud Apps with Identity Protection. This integration maximizes the utilization of shared signals and data, significantly bolstering the organization's security posture with advanced threat detection capabilities.
 
-#### Enable Conditional Access integration with Microsoft Defender for Cloud Apps
+### Enable Conditional Access integration with Microsoft Defender for Cloud Apps
   - Is Conditional Access integrated with Microsoft Defender for Cloud Apps?
     - Legacy: Conditional Access is not integrated with Microsoft Defender for Cloud Apps, leaving the organization's cloud applications and data exposed to potential security risks. There's no systematic approach to monitor or control access based on the evolving threat landscape, resulting in a static and vulnerable security posture. Without this integration, the organization misses out on advanced security analytics and real-time threat detection, making it difficult to enforce adaptive access policies that respond to assessed risks.
       - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
@@ -276,7 +276,7 @@ Questions in the following sections are designed to help us understand a clients
         - Seamless user experience with robust protection against unauthorized access and data breaches.
         - Significant reduction in incidents of security breaches, demonstrating effective threat detection and response.
 
-#### Enable restricted session for use in access decisions
+### Enable restricted session for use in access decisions
   - Is restricted session enabled for limited access to SharePoint Online and Exchange Online?
     - There are no restrictions on accessing SharePoint Online and Exchange Online from unmanaged devices, allowing full access without any conditional access policies in place. This unrestricted access enables users to download, print, and sync files freely, significantly increasing the risk of data leakage and unauthorized access to sensitive organizational information.
       - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
@@ -301,9 +301,9 @@ Questions in the following sections are designed to help us understand a clients
         - Integrated policies for consistent enforcement across Microsoft 365 applications
         - Highest level of security with operational flexibility
 
-### Integrate threat signals from other security solutions to improve detection, protection, and response
+## Integrate threat signals from other security solutions to improve detection, protection, and response
 
-#### Integrate Microsoft Defender for Identity with Microsoft Defender for Cloud Apps
+### Integrate Microsoft Defender for Identity with Microsoft Defender for Cloud Apps
   - Are signals from Microsoft Defender for Identity integrated to enhance the detection and response to risky behaviors in on-premises and cloud environments?
     - Legacy: No integration of signals from Microsoft Defender for Identity exists, leaving a significant gap in the detection and response to risky behaviors across on-premises and cloud environments. Organizations rely solely on traditional, perimeter-based security measures, which fail to address the nuanced threats present in a modern, decentralized IT landscape. This lack of integration results in a reactive posture towards security incidents, with limited visibility and control over identity-related risks.
       - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
@@ -330,7 +330,7 @@ Questions in the following sections are designed to help us understand a clients
         - Advanced automated response capabilities, minimizing manual intervention in threat mitigation.
         - Continuous assessment and adaptation of security policies based on evolving threats and identity signals.
 
-#### Enable Microsoft Defender for Endpoint
+### Enable Microsoft Defender for Endpoint
   - Is Conditional Access configured in Microsoft Defender for Endpoint to utilize health signals from Windows machines for access decisions?
     - Legacy: There is no Conditional Access configured within Microsoft Defender for Endpoint to utilize health signals from Windows machines, leaving access decisions solely on basic authentication methods. This absence of advanced security measures leaves the system vulnerable to unauthorized access, as it does not consider the health status of devices attempting to access resources.
       - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
@@ -393,9 +393,9 @@ Questions in the following sections are designed to help us understand a clients
 
 ## Devices and Workstations
 
-### 
+## 
 
-#### 
+### 
     - Legacy: 
     - Initial: 
     - Advanced: 
