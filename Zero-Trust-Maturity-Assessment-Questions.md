@@ -117,24 +117,24 @@ Questions in the following sections are designed to help us understand a clients
   - Is logging and reporting configured to capture detailed information on authentication, authorization, and provisioning events?
     - Legacy: Logging and reporting mechanisms are either not configured or are minimally implemented, resulting in a lack of visibility into authentication, authorization, and provisioning activities. This gap hinders the ability to effectively monitor and respond to security incidents.
       - Indicators:
-        - 
-        - 
-        - 
+        - Sparse or non-existent logging of critical security events.
+        - Limited ability to audit or review access decisions and provisioning changes.
+        - Increased risk due to lack of insight into potentially malicious activities or configuration errors.
     - Initial: Basic logging and reporting are in place, capturing some information on authentication, authorization, and provisioning. While this provides a level of visibility, it may not be sufficiently detailed or comprehensive to support robust security analysis.
       - Indicators:
-        - 
-        - 
-        - 
+        - Partial coverage of event logging, with significant activities recorded but lacking granularity.
+        - Some capability for security analysis and incident response, though with limitations.
+        - Moderate improvement in visibility, but with room for enhancement in detail and coverage.
     - Advanced: Detailed logging and reporting are configured for most authentication, authorization, and provisioning events, providing a high level of visibility. This advanced implementation supports effective security monitoring and incident response but may exclude some less critical systems.
       - Indicators:
-        - 
-        - 
-        - 
+        - Comprehensive logging of most security-relevant events with detailed information.
+        - Enhanced capability for in-depth security analysis and proactive incident management.
+        - Significantly improved visibility into security operations, with minor gaps remaining.
     - Optimal: Logging and reporting are fully optimized, capturing detailed and comprehensive information on all authentication, authorization, and provisioning activities across the organization. This optimal configuration ensures maximum visibility, supporting the highest standards of security monitoring and analysis.
       - Indicators:
-        - 
-        - 
-        - 
+        - Universal and detailed logging of all security events without exceptions.
+        - Full capability for granular security analysis, auditing, and proactive incident response.
+        - Maximized visibility and control over security operations, eliminating blind spots in monitoring and analysis.
 
 ## Identities and access privileges are managed with identity governance
 
