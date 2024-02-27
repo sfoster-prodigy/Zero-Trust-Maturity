@@ -346,6 +346,8 @@ Questions in the following sections are designed to help us understand a clients
         - Dynamic and real-time assessment of device health status, with adaptive access policies that respond to the latest threat intelligence and security analyses.
         - Strict adherence to security policies and compliance standards, with thorough vetting of device health and security posture before granting access.
 
+## Devices and Workstations
+
 ## Applications and Workloads
 
 ## Data
