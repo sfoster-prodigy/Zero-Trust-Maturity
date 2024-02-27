@@ -101,15 +101,7 @@ Questions in the following sections are designed to help us understand a clients
     - Legacy: Hybrid join and Microsoft Entra join, alongside mobile device management (MDM) through Intune, are not effectively utilized, if at all. This lack of utilization results in a disjointed approach to managing access and security policies across devices, leading to inconsistent security postures and potential vulnerabilities in device management and access control.
     - Initial: There is a basic implementation of hybrid join, Microsoft Entra join, and MDM through Intune. However, these tools are underutilized or not fully integrated, leading to a piecemeal approach in managing access and security policies. While some devices may be managed and secured, comprehensive coverage and policy consistency across all user devices are not achieved.
     - Advanced: Hybrid join, Microsoft Entra join, and MDM through Intune are utilized to a significant extent, providing a structured approach to managing access and security policies across user devices. While there is good coverage and integration, occasional challenges in policy consistency or enforcement may arise, indicating areas for further refinement and optimization.
-      - Indicators:
-        - 
-        - 
-        - 
     - Optimal: The organization leverages hybrid join, Microsoft Entra join, and MDM through Intune comprehensively, ensuring a seamless and fully integrated approach to managing access and security policies across all user devices. This optimal use includes advanced policy enforcement, real-time compliance checks, and automated remediation actions, ensuring consistent security posture and compliance across the device ecosystem.
-      - Indicators:
-        - 
-        - 
-        - 
 
 ### Analytics Improve Visibility
 
@@ -353,68 +345,6 @@ Questions in the following sections are designed to help us understand a clients
         - Dynamic and real-time assessment of device health status, with adaptive access policies that respond to the latest threat intelligence and security analyses.
         - Strict adherence to security policies and compliance standards, with thorough vetting of device health and security posture before granting access.
 
-
-
-
-
-
-
-
-
-
-
-
-
-    - Legacy: 
-    - Initial: 
-    - Advanced: 
-    - Optimal:  
-
-    - Legacy: 
-    - Initial: 
-    - Advanced: 
-    - Optimal:  
-
-    - Legacy: 
-    - Initial: 
-    - Advanced: 
-    - Optimal:  
-
-    - Legacy: 
-    - Initial: 
-    - Advanced: 
-    - Optimal:  
-
-    - Legacy: 
-    - Initial: 
-    - Advanced: 
-    - Optimal:  
-
-
-## Devices and Workstations
-
-## 
-
-### 
-    - Legacy: 
-    - Initial: 
-    - Advanced: 
-    - Optimal: 
-
-    - Legacy: 
-    - Initial: 
-    - Advanced: 
-    - Optimal: 
-
-    - Legacy: 
-    - Initial: 
-    - Advanced: 
-    - Optimal: 
-
-    - Legacy: 
-    - Initial: 
-    - Advanced: 
-    - Optimal: 
 ## Applications and Workloads
 
 ## Data
@@ -422,5 +352,3 @@ Questions in the following sections are designed to help us understand a clients
 ## Infrastructure
 
 ## Networks
-
- - 
