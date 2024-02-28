@@ -144,7 +144,7 @@ Questions in the following sections are designed to help us understand a clients
 - **Are automated email notifications and remediation actions configured and enabled for non-compliant devices in Intune?**
 
   - **Legacy:** Automated processes for managing non-compliant devices are absent. This stage represents a critical vulnerability, as organizations depend entirely on manual efforts for identifying and addressing non-compliance, leading to delayed responses and increased security risks.
-    - **Indicators**
+    - **Indicators:**
       - No automated email notifications for non-compliance, leaving significant gaps in timely communication.
       - Reliance on manual tracking and remediation efforts, introducing inefficiencies and potential for oversight.
       - A complete lack of automated interventions for non-compliant devices, heavily relying on ad-hoc manual processes.
@@ -196,62 +196,84 @@ Questions in the following sections are designed to help us understand a clients
         - Complete realization of the most advanced security policies and access controls for all devices, aligning with the highest security benchmarks.
         - Strategic enforcement of security measures, incorporating exhaustive conditional access rules and compliance mandates, safeguarding corporate data accessed via Windows devices to the utmost degree permissible through configuration.
 
-
 #### Ensure updates are deployed automatically to endpoints
-  - 
-    - Legacy: 
-      - Indicators
-        - 
+  - Is Windows Updates for Business configured and enabled for automated update management?
+    - **Legacy:** Windows devices are managed through on-premises update management solutions, or updates are applied manually, without leveraging the automation and cloud-based features of Windows Updates for Business. This approach reflects traditional update practices, which may not provide the agility and security benefits of modern, automated update management systems. The reliance on legacy methods can lead to inconsistent update deployments, increased administrative overhead, and potential security vulnerabilities due to delayed patching.
+      - **Indicators:**
+        - Absence of a structured and automated approach to managing Windows updates, leading to potential delays in critical security patching.
+        - Increased risk exposure due to the reliance on manual intervention for updates, resulting in potential inconsistencies and overlooked updates.
+        - Lack of assurance that all devices are operating on the latest software versions, increasing the organizational risk profile.
 
-    - Initial: 
-      - Indicators:
-        - 
+    - **Initial:** Initial steps are taken to configure Windows Updates for Business for some devices, introducing a basic level of automated update management. This phase marks the beginning of a shift towards more consistent and reliable update practices, though not yet fully comprehensive across the device fleet.
+      - **Indicators:**
+        - A portion of the device fleet is enrolled in Windows Updates for Business, starting the transition towards automated update management.
+        - Despite these initial configurations, comprehensive coverage and the full utilization of Windows Updates for Business capabilities are not yet achieved.
+        - Some improvement in update consistency and security posture, with automated updates beginning to reduce the window of vulnerability.
 
-    - Advanced: 
-      - Indicators:
-        - 
+    - **Advanced:** A significant number of devices are configured with Windows Updates for Business, significantly enhancing the organization's approach to update management. This advanced tier indicates a mature update strategy, with increased automation and consistency in applying updates across the device fleet.
+      - **Indicators:**
+        - Broad adoption of Windows Updates for Business across the device fleet, leading to more consistent application of updates.
+        - Enhanced control over the update process, with the ability to schedule updates and manage bandwidth, improving operational efficiency.
+        - Noticeable reduction in the risks associated with outdated software, through improved compliance with security updates and patches.
 
-    - Optimal: 
-      - Indicators:
-        - 
-
+    - **Optimal:** Windows Updates for Business is fully configured and enabled across all Windows devices within the organization, achieving the highest level of automated update management. This optimal scenario ensures that every device consistently receives updates as soon as they are available, minimizing the risk of security vulnerabilities and maximizing operational efficiency.
+      - **Indicators:**
+        - Universal configuration and utilization of Windows Updates for Business, ensuring all devices receive timely and consistent updates.
+        - Strategic management of the update process, with advanced features like update deferral and bandwidth optimization fully leveraged to suit organizational needs.
+        - Comprehensive mitigation of risks associated with outdated software, through a proactive and automated update management strategy that ensures the highest levels of security and compliance.
 
 #### Ensure devices are encrypted
-  - 
-    - Legacy: 
+  - Are Windows 10 and later devices encrypted with BitLocker and MacOS devices encrypted with FileVault?
+    - Legacy: Devices operate without full-disk encryption, relying on either no encryption or partial, inconsistent encryption practices. This approach leaves sensitive data vulnerable to unauthorized access, especially in the event of device loss or theft. Windows devices are not utilizing BitLocker, and MacOS devices are not taking advantage of FileVault, reflecting a significant gap in data protection measures.
       - Indicators
-        - 
+        - Absence of a standardized approach to device encryption, with many devices left unprotected or inconsistently secured.
+        - Increased risk of data breaches and non-compliance with data protection regulations due to the lack of effective encryption on Windows and MacOS devices.
+        - Operational challenges in managing data protection, with potential gaps in securing sensitive information across the device fleet.
 
-    - Initial: 
+    - Initial: Initial steps are taken to implement BitLocker encryption on Windows 10 and later devices and FileVault encryption on MacOS devices for a subset of the device fleet. This phase marks the beginning of adopting encryption standards, though not yet fully comprehensive or consistently applied across all devices.
       - Indicators:
-        - 
+        - A portion of the device fleet is encrypted with BitLocker for Windows devices and FileVault for MacOS devices, establishing a basic level of data protection.
+        - Despite these initial steps, a comprehensive encryption strategy covering all devices and data is not yet in place, limiting the overall effectiveness of data protection measures.
+        - Some improvement in the security posture related to data protection, with initial efforts reducing the risk of unauthorized data access on encrypted devices.
 
-    - Advanced: 
+    - Advanced: A significant number of Windows and MacOS devices are encrypted with BitLocker and FileVault, respectively, enhancing the organization's data protection capabilities. This advanced tier reflects a more mature approach to encryption, with the majority of devices secured and policies more consistently applied, though some areas may still require attention for full coverage.
       - Indicators:
-        - 
+        - Broad implementation of BitLocker and FileVault encryption across the device fleet, significantly improving data protection.
+        - Enhanced management of encryption keys and recovery information, ensuring that encrypted devices remain accessible to authorized users while securing data from unauthorized access.
+        - Noticeable reduction in the potential impact of data breaches, with most sensitive data protected by strong encryption methods.
 
-    - Optimal: 
+    - Optimal: BitLocker and FileVault are fully deployed and actively managed across all Windows 10 and later devices and MacOS devices, respectively, achieving the highest level of data protection through encryption. This optimal scenario ensures comprehensive coverage, with all devices encrypted and encryption policies consistently enforced, minimizing the risk of unauthorized data access and supporting compliance with data protection standards.
       - Indicators:
-        - 
+        - Universal deployment of BitLocker and FileVault encryption, ensuring that every device is protected by full-disk encryption without exceptions.
+        - Strategic and effective management of encryption policies, keys, and recovery mechanisms, facilitating both security and operational efficiency.
+        - Comprehensive mitigation of risks associated with data exposure, through proactive and uniform encryption practices that secure sensitive data across all Windows and MacOS devices.
 
 
 #### Create application protection policies to protect corporate data at the app-level
-  - 
-    - Legacy: 
+  - Are application protection policies leveraged to protect corporate data at the app-level with Intune?
+    - Legacy: Corporate data is accessed and handled by applications without specific application protection policies in place. This approach signifies a fundamental gap in data security, leaving sensitive information exposed to potential leaks and unauthorized access due to the lack of app-level controls. Organizations might rely on generic or platform-level security measures that do not fully address the unique risks associated with specific applications.
       - Indicators
-        - 
+        - Absence of targeted application protection policies, resulting in inconsistent security measures across different apps.
+        - Increased vulnerability to data leaks and breaches due to the lack of app-specific security controls and encryption.
+        - Challenges in enforcing data protection standards across applications, leading to potential non-compliance and security risks.
 
-    - Initial: 
+    - Initial: Initial efforts to implement application protection policies are underway, focusing on essential apps that access corporate data. This stage marks the beginning of a more focused approach to app-level data protection, though comprehensive coverage and advanced policy configurations may still be in development.
       - Indicators:
-        - 
+        - Partial deployment of application protection policies, primarily targeting high-priority apps.
+        - Basic configurations of app-level data protection measures, such as data encryption and access controls, are in place, offering a foundational level of security.
+        - Some improvement in controlling data access and preventing unauthorized data sharing, though a fully integrated app protection strategy is not yet realized.
 
-    - Advanced: 
+    - Advanced: A broad range of applications are covered by comprehensive application protection policies, significantly enhancing data security at the app level. This advanced tier reflects a mature approach to app-level security, with detailed policy configurations tailored to the specific risks and requirements of different applications.
       - Indicators:
-        - 
+        - Widespread implementation of application protection policies, encompassing a diverse set of apps that access or manage corporate data.
+        - Enhanced app-level security measures, including advanced encryption, access management, and conditional use policies, are systematically applied.\
+        - Notable reduction in the risk of data breaches and unauthorized access, supported by robust app-level controls and monitoring of data handling practices.
 
-    - Optimal: 
+    - Optimal: Application protection policies are comprehensively deployed and meticulously managed across all relevant applications, ensuring the highest level of data protection at the app level. This optimal scenario guarantees that corporate data is consistently secured across all applications, with dynamic policies that adapt to evolving security threats and business needs.
       - Indicators:
-        - 
+        - Universal and strategic deployment of application protection policies, ensuring that every app handling corporate data is governed by robust security controls.
+        - Strategic management of app-level policies, with adaptive measures that respond to new threats and incorporate best practices for data security.
+        - Comprehensive mitigation of app-related data security risks, through proactive and uniform application of protection measures, enhancing the overall security posture and compliance.
 
 
 ### Endpoint threat detection is used to monitor device risk
