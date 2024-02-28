@@ -275,47 +275,117 @@ Questions in the following sections are designed to help us understand a clients
         - Strategic management of app-level policies, with adaptive measures that respond to new threats and incorporate best practices for data security.
         - Comprehensive mitigation of app-related data security risks, through proactive and uniform application of protection measures, enhancing the overall security posture and compliance.
 
-
+  - Products and features covered:
+    - Microsoft Intune
+      - Windows Autopatch
+      - Application Protection Policies (APP)
+    - BitLocker
+    - FileVault
 ### Endpoint threat detection is used to monitor device risk
 
 #### Route endpoint logs and transactions to Microsoft Sentinel
-  - 
-    - Legacy: 
+  - Are endpoint logs and transactions routed to Microsoft Sentinel?
+    - Legacy: Endpoint logs and transactions are not systematically collected or analyzed. In this stage, organizations might rely on disparate or manual log review processes, if any, which significantly limits visibility into security events and potential threats. The lack of integration with centralized security information and event management (SIEM) solutions like Microsoft Sentinel results in missed opportunities for proactive threat detection and response.
       - Indicators
-        - 
+        - Absence of a centralized approach for collecting and analyzing endpoint logs and transactions.
+        - Limited ability to detect or respond to security incidents promptly due to the lack of comprehensive log data analysis.
+        - Increased risk of undetected security breaches and insufficient insights into endpoint security posture.
 
-    - Initial: 
+    - Initial: Initial efforts to route endpoint logs and transactions to a SIEM solution are underway, with some endpoint data being collected and analyzed. This stage marks the beginning of leveraging tools like Microsoft Sentinel for enhanced security monitoring, though comprehensive log coverage and advanced analytics capabilities may still be in development.
       - Indicators:
-        - 
+        - Partial integration of endpoint logs and transactions with Microsoft Sentinel, covering key systems or areas of concern.
+        - Basic log analysis capabilities are utilized, providing foundational insights into security events and potential vulnerabilities.
+        - Some improvement in the organization's ability to detect and respond to incidents, though a fully optimized SIEM deployment is not yet achieved.
 
-    - Advanced: 
+    - Advanced: A significant portion of endpoint logs and transactions are systematically routed to Microsoft Sentinel, enabling more comprehensive security monitoring and analysis. This advanced tier reflects a mature approach to log management, with enhanced analytics capabilities that support proactive threat detection, incident response, and security posture assessment.
       - Indicators:
-        - 
+        - Broad integration of endpoint logs and transactions with Microsoft Sentinel, facilitating a holistic view of the security landscape.
+        - Advanced use of analytics and threat detection capabilities within Microsoft Sentinel, enabling more effective identification of suspicious activities and potential threats.
+        - Significant improvements in the timeliness and effectiveness of security incident response, supported by detailed log insights and automated alerting mechanisms.
 
-    - Optimal: 
+    - Optimal: Endpoint logs and transactions from across the entire organization are fully integrated with Microsoft Sentinel, achieving the highest level of security monitoring and analytics. This optimal scenario ensures comprehensive visibility into endpoint activities, leveraging the full capabilities of Microsoft Sentinel for advanced threat detection, incident response, and security posture enhancement.
       - Indicators:
-        - 
-
+        - Universal and strategic routing of all endpoint logs and transactions to Microsoft Sentinel, ensuring no gaps in log coverage.
+        - Full exploitation of Microsoft Sentinel's advanced analytics, threat detection, and automated response capabilities, optimizing the organization's security operations.
+        - Proactive and efficient management of security threats and incidents, underpinned by comprehensive log data analysis and real-time monitoring, significantly enhancing the organization's overall security posture.
 
 ### Access control is gated on endpoint risk for both corporate devices and BYOD
 
-#### Corporate devices are enrolled with a cloud enrollment service such as DEP, Android Enterprise, or Windows AutoPilot
-  - 
-    - Legacy: 
-      - Indicators
-        - 
-
-    - Initial: 
+#### Corporate Windows devices are enrolled with a cloud enrollment service such as DEP, Android Enterprise, or Windows AutoPilot
+  - Are corporate Windows devices enrolled with the Windows Autopilot cloud enrollment service?
+    - Legacy: Corporate Windows devices are set up and managed manually, without the use of cloud enrollment services like Windows Autopilot. This traditional approach involves significant manual effort for device setup, configuration, and ongoing management, leading to increased operational costs and potential inconsistencies in device provisioning and security configurations.
       - Indicators:
-        - 
+        - Absence of cloud-based enrollment and management for Windows devices, relying instead on manual processes.
+        - Increased resource expenditure on device setup and management, with potential for configuration errors and inconsistencies.
+        - Limited scalability and efficiency in deploying and managing corporate devices, impacting the organization's agility and security posture.
 
-    - Advanced: 
+    - Initial: Initial steps have been taken to enroll some corporate Windows devices with Windows Autopilot, beginning the transition towards automated cloud-based device management. This stage marks the initial adoption of cloud enrollment services, though comprehensive enrollment of all devices and full utilization of Autopilot's capabilities may still be in progress.
       - Indicators:
-        - 
+        - Partial enrollment of corporate Windows devices in Windows Autopilot, focusing on a select group of devices or pilot deployment.
+        - Initial reduction in manual setup and configuration efforts for enrolled devices, though not yet fully realized across the entire device fleet.
+        - Some improvements in device deployment efficiency and consistency, but with room for further enhancement and broader adoption of cloud enrollment services.
 
-    - Optimal: 
+    - Advanced: A significant number of corporate Windows devices are enrolled in Windows Autopilot, significantly improving the efficiency and consistency of device management. This advanced tier indicates a mature approach to device deployment, with the majority of devices benefiting from automated provisioning, configuration, and management through Windows Autopilot.
       - Indicators:
-        - 
+        - Broad adoption of Windows Autopilot for corporate Windows devices, streamlining the deployment and management process.
+        - Enhanced operational efficiency and consistency in device provisioning, with reduced manual intervention and lower risk of configuration errors.
+        - Improved scalability and security posture through the standardized deployment and management of devices, leveraging cloud-based services for optimal device readiness and compliance.
+
+    - Optimal: All corporate Windows devices are fully enrolled and managed through Windows Autopilot, achieving the highest level of automation, efficiency, and security in device deployment and management. This optimal scenario ensures comprehensive and consistent application of configurations, policies, and security settings across the entire device fleet, facilitated by the advanced capabilities of cloud enrollment services.
+      - Indicators:
+        - Universal enrollment of corporate Windows devices in Windows Autopilot, eliminating manual setup and management processes.
+        - Full realization of operational efficiencies, scalability, and security enhancements offered by automated cloud-based device management.
+        - Strategic and proactive management of the device lifecycle, from deployment to retirement, supported by comprehensive insights and controls provided by Windows Autopilot, ensuring a robust and agile IT infrastructure.
+
+  - **Are corporate iOS and iPadOS devices enrolled with the Apple Device Enrollment Program (DEP) cloud enrollment service?**
+    - Legacy: Corporate iOS and iPadOS devices are configured and managed manually, bypassing the automation and security benefits provided by cloud enrollment services like the Apple Device Enrollment Program (DEP). This manual approach to device provisioning leads to increased operational burdens and potential inconsistencies in security and configuration settings across devices.
+      - Indicators:
+        - Absence of automated cloud-based enrollment and management for iOS and iPadOS devices, with a reliance on time-consuming manual processes.
+        - Increased resources and time spent on manual device setup, configuration, and management, leading to inefficiencies and potential for configuration disparities.
+        - Limited ability to enforce standardized security policies and configurations across all corporate iOS and iPadOS devices, affecting the organization's overall security posture.
+
+    - **Initial:** Initial steps have been taken to enroll some corporate iOS and iPadOS devices with the Apple Device Enrollment Program (DEP), initiating the shift towards automated and secure device management. This phase indicates the beginning of adopting cloud enrollment services, though not all devices may be enrolled, and the full suite of DEP features may not yet be leveraged.
+      - Indicators:
+        - Partial enrollment of corporate iOS and iPadOS devices in DEP, targeting a select subset of devices or conducting a pilot program.
+        - Initial reduction in the manual effort required for device provisioning and management for those devices enrolled in DEP.
+        - Some improvements in deployment efficiency and consistency for enrolled devices, though broader adoption and optimization of DEP capabilities are needed.
+
+    - **Advanced:** A significant portion of corporate iOS and iPadOS devices are enrolled in the Apple Device Enrollment Program (DEP), markedly improving the deployment and management process. This tier reflects an advanced approach to device management, with the majority of devices enjoying the benefits of automated provisioning and security configurations facilitated by DEP.
+      - Indicators:
+        - Broad adoption of DEP for corporate iOS and iPadOS devices, streamlining the deployment and ongoing management process.
+        - Enhanced operational efficiency in device provisioning, with a significant reduction in manual setup requirements and a uniform application of security policies and configurations.
+        - Noticeable improvements in the organization's ability to manage and secure its mobile device fleet, leveraging DEP for better control over devices and ensuring compliance with corporate standards.
+
+    - **Optimal:** All corporate iOS and iPadOS devices are fully enrolled and managed through the Apple Device Enrollment Program (DEP), achieving the highest level of automation, efficiency, and security in mobile device deployment and management. This optimal scenario ensures that every device is automatically provisioned with the necessary configurations, policies, and security settings right from the start, minimizing operational burdens and maximizing device and data security.
+      - Indicators:
+        - Universal and strategic enrollment of corporate iOS and iPadOS devices in DEP, eliminating the need for manual device setup and management.
+        - Full realization of the benefits offered by DEP, including operational efficiencies, enhanced security posture, and standardized device configurations across the entire mobile device fleet.
+        - Proactive and comprehensive management of the mobile device lifecycle, supported by DEP's advanced features, ensuring devices are always ready for business use while maintaining high security and compliance standards.
+
+  - **Are corporate Android devices enrolled with the Android Enterprise cloud enrollment service?**
+    - **Legacy:** Corporate Android devices are set up and managed manually, foregoing the benefits of automated enrollment and management offered by cloud services like Android Enterprise. This traditional method results in increased administrative effort, potential inconsistencies in device configurations, and gaps in security policy enforcement across the fleet.
+      - Indicators:
+        - A reliance on manual processes for the setup, configuration, and ongoing management of Android devices, leading to operational inefficiencies.
+        - Increased risk of configuration errors and security policy discrepancies due to the absence of standardized, automated deployment processes.
+        - Challenges in ensuring all corporate Android devices are consistently secured and compliant with organizational policies, impacting the overall security posture.
+
+    - Initial: Initial efforts to enroll corporate Android devices with Android Enterprise are in progress, marking the beginning of the transition to automated cloud-based device management. While this phase indicates adoption of cloud enrollment services, comprehensive coverage of all devices and full utilization of Android Enterprise's management capabilities may still be developing.
+      - Indicators:
+        - Partial enrollment of corporate Android devices in Android Enterprise, possibly focusing on a subset of the device fleet or conducting a pilot program.
+        - Initial reduction in manual device management tasks for enrolled devices, though broader adoption and deeper integration with Android Enterprise features are needed.
+        - Some improvement in the consistency and security of device configurations, but with further work required to achieve full device fleet management and policy compliance.
+
+    - Advanced: A significant number of corporate Android devices are enrolled in Android Enterprise, significantly enhancing the efficiency, consistency, and security of device management. This advanced tier reflects a mature approach to device management, with the majority of devices benefitting from automated provisioning and comprehensive policy enforcement.
+      - Indicators:
+        - Broad adoption of Android Enterprise for corporate Android devices, streamlining the deployment and ongoing management process.
+        - Enhanced operational efficiency and security through automated device provisioning, uniform policy application, and advanced management capabilities provided by Android Enterprise.
+        - Noticeable improvements in the organization's ability to secure and manage its Android device fleet, with increased control over device configurations and compliance with corporate standards.
+
+    - Optimal: All corporate Android devices are fully enrolled and managed through Android Enterprise, achieving the highest level of automation, efficiency, and security in mobile device deployment and management. This optimal scenario ensures comprehensive and consistent application of configurations, policies, and security settings across the entire Android device fleet, facilitated by the advanced capabilities of cloud enrollment services.
+      - Indicators:
+        - Universal and strategic enrollment of corporate Android devices in Android Enterprise, eliminating manual setup and management processes.
+        - Full realization of operational efficiencies, security enhancements, and compliance benefits offered by automated cloud-based device management.
+        - Proactive and comprehensive management of the Android device lifecycle, from deployment to retirement, supported by comprehensive insights and controls provided by Android Enterprise, ensuring a robust and agile IT infrastructure.
 
 ### Example
   - Is Conditional Access configured in Microsoft Defender for Endpoint to utilize health signals from Windows machines for access decisions?
@@ -339,7 +409,6 @@ Questions in the following sections are designed to help us understand a clients
         - Full integration of Conditional Access within Microsoft Defender for Endpoint, leveraging all available health signals from Windows machines for making informed access decisions.
         - Dynamic and real-time assessment of device health status, with adaptive access policies that respond to the latest threat intelligence and security analyses.
         - Strict adherence to security policies and compliance standards, with thorough vetting of device health and security posture before granting access.
-
 
 ## Applications and Workloads
 
