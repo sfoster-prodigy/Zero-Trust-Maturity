@@ -38,39 +38,124 @@ Questions in the following sections are designed to help us understand a clients
 
 ### Discover and control the use of shadow IT
 
-#### Integrate Microsoft Defender for Cloud Apps with Microsoft Defender for Endpoint
-  - Is Microsoft Defender for Cloud Apps integrated with Microsoft Defender for Endpoint for cloud traffic analysis on Windows 10 and later devices?
-    - Legacy: There is no integration between Microsoft Defender for Cloud Apps and Microsoft Defender for Endpoint for analyzing cloud traffic on Windows 10 and later devices. Organizations may rely on separate, uncoordinated security solutions that lead to gaps in visibility and control over cloud application usage, increasing the risk of shadow IT.
-      - Indicators:
-        - Absence of coordinated cloud traffic analysis, leading to incomplete visibility into application usage and potential security risks.
-        - Increased vulnerability to unauthorized cloud services and applications due to the lack of integrated monitoring and control mechanisms.
-        - Challenges in identifying and mitigating shadow IT, impacting the organization’s overall security posture and compliance status.
-
-    - Initial: Initial efforts have been made to integrate Microsoft Defender for Cloud Apps with Microsoft Defender for Endpoint for cloud traffic analysis on some Windows 10 and later devices. This phase marks the beginning of a more unified approach to monitoring and controlling cloud application usage, though comprehensive integration and full utilization of this synergy may still be developing.
+#### Discovery and control the use of shadow IT with Microsoft Defender for Cloud Apps Cloud Discovery
+  - Is Cloud Discovery within Microsoft Defender for Cloud Apps implemented to identity shadow IT by either integrating with Microsoft Defender for Endpoint, deploying the Microsoft Defender for Cloud Apps log collector, or integrating Defender for Cloud Apps with a proxy?
+    - Legacy: The organization has not implemented Cloud Discovery within Microsoft Defender for Cloud Apps, nor integrated it with Microsoft Defender for Endpoint, deployed the log collector, or integrated it with a proxy. This absence of implementation results in minimal visibility into shadow IT, posing potential security risks and compliance issues due to unmonitored and uncontrolled cloud application usage.
       - Indicators: 
-        - Partial integration for cloud traffic analysis, covering a select group of devices or specific departments.
-        - Initial improvements in detecting unauthorized cloud application usage, but a unified view across the entire device fleet is not yet achieved.
-        - Some enhancement in the organization's ability to manage cloud application risks, with room for improvement in achieving widespread integration and effective shadow IT control.
+        - An absence of Cloud Discovery implementation, leading to insufficient insight into unauthorized cloud application usage across the network.
+        - Increased exposure to security vulnerabilities and compliance violations due to the lack of monitoring and governance over shadow IT.
+        - Operational challenges in managing cloud application security and compliance, impacting the organization's ability to enforce its security policies effectively.
 
-    - Advanced: A significant number of Windows 10 and later devices are integrated with Microsoft Defender for Cloud Apps and Microsoft Defender for Endpoint for comprehensive cloud traffic analysis. This advanced tier reflects a mature approach to cloud application security management, with extensive monitoring and control over cloud app usage, significantly reducing the risks associated with shadow IT.
+    - Initial: The organization has taken initial steps to implement Cloud Discovery within Microsoft Defender for Cloud Apps by integrating with Microsoft Defender for Endpoint, deploying the log collector, or integrating with a proxy for some segments of the network. This phase marks the beginning of enhanced shadow IT visibility, though comprehensive coverage and full utilization of Cloud Discovery capabilities may still be in development.
       - Indicators: 
-        - Broad adoption of integration between Microsoft Defender for Cloud Apps and Microsoft Defender for Endpoint, facilitating enhanced visibility and governance of cloud application usage.
-        - Advanced utilization of cloud traffic analysis capabilities, enabling effective detection, investigation, and mitigation of unauthorized app usage.
-        - Noticeable reduction in shadow IT risks, supported by comprehensive monitoring, automated alerts, and proactive governance actions facilitated by the integrated security solution.
+        - Partial implementation of Cloud Discovery, with efforts focusing on integrating with Microsoft Defender for Endpoint, deploying the log collector, or proxy integration for critical network segments or user groups.
+        - Initial improvements in detecting and assessing the risk of shadow IT, though a complete, network-wide visibility is not yet achieved.
+        - Some enhancement in the organization's ability to govern and control unauthorized cloud application usage, but with further work required for comprehensive shadow IT discovery and risk management.
 
-    - Optimal: Microsoft Defender for Cloud Apps is fully integrated with Microsoft Defender for Endpoint across all Windows 10 and later devices, achieving the highest level of cloud application usage analysis and shadow IT control. This optimal scenario ensures comprehensive visibility into cloud traffic, enabling consistent application of security policies, real-time detection of unauthorized app usage, and effective mitigation of associated risks.
+    - Advanced: Cloud Discovery within Microsoft Defender for Cloud Apps is extensively implemented across a significant portion of the network by integrating with Microsoft Defender for Endpoint, deploying the log collector, or integrating with proxies. This advanced tier reflects a mature approach to shadow IT discovery and control, with comprehensive monitoring mechanisms in place.
       - Indicators: 
-        - Universal and strategic integration of cloud traffic analysis capabilities across the entire Windows device fleet, eliminating gaps in cloud application usage visibility.
-        - Full realization of operational efficiencies and security enhancements offered by the integrated solution, including optimized cloud application governance and effective shadow IT mitigation.
-        - Proactive and comprehensive management of cloud application security risks, underpinned by deep insights, real-time monitoring, and advanced control mechanisms, significantly enhancing the organization's ability to safeguard its cloud application ecosystem effectively.
+        - Broad adoption of Cloud Discovery implementation strategies, facilitating extensive visibility into and control over unauthorized cloud application usage.
+        - Enhanced capability to identify, assess, and mitigate risks associated with shadow IT, contributing to a stronger security and compliance posture.
+        - A noticeable reduction in security and compliance risks associated with unauthorized cloud apps, supported by detailed insights and effective governance actions based on Cloud Discovery data.
 
+    - Optimal: Cloud Discovery within Microsoft Defender for Cloud Apps is fully implemented and operationalized across the entire network, achieving the highest level of shadow IT discovery and control. This optimal scenario ensures comprehensive monitoring of unauthorized cloud services, enabling proactive risk management, compliance enforcement, and strategic decision-making based on extensive shadow IT insights.
+      - Indicators: 
+        - Universal and strategic implementation of Cloud Discovery, ensuring no gaps in shadow IT visibility across the network.
+        - Full realization of the benefits provided by comprehensive Cloud Discovery, including operational efficiencies, enhanced security posture, and informed governance of unauthorized cloud application usage.
+        - Proactive and comprehensive management of shadow IT, underpinned by robust analytics, automated response mechanisms, and a unified policy framework, significantly enhancing the organization's ability to detect, assess, and control shadow IT activities effectively.
 
 ### Protect sensitive information and activities automatically by implementing policies
 
-#### Adopt Microsoft Defender for Cloud Apps
+#### Deploy Microsoft Defender for Cloud Apps policies
+  - 
+    - Legacy: The organization has not implemented Microsoft Defender for Cloud Apps policies, resulting in a lack of automated protection mechanisms for sensitive information and cloud-based user activities. This absence leaves sensitive data exposed to potential threats and unauthorized access, due to manual or non-existent data protection and activity monitoring processes.
+      - Indicators: 
+        - An absence of policy implementation within Microsoft Defender for Cloud Apps, leading to insufficient protection of sensitive information.
+        - Increased risk of data breaches and unauthorized activities due to the lack of automated monitoring and protection mechanisms.
+        - Operational inefficiencies in safeguarding sensitive data and monitoring user activities, impacting the organization's overall security strategy and compliance posture.
+
+    - Initial: Initial efforts have been made to implement Microsoft Defender for Cloud Apps policies for protecting sensitive information and monitoring user activities in the cloud, marking the beginning of an automated data protection strategy. While this phase indicates the start of policy implementation, comprehensive coverage of all sensitive data and activities and full utilization of policy capabilities may still be under development.
+      - Indicators: 
+        - Partial implementation of policies within Microsoft Defender for Cloud Apps, focusing on critical data and high-risk user activities.
+        - Initial improvements in the automated protection of sensitive information and monitoring of user activities, though a complete, organization-wide policy enforcement is not yet achieved.
+        - Some enhancement in the organization's ability to protect sensitive data and control cloud-based activities, but with further work required for full policy coverage and optimization.
+
+    - Advanced: A significant number of Microsoft Defender for Cloud Apps policies are implemented, significantly improving the automated protection of sensitive information and monitoring of user activities in the cloud. This advanced tier reflects a mature approach to data protection and activity monitoring, with comprehensive policy enforcement mechanisms in place.
+      - Indicators: 
+        - Broad adoption of policy implementation within Microsoft Defender for Cloud Apps, enabling extensive protection of sensitive information and robust monitoring of user activities.
+        - Enhanced capability to automatically detect, alert, and remediate potential threats to sensitive data and unauthorized user activities, contributing to a stronger security and compliance posture.
+        - A noticeable reduction in risks associated with data breaches and unauthorized access, supported by detailed insights and effective automated governance actions based on policy enforcement.
+
+    - Optimal: Microsoft Defender for Cloud Apps policies are fully implemented and operationalized across the organization, achieving the highest level of automated protection for sensitive information and user activities in the cloud. This optimal scenario ensures comprehensive coverage, enabling proactive data protection, compliance enforcement, and strategic decision-making based on extensive monitoring and policy insights.
+      - Indicators: 
+        - Universal and strategic implementation of policies within Microsoft Defender for Cloud Apps, ensuring no gaps in the protection of sensitive data and monitoring of user activities.
+        - Full realization of the benefits provided by comprehensive policy enforcement, including operational efficiencies, enhanced security posture, and compliance with data protection regulations.
+        - Proactive and comprehensive management of sensitive information and cloud-based user activities, underpinned by robust analytics, automated response mechanisms, and a unified policy framework, significantly enhancing the organization's ability to protect and monitor its cloud environment effectively.
+
+
+### Deploy adaptive access and session controls for all apps
+
+#### Enable real-time monitoring and control over access to any web app
+  - Are web apps protected with Conditional Access App Control?
+    - Legacy: The organization does not utilize Conditional Access App Control for its web applications, resulting in a lack of adaptive access and granular session controls. This absence of Conditional Access App Control leaves web apps more vulnerable to unauthorized access and data breaches, as traditional, static access controls may not adequately address the dynamic nature of security threats and user behavior.
+      - Indicators: 
+        - Absence of Conditional Access App Control implementation, leading to insufficient adaptive security measures for web apps.
+        - Increased risk of unauthorized access and potential data compromise due to the lack of dynamic and context-based access controls.
+        - Challenges in enforcing compliance and data protection policies across web applications, impacting the organization's overall security and compliance posture.
+
+    - Initial: Initial steps have been made to protect some web applications with Conditional Access App Control, marking the beginning of enhanced security measures. While this phase indicates the start of adopting Conditional Access App Control, comprehensive coverage of all web apps and full utilization of its capabilities may still be under development.
+      - Indicators: 
+        - Partial deployment of Conditional Access App Control for critical web applications, focusing on high-risk or high-value apps.
+        - Initial improvements in adaptive access control and monitoring of user sessions, though a complete, organization-wide enforcement is not yet achieved.
+        - Some enhancement in the organization's ability to dynamically control access and protect sensitive data within web apps, but with further work required for full policy coverage and optimization.
+
+    - Advanced: A significant number of web applications are protected with Conditional Access App Control, significantly improving the organization's security posture by enforcing adaptive access and detailed session controls. This advanced tier reflects a mature approach to web application security, with comprehensive Conditional Access policies in place.
+      - Indicators: 
+        - Broad adoption of Conditional Access App Control, enabling extensive enforcement of adaptive access and session controls across web applications.
+        - Enhanced capability to dynamically manage access based on user context, risk assessment, and compliance requirements, contributing to a stronger security and compliance posture.
+        - A noticeable reduction in unauthorized access and data breaches, supported by detailed monitoring, real-time decision-making, and effective session management based on Conditional Access policies.
+
+    - Optimal: Conditional Access App Control is fully implemented and operationalized across all web applications, achieving the highest level of security and compliance enforcement. This optimal scenario ensures comprehensive and consistent application of adaptive access and session controls, leveraging the full capabilities of Conditional Access App Control for dynamic and effective web application protection.
+      - Indicators: 
+        - Universal and strategic implementation of Conditional Access App Control across all web applications, ensuring no gaps in security enforcement.
+        - Full realization of the benefits provided by comprehensive Conditional Access policies, including operational efficiencies, enhanced security posture, and compliance with data protection regulations.
+        - Proactive and comprehensive management of web app access
+
+
+### Strengthen protection against cyber threats and rogue apps
+
+#### Tune Anomaly Detection Policies in Defender for Cloud Apps
+  - Are Anomaly Detection Policies tuned and scoped according to business need in Microsoft Defender for Cloud Apps?
+    - Legacy: The organization has not customized or effectively implemented Anomaly Detection Policies within Microsoft Defender for Cloud Apps, leading to a generic approach to threat detection that may not align with specific business needs or risk profiles. This lack of tailored anomaly detection results in missed opportunities for early identification of sophisticated threats and potentially increases the risk of false positives.
+      - Indicators: 
+        - Absence of tuned Anomaly Detection Policies, resulting in a one-size-fits-all approach that may not effectively address specific organizational risks.
+        - Increased potential for overlooking genuine threats or encountering high rates of false positives due to the lack of policy customization.
+        - Challenges in responding to and mitigating cyber threats in a timely and effective manner, impacting the organization's overall security resilience.
+
+    - Initial: Initial efforts have been made to tune and scope Anomaly Detection Policies within Microsoft Defender for Cloud Apps according to business needs, marking the beginning of a more targeted threat detection strategy. While this phase indicates the start of policy customization, comprehensive coverage and full optimization of anomaly detection capabilities may still be under development.
+      - Indicators: 
+        - Partial customization of Anomaly Detection Policies, with efforts focusing on high-priority areas or specific threat vectors identified as significant risks.
+        - Initial improvements in the accuracy of threat detection and reduction in false positives, though a complete, organization-wide tuning of policies is not yet achieved.
+        - Some enhancement in the organization's ability to detect and respond to anomalies, but further work required for full alignment of detection policies with business needs and risk profile.
+
+    - Advanced: Anomaly Detection Policies within Microsoft Defender for Cloud Apps are extensively tuned and scoped, significantly improving the organization's capability to detect and respond to cyber threats and rogue apps in alignment with business needs. This advanced tier reflects a mature approach to anomaly detection, with policies carefully customized to maximize threat detection accuracy and minimize false positives.
+      - Indicators: 
+        - Broad customization and application of Anomaly Detection Policies, enabling precise threat detection tailored to the organization's unique risk factors and business requirements.
+        - Enhanced capability to quickly identify and mitigate genuine threats with minimal false positives, contributing to a stronger security posture and more efficient incident response.
+        - A noticeable reduction in the impact of cyber threats and rogue apps, supported by detailed insights and effective, business-aligned anomaly detection policies.
+
+    - Optimal: Anomaly Detection Policies within Microsoft Defender for Cloud Apps are fully customized, implemented, and operationalized across the organization, achieving the highest level of threat detection and response tailored to specific business needs. This optimal scenario ensures comprehensive and accurate identification of anomalies, leveraging the full capabilities of Microsoft Defender for Cloud Apps for dynamic and effective protection against cyber threats and rogue apps.
+      - Indicators: 
+        - Universal and strategic customization of Anomaly Detection Policies, ensuring comprehensive protection that is fully aligned with the organization's business needs and risk profile.
+        - Full realization of the benefits provided by customized anomaly detection, including operational efficiencies, enhanced security posture, and effective mitigation of cyber threats with a high degree of accuracy.
+        - Proactive and comprehensive management of cybersecurity threats, underpinned by robust analytics, automated response mechanisms, and a unified, business-need-focused anomaly detection framework, significantly enhancing the organization's resilience against cyber threats and rogue application activities.
+
+### Assess the security posture of your cloud environments
+
+#### 
   - 
     - Legacy: 
-      - Indicators:
+      - Indicators: 
         - 
 
     - Initial: 
@@ -84,21 +169,3 @@ Questions in the following sections are designed to help us understand a clients
     - Optimal: 
       - Indicators: 
         - 
-
-
-### Deploy adaptive access and session controls for all apps
-
-####
-
-
-
-### Strengthen protection against cyber threats and rogue apps
-
-####
-
-
-
-
-### Assess the security posture of your cloud environments
-
-#### 
