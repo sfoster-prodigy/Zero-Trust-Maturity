@@ -10,7 +10,7 @@ Questions in the following sections are designed to help us understand a clients
 
 ### Gain visibility into the activities and data in your applications by connecting them via APIs
 
-#### Adopt Microsoft Defender for Cloud Apps
+#### Adopt SaaS Security Posture Management - SSPM (Microsoft Defender for Cloud)
   - Is Microsoft Defender for Cloud Apps adopted to work with services for optimizing visibility, governance actions, and usage?
     - Legacy: Applications and services operate without the integration of Microsoft Defender for Cloud Apps, leading to a lack of comprehensive visibility into app-related activities, potential governance gaps, and suboptimal usage optimization. Organizations might rely on disparate, non-integrated security solutions or manual monitoring methods, which can result in oversight gaps and increased security risks.
       - Indicators:
@@ -38,8 +38,8 @@ Questions in the following sections are designed to help us understand a clients
 
 ### Discover and control the use of shadow IT
 
-#### Discovery and control the use of shadow IT with Microsoft Defender for Cloud Apps Cloud Discovery
-  - Is Cloud Discovery within Microsoft Defender for Cloud Apps implemented to identity shadow IT by either integrating with Microsoft Defender for Endpoint, deploying the Microsoft Defender for Cloud Apps log collector, or integrating Defender for Cloud Apps with a proxy?
+#### Discover SaaS applications (Microsoft Defender for Cloud Apps Cloud Discovery)
+  - Is Cloud Discovery within Microsoft Defender for Cloud Apps implemented to identify shadow IT by integrating with Microsoft Defender for Endpoint, deploying the Microsoft Defender for Cloud Apps log collector, or integrating Defender for Cloud Apps with a proxy?
     - Legacy: The organization has not implemented Cloud Discovery within Microsoft Defender for Cloud Apps, nor integrated it with Microsoft Defender for Endpoint, deployed the log collector, or integrated it with a proxy. This absence of implementation results in minimal visibility into shadow IT, posing potential security risks and compliance issues due to unmonitored and uncontrolled cloud application usage.
       - Indicators: 
         - An absence of Cloud Discovery implementation, leading to insufficient insight into unauthorized cloud application usage across the network.
@@ -66,8 +66,8 @@ Questions in the following sections are designed to help us understand a clients
 
 ### Protect sensitive information and activities automatically by implementing policies
 
-#### Deploy Microsoft Defender for Cloud Apps policies
-  - 
+#### Implement data protection policies with SSPM (Microsoft Defender for Cloud Apps policies)
+  - Are Microsoft Defender for Cloud Apps policies implemented to automatically protect sensitive information and user activities in the cloud?
     - Legacy: The organization has not implemented Microsoft Defender for Cloud Apps policies, resulting in a lack of automated protection mechanisms for sensitive information and cloud-based user activities. This absence leaves sensitive data exposed to potential threats and unauthorized access, due to manual or non-existent data protection and activity monitoring processes.
       - Indicators: 
         - An absence of policy implementation within Microsoft Defender for Cloud Apps, leading to insufficient protection of sensitive information.
@@ -92,39 +92,7 @@ Questions in the following sections are designed to help us understand a clients
         - Full realization of the benefits provided by comprehensive policy enforcement, including operational efficiencies, enhanced security posture, and compliance with data protection regulations.
         - Proactive and comprehensive management of sensitive information and cloud-based user activities, underpinned by robust analytics, automated response mechanisms, and a unified policy framework, significantly enhancing the organization's ability to protect and monitor its cloud environment effectively.
 
-
-### Deploy adaptive access and session controls for all apps
-
-#### Enable real-time monitoring and control over access to any web app
-  - Are web apps protected with Conditional Access App Control?
-    - Legacy: The organization does not utilize Conditional Access App Control for its web applications, resulting in a lack of adaptive access and granular session controls. This absence of Conditional Access App Control leaves web apps more vulnerable to unauthorized access and data breaches, as traditional, static access controls may not adequately address the dynamic nature of security threats and user behavior.
-      - Indicators: 
-        - Absence of Conditional Access App Control implementation, leading to insufficient adaptive security measures for web apps.
-        - Increased risk of unauthorized access and potential data compromise due to the lack of dynamic and context-based access controls.
-        - Challenges in enforcing compliance and data protection policies across web applications, impacting the organization's overall security and compliance posture.
-
-    - Initial: Initial steps have been made to protect some web applications with Conditional Access App Control, marking the beginning of enhanced security measures. While this phase indicates the start of adopting Conditional Access App Control, comprehensive coverage of all web apps and full utilization of its capabilities may still be under development.
-      - Indicators: 
-        - Partial deployment of Conditional Access App Control for critical web applications, focusing on high-risk or high-value apps.
-        - Initial improvements in adaptive access control and monitoring of user sessions, though a complete, organization-wide enforcement is not yet achieved.
-        - Some enhancement in the organization's ability to dynamically control access and protect sensitive data within web apps, but with further work required for full policy coverage and optimization.
-
-    - Advanced: A significant number of web applications are protected with Conditional Access App Control, significantly improving the organization's security posture by enforcing adaptive access and detailed session controls. This advanced tier reflects a mature approach to web application security, with comprehensive Conditional Access policies in place.
-      - Indicators: 
-        - Broad adoption of Conditional Access App Control, enabling extensive enforcement of adaptive access and session controls across web applications.
-        - Enhanced capability to dynamically manage access based on user context, risk assessment, and compliance requirements, contributing to a stronger security and compliance posture.
-        - A noticeable reduction in unauthorized access and data breaches, supported by detailed monitoring, real-time decision-making, and effective session management based on Conditional Access policies.
-
-    - Optimal: Conditional Access App Control is fully implemented and operationalized across all web applications, achieving the highest level of security and compliance enforcement. This optimal scenario ensures comprehensive and consistent application of adaptive access and session controls, leveraging the full capabilities of Conditional Access App Control for dynamic and effective web application protection.
-      - Indicators: 
-        - Universal and strategic implementation of Conditional Access App Control across all web applications, ensuring no gaps in security enforcement.
-        - Full realization of the benefits provided by comprehensive Conditional Access policies, including operational efficiencies, enhanced security posture, and compliance with data protection regulations.
-        - Proactive and comprehensive management of web app access
-
-
-### Strengthen protection against cyber threats and rogue apps
-
-#### Tune Anomaly Detection Policies in Defender for Cloud Apps
+#### Refine data protection policies with SSPM (Microsoft Defender for Cloud Apps policies)
   - Are Anomaly Detection Policies tuned and scoped according to business need in Microsoft Defender for Cloud Apps?
     - Legacy: The organization has not customized or effectively implemented Anomaly Detection Policies within Microsoft Defender for Cloud Apps, leading to a generic approach to threat detection that may not align with specific business needs or risk profiles. This lack of tailored anomaly detection results in missed opportunities for early identification of sophisticated threats and potentially increases the risk of false positives.
       - Indicators: 
@@ -150,22 +118,31 @@ Questions in the following sections are designed to help us understand a clients
         - Full realization of the benefits provided by customized anomaly detection, including operational efficiencies, enhanced security posture, and effective mitigation of cyber threats with a high degree of accuracy.
         - Proactive and comprehensive management of cybersecurity threats, underpinned by robust analytics, automated response mechanisms, and a unified, business-need-focused anomaly detection framework, significantly enhancing the organization's resilience against cyber threats and rogue application activities.
 
-### Assess the security posture of your cloud environments
+### Deploy adaptive access and session controls for all apps
 
-#### 
-  - 
-    - Legacy: 
+#### Enable real-time monitoring and control over access to any web app
+  - Has Microsoft Defender for Cloud Apps Conditional Access App Control been integrate with Microsoft Entra ID Conditional Access for dynamic access and session control?
+    - Legacy: The organization does not utilize Conditional Access App Control for its web applications, resulting in a lack of adaptive access and granular session controls. This absence of Conditional Access App Control leaves web apps more vulnerable to unauthorized access and data breaches, as traditional, static access controls may not adequately address the dynamic nature of security threats and user behavior.
       - Indicators: 
-        - 
+        - Absence of Conditional Access App Control implementation, leading to insufficient adaptive security measures for web apps.
+        - Increased risk of unauthorized access and potential data compromise due to the lack of dynamic and context-based access controls.
+        - Challenges in enforcing compliance and data protection policies across web applications, impacting the organization's overall security and compliance posture.
 
-    - Initial: 
+    - Initial: Initial steps have been made to protect some web applications with Conditional Access App Control, marking the beginning of enhanced security measures. While this phase indicates the start of adopting Conditional Access App Control, comprehensive coverage of all web apps and full utilization of its capabilities may still be under development.
       - Indicators: 
-        - 
+        - Partial deployment of Conditional Access App Control for critical web applications, focusing on high-risk or high-value apps.
+        - Initial improvements in adaptive access control and monitoring of user sessions, though a complete, organization-wide enforcement is not yet achieved.
+        - Some enhancement in the organization's ability to dynamically control access and protect sensitive data within web apps, but with further work required for full policy coverage and optimization.
 
-    - Advanced: 
+    - Advanced: A significant number of web applications are protected with Conditional Access App Control, significantly improving the organization's security posture by enforcing adaptive access and detailed session controls. This advanced tier reflects a mature approach to web application security, with comprehensive Conditional Access policies in place.
       - Indicators: 
-        - 
+        - Broad adoption of Conditional Access App Control, enabling extensive enforcement of adaptive access and session controls across web applications.
+        - Enhanced capability to dynamically manage access based on user context, risk assessment, and compliance requirements, contributing to a stronger security and compliance posture.
+        - A noticeable reduction in unauthorized access and data breaches, supported by detailed monitoring, real-time decision-making, and effective session management based on Conditional Access policies.
 
-    - Optimal: 
+    - Optimal: Conditional Access App Control is fully implemented and operationalized across all web applications, achieving the highest level of security and compliance enforcement. This optimal scenario ensures comprehensive and consistent application of adaptive access and session controls, leveraging the full capabilities of Conditional Access App Control for dynamic and effective web application protection.
       - Indicators: 
-        - 
+        - Universal and strategic implementation of Conditional Access App Control across all web applications, ensuring no gaps in security enforcement.
+        - Full realization of the benefits provided by comprehensive Conditional Access policies, including operational efficiencies, enhanced security posture, and compliance with data protection regulations.
+        - Proactive and comprehensive management of web app access
+
