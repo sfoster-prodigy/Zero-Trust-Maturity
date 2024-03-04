@@ -403,24 +403,35 @@ Questions in the following sections are designed to help us understand a clients
 
 **Has the organization adopted Microsoft Purview Insider Risk Management to proactively identify and mitigate insider risks, leveraging its comprehensive analytics and integrated data protection capabilities?**
 
-  - **Legacy:** 
+  - **Legacy:** The organization has not implemented Microsoft Purview Insider Risk Management or similar solutions, leading to potential vulnerabilities in managing and mitigating insider risks. This lack of insider threat management measures increases the risk of data breaches and security incidents caused by internal actors.
       - Indicators: 
-          - 
+          - No deployment of insider risk management solutions to detect, investigate, and respond to potential insider threats.
+          - Increased vulnerability to security incidents and data breaches originating from within the organization.
+          - Challenges in proactively identifying and mitigating insider risks, impacting overall security posture and data protection efforts.
 
-  - **Initial:** 
+  - **Initial:** Initial efforts have been made to implement Microsoft Purview Insider Risk Management for identifying and mitigating insider risks in specific areas or for certain types of data. While this phase marks the beginning of adopting insider risk management practices, comprehensive coverage and consistent policy enforcement across the organization may still be under development.
       - Indicators: 
-          - 
+          - Partial deployment of Microsoft Purview Insider Risk Management, focusing on high-priority areas or specific segments of the workforce.
+          - Initial improvements in detecting and mitigating insider risks, though organization-wide implementation is not yet achieved.
+          - Some enhancement in the organization's ability to manage insider threats, with ongoing efforts to expand and optimize insider risk management strategies.
 
-  - **Advanced:** 
+  - **Advanced:** Microsoft Purview Insider Risk Management is broadly implemented, significantly improving the organization's capability to proactively identify and mitigate insider risks. This advanced tier reflects a mature approach to insider threat management, ensuring that potential risks are effectively managed through comprehensive analytics and integrated data protection.
       - Indicators: 
-          - 
+          - Broad adoption of Microsoft Purview Insider Risk Management, facilitating comprehensive detection and mitigation of insider risks.
+          - Enhanced security measures in place, supported by consistent application of insider risk policies and analytics.\
+          - Significant progress toward minimizing the impact of insider threats and ensuring a secure organizational environment, bolstered by robust risk management practices.
 
-  - **Optimal:** 
+  - **Optimal:** Microsoft Purview Insider Risk Management solutions are fully developed, operationalized, and integrated into the organization’s overall security and risk management strategies. This optimal scenario guarantees the highest level of protection against insider threats, leveraging advanced analytics and data protection capabilities to manage risks proactively.
       - Indicators: 
-          - 
+          - Universal and strategic implementation of insider risk management practices across all areas of the organization.
+          - Comprehensive and proactive management of insider risks, enhancing overall security and data protection.
+          - Full compliance with security standards and regulations, underpinned by an effective and well-managed insider risk management system.
 
   - **Relevance to NIST SP 800-53 Revision 5:**
-      - 
+      - PS-3 Personnel Screening: Insider risk management solutions support the vetting processes by identifying potential insider threats based on behavior analytics, aligning with personnel screening controls.
+      - AT-2 Security Awareness Training: Insights from insider risk management can inform targeted security awareness and training programs, emphasizing the prevention of insider threats.
+      - AC-2 Account Management: Integrating insider risk management helps ensure that accounts are managed in accordance with users’ roles and responsibilities, reducing the risk of insider threats by enforcing principle of least privilege.
+      - IR-4 Incident Handling: Insider risk management solutions enhance incident handling capabilities by providing tools to detect, respond to, and mitigate incidents involving insider threats.
 
 ### Delete unnecessary sensitive information
 
@@ -453,63 +464,72 @@ Questions in the following sections are designed to help us understand a clients
           - Proactive and comprehensive management of records within the Microsoft Purview framework, underpinned by robust policies, automated workflows, and a unified records management strategy, significantly enhancing the organization's ability to meet record-keeping obligations effectively.
 
   - **Relevance to NIST SP 800-53 Revision 5:**
-      - 
+      - AU-11 Record Retention: Microsoft Purview Records Management supports the retention of audit records in accordance with legal and regulatory requirements, aligning with the Record Retention control.
+      - SI-12 Information Handling and Retention: The system aids in handling and retaining information within the organization, ensuring compliance with information retention requirements specified by law, regulation, or policy.
+      - RA-5 Vulnerability Scanning: Implementing a records management solution can contribute to identifying vulnerabilities related to improper records handling and storage, supporting continuous vulnerability assessment efforts.
+      - PL-4 Rules of Behavior: Records management practices enforce rules of behavior for individuals accessing the system, detailing responsibilities and expected behavior regarding the handling of records.
 
 **Has the organization implemented Microsoft Purview Data Lifecycle Management to effectively manage data across its entire lifecycle, ensuring optimized data governance and compliance with regulatory requirements?**
 
-    - **lagacy:** The organization lacks implementation of Microsoft Purview Data Lifecycle Management, leading to potential gaps in data governance and challenges in meeting compliance requirements. This absence of a structured data lifecycle management approach results in inefficiencies in handling data retention, disposition, and overall data management, potentially exposing the organization to risks related to data breaches and non-compliance.
-        - Indicators:
-            - Absence of Microsoft Purview Data Lifecycle Management, resulting in manual or inconsistent data handling practices.
-            - Increased risk of data mismanagement, including inadequate data retention and disposition, affecting compliance and operational efficiency.
-            - Challenges in ensuring data governance and meeting regulatory compliance requirements, impacting the organization's ability to safeguard sensitive information and adhere to legal standards.
+  - **lagacy:** The organization lacks implementation of Microsoft Purview Data Lifecycle Management, leading to potential gaps in data governance and challenges in meeting compliance requirements. This absence of a structured data lifecycle management approach results in inefficiencies in handling data retention, disposition, and overall data management, potentially exposing the organization to risks related to data breaches and non-compliance.
+      - Indicators:
+          - Absence of Microsoft Purview Data Lifecycle Management, resulting in manual or inconsistent data handling practices.
+          - Increased risk of data mismanagement, including inadequate data retention and disposition, affecting compliance and operational efficiency.
+          - Challenges in ensuring data governance and meeting regulatory compliance requirements, impacting the organization's ability to safeguard sensitive information and adhere to legal standards.
 
-    - **Initial:** Initial steps have been taken to implement Microsoft Purview Data Lifecycle Management, starting the process of establishing structured data governance and enhancing regulatory compliance. While this phase indicates the beginning of adopting data lifecycle management practices, comprehensive deployment and full optimization of lifecycle policies may still be under development.
-        - Indicators:
-            - Partial deployment of Microsoft Purview Data Lifecycle Management, with efforts focusing on critical data sets or specific areas of regulatory concern.
-            - Initial improvements in data governance and compliance processes, though a complete, organization-wide implementation is not yet achieved.
-            - Some enhancement in managing the data lifecycle, including retention and disposition, but further work required for full policy alignment and optimization.
+  - **Initial:** Initial steps have been taken to implement Microsoft Purview Data Lifecycle Management, starting the process of establishing structured data governance and enhancing regulatory compliance. While this phase indicates the beginning of adopting data lifecycle management practices, comprehensive deployment and full optimization of lifecycle policies may still be under development.
+      - Indicators:
+          - Partial deployment of Microsoft Purview Data Lifecycle Management, with efforts focusing on critical data sets or specific areas of regulatory concern.
+          - Initial improvements in data governance and compliance processes, though a complete, organization-wide implementation is not yet achieved.
+          - Some enhancement in managing the data lifecycle, including retention and disposition, but further work required for full policy alignment and optimization.
 
-    - **Advanced:** Microsoft Purview Data Lifecycle Management is extensively implemented, significantly improving data governance and ensuring compliance with regulatory requirements across the data lifecycle. This advanced tier reflects a mature approach to data lifecycle management, with comprehensive policies and practices in place.
-        - Indicators: 
-            - Broad adoption of Microsoft Purview Data Lifecycle Management, enabling effective management of data from creation to disposal.
-            - Enhanced capability to enforce data governance policies and comply with regulatory standards, contributing to a stronger data management and compliance posture.
-            - A noticeable reduction in data management inefficiencies and compliance risks, supported by streamlined processes for data retention, archiving, and deletion.
+  - **Advanced:** Microsoft Purview Data Lifecycle Management is extensively implemented, significantly improving data governance and ensuring compliance with regulatory requirements across the data lifecycle. This advanced tier reflects a mature approach to data lifecycle management, with comprehensive policies and practices in place.
+      - Indicators: 
+          - Broad adoption of Microsoft Purview Data Lifecycle Management, enabling effective management of data from creation to disposal.
+          - Enhanced capability to enforce data governance policies and comply with regulatory standards, contributing to a stronger data management and compliance posture.
+          - A noticeable reduction in data management inefficiencies and compliance risks, supported by streamlined processes for data retention, archiving, and deletion.
 
-    - **Optimal:** Microsoft Purview Data Lifecycle Management is fully implemented and operationalized across the organization, achieving the highest level of data governance and regulatory compliance. This optimal scenario ensures comprehensive management of the data lifecycle, enabling the organization to effectively govern data, comply with legal and regulatory standards, and optimize data usage and storage.
-        - Indicators:
+  - **Optimal:** Microsoft Purview Data Lifecycle Management is fully implemented and operationalized across the organization, achieving the highest level of data governance and regulatory compliance. This optimal scenario ensures comprehensive management of the data lifecycle, enabling the organization to effectively govern data, comply with legal and regulatory standards, and optimize data usage and storage.
+      - Indicators:
           - Universal and strategic implementation of Microsoft Purview Data Lifecycle Management, ensuring robust governance of data across its entire lifecycle.
           - Full realization of the benefits provided by comprehensive data lifecycle management, including operational efficiencies, enhanced compliance, and optimized data storage and utilization.
           - Proactive and comprehensive management of data governance and compliance, underpinned by robust policies, automated workflows, and a unified lifecycle management framework, significantly enhancing the organization's ability to manage data effectively and meet regulatory requirements.
 
   - **Relevance to NIST SP 800-53 Revision 5:**
-      - 
+      - AU-11 Record Retention: Microsoft Purview Records Management supports the retention of audit records in accordance with legal and regulatory requirements, aligning with the Record Retention control.
+      - SI-12 Information Handling and Retention: The system aids in handling and retaining information within the organization, ensuring compliance with information retention requirements specified by law, regulation, or policy.
+      - RA-5 Vulnerability Scanning: Implementing a records management solution can contribute to identifying vulnerabilities related to improper records handling and storage, supporting continuous vulnerability assessment efforts.
+      - PL-4 Rules of Behavior: Records management practices enforce rules of behavior for individuals accessing the system, detailing responsibilities and expected behavior regarding the handling of records.
 
 #### Data Sharing
-  - Has the organization implemented Microsoft Purview Data Sharing to enable direct sharing of data with users and partners, thereby avoiding data duplication, while centrally managing these sharing activities from within Microsoft Purview?
+**Has the organization implemented Microsoft Purview Data Sharing to enable direct sharing of data with users and partners, thereby avoiding data duplication, while centrally managing these sharing activities from within Microsoft Purview?**
 
-    - **Legacy:** The organization does not utilize Microsoft Purview Data Sharing, resulting in potential data duplication and inefficient data management practices. This absence of a centralized data sharing solution leads to fragmented data ecosystems and increases the risk of data breaches due to the lack of consolidated oversight and control over data sharing processes.
-        - Indicators: 
-            - Absence of Microsoft Purview Data Sharing implementation, leading to reliance on manual or disparate data sharing methods.
-            - Increased risk of data duplication and inconsistencies, affecting data integrity and operational efficiency.
-            - Challenges in ensuring data security and compliance during sharing activities, impacting the organization's ability to protect sensitive information and adhere to regulatory requirements.
+  - **Legacy:** The organization does not utilize Microsoft Purview Data Sharing, resulting in potential data duplication and inefficient data management practices. This absence of a centralized data sharing solution leads to fragmented data ecosystems and increases the risk of data breaches due to the lack of consolidated oversight and control over data sharing processes.
+      - Indicators: 
+          - Absence of Microsoft Purview Data Sharing implementation, leading to reliance on manual or disparate data sharing methods.
+          - Increased risk of data duplication and inconsistencies, affecting data integrity and operational efficiency.
+          - Challenges in ensuring data security and compliance during sharing activities, impacting the organization's ability to protect sensitive information and adhere to regulatory requirements.
 
-    - **Initial:** Initial steps have been taken to implement Microsoft Purview Data Sharing for enabling direct data sharing with users and partners. While this phase indicates the beginning of adopting centralized data sharing practices, comprehensive deployment across all relevant data ecosystems and full optimization of sharing controls may still be under development.
-        - Indicators:
-            - Partial deployment of Microsoft Purview Data Sharing, with efforts focusing on key data sets or specific user groups and partners.
-            - Initial improvements in reducing data duplication and enhancing data sharing efficiency, though a complete, organization-wide adoption is not yet achieved.
-            - Some enhancement in centralized management of data sharing activities, but further work required for full governance and security alignment with organizational policies.
+  - **Initial:** Initial steps have been taken to implement Microsoft Purview Data Sharing for enabling direct data sharing with users and partners. While this phase indicates the beginning of adopting centralized data sharing practices, comprehensive deployment across all relevant data ecosystems and full optimization of sharing controls may still be under development.
+      - Indicators:
+          - Partial deployment of Microsoft Purview Data Sharing, with efforts focusing on key data sets or specific user groups and partners.
+          - Initial improvements in reducing data duplication and enhancing data sharing efficiency, though a complete, organization-wide adoption is not yet achieved.
+          - Some enhancement in centralized management of data sharing activities, but further work required for full governance and security alignment with organizational policies.
 
-    - **Advanced:** Microsoft Purview Data Sharing is extensively implemented, significantly improving direct data sharing with users and partners while avoiding data duplication. This advanced tier reflects a mature approach to data management, with comprehensive controls for secure and efficient data sharing practices.
-        - Indicators:
-            - Broad adoption of Microsoft Purview Data Sharing, enabling efficient and direct sharing of data across the organization and with external partners.
-            - Enhanced capability to manage data sharing activities centrally, contributing to improved data governance, security, and compliance.
-            - A noticeable reduction in data duplication and related inefficiencies, supported by streamlined and secure data sharing processes facilitated by Microsoft Purview.
+  - **Advanced:** Microsoft Purview Data Sharing is extensively implemented, significantly improving direct data sharing with users and partners while avoiding data duplication. This advanced tier reflects a mature approach to data management, with comprehensive controls for secure and efficient data sharing practices.
+      - Indicators:
+          - Broad adoption of Microsoft Purview Data Sharing, enabling efficient and direct sharing of data across the organization and with external partners.
+          - Enhanced capability to manage data sharing activities centrally, contributing to improved data governance, security, and compliance.
+          - A noticeable reduction in data duplication and related inefficiencies, supported by streamlined and secure data sharing processes facilitated by Microsoft Purview.
 
-    - **Optimal:** Microsoft Purview Data Sharing is fully implemented and operationalized across the organization, achieving the highest level of efficiency and security in data sharing activities. This optimal scenario ensures comprehensive and centralized management of data sharing, enabling direct and secure exchanges of data with users and partners without risking data duplication.
-        - Indicators:
-            - Universal and strategic implementation of Microsoft Purview Data Sharing, ensuring efficient, secure, and direct data exchanges across all data ecosystems.
-            - Full realization of the benefits provided by centralized data sharing management, including operational efficiencies, enhanced data governance, and adherence to data security and compliance standards.
-            - Proactive and comprehensive management of data sharing activities, underpinned by robust governance mechanisms, automated workflows, and a unified data sharing policy framework, significantly enhancing the organization's data sharing capabilities and overall data management strategy.
+  - **Optimal:** Microsoft Purview Data Sharing is fully implemented and operationalized across the organization, achieving the highest level of efficiency and security in data sharing activities. This optimal scenario ensures comprehensive and centralized management of data sharing, enabling direct and secure exchanges of data with users and partners without risking data duplication.
+      - Indicators:
+          - Universal and strategic implementation of Microsoft Purview Data Sharing, ensuring efficient, secure, and direct data exchanges across all data ecosystems.
+          - Full realization of the benefits provided by centralized data sharing management, including operational efficiencies, enhanced data governance, and adherence to data security and compliance standards.
+          - Proactive and comprehensive management of data sharing activities, underpinned by robust governance mechanisms, automated workflows, and a unified data sharing policy framework, significantly enhancing the organization's data sharing capabilities and overall data management strategy.
 
   - **Relevance to NIST SP 800-53 Revision 5:**
-      - 
+      - **AC-22 Public Information and Information Sharing:** The system supports the controlled sharing of information with users and partners, ensuring that sharing decisions are made based on the sensitivity of the information and the sharing context.
+      - **AU-11 Audit Record Retention:** By minimizing data duplication, Microsoft Purview Data Sharing aids in efficient audit record retention, ensuring that audit logs are managed in accordance with legal, regulatory, and organizational requirements.
+      - **CM-8 Information System Component Inventory:** Centralized data sharing helps maintain an accurate inventory of data assets, as it reduces unnecessary data duplication and facilitates better management of information system components.
+      - **SA-9 External Information System Services:** Microsoft Purview Data Sharing enables organizations to securely use external services for data sharing, ensuring that the service agreements align with organizational security requirements.
