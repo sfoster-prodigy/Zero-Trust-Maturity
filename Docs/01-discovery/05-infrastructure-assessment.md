@@ -138,7 +138,7 @@ Questions in the following sections are designed to help us understand a clients
       - SC-28 Protection of Information at Rest: Automated classification aids in applying protective measures for information stored in systems, ensuring data is encrypted and safeguarded according to its sensitivity.
       - CM-8 Information System Component Inventory: Automated discovery contributes to maintaining an accurate inventory of system components by identifying and classifying data assets across the data estate.
 
-**Is a system for automated discovery and classification of application data implemented across the organizations data estate?**
+**Has the organization implemented a system for automated discovery and classification of application data across the entire data estate?**
   - **Legacy:** The organization has not implemented an automated system for the discovery and classification of application data, leading to potential inefficiencies and security risks. This absence means sensitive application data may be inadequately protected, and compliance with data protection regulations may be compromised.
       - Indicators:
           - No deployment of automated discovery and classification systems for application data, resulting in manual or inconsistent data handling processes.
@@ -529,7 +529,7 @@ Questions in the following sections are designed to help us understand a clients
           - Proactive and comprehensive management of data sharing activities, underpinned by robust governance mechanisms, automated workflows, and a unified data sharing policy framework, significantly enhancing the organization's data sharing capabilities and overall data management strategy.
 
   - **Relevance to NIST SP 800-53 Revision 5:**
-      - **AC-22 Public Information and Information Sharing:** The system supports the controlled sharing of information with users and partners, ensuring that sharing decisions are made based on the sensitivity of the information and the sharing context.
-      - **AU-11 Audit Record Retention:** By minimizing data duplication, Microsoft Purview Data Sharing aids in efficient audit record retention, ensuring that audit logs are managed in accordance with legal, regulatory, and organizational requirements.
-      - **CM-8 Information System Component Inventory:** Centralized data sharing helps maintain an accurate inventory of data assets, as it reduces unnecessary data duplication and facilitates better management of information system components.
-      - **SA-9 External Information System Services:** Microsoft Purview Data Sharing enables organizations to securely use external services for data sharing, ensuring that the service agreements align with organizational security requirements.
+      - AC-22 Public Information and Information Sharing: The system supports the controlled sharing of information with users and partners, ensuring that sharing decisions are made based on the sensitivity of the information and the sharing context.
+      - AU-11 Audit Record Retention: By minimizing data duplication, Microsoft Purview Data Sharing aids in efficient audit record retention, ensuring that audit logs are managed in accordance with legal, regulatory, and organizational requirements.
+      - CM-8 Information System Component Inventory: Centralized data sharing helps maintain an accurate inventory of data assets, as it reduces unnecessary data duplication and facilitates better management of information system components.
+      - SA-9 External Information System Services: Microsoft Purview Data Sharing enables organizations to securely use external services for data sharing, ensuring that the service agreements align with organizational security requirements.
