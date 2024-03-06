@@ -52,59 +52,85 @@ Questions in the following sections are designed to help us understand a clients
             - Increased vulnerability to advanced threats, compromised identities, and malicious insider actions due to inadequate monitoring and detection capabilities.
             - Challenges in proactively securing the organization against targeted cyber attacks and insider threats, impacting overall security posture.
 
-    - Initial:
+    - Initial: Initial efforts have been made to deploy Microsoft Defender for Identity and Advanced Threat Analytics for monitoring specific segments of the IT environment. While this phase marks the beginning of adopting advanced threat detection practices, comprehensive coverage and consistent application of these solutions across the organization may still be under development.
         - Indicators:
-            - 
+            - Partial implementation of Microsoft Defender for Identity and Advanced Threat Analytics, focusing on high-priority areas or specific user groups.
+            - Initial improvements in detecting advanced threats and compromised identities, though organization-wide detection capabilities are not yet achieved.
+            - Some enhancement in the organization's ability to respond to security incidents, with ongoing efforts to expand and optimize threat detection and identity protection strategies.
 
-    - Advanced:
+    - Advanced: Microsoft Defender for Identity and Advanced Threat Analytics are broadly implemented, significantly improving the organization's capability to detect, investigate, and respond to advanced threats, compromised identities, and insider actions. This advanced tier reflects a mature approach to security monitoring, ensuring comprehensive protection against sophisticated cyber threats.
         - Indicators:
-            - 
+            - Broad adoption of Microsoft Defender for Identity and Advanced Threat Analytics, facilitating comprehensive signal collection and threat detection.
+            - Enhanced security measures in place, supported by consistent and effective monitoring of user and entity behaviors.
+            - Significant progress toward mitigating potential security breaches and insider threats, bolstered by robust detection and response capabilities.
 
-    - Optimal:
+    - Optimal: Microsoft Defender for Identity and Advanced Threat Analytics solutions are fully developed, operationalized, and integrated into the organization’s overall security and risk management strategies. This optimal scenario ensures the highest level of protection against advanced threats, compromised identities, and malicious insider actions.
         - Indicators:
-            - 
+            - Universal and strategic implementation of advanced threat detection and identity protection solutions across all IT environments.
+            - Comprehensive and proactive management of security threats, enhancing organizational resilience against cyber attacks and insider threats.
+            - Full compliance with security standards and regulations, underpinned by an effective and well-managed threat detection and response system.
 
     - Relevance to NIST SP 800-53 Revision 5:
-        - 
+        - SI-4 Information System Monitoring: These solutions support the continuous monitoring of information systems for unauthorized access, use, and anomalies, enhancing the detection of advanced threats and compromised identities.
+        - AU-6 Audit Review, Analysis, and Reporting: The signal collection and analysis capabilities of Microsoft Defender for Identity and Advanced Threat Analytics aid in the review and analysis of audit records, contributing to the identification of potential security incidents.
+        - AC-2 Account Management: Implementing identity protection measures supports effective account management practices by identifying and responding to compromised credentials and insider threats, ensuring accounts are managed securely.
+        - IR-4 Incident Handling: The solutions enhance incident handling processes by providing timely detection of and response to advanced threats, facilitating rapid containment, eradication, and recovery from incidents.
 
 #### Leverage Microsoft Sentinel for integrated SIEM and SOAR capabilities across the enterprise
 
 **Has the organization integrated signals from Defender for Cloud, Defender for Identity, Advanced Threat Analytics, and other monitoring systems with Microsoft Sentinel to provide the Security Operations Center (SOC) with a comprehensive, single-pane-of-glass view for monitoring security events across the enterprise?**
-    - Legacy:
-        - Indicators:
-            - 
+    - Legacy: The organization has not integrated its security monitoring systems, including Defender for Cloud, Defender for Identity, Advanced Threat Analytics, with Microsoft Sentinel. This lack of integration results in siloed security monitoring efforts, potentially leading to missed threats and inefficient incident response due to fragmented visibility across the security landscape.
+        - Indicators: 
+            - Absence of centralized security event monitoring, leading to disjointed and less effective security operations.
+            - Increased risk of delayed threat detection and response due to the lack of a unified monitoring view.
+            - Challenges in managing and correlating security events across various platforms and systems, impacting the overall effectiveness of the SOC.
 
-    - Initial:
-        - Indicators:
-            - 
+    - Initial: Initial steps have been made to integrate some security monitoring systems with Microsoft Sentinel, providing the SOC with improved visibility into security events within selected environments. While this phase marks the beginning of consolidating security event monitoring, full integration and comprehensive visibility across all enterprise systems may still be under development.
+        - Indicators: 
+            - Partial integration of security monitoring systems with Microsoft Sentinel, focusing on high-priority areas or specific security solutions.
+            - Initial improvements in centralized monitoring and incident response capabilities, though comprehensive enterprise-wide visibility is not yet achieved.
+            - Some enhancement in the SOC’s ability to detect and respond to security threats, with ongoing efforts to expand the scope of integration with Microsoft Sentinel.
 
-    - Advanced:
-        - Indicators:
-            - 
+    - Advanced: A broad range of security monitoring systems, including Defender for Cloud, Defender for Identity, and Advanced Threat Analytics, are integrated with Microsoft Sentinel, significantly improving the SOC's visibility and response capabilities across the enterprise. This advanced tier reflects a mature approach to security event monitoring, ensuring effective threat detection and incident management through a unified platform.
+        - Indicators: 
+            - Broad integration of security monitoring systems with Microsoft Sentinel, facilitating comprehensive visibility into security events across the enterprise.
+            - Enhanced SOC efficiency and effectiveness in threat detection, analysis, and response, supported by a single-pane-of-glass monitoring view.
+            - Significant progress toward optimizing security operations and incident management, bolstered by integrated analytics and automated response capabilities.
 
-    - Optimal:
-        - Indicators:
-            - 
+    - Optimal: The organization has fully integrated Microsoft Defender for Cloud, Defender for Identity, Advanced Threat Analytics, and other monitoring systems with Microsoft Sentinel, achieving a comprehensive and unified view for monitoring security events across the entire enterprise. This optimal scenario ensures the highest level of operational efficiency and effectiveness in the SOC, leveraging advanced analytics and automation for proactive security management.
+        - Indicators: 
+            - Universal and strategic integration of all relevant security monitoring systems with Microsoft Sentinel, covering all aspects of the enterprise security landscape.
+            - Comprehensive and consistent operational visibility, enabling proactive and efficient security threat detection, investigation, and response.
+            - Full realization of SOC capabilities in managing enterprise security, underpinned by an effective, centralized security event monitoring and management system.
+
+    - Relevance to NIST SP 800-53 Revision 5:
+        - SI-4 Information System Monitoring: Integrating diverse security signals into Microsoft Sentinel supports the continuous monitoring of information systems for unauthorized access, use, anomalies, and other cybersecurity-related events, aligning with SI-4 requirements.
+        - IR-4 Incident Handling: The consolidation of security event monitoring with Microsoft Sentinel enhances the organization's incident handling capabilities by providing a centralized platform for incident detection, analysis, response, and reporting.
+        - AU-6 Audit Review, Analysis, and Reporting: The centralized view offered by Microsoft Sentinel facilitates the review, analysis, and reporting of audit records, contributing to effective audit management and analysis aligned with AU-6.
+        - CA-7 Continuous Monitoring: The integration supports the establishment of a continuous monitoring strategy that assesses security controls and risks, leveraging Microsoft Sentinel's analytics and automation capabilities for real-time security insights.
 
 ### Every workload is assigned an app identity—and configured and deployed consistently
 #### Every server and supported PaaS resource type (e.g. Azure SQL, KeyVault, etc.)  is assigned a managed identity
 
 **Has the organization assigned a managed identity to every server and supported PaaS resource type?**
-    - Legacy:
-        - Indicators:
+    - Legacy: 
+        - Indicators: 
             - 
 
-    - Initial:
-        - Indicators:
+    - Initial: 
+        - Indicators: 
             - 
 
-    - Advanced:
-        - Indicators:
+    - Advanced: 
+        - Indicators: 
             - 
 
-    - Optimal:
-        - Indicators:
+    - Optimal: 
+        - Indicators: 
             - 
+
+    - Relevance to NIST SP 800-53 Revision 5:
+        - 
 
 #### Implement and enforce policy-driven workloads and resources
 
@@ -125,6 +151,9 @@ Questions in the following sections are designed to help us understand a clients
         - Indicators:
             - 
 
+    - Relevance to NIST SP 800-53 Revision 5:
+        - 
+
 ### Human access to resources requires Just-In-Time
 #### Implement a protect the administrator program
 
@@ -144,6 +173,9 @@ Questions in the following sections are designed to help us understand a clients
     - **Optimal:**
         - Indicators:
             - 
+
+    - Relevance to NIST SP 800-53 Revision 5:
+        - 
 
 ##### References
 https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elevated-privilege-accounts-at-microsoft/?OCID=InsideTrack_Search
@@ -169,6 +201,9 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
         - Indicators:
             - 
 
+    - Relevance to NIST SP 800-53 Revision 5:
+        - 
+
 ### Granular visibility and access control are available across workloads
 #### Metrics, logs, and scaling efficiency
 
@@ -189,6 +224,9 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
         - Indicators:
             - 
 
+    - Relevance to NIST SP 800-53 Revision 5:
+        - 
+
 #### Role-Based Access Control (RBAC) for efficient permissions management across Workloads
 
 **Has the organization implemented Role-Based Access Control (RBAC) to manage access permissions uniformly across individual and group levels for diverse workloads, using both built-in and custom roles?**
@@ -208,6 +246,8 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
         - Indicators:
             - 
 
+    - Relevance to NIST SP 800-53 Revision 5:
+        - 
 
 ### User and resource access segmented for each workload
 #### Utilize VNets, NSGs, ASGs, and Azure Firewalls for enhanced workload access management
