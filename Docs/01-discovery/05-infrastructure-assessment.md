@@ -135,47 +135,69 @@ Questions in the following sections are designed to help us understand a clients
 #### Implement and enforce policy-driven workloads and resources
 
 **Has the organization implemented and enforced policies that govern the creation of resources and workloads, including requirements for tagging, resource group assignments, and technical specifications such as allowed regions, VM types, disks, and network policies?**
-    - **Legacy:**
-        - Indicators:
-            - 
+    - **Legacy:** The organization lacks formalized policies governing the creation, configuration, and deployment of cloud resources and workloads. This absence of governance policies leads to inconsistent resource provisioning, potential misconfigurations, and increased security and compliance risks.
+        - Indicators: 
+            - No established policies for resource provisioning, leading to ad hoc and unregulated creation of cloud resources.
+            - Increased vulnerability due to inconsistent resource configurations and deployments.
+            - Challenges in achieving compliance and maintaining security standards across cloud environments due to the lack of standardized provisioning practices.
 
-    - **Initial:**
-        - Indicators:
-            - 
+    - **Initial:** Initial efforts have been made to develop policies governing the creation of resources and workloads, including basic requirements for tagging, resource group assignments, and certain technical specifications. While this phase marks the beginning of establishing governance practices, comprehensive policy coverage and enforcement across all cloud resources may still be under development.
+        - Indicators: 
+            - Partial implementation of governance policies, focusing on high-priority areas or specific types of cloud resources.
+            - Initial improvements in resource provisioning consistency, though not fully realized across the entire cloud infrastructure.
+            - Some enhancement in security and compliance posture, with ongoing efforts to expand and standardize governance policies for resource creation and deployment.
 
-    - **Advanced:**
-        - Indicators:
-            - 
+    - **Advanced:** Policies governing the creation, configuration, and deployment of cloud resources and workloads are broadly implemented and enforced, significantly improving the consistency and security of resource provisioning. This advanced tier reflects a mature approach to cloud resource governance, ensuring compliance with technical specifications, tagging policies, and deployment standards.
+        - Indicators: 
+            - Broad adoption and enforcement of comprehensive governance policies across cloud resources and workloads.
+            - Enhanced security and compliance measures in place, supported by consistent application of resource provisioning policies.
+            - Significant progress toward mitigating risks associated with resource misconfiguration and unauthorized deployments, bolstered by robust governance practices.
 
-    - **Optimal:**
-        - Indicators:
-            - 
+    - **Optimal:** Governance policies for the creation of resources and workloads are fully developed, operationalized, and integrated into the organization’s cloud management strategy. This optimal scenario ensures comprehensive and consistent governance of cloud resource provisioning, meeting all technical specifications, compliance requirements, and security standards.
+        - Indicators: 
+            - Universal and strategic implementation of governance policies, covering all aspects of cloud resource creation, configuration, and deployment.
+            - Comprehensive management and oversight of cloud resources, enhancing overall infrastructure security, compliance, and operational efficiency.
+            - Full alignment with industry best practices and regulatory standards, underpinned by an effective and well-managed cloud governance framework.
 
     - Relevance to NIST SP 800-53 Revision 5:
-        - 
+        - M-2 Baseline Configuration: Governance policies support the establishment of baseline configurations for cloud resources, ensuring that systems are deployed consistently in accordance with organizational security standards.
+        - CM-7 Least Functionality: By defining allowed regions, VM types, disks, and network policies, governance policies enforce the principle of least functionality, minimizing the attack surface by limiting resource capabilities to only those necessary for operational needs.
+        - RA-5 Vulnerability Scanning: Governance policies that include technical specifications and configuration requirements facilitate vulnerability scanning by ensuring that resources are deployed in a manner that supports effective security assessments.
+        - SA-10 Developer Configuration Management: The enforcement of resource creation policies supports developer configuration management by providing clear guidelines for the provisioning and deployment of cloud workloads, aligning with secure development practices.
 
 ### Human access to resources requires Just-In-Time
 #### Implement a protect the administrator program
 
-**Has the organization implemented a protect the administrator program, including measures such as granting just-in-time (JIT) access, auditing elevated permissions, creating High-Value Asset zones, and providing secure admin workstations, to enhance oversight and security of administrative permissions?**
-    - **Legacy:**
+**Has the organization implemented a protect the administrator program, including measures such as granting just-in-time (JIT) access, auditing elevated permissions, creating high-value asset zones, and providing secure admin workstations, to enhance oversight and security of administrative permissions?**
+    - **Legacy:** The organization lacks a comprehensive protect the administrator program. Administrative access is not tightly controlled, leading to potential security vulnerabilities due to the overprovisioning of permissions and inadequate monitoring of administrative activities.
         - Indicators:
-            - 
+            - Absence of just-in-time (JIT) access mechanisms and secure admin workstations.
+            - Lack of systematic auditing of elevated permissions and high-value asset zones.
+            - Increased risk of insider threats and external attacks due to loosely managed administrative permissions.
 
-    - **Initial:**
+    - **Initial:** Initial steps have been taken to implement aspects of a protect the administrator program, such as granting JIT access or auditing elevated permissions for certain systems or administrators. Comprehensive coverage, including all components like high-value asset zones and secure admin workstations, may still be under development.
         - Indicators:
-            - 
+            - Partial deployment of protect the administrator measures, focusing on high-risk areas or key administrative roles.
+            - Initial improvements in securing administrative access and activities, though not fully realized across the organization.
+            - Some enhancement in oversight and security of administrative permissions, with ongoing efforts to expand and optimize the protect the administrator program.
 
-    - **Advanced:**
+    - **Advanced:** A comprehensive protect the administrator program is broadly implemented, significantly improving the oversight and security of administrative permissions. This includes JIT access, rigorous auditing of elevated permissions, dedicated high-value asset zones, and secure admin workstations across the organization.
         - Indicators:
-            - 
+            - Broad adoption of JIT access mechanisms, secure admin workstations, and auditing practices for elevated permissions.
+            - Enhanced security measures in place for administrative access, supported by consistent application of protect the administrator policies.
+            - Significant progress toward minimizing security risks associated with administrative permissions, bolstered by robust access control and monitoring practices.
 
-    - **Optimal:**
+    - **Optimal:** The protect the administrator program is fully developed, operationalized, and integrated into the organization’s overall security strategy. This optimal scenario ensures the highest level of oversight and security for administrative permissions, leveraging JIT access, secure admin workstations, and other advanced measures comprehensively.
         - Indicators:
-            - 
+            - Universal and strategic implementation of protect the administrator measures across all systems and administrative roles.
+            - Comprehensive management and security of administrative permissions, enhancing organizational resilience against security threats.
+            - Full alignment with best practices and regulatory standards for administrative access, underpinned by an effective and well-managed security framework.
 
     - Relevance to NIST SP 800-53 Revision 5:
-        - 
+        - AC-2 Account Management: This control is supported by JIT access and the auditing of elevated permissions, ensuring that accounts are managed according to the least privilege and need-to-know principles.
+        - AC-6 Least Privilege: Implementing JIT access helps enforce the principle of least privilege by granting administrative access only when needed, for a limited duration.
+        - AC-17 Remote Access: Secure admin workstations are an aspect of controlling remote access, ensuring that administrative tasks are performed from systems with enhanced security.
+        - AU-12 Audit Generation: The auditing of elevated permissions aligns with the requirement to generate audit records for key events, including the use of administrative privileges, to support effective analysis and monitoring.
 
 ##### References
 https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elevated-privilege-accounts-at-microsoft/?OCID=InsideTrack_Search
