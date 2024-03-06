@@ -15,6 +15,7 @@ Questions in the following sections are designed to help us understand a clients
 #### Activate Microsoft Defender for Cloud and its comprehensive protection plans 
 
 **Has the organization enabled Microsoft Defender for Cloud along with its specific protection plans for servers, storage, containers, SQL, and other supported resource types to enhance security measures?**
+
     - Legacy: The organization has not implemented Microsoft Defender for Cloud or its specific protection plans, leading to potential vulnerabilities in cloud infrastructure and resources. This absence of comprehensive security monitoring and threat protection measures may result in increased risk of cyberattacks and security breaches.
         - Indicators:
             - No deployment of Microsoft Defender for Cloud to monitor and protect servers, storage, containers, SQL, and other resource types.
@@ -274,6 +275,7 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
 #### Role-Based Access Control (RBAC) for efficient permissions management across Workloads
 
 **Has the organization implemented Role-Based Access Control (RBAC) to manage access permissions uniformly across individual and group levels for diverse workloads, using both built-in and custom roles?**
+
 - **Legacy:** The organization lacks a comprehensive RBAC system, leading to potential inconsistencies in access management and increased security risks due to overprivileged accounts or unauthorized access. This absence of structured access control may result in non-compliance with security policies and standards.
     - Indicators: 
         - No systematic use of RBAC or reliance on ad hoc, manual access management processes.
