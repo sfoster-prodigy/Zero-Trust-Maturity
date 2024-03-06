@@ -331,3 +331,9 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
             - Strategic and universal application of network segmentation features to ensure comprehensive isolation and access control across all Azure workloads.
             - Comprehensive management of network traffic, enhancing organizational resilience against network-based threats.
             - Full alignment with network security best practices and compliance requirements, underpinned by a well-managed and effective Azure network segmentation framework.
+
+    - Relevance to NIST SP 800-53 Revision 5:
+        - SC-7 Boundary Protection: Utilizing VNets, NSGs, and Azure Firewalls supports the enforcement of boundary protections, controlling the flow of information between networks under different levels of trust.
+        - AC-4 Information Flow Enforcement: Network segmentation practices, such as the use of ASGs and VNet peering, aid in enforcing approved authorizations for controlling the flow of information within the system and between interconnected systems.
+        - SC-32 Network Segmentation: The strategic implementation of network segmentation using Azure's capabilities directly supports the principles of network segmentation, enhancing security by isolating system components into separate security zones.
+        - AC-3 Access Enforcement: The application of NSGs and ASGs enables the enforcement of approved access decisions to resources and services, aligning with the requirement to restrict access based on the application of policy rules.
