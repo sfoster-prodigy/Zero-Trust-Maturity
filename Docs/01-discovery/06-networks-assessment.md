@@ -207,7 +207,7 @@ Questions in the following sections are designed to help us understand a clients
     - RA-5 Vulnerability Scanning: While primarily focused on vulnerabilities, Azure DDoS Protection's monitoring and analysis capabilities can aid in identifying potential DDoS vulnerabilities and traffic patterns that may indicate an impending attack, supporting the organization's vulnerability management processes.
 
 ### All traffic is encrypted
-
+####
 
 ### Discontinue legacy network security technology
 ####
