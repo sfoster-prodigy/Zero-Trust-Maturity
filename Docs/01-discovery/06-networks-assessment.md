@@ -176,6 +176,7 @@ Questions in the following sections are designed to help us understand a clients
 
 #### Enhance security with Azure DDoS protection
 **Has the organization enhanced its security posture by activating Azure DDoS Protection Standard to monitor Azure-hosted application traffic, utilize ML-based frameworks for detecting volumetric traffic floods, and implement automatic mitigations, including configuring alerts for DDoS protection metrics?**
+
 - **Legacy:** The organization lacks Azure DDoS Protection Standard or similar DDoS protection measures, leading to potential vulnerabilities to DDoS attacks. This absence of DDoS protection can result in increased risk of service disruption and compromised application availability.
     - Indicators: 
           - No deployment of Azure DDoS Protection Standard or utilization of ML-based detection frameworks for network traffic.
@@ -207,11 +208,105 @@ Questions in the following sections are designed to help us understand a clients
     - RA-5 Vulnerability Scanning: While primarily focused on vulnerabilities, Azure DDoS Protection's monitoring and analysis capabilities can aid in identifying potential DDoS vulnerabilities and traffic patterns that may indicate an impending attack, supporting the organization's vulnerability management processes.
 
 ### All traffic is encrypted
-####
+#### Enforcing HTTPS-Only Communication with Azure Front Door
+
+**Has the organization secured its internet-facing web applications by enforcing HTTPS-only communication, redirecting HTTP traffic to HTTPS using Azure Front Door?**
+
+- **Legacy:** 
+    - Indicators: 
+          - 
+
+- **Initial:** 
+    - Indicators: 
+        - 
+
+- **Advanced:** 
+    - Indicators: 
+        - 
+
+- **Optimal:** 
+    - Indicators: 
+        - 
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
+
+#### Utilizing Azure VPN Gateway for Secure Employee and Partner Access
+
+**Has the organization facilitated secure access for remote employees and partners by implementing the Azure VPN Gateway, ensuring encryption for point-to-site traffic?**
+
+- **Legacy:** 
+    - Indicators: 
+          - 
+
+- **Initial:** 
+    - Indicators: 
+        - 
+
+- **Advanced:** 
+    - Indicators: 
+        - 
+
+- **Optimal:** 
+    - Indicators: 
+        - 
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
+#### Encrypted Connections through Azure Bastion for SSH and RDP
+
+**Has the organization implemented secure access to Azure virtual machines through encrypted communication using Azure Bastion, including SSH connections for Linux VMs and RDP for Windows VMs?**
+
+- **Legacy:** 
+    - Indicators: 
+          - 
+
+- **Initial:** 
+    - Indicators: 
+        - 
+
+- **Advanced:** 
+    - Indicators: 
+        - 
+
+- **Optimal:** 
+    - Indicators: 
+        - 
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
 
 ### Discontinue legacy network security technology
-####
-****
+#### Moving Beyond Legacy NIDS/NIPS in Cloud Environments
+
+**Has the organization moved beyond the use of legacy Network Intrusion Detection/Prevention Systems (NIDS/NIPS), considering the major cloud service providers' capabilities to filter common network layer attacks and the limitations of signature-based detection methods?**
+
+- **Legacy:** 
+    - Indicators: 
+          - 
+
+- **Initial:** 
+    - Indicators: 
+        - 
+
+- **Advanced:** 
+    - Indicators: 
+        - 
+
+- **Optimal:** 
+    - Indicators: 
+        - 
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
+#### The Diminishing Effectiveness of Network-Based DLP and the Shift Away from SSL-Bridging
+
+**Has the organization recognized the decreasing effectiveness of network-based Data Loss Prevention (DLP) due to network-level encryption and moved away from relying on SSL-bridging techniques, while exploring alternative security measures for data protection in the cloud environment?**
+
+
 - **Legacy:** 
     - Indicators: 
           - 
