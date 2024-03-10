@@ -212,116 +212,171 @@ Questions in the following sections are designed to help us understand a clients
 
 **Has the organization secured its internet-facing web applications by enforcing HTTPS-only communication, redirecting HTTP traffic to HTTPS using Azure Front Door?**
 
-- **Legacy:** 
+- **Legacy:** The organization has not enforced HTTPS-only communication for its internet-facing web applications, potentially allowing traffic over unsecured HTTP. This lack of enforced secure communication protocols increases the risk of data interception and compromises the confidentiality and integrity of data in transit.
     - Indicators: 
-          - 
+          - Internet-facing web applications accessible over HTTP without automatic redirection to HTTPS.
+          - Increased vulnerability to man-in-the-middle (MITM) attacks and data breaches due to unencrypted data transmission.
+          - Challenges in ensuring data protection and maintaining user trust due to the absence of secure communication practices.
 
-- **Initial:** 
+- **Initial:** Initial efforts have been made to implement HTTPS-only communication for key internet-facing web applications, possibly using Azure Front Door for some applications to redirect HTTP traffic to HTTPS. While this phase marks the beginning of adopting secure communication protocols, comprehensive coverage and consistent enforcement across all web applications may still be under development.
     - Indicators: 
-        - 
+        - Partial deployment of HTTPS enforcement and HTTP to HTTPS redirection using Azure Front Door for select web applications.
+        - Initial improvements in securing data in transit and enhancing application security, though not uniformly applied across all internet-facing applications.
+        - Some enhancement in the organization's web application security posture, with ongoing efforts to expand HTTPS enforcement and redirection.
 
-- **Advanced:** 
+- **Advanced:** HTTPS-only communication is broadly enforced across all internet-facing web applications, with Azure Front Door effectively redirecting HTTP traffic to HTTPS. This advanced tier reflects a mature approach to securing web applications, ensuring encrypted communication and protecting data integrity and confidentiality.
     - Indicators: 
-        - 
+        - Comprehensive adoption of HTTPS enforcement and HTTP to HTTPS redirection for all internet-facing web applications via Azure Front Door.
+        - Enhanced protection against data interception and security threats, supported by encrypted communication channels.
+        - Significant progress toward ensuring a secure web application environment, bolstered by consistent application of secure communication protocols.
 
-- **Optimal:** 
+- **Optimal:** The enforcement of HTTPS-only communication for internet-facing web applications, complemented by HTTP to HTTPS redirection via Azure Front Door, is fully developed, operationalized, and integrated into the organization's web security strategy. This optimal scenario ensures the highest level of data protection and application security through mandatory encrypted communication.
     - Indicators: 
-        - 
+        - Strategic and universal application of HTTPS enforcement and HTTP to HTTPS redirection across all internet-facing web applications.
+        - Comprehensive management of web application security, enhancing data confidentiality, integrity, and trust.
+        - Full alignment with best practices for secure communication and compliance requirements, supported by an effective and well-managed implementation of Azure Front Door.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - SC-8 Transmission Confidentiality and Integrity: Enforcing HTTPS for web applications ensures that data transmitted over the network is protected through encryption, aligning with the control requirements for confidentiality and integrity of information in transit.
+    - SC-23 Data in Transit Protection: Redirecting HTTP to HTTPS using Azure Front Door supports the protection of data in transit, ensuring that all communications are encrypted and secure from unauthorized disclosure and modification.
+    - AC-17 Remote Access: The implementation of HTTPS enforcement relates to secure remote access to the organization's services, providing secure communication channels for remote users accessing internet-facing web applications.
+    - SC-13 Cryptographic Protection: The use of HTTPS involves cryptographic protocols to secure communications over the network, supporting the requirements for applying cryptographic protection to information deemed sensitive or at risk.
 
 
 #### Utilizing Azure VPN Gateway for Secure Employee and Partner Access
 
 **Has the organization facilitated secure access for remote employees and partners by implementing the Azure VPN Gateway, ensuring encryption for point-to-site traffic?**
 
-- **Legacy:** 
+- **Legacy:** The organization has not implemented Azure VPN Gateway or similar technologies for remote access, leading to potential risks associated with unsecured remote connections. This lack of secure remote access infrastructure increases the risk of data interception and compromises the confidentiality and integrity of data in transit.
     - Indicators: 
-          - 
+          - Absence of a secure remote access solution, resulting in unencrypted point-to-site traffic.
+          - Increased vulnerability to cyber threats due to the lack of encrypted communication channels for remote access.
+          - Challenges in ensuring data protection and maintaining operational security for remote employees and partners.
 
-- **Initial:** 
+- **Initial:** Initial efforts have been made to deploy Azure VPN Gateway for some remote access needs, focusing on key user groups or applications. While this phase marks the beginning of adopting encrypted remote access solutions, comprehensive coverage and optimization of VPN configurations for all remote employees and partners may still be under development.
     - Indicators: 
-        - 
+        - Partial implementation of Azure VPN Gateway, providing encrypted point-to-site traffic for select scenarios.
+        - Initial improvements in securing remote access, though not uniformly applied across all remote connections.
+        - Some enhancement in the organization’s remote access security posture, with ongoing efforts to expand and standardize the use of Azure VPN Gateway.
 
-- **Advanced:** 
+- **Advanced:** Azure VPN Gateway is broadly implemented, significantly improving secure access for remote employees and partners by ensuring encryption for all point-to-site traffic. This advanced tier reflects a mature approach to remote access security, ensuring that all remote connections are protected by encryption.
     - Indicators: 
-        - 
+        - Comprehensive adoption of Azure VPN Gateway, facilitating encrypted remote access across the organization.
+        - Enhanced protection against data interception and unauthorized access, supported by robust encryption measures for all remote connections.
+        - Significant progress toward securing the remote workforce and partner access, bolstered by consistent and comprehensive VPN deployment.
 
-- **Optimal:** 
+- **Optimal:** The deployment of Azure VPN Gateway for secure remote access is fully developed, operationalized, and integrated into the organization’s overall network security strategy. This optimal scenario ensures the highest level of protection for remote access, with all point-to-site traffic encrypted and securely managed.
     - Indicators: 
-        - 
+        - Strategic and universal application of Azure VPN Gateway to secure remote access for all employees and partners.
+        - Comprehensive management of remote access security, enhancing data confidentiality, integrity, and operational continuity.
+        - Full alignment with remote access security best practices and compliance requirements, supported by an effective and well-managed encrypted remote access solution.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - AC-17 Remote Access: Azure VPN Gateway supports secure remote access control by providing encrypted communication channels for remote employees and partners, ensuring that remote access is managed and controlled in line with organizational security policies.
+    - SC-8 Transmission Confidentiality and Integrity: Implementing encrypted point-to-site VPN connections via Azure VPN Gateway ensures that data transmitted over remote access sessions is protected, maintaining the confidentiality and integrity of data in transit.
+    - SC-13 Cryptographic Protection: The use of Azure VPN Gateway involves cryptographic protocols to secure remote communications, aligning with the requirements for cryptographic protection of information.
+    - AC-4 Information Flow Enforcement: Azure VPN Gateway aids in enforcing approved authorizations for controlling the flow of information within the organization and to external partners, ensuring that remote access communications comply with established information flow policies.
 
 #### Encrypted Connections through Azure Bastion for SSH and RDP
 
 **Has the organization implemented secure access to Azure virtual machines through encrypted communication using Azure Bastion, including SSH connections for Linux VMs and RDP for Windows VMs?**
 
-- **Legacy:** 
+- **Legacy:** The organization has not utilized Azure Bastion for securing access to Azure virtual machines. This absence of a centralized, secure access solution may lead to reliance on less secure methods for remote access, increasing the risk of exposure to cyber threats and compromising the confidentiality and integrity of data in transit.
     - Indicators: 
-          - 
+          - Direct exposure of VMs to the internet for SSH/RDP access without leveraging Azure Bastion's encrypted communication channels.
+          - Increased vulnerability to network-based attacks and potential unauthorized access due to unsecured remote access points.
+          - Challenges in managing secure access and ensuring encryption of communication for remote administrative tasks.
 
-- **Initial:** 
+- **Initial:** Initial efforts have been made to deploy Azure Bastion for secure access to a subset of Azure virtual machines, focusing on critical systems or environments. While this phase marks the beginning of adopting Azure Bastion, comprehensive coverage and optimization for secure and encrypted access across all VMs may still be under development.
     - Indicators: 
-        - 
+        - Partial implementation of Azure Bastion, providing secure, encrypted access for select Linux and Windows VMs.
+        - Initial improvements in secure remote access and encrypted communication, though not uniformly applied across all virtual machines.
+        - Some enhancement in the organization’s remote access security posture, with ongoing efforts to expand Azure Bastion deployment for comprehensive coverage.
 
-- **Advanced:** 
+- **Advanced:** Azure Bastion is broadly implemented, significantly improving secure and encrypted access to both Linux and Windows VMs across the organization. This advanced tier reflects a mature approach to remote VM access, ensuring that all SSH and RDP connections are securely managed and encrypted.
     - Indicators: 
-        - 
+        - Comprehensive adoption of Azure Bastion for encrypted remote access to all relevant Azure VMs.
+        - Enhanced security measures in place, supported by Azure Bastion's seamless integration and encryption capabilities for SSH and RDP connections.
+        - Significant progress toward minimizing risks associated with remote access to VMs, bolstered by consistent application of encrypted communication protocols.
 
-- **Optimal:** 
+- **Optimal:** The deployment of Azure Bastion for secure and encrypted access to Azure virtual machines is fully developed, operationalized, and integrated into the organization’s network security strategy. This optimal scenario ensures the highest level of protection for remote access to VMs, leveraging Azure Bastion's capabilities for encrypted SSH and RDP communications.
     - Indicators: 
-        - 
+        - Strategic and universal application of Azure Bastion, ensuring secure and encrypted access to all Azure VMs.
+        - Comprehensive management of remote VM access security, enhancing protection against unauthorized access and data breaches.
+        - Full alignment with secure access best practices and compliance requirements, underpinned by an effective and well-managed remote access solution.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - AC-17 Remote Access: Azure Bastion supports secure remote access control by providing a protected, encrypted channel for SSH and RDP connections, ensuring that remote access to VMs is managed in accordance with organizational policies.
+    - SC-8 Transmission Confidentiality and Integrity: Using Azure Bastion for encrypted SSH/RDP connections ensures that data transmitted during remote access sessions is protected, maintaining the confidentiality and integrity of data in transit.
+    - SC-13 Cryptographic Protection: The encryption of SSH and RDP communications via Azure Bastion aligns with requirements for applying cryptographic protection to information deemed sensitive or at risk during transmission.
+    - AC-4 Information Flow Enforcement: Azure Bastion aids in enforcing approved authorizations for controlling the flow of information within the system and between interconnected systems, ensuring compliance with established information flow policies during remote VM access.
 
 ### Discontinue legacy network security technology
 #### Moving Beyond Legacy NIDS/NIPS in Cloud Environments
 
 **Has the organization moved beyond the use of legacy Network Intrusion Detection/Prevention Systems (NIDS/NIPS), considering the major cloud service providers' capabilities to filter common network layer attacks and the limitations of signature-based detection methods?**
 
-- **Legacy:** 
+- **Legacy:** The organization predominantly relies on traditional NIDS/NIPS for network security, without fully leveraging the advanced security features offered by major cloud service providers. This reliance on legacy systems may lead to gaps in security coverage due to the limitations of signature-based detection and the evolving nature of cyber threats.
     - Indicators: 
-          - 
+          - Continued use of legacy NIDS/NIPS without significant integration of cloud-native security services.
+          - Potential vulnerabilities due to the limitations of signature-based detection in addressing zero-day attacks and advanced persistent threats (APTs).
+          - Challenges in effectively managing network security within a cloud-centric environment, potentially leading to inefficiencies and reduced detection capabilities.
 
-- **Initial:** 
+- **Initial:** Initial steps have been taken to explore and partially integrate cloud-native security solutions offered by cloud service providers, alongside existing legacy NIDS/NIPS. While this phase marks the beginning of the transition to more modern security approaches, comprehensive adoption and optimization of cloud-native security features may still be under development.
     - Indicators: 
-        - 
+        - Partial deployment of cloud-native security solutions, with ongoing reliance on some traditional NIDS/NIPS.
+        - Initial improvements in network security capabilities through the integration of cloud service provider features, though not fully realized.
+        - Some enhancement in the organization’s ability to address common network layer attacks, with ongoing efforts to move beyond legacy detection methods.
 
-- **Advanced:** 
+- **Advanced:** The organization has significantly adopted cloud-native security solutions, reducing dependence on legacy NIDS/NIPS. This advanced tier reflects a mature approach to network security, leveraging the capabilities of cloud service providers to enhance protection against network layer attacks and address the limitations of signature-based detection.
     - Indicators: 
-        - 
+        - Broad adoption of cloud-native security services, with minimal reliance on traditional NIDS/NIPS.
+        - Enhanced capability to defend against a wider range of cyber threats, supported by advanced detection and prevention techniques offered by cloud service providers.
+        - Significant progress toward a more effective and efficient network security posture, bolstered by the adoption of modern, cloud-centric security solutions.
 
-- **Optimal:** 
+- **Optimal:** The organization has fully transitioned to leveraging cloud-native security solutions, effectively moving beyond legacy NIDS/NIPS. This optimal scenario ensures the highest level of network security, maximizing the benefits of cloud service providers' capabilities for comprehensive protection against network layer attacks.
     - Indicators: 
-        - 
+        - Strategic and universal application of cloud-native security solutions, phasing out traditional NIDS/NIPS.
+        - Comprehensive and proactive network security management, enhancing organizational resilience against emerging and sophisticated cyber threats.
+        - Full alignment with the capabilities and advantages of cloud service providers, supported by an effective and forward-looking network security strategy.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - SI-4 Information System Monitoring: The use of cloud-native security features enhances the monitoring of information systems for unauthorized access, use, anomalies, and cybersecurity threats, supporting the requirements for comprehensive system monitoring.
+    - SC-7 Boundary Protection: Cloud-native security solutions contribute to boundary protection controls by providing advanced mechanisms for monitoring and controlling communications at the network's external and internal boundaries.
+    - SI-3 Malicious Code Protection: Modern cloud security services offer capabilities to protect against malware and other forms of malicious code, addressing the limitations of signature-based detection with more adaptive and behavior-based analysis techniques.
+    - RA-5 Vulnerability Scanning: Cloud service providers often include advanced vulnerability scanning tools that can identify and mitigate vulnerabilities more effectively than traditional NIDS/NIPS, supporting the organization's vulnerability management process.
 
 #### The Diminishing Effectiveness of Network-Based DLP and the Shift Away from SSL-Bridging
 
 **Has the organization recognized the decreasing effectiveness of network-based Data Loss Prevention (DLP) due to network-level encryption and moved away from relying on SSL-bridging techniques, while exploring alternative security measures for data protection in the cloud environment?**
 
 
-- **Legacy:** 
+- **Legacy:** The organization primarily relies on traditional network-based DLP solutions, including SSL-bridging techniques, for data protection. This reliance may result in decreased effectiveness in identifying and preventing data loss due to the increasing use of end-to-end encryption, which obscures data content at the network layer.
     - Indicators: 
-          - 
+        - Continued use of SSL-bridging and network-based DLP solutions without significant adaptation to encrypted network traffic trends.
+        - Potential gaps in data protection capabilities due to the limitations of traditional DLP in environments with pervasive encryption.
+        - Challenges in maintaining comprehensive visibility into data movement and enforcing data protection policies effectively.
 
-- **Initial:** 
+- **Initial:** Initial efforts have been made to evaluate and partially integrate alternative data protection measures suitable for encrypted network environments and cloud platforms. While this phase marks the beginning of transitioning away from legacy DLP methods, comprehensive deployment of modern data protection solutions may still be under development.
     - Indicators: 
-        - 
+        - Partial exploration and adoption of alternative data protection strategies, focusing on cloud-native DLP solutions and encryption-aware security technologies.
+        - Initial improvements in data protection capabilities within encrypted traffic, though not fully realized across all data flows.
+        - Some enhancement in the organization’s ability to protect sensitive data in the cloud, with ongoing efforts to refine and expand alternative security measures.
 
-- **Advanced:** 
+- **Advanced:** The organization has significantly adopted modern data protection measures, moving away from reliance on traditional network-based DLP and SSL-bridging techniques. This advanced tier reflects a mature approach to data protection, effectively addressing the challenges posed by network-level encryption in cloud environments.
     - Indicators: 
-        - 
+        - Comprehensive adoption of alternative security measures for data protection, including cloud-native DLP solutions and encryption-aware technologies.
+        - Enhanced capability to identify and prevent data loss within encrypted network environments, supported by modern data protection strategies.
+        - Significant progress toward ensuring robust data protection in the cloud, bolstered by the adoption of advanced security measures tailored to encrypted traffic.
 
-- **Optimal:** 
+- **Optimal:** The strategic shift from traditional network-based DLP to alternative, modern data protection measures in cloud environments is fully developed, operationalized, and integrated into the organization's overall data security strategy. This optimal scenario ensures the highest level of data protection, leveraging technologies and approaches designed for the complexities of today's encrypted networks.
     - Indicators: 
-        - 
+        - Strategic and universal application of modern data protection solutions, effectively addressing the limitations of legacy DLP in encrypted environments.
+        - Comprehensive management of data security across cloud platforms, enhancing the organization’s resilience against data loss and leakage.
+        - Full alignment with current data protection best practices and compliance requirements, supported by an effective and adaptive data security framework.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - SC-13 Cryptographic Protection: The acknowledgment of network-level encryption challenges highlights the necessity of cryptographic protection measures that can function effectively within encrypted communication channels.
+    - MP-4 Media Protection: Modern data protection measures that adapt to encrypted environments support the safeguarding of sensitive information during electronic storage and transmission.
+    - SC-28 Protection of Information at Rest: The shift towards modern data protection methods includes ensuring that data at rest in cloud environments is securely encrypted, aligning with the control requirements for data protection.
+    - AC-4 Information Flow Enforcement: Modern data protection solutions facilitate the enforcement of approved authorizations for controlling the flow of sensitive information within the system and across interconnected systems, accommodating the constraints posed by encrypted traffic.
