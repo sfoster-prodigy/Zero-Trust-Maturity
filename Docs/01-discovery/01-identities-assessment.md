@@ -12,59 +12,273 @@ Questions in the following sections are designed to help us understand a clients
 
 ## Cloud Identity Federates with On-premises Identity Systems
 
-### Connect all of your users to Microsoft Entra ID and federate with on-premises identity systems:
+### Connect all of your users to Microsoft Entra ID and federate with on-premises identity systems
 
-  - Are Microsoft Entra ID and your existing on-premises identity systems integrated to ensure seamless access for users across environments?
-    - Legacy: Cloud identity is not federated with on-premises Active Directory using Microsoft Entra Connect. Users manage separate identities for cloud and on-premises environments, leading to inefficiencies and increased security risks due to the lack of centralized identity management.
-    - Initial: Cloud identity is federated with on-premises Active Directory using Microsoft Entra Connect pass-through authentication or ADFS integration. This setup allows for real-time authentication requests to be passed directly to the on-premises Active Directory, enabling users to use their existing credentials for cloud services.
-    - Advanced: Cloud identity is federated with on-premises Active Directory using Microsoft Entra Connect password hash synchronization. This approach synchronizes user password hashes from the on-premises Active Directory to the cloud, allowing for rapid authentication without direct access to the on-premises AD at the time of sign-in.
-    - Optimal: Cloud identity is fully integrated with on-premises Active Directory through Microsoft Entra Connect, utilizing both password hash synchronization and seamless SSO with Conditional Access policies. This optimal setup leverages the best aspects of both advanced authentication mechanisms and introduces dynamic access controls based on user behavior, location, device health, and other risk factors. 
-    - Optimal: Cloud identity is fully integrated with on-premises Active Directory through Microsoft Entra Connect, utilizing both password hash synchronization and seamless SSO with Conditional Access policies. This optimal setup leverages the best aspects of both advanced authentication mechanisms and introduces dynamic access controls based on user behavior, location, device health, and other risk factors. 
+**Has the organization integrated Microsoft Entra ID with existing on-premises identity systems to ensure seamless user access across environments?**
+    
+- Legacy: Cloud identity is not federated with on-premises Active Directory using Microsoft Entra Connect. Users manage separate identities for cloud and on-premises environments, leading to inefficiencies and increased security risks due to the lack of centralized identity management.
+    - Indicators:
+        - Separate management of identities for cloud and on-premises access.
+        - Increased potential for security breaches due to inconsistent identity and access management practices.
+        - User experience issues stemming from the need to remember multiple sets of credentials.
 
-  - Is Microsoft Entra ID being utilized to protect against security threats such as brute force, DDoS, and password spray attacks through specific authentication options?
-    - Legacy: Microsoft Entra ID is not actively utilized for protecting against common security threats like brute force, DDoS, and password spray attacks. Authentication mechanisms are basic, lacking advanced security features, leaving systems vulnerable to these types of cyber threats.
-    - Initial: Microsoft Entra ID is used with basic security settings to protect against attacks. Basic MFA is implemented, providing an additional layer of security beyond simple passwords. However, more sophisticated conditional access policies and threat protection mechanisms are not fully exploited.
-    - Advanced: Microsoft Entra ID is leveraged more effectively, utilizing password hash synchronization and advanced MFA options. Conditional access policies are in place, offering protection based on user behavior, device compliance, and sign-in risk. This setup provides solid defense against brute force, DDoS, and password spray attacks.
-    - Optimal: Microsoft Entra ID is fully optimized to protect against security threats, utilizing a comprehensive suite of authentication options and security measures. This includes seamless integration of advanced MFA, adaptive risk-based conditional access, and protection mechanisms specifically designed to thwart brute force, DDoS, and password spray attacks. AI and machine learning algorithms are employed to dynamically adjust security policies and authentication requirements in real-time, based on evolving threat landscapes.
+- Initial: Cloud identity is federated with on-premises Active Directory using Microsoft Entra Connect pass-through authentication or ADFS integration. This setup allows for real-time authentication requests to be passed directly to the on-premises Active Directory, enabling users to use their existing credentials for cloud services.
+    - Indicators:
+        - Implementation of pass-through authentication or ADFS for federating cloud identities with on-premises AD.
+        - Improved user experience by allowing the use of existing on-premises credentials for accessing cloud services.
+        - Enhanced security posture through real-time authentication but without the benefits of password hash synchronization.
 
-  - Are unnecessary on-premises identities, like service accounts or privileged roles, identified and excluded from cloud federation?
-    - Legacy: Unnecessary on-premises identities are not systematically identified or excluded from cloud federation. There is no clear strategy or process in place for assessing which on-premises identities should be federated to the cloud, resulting in potential security vulnerabilities and management inefficiencies.
-    - Initial: Some effort is made to identify unnecessary on-premises identities for exclusion from cloud federation, but the approach is manual and lacks comprehensive coverage. Basic guidelines exist for determining which identities to federate, but these are not applied consistently or thoroughly.
-    - Advanced: A systematic approach is in place to identify and exclude unnecessary on-premises identities from cloud federation. Automated tools and processes are used to regularly audit on-premises identities, with specific criteria for determining which identities are federated to the cloud. Most non-essential service accounts and privileged roles are excluded.
-    - Optimal: Comprehensive and dynamic management of on-premises identities ensures that only necessary identities are federated to the cloud. Advanced automation and intelligence tools are employed to continuously evaluate and adjust which on-premises identities are federated, based on real-time analysis of role necessity, security posture, and usage patterns. Unnecessary service accounts and privileged roles are proactively identified and excluded, ensuring optimal security and efficiency.
+- Advanced: Cloud identity is federated with on-premises Active Directory using Microsoft Entra Connect password hash synchronization. This approach synchronizes user password hashes from the on-premises Active Directory to the cloud, allowing for rapid authentication without direct access to the on-premises AD at the time of sign-in.
+    - Indicators:
+        - Deployment of password hash synchronization for federating cloud identities with on-premises AD.
+        - Users benefit from seamless access to cloud services with their on-premises credentials, enhancing the authentication process's efficiency.
+        - Strengthened security through rapid cloud authentication, leveraging synchronized password hashes.
+
+- Optimal: Cloud identity is fully integrated with on-premises Active Directory through Microsoft Entra Connect, utilizing both password hash synchronization and seamless SSO with Conditional Access policies. This optimal setup leverages the best aspects of both advanced authentication mechanisms and introduces dynamic access controls based on user behavior, location, device health, and other risk factors.
+    - Indicators:
+        - Comprehensive integration of cloud and on-premises identities, utilizing the full suite of Microsoft Entra Connect capabilities.
+        - Deployment of Conditional Access policies that dynamically adapt authentication requirements, significantly enhancing security.
+        - Superior user experience through seamless SSO across environments, bolstered by robust and adaptive security measures.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - AC-2 Account Management: The federation and integration of cloud and on-premises identities support the principles of account management by ensuring that user accounts are managed consistently across environments.
+    - IA-2 Identification and Authentication (Organizational Users): Utilizing Microsoft Entra Connect for seamless identity integration ensures that organizational users are uniquely identified and authenticated, providing secure and efficient access to networked systems.
+    - AC-17 Remote Access: The implementation of seamless SSO and Conditional Access policies enhances secure remote access controls, ensuring that remote connections to the organization’s networks enforce security policies and employ encryption for communications.
+    - AC-14 Permitted Actions Without Identification or Authentication: While typically requiring strict controls, the optimal integration scenario, with advanced SSO and Conditional Access, ensures that any exceptions to identification or authentication requirements are securely managed and based on dynamic assessments of risk.
+
+
+**Has the organization utilized Microsoft Entra ID to protect against security threats like brute force, DDoS, and password spray attacks through specific authentication options?**
+
+- Legacy: The organization has not leveraged Microsoft Entra ID's advanced authentication features to protect against common security threats. Reliance on basic or outdated authentication methods may leave the organization vulnerable to brute force, DDoS, and password spray attacks.
+    - Indicators:
+        - Limited use of advanced authentication mechanisms, increasing susceptibility to common attack vectors.
+        - Increased risk of unauthorized access due to reliance on single-factor or weak authentication methods.
+        - Challenges in effectively defending against targeted attacks and securing user identities, impacting overall security posture.
+
+- Initial: nitial efforts have been made to implement Microsoft Entra ID's authentication features, such as multi-factor authentication (MFA), to protect against specific threats. While this phase marks the beginning of improving security defenses, comprehensive adoption of all available authentication options to counter various threats may still be under development.
+    - Indicators:
+      - Partial deployment of Microsoft Entra ID authentication features, focusing on key systems or user groups.
+      - Initial improvements in security against attacks like brute force and password spray, though not uniformly applied across the organization.
+      - Some enhancement in the organization’s ability to secure access and user identities, with ongoing efforts to leverage full capabilities of Microsoft Entra ID.
+
+- Advanced: Microsoft Entra ID’s authentication features are broadly implemented, significantly improving protection against security threats such as brute force, DDoS, and password spray attacks. This advanced tier reflects a mature approach to authentication security, ensuring robust defenses are in place.
+    - Indicators:
+        - Comprehensive adoption of Microsoft Entra ID’s advanced authentication options, including MFA and conditional access policies.
+        - Enhanced capability to defend against a wide range of cyber threats, supported by strong authentication mechanisms.
+        - Significant progress toward minimizing the risk of unauthorized access and securing user identities, bolstered by effective use of authentication features.
+
+- Optimal: The utilization of Microsoft Entra ID for advanced authentication and threat protection is fully developed, operationalized, and integrated into the organization's identity and access management strategy. This optimal scenario ensures the highest level of security against brute force, DDoS, and password spray attacks, leveraging the full suite of authentication options provided by Microsoft Entra ID.
+    - Indicators:
+        - Strategic and universal application of Microsoft Entra ID’s authentication features to protect against common and sophisticated attacks.
+        - Comprehensive management of identity and access security, enhancing organizational resilience against cyber threats.
+        - Full alignment with security best practices and compliance requirements, supported by an effective and adaptive authentication security framework.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - IA-2 Identification and Authentication (Organizational Users): Leveraging advanced authentication options supports the unique identification and authentication of users, enhancing security controls to protect against unauthorized access.
+    - SC-8 Transmission Confidentiality and Integrity: Implementing strong authentication methods contributes to the protection of information during transmission, safeguarding against interception and unauthorized disclosure.
+    - AC-7 Unsuccessful Login Attempts: Features that protect against brute force and password spray attacks help to monitor and limit unsuccessful login attempts, deterring unauthorized access attempts.
+    - A-4 Identifier Management: Utilizing Microsoft Entra ID aids in managing identifiers by ensuring they are properly issued, maintained, and retired, supporting secure authentication practices.
+
+**Has the organization identified and excluded unnecessary on-premises identities, such as service accounts or privileged roles, from cloud federation?**
+
+- Legacy: Unnecessary on-premises identities are not systematically identified or excluded from cloud federation. There is no clear strategy or process in place for assessing which on-premises identities should be federated to the cloud, resulting in potential security vulnerabilities and management inefficiencies.
+    - Indicators:
+        - Inclusion of all on-premises identities in cloud federation without assessment of necessity or risk.
+        - Potential security risks due to federated service accounts or privileged roles that are not required in the cloud environment.
+        - Challenges in managing federated identities effectively, impacting the overall security posture and access control.
+
+ 
+- Initial: Some effort is made to identify unnecessary on-premises identities for exclusion from cloud federation, but the approach is manual and lacks comprehensive coverage. Basic guidelines exist for determining which identities to federate, but these are not applied consistently or thoroughly.
+    - Indicators:
+        - Partial assessment and management of on-premises identities for federation, focusing on easily identifiable unnecessary accounts or roles.
+        - Initial steps toward reducing the number of unnecessary federated identities, though a systematic approach may not yet be fully implemented.
+        - Some improvement in security and access management for federated environments, with ongoing efforts to refine identity federation practices.
+
+- Advanced: A systematic approach is in place to identify and exclude unnecessary on-premises identities from cloud federation. Automated tools and processes are used to regularly audit on-premises identities, with specific criteria for determining which identities are federated to the cloud. Most non-essential service accounts and privileged roles are excluded.
+    - Indicators:
+        - Comprehensive review and exclusion of unnecessary on-premises identities from cloud federation, including service accounts and privileged roles.
+        - Enhanced security posture through careful management of federated identities, minimizing potential access risks.
+        - Significant progress in optimizing identity federation practices, bolstered by targeted inclusion of on-premises identities.
+
+- Optimal: Comprehensive and dynamic management of on-premises identities ensures that only necessary identities are federated to the cloud. Advanced automation and intelligence tools are employed to continuously evaluate and adjust which on-premises identities are federated, based on real-time analysis of role necessity, security posture, and usage patterns. Unnecessary service accounts and privileged roles are proactively identified and excluded, ensuring optimal security and efficiency.
+    - Indicators:
+        - Strategic and universal application of best practices for identity federation, ensuring only necessary on-premises identities are included.
+        - Comprehensive and proactive management of federated identity risks, enhancing organizational resilience and compliance.
+        - Full alignment with identity management best practices and regulatory requirements, supported by an effective and well-managed federation process.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - AC-2 Account Management: The review and exclusion of unnecessary on-premises identities from cloud federation supports the principle of least privilege, ensuring accounts are managed according to their necessity for business functions.
+    - A-2 Identification and Authentication (Organizational Users): Ensuring that only necessary identities are federated enhances the identification and authentication controls by reducing the potential for unauthorized access.
+    - AC-6 Least Privilege: Carefully managing which on-premises identities are federated to cloud services enforces the least privilege principle, minimizing unnecessary access rights and reducing security risks.
+    - CM-2 Baseline Configuration: The process of identifying and excluding unnecessary federated identities contributes to maintaining a secure baseline configuration, ensuring that only approved identities have access within the federated environment.
 
 ### Establish your Identity Foundation with Microsoft Entra ID:
-  - Are all access requests passing through Microsoft Entra ID to leverage its policy decision points for enforcing access policies?
-    - Legacy: Access requests are not consistently managed or enforced through Microsoft Entra ID. There is no centralized control over access requests, leading to fragmented security policies and potential vulnerabilities in access management.
-    - Initial: Some access requests are configured to pass through Microsoft Entra ID, but the implementation is partial or inconsistent. Basic access enforcement is in place, utilizing a limited set of policies within Microsoft Entra ID for certain applications or user groups.
-    - Advanced: The majority of access requests are configured to go through Microsoft Entra ID, leveraging its policy decision point capabilities for robust access enforcement. Advanced policies are applied more broadly, though some legacy systems or applications may not yet be fully integrated.
-    - Optimal: Every access request is meticulously configured to pass through Microsoft Entra ID, fully utilizing its comprehensive policy decision point capabilities for access enforcement across the entire organization. This setup ensures that all access is governed by dynamic, context-aware policies that adapt to evolving security landscapes and organizational needs.
+
+**Has the organization ensured that all access requests pass through Microsoft Entra ID to leverage its policy decision points for enforcing access policies?**
+
+- Legacy: Access requests are not consistently managed or enforced through Microsoft Entra ID. There is no centralized control over access requests, leading to fragmented security policies and potential vulnerabilities in access management.
+    - Indicators:
+        - Access requests for various resources and services are managed without a centralized policy decision point, leading to disparate access control mechanisms.
+        - Increased risk of unauthorized access due to inconsistent application of access policies across different environments and platforms.
+        - Challenges in monitoring, auditing, and reporting on access controls and policy enforcement, impacting the organization's overall security posture.
+
+- Initial: Some access requests are configured to pass through Microsoft Entra ID, but the implementation is partial or inconsistent. Basic access enforcement is in place, utilizing a limited set of policies within Microsoft Entra ID for certain applications or user groups.
+    - Indicators:
+        - Partial routing of access requests through Microsoft Entra ID, focusing on high-priority or high-risk applications and services.
+        - Initial improvements in access control and policy enforcement, though not uniformly applied across the organization.
+        - Some enhancement in the organization's ability to enforce access policies consistently, with ongoing efforts to expand the use of Microsoft Entra ID as the central policy decision point.
+
+- Advanced: The majority of access requests are configured to go through Microsoft Entra ID, leveraging its policy decision point capabilities for robust access enforcement. Advanced policies are applied more broadly, though some legacy systems or applications may not yet be fully integrated.
+    - Indicators:
+        - Comprehensive routing of all access requests through Microsoft Entra ID, facilitating centralized and consistent policy enforcement.
+        - Enhanced security measures in place, supported by the systematic application of access controls and policies.
+        - Significant progress toward minimizing access management complexities and security risks, bolstered by the centralized management of access requests.
+
+- Optimal: Every access request is meticulously configured to pass through Microsoft Entra ID, fully utilizing its comprehensive policy decision point capabilities for access enforcement across the entire organization. This setup ensures that all access is governed by dynamic, context-aware policies that adapt to evolving security landscapes and organizational needs.
+    - Indicators:
+        - Strategic and universal application of Microsoft Entra ID for policy decision-making across all user access scenarios and environments.
+        - Comprehensive management of access policies, enhancing organizational agility, security resilience, and compliance with access control best practices.
+        - Full alignment with identity and access management best practices and compliance requirements, supported by an effective and well-managed access control framework.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - AC-2 Account Management: Utilizing Microsoft Entra ID as the central point for access decisions supports the management of user accounts, ensuring that access is granted based on defined policies and principles of least privilege.
+    - AC-3 Access Enforcement: The enforcement of access decisions through Microsoft Entra ID aids in controlling access to organizational resources based on approved authorizations, supporting the access enforcement control.
+    - AC-25 Access Control Policies and Procedures: Leveraging Microsoft Entra ID for policy decision points aligns with the establishment and maintenance of access control policies and procedures, ensuring that access to resources is managed and enforced in a consistent manner.
+    - AC-1 Access Control Policy and Procedures: Centralizing access requests through Microsoft Entra ID supports the organization’s access control policies by ensuring that access to systems and applications is governed by comprehensive procedures.
 
 ### Integrate all your applications with Microsoft Entra ID:
-  - Are both modern and legacy applications integrated with Microsoft Entra ID for single sign-on and consistent identity and access management?
-    - Legacy: Neither modern nor legacy applications are integrated with Microsoft Entra ID for single sign-on (SSO) or identity and access management. Applications operate in silos, each with its own access management protocols, leading to inconsistent user experiences and heightened security risks.
-    - Initial: Modern applications are partially integrated with Microsoft Entra ID for SSO, but legacy applications remain disconnected, leading to a split in the user experience and access management. Efforts to unify identity management are underway, but not all applications are covered.
-    - Advanced: Both modern and many legacy applications are integrated with Microsoft Entra ID for SSO and consistent identity and access management. Efforts include using application proxies or wrappers for legacy applications to fit them into the SSO ecosystem, improving overall security and user experience.
-    - Optimal: Every application, both modern and legacy, is fully integrated with Microsoft Entra ID for seamless SSO and consistent identity and access management across the entire application portfolio. Advanced solutions, including custom integration for the most challenging legacy applications, ensure a unified and secure user experience.
 
-  - Are all identity and access management functions integrated into Microsoft Entra ID to ensure a seamless and secure user experience across the entire application portfolio with advanced security measures applied consistently?
-    - Legacy: Multiple, disparate IAM engines are in use across the environment without any efforts towards consolidation. This leads to fragmented identity and access management practices, creating inefficiencies and potential security vulnerabilities due to inconsistent policy enforcement and user experiences.
-    - Initial: Initial efforts to consolidate IAM engines have begun, focusing on integrating some systems with Microsoft Entra ID. While some applications now benefit from unified access management, others remain outside this integrated environment, resulting in a partial enhancement of security and user experience.
-    - Advanced: Significant progress has been made in consolidating IAM engines, with the majority now integrated into a unified Microsoft Entra ID environment. This consolidation covers most modern and legacy applications, greatly enhancing security and user experience through consistent access management practices.
-    - Optimal: A fully consolidated IAM environment has been achieved, with all identity and access management functions integrated into Microsoft Entra ID. This ensures a seamless and secure user experience across the entire application portfolio, with advanced security measures applied consistently.
+**Has the organization integrated both modern and legacy applications with Microsoft Entra ID for single sign-on and consistent identity and access management?**
+
+- Legacy: Neither modern nor legacy applications are integrated with Microsoft Entra ID for single sign-on (SSO) or identity and access management. Applications operate in silos, each with its own access management protocols, leading to inconsistent user experiences and heightened security risks.
+    - Indicators:
+        - Separate identity management systems for different applications, leading to varied user authentication experiences and potential security gaps.
+        - Increased administrative overhead and potential for error in managing multiple access control systems.
+        - Challenges in achieving a streamlined access management process and ensuring comprehensive security coverage for all applications.
+
+- Initial: Modern applications are partially integrated with Microsoft Entra ID for SSO, but legacy applications remain disconnected, leading to a split in the user experience and access management. Efforts to unify identity management are underway, but not all applications are covered.
+    - Indicators:
+        - Partial deployment of SSO and identity management through Microsoft Entra ID, focusing on a subset of modern applications.
+        - Initial improvements in user access management and security for integrated applications, though legacy systems may remain isolated.
+        - Some enhancement in the organization's approach to identity and access management, with ongoing efforts to extend Microsoft Entra ID integration.
+
+- Advanced: Both modern and many legacy applications are integrated with Microsoft Entra ID for SSO and consistent identity and access management. Efforts include using application proxies or wrappers for legacy applications to fit them into the SSO ecosystem, improving overall security and user experience.
+    - Indicators:
+        - Comprehensive adoption of Microsoft Entra ID for SSO and access management, including efforts to integrate legacy applications through adapters or connectors.
+        - Enhanced security measures in place, supported by consistent application of identity and access policies across all applications.
+        - Significant progress toward minimizing security risks and administrative overhead, bolstered by the centralized management of user identities and access.
+
+- Optimal: Every application, both modern and legacy, is fully integrated with Microsoft Entra ID for seamless SSO and consistent identity and access management across the entire application portfolio. Advanced solutions, including custom integration for the most challenging legacy applications, ensure a unified and secure user experience.
+    - Indicators:
+        - Strategic and universal application of Microsoft Entra ID for identity and access management across the entire application landscape.
+        - Comprehensive and proactive management of access security, enhancing organizational agility, security resilience, and compliance.
+        - Full alignment with identity and access management best practices and compliance requirements, supported by an effective and well-managed unified access control framework.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+        - AC-2 Account Management: Utilizing Microsoft Entra ID supports the management of user accounts, ensuring that access is granted based on the principles of least privilege and need-to-know.
+        - AC-14 Permitted Actions Without Identification or Authentication: The comprehensive integration of applications with Microsoft Entra ID for SSO helps minimize instances where actions can be performed without proper identification or authentication, enhancing security.
+        - IA-2 Identification and Authentication (Organizational Users): Ensuring consistent identity management across all applications via Microsoft Entra ID supports the unique identification and authentication of users, enhancing security controls.
+        - IA-8 Identification and Authentication (Non-Organizational Users): For applications accessed by non-organizational users, integration with Microsoft Entra ID can provide robust mechanisms for identifying and authenticating these users according to established policies.
+
+
+**Has the organization integrated all identity and access management functions into Microsoft Entra ID to ensure a seamless and secure user experience across the entire application portfolio, with advanced security measures applied consistently?**
+
+- Legacy: Multiple, disparate IAM engines are in use across the environment without any efforts towards consolidation. This leads to fragmented identity and access management practices, creating inefficiencies and potential security vulnerabilities due to inconsistent policy enforcement and user experiences.
+    - Indicators:
+        - Separate identity management solutions for different applications or services, leading to varied user authentication experiences and potential security gaps.
+        - Increased complexity and potential for error in managing access controls across multiple systems.
+        - Challenges in ensuring a cohesive and secure user experience, affecting the overall effectiveness of identity and access management.
+
+- Initial: Initial efforts to consolidate IAM engines have begun, focusing on integrating some systems with Microsoft Entra ID. While some applications now benefit from unified access management, others remain outside this integrated environment, resulting in a partial enhancement of security and user experience.
+    - Indicators:
+        - Partial deployment of Microsoft Entra ID for identity and access management, focusing on high-priority applications or systems.
+        - Initial improvements in user access management and security for integrated applications, though not uniformly applied across the entire portfolio.
+        - Some enhancement in the organization’s identity management strategy, with ongoing efforts to extend Microsoft Entra ID integration across all functions.
+
+- Advanced: Significant progress has been made in consolidating IAM engines, with the majority now integrated into a unified Microsoft Entra ID environment. This consolidation covers most modern and legacy applications, greatly enhancing security and user experience through consistent access management practices.
+    - Indicators:
+        - Comprehensive adoption of Microsoft Entra ID for identity and access management functions, facilitating a unified user experience and consistent security measures.
+        - Enhanced security posture through the systematic application of advanced identity and access controls across all applications and systems.
+        - Significant progress toward a holistic identity and access management approach, bolstered by the integration of Microsoft Entra ID across the entire portfolio.
+
+- Optimal: A fully consolidated IAM environment has been achieved, with all identity and access management functions integrated into Microsoft Entra ID. This ensures a seamless and secure user experience across the entire application portfolio, with advanced security measures applied consistently.
+    - Indicators:
+        - Strategic and universal application of Microsoft Entra ID for comprehensive identity and access management across the organization.
+        - Comprehensive management of user identities and access, enhancing organizational agility, security resilience, and compliance.
+        - Full alignment with identity management best practices and regulatory requirements, supported by an effective and well-managed identity management framework.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - AC-2 Account Management: Centralizing identity and access management with Microsoft Entra ID supports the management of user accounts according to the least privilege principle and the need-to-know basis, enhancing control over user access.
+    - IA-2 Identification and Authentication (Organizational Users): Consolidating identification and authentication functions within Microsoft Entra ID ensures that users are uniquely identified and authenticated across all systems, supporting robust security controls.
+    - AC-3 Access Enforcement: Integration with Microsoft Entra ID facilitates the enforcement of approved authorizations for accessing systems and applications, aligning with access control policies.
+    - IA-8 Identification and Authentication (Non-Organizational Users): For applications accessed by non-organizational users, Microsoft Entra ID can provide comprehensive mechanisms for identification and authentication in line with established policies.
+
 
 ### Verify explicitly with strong authentication:
-  - Is Microsoft Entra multifactor authentication (MFA) fully deployed and enforced across the entire organization without exception?
-    - Legacy: Microsoft Entra MFA has not been deployed, leaving the organization reliant on basic, single-factor authentication methods. This lack of MFA exposes the organization to increased security risks, such as unauthorized access and compromised user sessions.
-    - Initial: Microsoft Entra MFA has been partially deployed in the organization. Key systems or sensitive roles may be protected by MFA, but it is not uniformly applied across all users and applications. This partial deployment offers improved security over the Legacy stage but leaves significant gaps in protection.
-    - Advanced: Microsoft Entra MFA is widely deployed across the organization, covering most users and applications. Efforts have been made to standardize MFA usage, significantly reducing user session risks. However, some areas or legacy systems might still operate without full MFA protection.
-    - Optimal: Microsoft Entra MFA is fully deployed and enforced across the entire organization without exceptions. This comprehensive MFA coverage ensures the highest level of security for all user sessions, applications, and systems, effectively mitigating risks associated with compromised credentials.
 
-  - Is the organization blocking all legacy authentication methods, fully embracing modern authentication protocols without exceptions, and enforcing strict access policies that require secure authentication mechanisms to eliminate the risks associated with legacy methods?
-    - Legacy: Legacy authentication methods are fully permitted within the organization. There's no policy or mechanism in place to block these outdated authentication methods, leaving the organization vulnerable to a variety of security threats that exploit weaknesses in these older protocols.
-    - Initial: The organization has started to recognize the risks associated with legacy authentication methods and has initiated efforts to block them in certain high-risk scenarios or systems. However, this blockade is not comprehensive, and many systems still rely on legacy authentication due to various constraints.
-    - Advanced: Significant progress has been made in blocking legacy authentication methods across the majority of the organization's systems and applications. Efforts include transitioning to modern authentication protocols and applying conditional access policies to enforce these standards. Some legacy systems may still use older methods due to technical limitations.
-    - Optimal: The organization has achieved comprehensive blocking of all legacy authentication methods, fully embracing modern authentication protocols without exceptions. This includes enforcing strict access policies that require secure authentication mechanisms, effectively eliminating the risks associated with legacy methods.
+**Has the organization fully deployed and enforced Microsoft Entra multifactor authentication (MFA) across the entire organization without exception?**
+
+- Legacy: The organization has not implemented Microsoft Entra MFA, relying solely on traditional single-factor authentication methods. This lack of MFA can lead to increased vulnerability to account compromise and unauthorized access, undermining the organization’s overall security posture.
+    - Indicators:
+        - Reliance on single-factor authentication without MFA enforcement.
+        - Increased risk of phishing attacks and credential theft.
+        - Challenges in securing sensitive data and systems against unauthorized access.
+
+- Initial: Initial efforts have been made to deploy Microsoft Entra MFA for certain user groups or critical systems. While this phase marks the beginning of adopting MFA, comprehensive coverage and consistent enforcement across the entire organization may still be under development.
+    - Indicators:
+        - Partial implementation of MFA, focusing on high-risk areas or critical applications.
+        - Initial improvements in authentication security, though not uniformly applied across all organizational resources.
+        - Some enhancement in the organization's ability to defend against credential compromise, with ongoing efforts to expand MFA deployment.
+
+- Advanced: Microsoft Entra MFA is broadly implemented across the organization, significantly improving security by requiring multiple forms of verification. This advanced tier reflects a mature approach to authentication, ensuring that MFA is applied consistently across all systems and users.
+    - Indicators:
+        - Comprehensive adoption of MFA for enhanced security across various access points and applications.
+        - Enhanced protection against unauthorized access, supported by the systematic application of MFA.
+        - Significant progress toward minimizing potential security breaches, bolstered by the widespread enforcement of MFA.
+
+- Optimal: The deployment and enforcement of Microsoft Entra MFA across the entire organization are fully developed, operationalized, and integrated into the organization’s overall security strategy. This optimal scenario ensures the highest level of authentication security, with MFA required for access to all systems and data without exception.
+    - Indicators:
+        - Universal application of MFA, ensuring that no exceptions are made in its enforcement.
+        - Comprehensive management of authentication practices, enhancing the organization's resilience against various cyber threats.
+        - Full alignment with authentication security best practices and compliance requirements, supported by an effective and well-managed MFA framework.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - IA-2 Identification and Authentication (Organizational Users): The implementation of MFA supports the requirements for unique identification and authentication of users, enhancing security controls against unauthorized access.
+    - IA-5 Authenticator Management: Enforcing MFA involves managing the lifecycle of multiple authenticators, aligning with the control's requirements for effective authenticator management practices.
+    - AC-7 Unsuccessful Login Attempts: MFA can deter unauthorized access attempts by increasing the complexity of successful authentication, contributing to the control's objective of limiting unsuccessful login attempts.
+    - IA-11 Re-authentication: Requiring MFA at re-authentication events ensures that the security of the authentication session is maintained, aligning with the control's emphasis on re-establishing authentication assurances periodically.
+
+**Has the organization blocked all legacy authentication methods, fully embraced modern authentication protocols without exceptions, and enforced strict access policies that require secure authentication mechanisms to eliminate the risks associated with legacy methods?**
+
+- Legacy: The organization continues to allow legacy authentication methods, exposing itself to increased security risks such as credential theft and replay attacks. This reliance on outdated authentication mechanisms undermines the security posture and increases vulnerability.
+    - Indicators:
+        - Continued use of legacy authentication protocols, such as NTLM or basic auth, without restrictions.
+        - Increased susceptibility to common attack vectors exploiting weaknesses in legacy authentication methods.
+        - Challenges in securing access to resources and services due to the inherent vulnerabilities of outdated authentication technologies.
+
+- Initial: Initial steps have been taken to identify and limit the use of legacy authentication methods, with partial adoption of modern authentication protocols for certain applications or user groups. While this phase marks the beginning of transitioning to more secure authentication practices, comprehensive enforcement and elimination of all legacy methods may still be under development.
+    - Indicators:
+        - Partial restriction of legacy authentication methods and gradual adoption of modern protocols like OAuth 2.0 and OpenID Connect.
+        - Initial improvements in authentication security, though legacy methods may still be permitted in certain scenarios.
+        - Some enhancement in the organization's ability to protect against authentication-related risks, with ongoing efforts to fully transition to modern authentication.
+
+- Advanced: The organization has broadly implemented modern authentication protocols across most applications and services, significantly reducing reliance on legacy methods. This advanced tier reflects a mature approach to authentication security, ensuring that access to resources is protected by more secure and robust mechanisms.
+    - Indicators:
+        - Comprehensive adoption of modern authentication protocols, with legacy authentication methods blocked in the majority of cases.
+        - Enhanced security measures in place, supported by the consistent application of secure authentication mechanisms.
+        - Significant progress toward minimizing the risks associated with legacy authentication, bolstered by strict access policies and modern authentication practices.
+
+- Optimal: The deployment of modern authentication protocols is fully developed, operationalized, and integrated into the organization’s overall access control strategy, with a complete blockade of all legacy authentication methods. This optimal scenario ensures the highest level of security, eliminating risks associated with outdated authentication technologies.
+    - Indicators:
+        - Universal application of modern authentication protocols across all organizational resources, with no exceptions for the use of legacy methods.
+        - Comprehensive and proactive management of authentication practices, enhancing the organization's resilience against various cyber threats.
+        - Full alignment with authentication security best practices and compliance requirements, supported by an effective and well-managed authentication framework.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - IA-2 Identification and Authentication (Organizational Users): Implementing modern authentication supports the requirements for unique identification and authentication of users, enhancing security controls against unauthorized access.
+    - IA-5 Authenticator Management: The transition to modern authentication involves managing the lifecycle of secure authenticators, aligning with the control's requirements for effective authenticator management practices.
+    - AC-17 Remote Access: Modern authentication protocols support secure remote access control by providing robust mechanisms for authentication over remote connections.
+    - IA-8 Identification and Authentication (Non-Organizational Users): For applications accessed by non-organizational users, the adoption of modern authentication can provide comprehensive mechanisms for identification and authentication in line with established policies.
 
 ## Conditional Access Policies Gate Access and Provide Remediation Activities
   - Is there is a structured remediation process in place for users who are denied access by Conditional Access policies?
@@ -72,18 +286,27 @@ Questions in the following sections are designed to help us understand a clients
     - Initial: While basic Conditional Access policies are in place, they're applied broadly, lacking the granularity needed for effective security management. Updates and reviews are sporadic, indicating a reactive rather than a strategically proactive approach to securing access based on current security landscapes and operational demands.
     - Advanced: There's a clear effort to develop Conditional Access policies that consider multiple variables for access decisions, including user roles, device status, and application sensitivity. Regular reviews and updates are in place, yet there's room for improvement, especially in integrating real-time threat intelligence and automating the response to access challenges.
     - Optimal: Conditional Access policies are meticulously tailored and dynamically managed, incorporating real-time risk assessments, user behavior analytics, and automated remediation strategies. These policies are continually refined, leveraging the latest in security threat intelligence and operational feedback, ensuring both robust security measures and minimal disruption to user productivity.
- 
+
+    - **Relevance to NIST SP 800-53 Revision 5:**
+        - 
+
   - In cases where access is restricted by Conditional Access policies, is there a structured remediation process for users to follow to regain access, and how is this oversight conducted?
     - Legacy: There is no structured remediation process in place for users who are denied access by Conditional Access policies. Oversight of such incidents is minimal or non-existent, leading to potential disruptions in productivity and lack of clear guidance for users on how to address access issues.
     - Initial: A basic remediation process exists for users denied access, but it is generic and not well communicated. Oversight is sporadic and often reactive, with limited tracking or analysis of denied access incidents. This approach results in inconsistent user experiences and missed opportunities for improving access management based on real-world challenges.
     - Advanced: The organization has developed a structured remediation process for users impacted by Conditional Access policies, including clear steps for users to regain access. Oversight is more consistent, with some level of tracking and analysis of denied access incidents. However, there could be further improvements in automating remediation processes and enhancing real-time oversight.
     - Optimal: A highly structured and user-friendly remediation process is actively managed, providing immediate guidance and support for users denied access. Oversight is comprehensive, utilizing real-time tracking, analysis, and feedback mechanisms to continuously refine access controls and remediation processes. Automation and user-centric design ensure efficient resolution of access issues, minimizing disruption and bolstering security posture.
 
+    - **Relevance to NIST SP 800-53 Revision 5:**
+        - 
+
   - Is there a comprehensive strategy in place for planning, testing, and customizing Conditional Access policies to ensure they align with security needs while minimizing impact on user experience?
     - Legacy: There is no comprehensive strategy for planning, testing, or customizing Conditional Access policies. Policies are often created reactively, without thorough testing or consideration for user experience, leading to potential security vulnerabilities and significant disruptions in user productivity.
     - Initial: A basic strategy exists for the planning and implementation of Conditional Access policies, but it lacks depth in testing and customization. While some efforts are made to align policies with security needs, the impact on user experience is not thoroughly evaluated, leading to potential friction or resistance from users.
     - Advanced: The organization has developed a more structured strategy for planning, testing, and customizing Conditional Access policies, considering both security requirements and user experience. Policies undergo regular review and testing phases, with adjustments made to better meet security objectives while striving to reduce user impact. However, there remains room for further integration of user feedback and continuous improvement processes.
     - Optimal: A comprehensive and dynamic strategy is in place for the planning, testing, and customizing of Conditional Access policies, fully integrating security needs with a focus on optimizing user experience. This strategy includes proactive engagement with stakeholders, iterative testing with real-world scenarios, and continuous feedback loops to refine policies. Automation and advanced analytics are leveraged to ensure policies are both effective and minimally intrusive.
+
+    - **Relevance to NIST SP 800-53 Revision 5:**
+        - 
 
 ### Register devices with Microsoft Entra ID to restrict access from vulnerable and compromised devices
   - Are devices registered with Microsoft Entra ID to ensure that access from vulnerable and compromised devices is appropriately restricted?
