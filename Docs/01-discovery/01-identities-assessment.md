@@ -760,108 +760,113 @@ Questions in the following sections are designed to help us understand a clients
     - IR-4 Incident Handling: Integration between Defender for Cloud Apps and Identity Protection improves incident handling capabilities by enabling quicker identification, analysis, and response to incidents based on user behavior insights.
     - PM-12 Insider Threat Program: The detailed monitoring of user behavior within SaaS and modern applications contributes to an effective insider threat program by identifying potential malicious activities or policy violations from within the organization.
 
-### Enable Conditional Access integration with Microsoft Defender for Cloud Apps
+### Enhancing Monitoring and Enforcement with Defender for Cloud Apps and Conditional Access Integration
 
-**Is Conditional Access integrated with Microsoft Defender for Cloud Apps?**
+**Has the organization implemented session monitoring and enforcement for SaaS applications by enabling Defender for Cloud Apps and integrating Conditional Access, including extending these controls to on-premises apps?**
 
-- Legacy: Conditional Access is not integrated with Microsoft Defender for Cloud Apps, leaving the organization's cloud applications and data exposed to potential security risks. There's no systematic approach to monitor or control access based on the evolving threat landscape, resulting in a static and vulnerable security posture. Without this integration, the organization misses out on advanced security analytics and real-time threat detection, making it difficult to enforce adaptive access policies that respond to assessed risks.
-
+- Legacy: The organization lacks comprehensive session monitoring and enforcement mechanisms for SaaS and on-premises applications, leading to potential gaps in security coverage and an inability to enforce consistent access policies across the application landscape.
     - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - Absence of Conditional Access policies informed by threat intelligence.
-        - No evidence of adaptive security measures based on user behavior and risk assessment.
-        - Increased incidents of security breaches due to unmonitored application access.
+        - Absence of integrated session monitoring tools, resulting in limited visibility into user activities within SaaS and on-premises applications.
+        - Lack of enforcement capabilities for Conditional Access policies across both cloud and on-premises environments, increasing the risk of unauthorized access.
+        - Challenges in achieving a unified security posture due to disjointed monitoring and policy enforcement mechanisms.
 
-- Initial: Initial steps are taken to integrate Conditional Access with Microsoft Defender for Cloud Apps, providing a basic level of security monitoring and response capabilities. At this stage, Conditional Access policies begin to leverage some signals from Defender for Cloud Apps to inform access decisions, but the implementation is limited and does not fully utilize the potential of cloud-based threat intelligence. The organization starts to see benefits in terms of improved visibility into access patterns and potential threats, but the coverage is not comprehensive.
+- Initial: Initial efforts have been made to deploy Defender for Cloud Apps for session monitoring in SaaS applications, with some integration of Conditional Access policies. Efforts to extend these controls to on-premises applications may be in the early stages, indicating progress toward a more integrated security approach.
     - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - Implementation of Conditional Access policies that begin to leverage threat signals.
-        - Partial coverage and utilization of threat intelligence for security monitoring.
-        - Some improvements in detecting suspicious activities, with gaps in comprehensive threat response.
+        - Partial implementation of Defender for Cloud Apps for monitoring SaaS application sessions, with Conditional Access integration beginning to take shape.\
+        - Initial steps toward extending session monitoring and policy enforcement capabilities to on-premises applications, though not fully realized.
+        - Some improvement in session security and policy compliance, with ongoing efforts to enhance and expand integrated monitoring and enforcement.
 
-- Advanced: The integration between Conditional Access and Microsoft Defender for Cloud Apps is expanded, enabling more sophisticated security controls based on a wider array of signals from user behavior and threat intelligence. Conditional Access policies are dynamically adjusted based on detailed risk assessments, and the organization employs conditional access to enforce security policies more granely. This tier sees improved security outcomes through better detection of suspicious activities and the ability to respond more effectively to identified risks, although there may still be areas for further optimization.
+- Advanced: Defender for Cloud Apps and Conditional Access are broadly implemented for comprehensive session monitoring and enforcement across SaaS applications, with significant progress in extending these controls to on-premises apps. This advanced tier reflects a mature approach to security, ensuring consistent policy enforcement and visibility.
     - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - Use of a wide array of signals from user behavior and threat intelligence for Conditional Access.
-        - Evidence of dynamic and granular enforcement of security policies.
-        - Decrease in successful security breaches due to enhanced detection and response capabilities.
+        - Comprehensive deployment of integrated session monitoring and enforcement mechanisms for SaaS applications, with expanding coverage to on-premises apps.
+        - Enhanced capability to detect, analyze, and respond to security risks, supported by detailed session insights and robust policy enforcement.
+        - Significant strides toward a unified security framework, bolstered by the systematic application of integrated security tools across the application landscape.
 
-- Optimal: A fully integrated Conditional Access and Microsoft Defender for Cloud Apps system is in place, offering comprehensive and adaptive security measures that cover all aspects of access and threat response. This level of integration ensures that Conditional Access policies are informed by real-time, detailed threat intelligence from Defender for Cloud Apps, enabling the organization to implement dynamic and context-aware access controls. The optimal tier represents the highest standard of security, with the ability to detect, analyze, and respond to threats in real-time, significantly reducing the risk of unauthorized access and data breaches while maintaining a seamless user experience.
+- Optimal: The implementation of session monitoring and enforcement for both SaaS and on-premises applications, leveraging Defender for Cloud Apps and Conditional Access, is fully developed, operationalized, and integrated into the organization’s overall security strategy. This optimal scenario ensures the highest level of security intelligence, policy compliance, and operational efficiency.
     - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - Comprehensive coverage and use of real-time threat intelligence for adaptive access controls.
-        - Seamless user experience with robust protection against unauthorized access and data breaches.
-        - Significant reduction in incidents of security breaches, demonstrating effective threat detection and response.
+        - Strategic and universal application of session monitoring and policy enforcement, covering all cloud and on-premises applications without exception.
+        - Comprehensive management of session security, enhancing organizational agility, risk resilience, and compliance.
+        - Full alignment with advanced security practices and regulatory requirements, supported by an effective, adaptive, and well-managed integrated security framework.
 
 - Relevance to NIST SP 800-53 Revision 5:
-    - 
+    - AC-4 Information Flow Enforcement: Integrating Conditional Access with Defender for Cloud Apps supports the enforcement of policies governing information flows, ensuring that data is shared and accessed in accordance with security policies.
+    - AC-17 Remote Access: The implementation of session monitoring and policy enforcement mechanisms enhances the security of remote access, ensuring that access to organizational resources is controlled and monitored.
+    - SI-4 Information System Monitoring: Leveraging integrated monitoring solutions enhances the organization’s capability to detect, analyze, and respond to anomalies in user sessions, aligning with the control's requirements for comprehensive system monitoring.
+    - CM-7 Least Functionality: By enforcing Conditional Access policies based on session monitoring, organizations can ensure that software, applications, and services are restricted to necessary functions, reducing the attack surface.
 
 ### Enable restricted session for use in access decisions
 
-**Is restricted session enabled for limited access to SharePoint Online and Exchange Online?**
+**Has the organization enabled limited access to SharePoint Online and Exchange Online, configuring restricted sessions to allow users to read emails and view files from unknown endpoints without the ability to download and save on untrusted devices?**
 
-- There are no restrictions on accessing SharePoint Online and Exchange Online from unmanaged devices, allowing full access without any conditional access policies in place. This unrestricted access enables users to download, print, and sync files freely, significantly increasing the risk of data leakage and unauthorized access to sensitive organizational information.
-    - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - Full access from any device without restrictions
-        - No conditional access policies implemented
-        - High risk of data leakage and unauthorized access
+- The organization does not implement access restrictions for SharePoint Online and Exchange Online, allowing full access from any endpoint. This approach does not differentiate between trusted and untrusted devices, increasing the risk of data leakage and unauthorized access.
+    - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
+        - Full access to organizational data via SharePoint Online and Exchange Online from any device, without session restrictions.
+        - Increased vulnerability to data exfiltration and unauthorized access due to lack of controls on untrusted devices.
+        - Challenges in protecting sensitive information when accessed from endpoints outside the organization's control.
 
-- Initial: Basic limitations are introduced for access from unmanaged devices. In SharePoint Online, access is restricted to browser-only, disabling the ability to download, print, or sync files. Similarly, in Exchange Online, conditional access policies restrict the ability to download email attachments to local machines, although users can still view and edit attachments in the browser. This tier introduces a fundamental level of security but lacks comprehensive controls and granularity in access restrictions.
+- Initial: Initial efforts have been made to implement limited access configurations for SharePoint Online and Exchange Online, allowing restricted sessions from unknown endpoints. While this phase marks progress towards securing access, comprehensive deployment and optimization of restricted sessions across the organization may still be under development.
     - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
         - Browser-only access for SharePoint Online
         - Download restrictions for email attachments in Exchange Online
         - Basic level of security with limited granularity
 
-- Advanced: More sophisticated conditional access policies are implemented. SharePoint Online administrators can now tailor access based on specific user groups, site classifications, or content types, and use PowerShell for detailed policy application. Exchange Online enhances security by allowing finer adjustments to the OwaMailboxPolicy, such as setting attachments to read-only or entirely blocking downloads on non-compliant devices. This tier offers improved security through enhanced control over access and editing capabilities, although some exceptions for specific user needs or applications may remain.
-    - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - Granular access control based on user groups, site classifications, or content types
-        - Use of PowerShell for detailed policy application in SharePoint Online
-        - Enhanced security measures for attachments in Exchange Online
-        - Improved control with allowances for exceptions
+- Advanced: The configuration of restricted sessions for SharePoint Online and Exchange Online, tailored to secure access from unknown endpoints, is fully developed, operationalized, and integrated into the organization’s overall data protection strategy. This optimal scenario ensures the highest level of control over data access, minimizing the risk of unauthorized use or exfiltration.
+    - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
+        - Comprehensive implementation of restricted sessions, providing secure, limited access across SharePoint Online and Exchange Online for all users.
+        - Enhanced security measures in place, supported by consistent enforcement of access controls based on the trustworthiness of endpoints.
+        - Significant progress toward mitigating the risk of data leakage, bolstered by the systematic application of access restrictions.
 
 - Optimal: A holistic approach to managing access from unmanaged devices is adopted, applying comprehensive conditional access policies across all Microsoft 365 services. This includes enforcing strict access controls based on device compliance, user risk profiles, and session restrictions, ensuring a seamless yet secure experience for users across all devices. SharePoint Online and Exchange Online benefit from integrated policies that not only restrict access and editing based on device status but also enforce these policies consistently across the entire suite of Microsoft 365 applications. This tier represents the highest level of security, minimizing data exposure and unauthorized access while maintaining operational flexibility.
-    - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - Comprehensive conditional access policies across Microsoft 365
-        - Enforced access controls based on device compliance and user risk profiles
-        - Integrated policies for consistent enforcement across Microsoft 365 applications
-        - Highest level of security with operational flexibility
+    - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
+        - Strategic and universal application of limited access configurations, ensuring that all users can securely access information without compromising data security.
+        - Comprehensive management of access policies, enhancing organizational resilience against threats associated with untrusted devices.
+        - Full alignment with data protection best practices and compliance requirements, supported by an effective, adaptive, and well-managed access control framework.
 
 - Relevance to NIST SP 800-53 Revision 5:
-    - 
+    - AC-3 Access Enforcement: Configuring restricted sessions enforces approved authorizations for accessing organizational data, ensuring that access from untrusted devices is appropriately limited.
+    - AC-4 Information Flow Enforcement: Limited access configurations support the enforcement of policies governing information flows, preventing unauthorized download or saving of data on untrusted devices.
+    - SC-7 Boundary Protection: Implementing restricted sessions contributes to boundary protection by controlling the flow of organizational information to untrusted devices, ensuring that data remains within secure environments.
+    - AC-20 Use of External Information Systems: The configuration allows organizations to manage the risks associated with accessing organizational data from external systems, providing a mechanism to securely interact with SharePoint Online and Exchange Online from unknown endpoints.
 
 ## Integrate threat signals from other security solutions to improve detection, protection, and response
 
-### Integrate Microsoft Defender for Identity with Microsoft Defender for Cloud Apps
+### Integrating Microsoft Defender for Identity with Entra ID for Comprehensive On-Premises and Cloud Security
 
-**Are signals from Microsoft Defender for Identity integrated to enhance the detection and response to risky behaviors in on-premises and cloud environments?**
+**Has the organization enabled integration between Microsoft Defender for Identity and Microsoft Entra ID to include on-premises signals in the user risk assessment, and are they utilizing the combined Investigation Priority score to prioritize SOC focus on users at risk?**
 
-- Legacy: No integration of signals from Microsoft Defender for Identity exists, leaving a significant gap in the detection and response to risky behaviors across on-premises and cloud environments. Organizations rely solely on traditional, perimeter-based security measures, which fail to address the nuanced threats present in a modern, decentralized IT landscape. This lack of integration results in a reactive posture towards security incidents, with limited visibility and control over identity-related risks.
+- Legacy: The organization does not integrate security signals from on-premises and cloud environments, resulting in siloed and incomplete user risk assessments. This lack of integration may lead to overlooked security threats and inefficient prioritization by the Security Operations Center (SOC).
     - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - Absence of centralized identity threat detection mechanisms.
-        - Reliance on perimeter-based security controls with no identity signal sharing.
-        - Lack of visibility into user activities and security events across environments.
-        - No automated response capabilities to identity-related threats.
+        - Separate handling of on-premises and cloud security signals, leading to gaps in the overall visibility of user risk.
+        - Increased challenges in accurately identifying and prioritizing users at risk due to fragmented security insights.
+        - Inefficiencies in SOC operations, with potential delays in responding to critical threats.
 
-- Initial: Basic integration of signals from Microsoft Defender for Identity is established, providing initial insights into risky behaviors within on-premises systems. While this represents a step forward in enhancing security posture, the approach remains fragmented. Integration with cloud security solutions is minimal, leading to inconsistent detection and response capabilities across the IT environment. This stage introduces the concept of identity-based security signals but does not fully leverage their potential in a cohesive security strategy.
+- Initial: Initial steps have been made to integrate Microsoft Defender for Identity with Microsoft Entra ID for some user groups or specific scenarios. While this phase marks progress toward comprehensive risk assessment, full utilization of combined security signals across all users and effective SOC prioritization may still be under development.
     - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - Initial efforts to integrate on-premises identity signals with some cloud security solutions.
-        - Selective, rather than comprehensive, use of identity signals for threat detection.
-        - Inconsistent policy enforcement across on-premises and cloud environments.
-        - Some manual processes in monitoring and responding to security alerts.
+        - Partial integration of on-premises and cloud security signals for user risk assessment, focusing on high-priority areas.
+        - Initial improvements in identifying users at risk, though the coverage and effectiveness of the combined Investigation Priority score may be limited.
+        - Some enhancement in SOC operations based on integrated risk assessments, with ongoing efforts to expand and optimize security signal integration.
 
-- Advanced: Advanced integration techniques are deployed, including comprehensive signal sharing between Microsoft Defender for Identity and cloud security solutions. This integration extends visibility into user activities and risky behaviors across both on-premises and cloud environments, facilitating a more unified and effective response to threats. However, while the framework for leveraging identity signals is in place, occasional lapses in coverage or delays in response may occur due to the complex nature of these integrations and the evolving threat landscape.
+- Advanced: Microsoft Defender for Identity and Microsoft Entra ID are broadly integrated, significantly enhancing user risk assessments by including comprehensive on-premises and cloud signals. The SOC effectively utilizes the combined Investigation Priority score to prioritize focus on users at risk, improving the efficiency and impact of security operations.
     - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - Robust integration of identity signals from both on-premises and cloud environments.
-        - Automated detection and response to identity-based threats across the digital estate.
-        - Use of advanced analytics to understand user behavior and detect anomalies.
-        - Presence of policy and governance mechanisms that leverage identity signals for security decisions.
+        - Comprehensive integration of security signals from both on-premises and cloud environments, facilitating detailed and accurate user risk assessments.
+        - Enhanced capability of the SOC to prioritize and focus on users at risk, supported by a robust and data-driven Investigation Priority score.
+        - Significant progress toward a unified and effective security posture, bolstered by the systematic application of integrated risk assessment tools.
 
-- Optimal: A fully mature integration of Microsoft Defender for Identity with cloud security solutions is achieved, embodying a proactive and all-encompassing approach to monitoring, detecting, and responding to risky behaviors. This tier ensures seamless real-time signal integration, enabling immediate and informed security responses across the entire digital estate. Optimal use of identity signals empowers organizations to preemptively address potential threats, minimizing risk exposure and reinforcing a robust Zero Trust security posture. This level represents the pinnacle of identity-driven security, ensuring maximum protection and resilience against identity-related threats in both on-premises and cloud environments.
+- Optimal: The integration of Microsoft Defender for Identity with Microsoft Entra ID for comprehensive user risk assessment, including the effective use of the Investigation Priority score for SOC prioritization, is fully developed, operationalized, and integrated into the organization’s overall security strategy. This optimal scenario ensures the highest level of security intelligence and operational efficiency in addressing user risks.
     - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - Seamless, real-time integration of identity signals for immediate threat detection and response.
-        - Full coverage and visibility into user activities and security events across all environments.
-        - Advanced automated response capabilities, minimizing manual intervention in threat mitigation.
-        - Continuous assessment and adaptation of security policies based on evolving threats and identity signals.
+        - Strategic and universal application of integrated security signal analysis, covering all users without exception.
+        - Comprehensive and proactive management of user risk assessments, enhancing organizational agility and resilience against identity-related threats.
+        - Full alignment with advanced security practices and compliance requirements, supported by an effective, adaptive, and well-managed risk prioritization framework.
 
-### Enable Microsoft Defender for Endpoint
+- Relevance to NIST SP 800-53 Revision 5:
+    - SI-4 Information System Monitoring: Leveraging integrated security signals from both on-premises and cloud sources enhances the organization’s monitoring capabilities, allowing for the detection, analysis, and response to anomalies related to user risk.
+    - IR-4 Incident Handling: The effective use of the combined Investigation Priority score supports the incident handling process by enabling the SOC to prioritize and respond to incidents based on a comprehensive assessment of user risk.
+    - PM-9 Risk Management Strategy: Integrating security signals into user risk assessments contributes to the organization’s risk management strategy by ensuring that risks are identified, assessed, and prioritized based on a holistic view of user activities and threats.
+    - PE-6 Monitoring Physical Access: While primarily focused on logical access, the integration of signals for risk assessment can also support physical security measures by identifying potential security breaches that may have both physical and logical security implications.
 
-**Is Conditional Access configured in Microsoft Defender for Endpoint to utilize health signals from Windows machines for access decisions?**
+### Real-Time Malware Detection and Conditional Access Integration
+
+**Has the organization configured Conditional Access in Microsoft Defender for Endpoint to utilize real-time malware detection and react to security threats by adjusting device/user risk levels at runtime?**
 
 - Legacy: There is no Conditional Access configured within Microsoft Defender for Endpoint to utilize health signals from Windows machines, leaving access decisions solely on basic authentication methods. This absence of advanced security measures leaves the system vulnerable to unauthorized access, as it does not consider the health status of devices attempting to access resources.
     - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
