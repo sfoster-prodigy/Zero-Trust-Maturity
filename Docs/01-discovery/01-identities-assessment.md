@@ -625,85 +625,164 @@ Questions in the following sections are designed to help us understand a clients
 
 ### Use passwordless authentication to reduce the risk of phishing and password attacks
 
-**Is passwordless authentication implemented to minimize the risk associated with phishing and password attacks?**
+**Has the organization implemented passwordless authentication to minimize the risk associated with phishing and password attacks?**
 
 - Legacy: Passwordless authentication is not implemented, leaving the organization heavily reliant on traditional password-based authentication methods. This reliance increases the risk of falling victim to phishing and password spray attacks, as there are no advanced authentication technologies in place to mitigate these threats.
+    - Indicators:
+        - Exclusive use of passwords for user authentication, without alternative, more secure authentication methods in place.
+        - Increased susceptibility to phishing, credential stuffing, and password-related attacks.
+        - Challenges in maintaining a robust security posture against common attack vectors targeting user credentials.
 
 - Initial: Basic passwordless authentication methods are in place, such as limited use of Microsoft Authenticator. However, the implementation is not widespread across the organization, and more advanced technologies like Windows Hello and FIDO2 are not yet utilized. This partial implementation offers some protection against phishing and password attacks but leaves gaps in security coverage.
+    - Indicators:
+        - Partial deployment of passwordless authentication options, such as biometrics, security keys, or authentication apps, for a subset of access scenarios.
+        - Initial reduction in the risk of phishing and password attacks in areas where passwordless methods have been adopted.
+        - Some improvement in the organization's security posture, with ongoing efforts to expand and standardize passwordless authentication.
 
 - Advanced: Passwordless authentication is implemented using a variety of technologies, including Windows Hello, Microsoft Authenticator, and possibly FIDO2, among others. The implementation covers a significant portion of the organization, substantially reducing the risk associated with phishing and password attacks. However, there may be areas or user groups within the organization that are not fully covered, indicating room for broader implementation and integration.
+    - Indicators:
+        - Comprehensive adoption of passwordless authentication mechanisms, facilitating secure and user-friendly access across various applications and services.
+        - Enhanced security measures in place, supported by the widespread use of non-password-based authentication methods.
+        - Significant progress toward minimizing the organization's vulnerability to credential theft and phishing attacks, bolstered by effective passwordless strategies.
 
 - Optimal: The organization has fully implemented passwordless authentication, utilizing a comprehensive range of technologies such as Windows Hello, Microsoft Authenticator, and FIDO2 across all areas. This widespread implementation ensures maximum protection against phishing and password attacks, significantly enhancing the security posture by eliminating reliance on passwords and reducing the risk of such attacks to nearly zero.
+    - Indicators:
+        - Strategic and universal application of passwordless authentication, covering all user access scenarios without exception.
+        - Comprehensive management of authentication practices, enhancing organizational resilience against phishing and password-related threats.
+        - Full alignment with authentication security best practices and compliance requirements, supported by an effective and well-managed passwordless authentication framework.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - IA-2 Identification and Authentication (Organizational Users): Passwordless authentication supports the requirements for unique identification and authentication of users, offering a more secure alternative to password-based methods.
+    - IA-5 Authenticator Management: The management of passwordless authenticators (e.g., biometric, security keys) aligns with the control's requirements for issuing, maintaining, and revoking authenticators.
+    - IA-11 Re-authentication: Passwordless methods can enhance the security of re-authentication events by providing secure and convenient mechanisms for users to re-establish their authentication assurances.
+    - SC-13 Cryptographic Protection: Many passwordless authentication solutions leverage cryptographic methods to ensure the integrity and confidentiality of the authentication process, aligning with the control’s emphasis on cryptographic protection.
 
 ## User, device, location, and behavior is analyzed in real time to determine risk and deliver ongoing protection
-
 ### Deploy Microsoft Entra Password Protection
 
-**Has Microsoft Entra Password Protection been enabled for users in the cloud and on-premises to prevent weak passwords and password spray attacks?**
+**Has the organization enabled Microsoft Entra Password Protection for users in the cloud and on-premises to prevent weak passwords and password spray attacks?**
 
-- Legacy: Microsoft Entra Password Protection is not deployed, leaving the organization vulnerable to weak or compromised password usage. Security policies do not adequately address password protection, leading to a higher risk of breach due to inadequate password management practices.
+- Legacy: The organization has not implemented any specific measures to prevent the use of weak passwords, leaving systems vulnerable to password spray attacks and other password-related security threats. Users are allowed to set simple or commonly used passwords without restrictions.
+    - Indicators:
+        - Absence of enforced password complexity or banning of common passwords, resulting in weak password practices.
+        - Increased susceptibility to password spray attacks and other credential theft incidents.
+        - Challenges in securing user accounts against common attack vectors due to inadequate password policies.
 
-- Initial: Microsoft Entra Password Protection is deployed in a basic form, but the strategy is not comprehensive or fully aligned with the organization's security policies. Efforts to prevent weak password usage are present but not optimized for maximum protection or user compliance.
+- Initial: Initial efforts have been made to deploy Microsoft Entra Password Protection for cloud services, with some consideration given to extending these protections to on-premises environments. While this phase marks progress toward stronger password security, comprehensive protection across all user accounts and environments may still be under development.
+    - Indicators:
+        - Partial implementation of Microsoft Entra Password Protection, mainly in cloud environments, with limited or no enforcement in on-premises systems.
+        - Initial reduction in the use of weak passwords among cloud service users, though inconsistencies may exist across the organization.
+        - Some improvement in the organization’s defense against password-related attacks, with ongoing efforts to enhance and standardize password protection policies.
 
-- Advanced: Microsoft Entra Password Protection is deployed in a more advanced form, with efforts to tailor the deployment to the organization's security policies. While significant steps are taken to prevent weak or compromised password usage, continuous refinement and alignment with user compliance are needed.
+- Advanced: Microsoft Entra Password Protection is broadly implemented across both cloud and on-premises environments, significantly reducing the risk associated with weak passwords and enhancing the organization's resilience against password spray attacks.
+    - Indicators:
+        - Comprehensive deployment of password protection measures, including the enforcement of strong password policies and the banning of common passwords across all user accounts.
+        - Enhanced security posture through robust password policies, supported by consistent application of Microsoft Entra Password Protection.
+        - Significant progress toward minimizing the organization's vulnerability to password-related security threats, bolstered by effective password security strategies.
 
-- Optimal: The organization employs a comprehensive and fully integrated strategy for deploying Microsoft Entra Password Protection, perfectly tailored to meet stringent security policies and ensure user compliance. Advanced measures are in place to prevent any weak or compromised password usage, significantly enhancing the organization's security posture.
-
-- **Relevance to NIST SP 800-53 Revision 5:**
-    - 
-
-### Enable Identity Protection
-
-**Is Identity Protection enabled to provide granular session/user risk signals for investigating risk and confirming or dismissing compromise signals?**
-
-- Legacy: There is no systematic approach for utilizing Microsoft Identity Protection. The organization lacks customization of risk policies, leaving identity threats undetected and unmitigated.
-
-- Initial: Microsoft Identity Protection is used, but the approach is not fully systematic or tailored to the organization's risk management framework. Some identity threats may be detected, but the mitigation process is not optimized.
-
-- Advanced: The organization has established a more systematic approach to utilizing Microsoft Identity Protection, including some customization of risk policies. While many identity threats are effectively detected and mitigated, there's room for further refinement to fully align with the organization's risk management framework.
-
-- Optimal: A comprehensive and fully tailored strategy is in place for utilizing Microsoft Identity Protection, with risk policies customized to fit precisely within the organization's risk management framework. This approach ensures the highest level of detection and mitigation of identity threats, significantly bolstering the organization's security posture.
-
-- **Relevance to NIST SP 800-53 Revision 5:**
-    - 
-
-### Enable Microsoft Defender for Cloud Apps integration with Identity Protection
-
-**Are threat signals from Microsoft Defender for Cloud Apps integrated with Identity Protection to improve detection and response to suspicious user behaviors?**
-
-- Legacy: There is no integration of Microsoft Defender for Cloud Apps with Identity Protection, missing opportunities to enhance threat detection capabilities through shared signals and data.
-
-- Initial: Basic integration of Microsoft Defender for Cloud Apps with Identity Protection exists, but the strategy is not fully developed or optimized. Shared signals and data are underutilized, providing limited enhancements to threat detection capabilities.
-
-- Advanced: A structured strategy is in place for integrating Microsoft Defender for Cloud Apps with Identity Protection, leveraging shared signals and data to enhance threat detection. While significant improvements are seen, the strategy could be further refined for maximum security posture enhancement.
-
-- Optimal: The organization employs a comprehensive and fully optimized strategy for integrating Microsoft Defender for Cloud Apps with Identity Protection. This integration maximizes the utilization of shared signals and data, significantly bolstering the organization's security posture with advanced threat detection capabilities.
+- Optimal: The deployment of Microsoft Entra Password Protection for users in both the cloud and on-premises environments is fully developed, operationalized, and integrated into the organization’s overall cybersecurity strategy. This optimal scenario ensures the highest level of protection against weak passwords and password spray attacks.
+    - Indicators:
+        - Strategic and universal application of Microsoft Entra Password Protection, covering all user accounts and access scenarios without exception.
+        - Comprehensive and proactive management of password security, enhancing organizational resilience against credential theft and password attacks.
+        - Full alignment with cybersecurity best practices and compliance requirements, supported by an effective and well-managed password protection framework.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - IA-5 Authenticator Management: The control's requirements for managing authenticators, including passwords, are supported by enforcing strong password policies and preventing the use of known weak passwords.
+    - AC-7 Unsuccessful Login Attempts: Microsoft Entra Password Protection contributes to mitigating the risk of password spray attacks by preventing the use of easily guessable passwords, aligning with efforts to limit unsuccessful login attempts.
+    - IA-2 Identification and Authentication (Organizational Users): By ensuring that users employ strong passwords, the organization enhances the security of the identification and authentication process.
+    - SC-13 Cryptographic Protection: While not directly related to cryptographic protection, strong password policies enforced by Microsoft Entra Password Protection contribute to the overall security of cryptographic systems by protecting against unauthorized access.
+
+### Leveraging Identity Protection for Granular Risk Assessment and Response
+
+**Has the organization enhanced security insights by enabling Identity Protection to obtain more granular session/user risk signals, allowing for detailed investigation and improved risk management?**
+
+- Legacy: The organization lacks advanced security monitoring and risk assessment mechanisms, relying on basic or traditional methods for detecting threats. This approach may miss or delay the identification of sophisticated attacks, increasing the risk of security breaches.
+    - Indicators:
+        - Absence of real-time risk signal monitoring and analysis, leading to gaps in threat detection and response capabilities.
+        - Limited visibility into user and session risks, hindering the organization's ability to conduct detailed investigations.
+        - Challenges in effectively managing and mitigating identity-related security risks due to insufficient insights.
+
+- Initial: Initial efforts have been made to deploy Identity Protection for a subset of users or specific scenarios. While this phase marks the beginning of improved security insights, comprehensive coverage and integration of granular risk signal monitoring across all users and sessions may still be under development.
+    - Indicators:
+        - Partial implementation of Identity Protection, with some monitoring of risk signals for enhanced threat detection in targeted areas.
+        - Initial improvements in the organization’s ability to identify and investigate risks, though not uniformly applied across the entire user base.
+        - Some enhancement in risk management practices, with ongoing efforts to extend and optimize the use of Identity Protection.
+
+- Advanced: Identity Protection is broadly implemented across the organization, significantly enhancing security insights by providing granular risk signals for all users and sessions. This advanced tier reflects a mature approach to security monitoring, enabling detailed investigations and effective risk management.
+    - Indicators:
+        - Comprehensive deployment of Identity Protection, facilitating in-depth monitoring and analysis of risk signals for improved security posture.
+        Enhanced capability to detect, investigate, and respond to identity-related risks, supported by detailed and actionable insights.
+        Significant progress toward a robust risk management framework, bolstered by the systematic application of advanced monitoring tools.
+
+- Optimal: The utilization of Identity Protection for enhanced security insights and risk management is fully developed, operationalized, and integrated into the organization’s overall security strategy. This optimal scenario ensures the highest level of protection and resilience against identity-related threats.
+    - Indicators:
+        - Strategic and universal application of Identity Protection, covering all users and sessions without exception.
+        - Comprehensive and proactive management of identity risks, enhancing organizational agility, security resilience, and compliance.
+        - Full alignment with security best practices and regulatory requirements, supported by an effective, adaptive, and well-managed risk monitoring framework.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - SI-4 Information System Monitoring: Utilizing Identity Protection to monitor risk signals enhances the organization’s information system monitoring capabilities, allowing for the detection of unauthorized activities and security incidents.
+    - RA-5 Vulnerability Scanning: The detailed risk signals provided by Identity Protection contribute to the vulnerability scanning process by identifying potential weaknesses related to user identities and behaviors.
+    - CA-7 Continuous Monitoring: Implementing Identity Protection supports the continuous monitoring control by providing ongoing assessment of security controls and risk posture based on user and session risk signals.
+    - IR-4 Incident Handling: Enhanced security insights from Identity Protection improve the organization's incident handling capabilities by enabling quicker identification, analysis, and response to incidents related to identity risks.
+
+### Using Defender for Cloud Apps to Enhance Microsoft Entra ID's Security Responses
+
+**Has the organization enabled Defender for Cloud Apps monitoring to enrich the Identity Protection signal, allowing Microsoft Entra ID to take informed actions based on user behavior insights within SaaS and modern applications?**
+
+- Legacy: The organization does not leverage integrated security solutions, missing the opportunity to enrich identity protection signals with application usage insights. This absence of a comprehensive security approach may result in blind spots in detecting and responding to threats within SaaS and modern applications.
+    - Indicators:
+        - Lack of integration between identity protection mechanisms and cloud application monitoring, resulting in limited visibility into user behavior risks.
+        - Increased risk of overlooking suspicious activities due to disjointed security monitoring tools.
+        - Challenges in implementing proactive and informed security measures based on comprehensive user behavior insights.
+
+- Initial: Initial efforts have been made to integrate Defender for Cloud Apps monitoring with Identity Protection, providing enhanced visibility into a subset of user activities within SaaS and modern applications. While this phase marks progress toward integrated security insights, full utilization and optimization across all applications and user behaviors may still be under development.
+    - Indicators:
+        - Partial integration of Defender for Cloud Apps with Identity Protection, focusing on high-priority applications or user groups.
+        - Initial improvements in the ability to detect and respond to security risks based on enriched user behavior signals, though not comprehensively applied.
+        - Some enhancement in the organization's overall security posture, with ongoing efforts to extend and maximize the integration benefits.
+
+- Advanced: Defender for Cloud Apps monitoring is broadly integrated with Identity Protection across the organization, significantly improving security insights and enabling informed actions based on comprehensive user behavior within SaaS and modern applications. This advanced tier reflects a mature approach to leveraging integrated security intelligence for effective threat detection and response.
+    - Indicators:
+        - Comprehensive deployment of integrated monitoring and identity protection solutions, offering detailed insights into user activities and associated risks.
+        - Enhanced capability to take informed security actions, supported by rich behavioral data from the use of cloud applications.
+        - Significant progress toward a robust, data-driven security strategy, bolstered by the systematic application of integrated monitoring tools.
+
+- Optimal: The integration of Defender for Cloud Apps monitoring with Identity Protection for enriched security signals and informed action taking is fully developed, operationalized, and integrated into the organization’s overall security strategy. This optimal scenario ensures the highest level of security intelligence and response effectiveness, informed by detailed insights into user behavior across all SaaS and modern applications.
+    - Indicators:
+        - Strategic and universal application of integrated security monitoring, covering all user activities and cloud applications without exception.
+        - Comprehensive and adaptive management of security risks, enhancing organizational resilience against threats in cloud and SaaS environments.
+        - Full alignment with advanced security practices and compliance requirements, supported by an effective, adaptive, and well-managed integrated monitoring framework.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - SI-4 Information System Monitoring: Leveraging integrated monitoring solutions enhances the organization’s capability to detect, analyze, and respond to anomalies in user behavior, aligning with the control's requirements for comprehensive system monitoring.
+    - AU-6 Audit Review, Analysis, and Reporting: The enriched security signals obtained from integrated monitoring support the audit review, analysis, and reporting processes by providing detailed insights into user activities and potential risks.
+    - IR-4 Incident Handling: Integration between Defender for Cloud Apps and Identity Protection improves incident handling capabilities by enabling quicker identification, analysis, and response to incidents based on user behavior insights.
+    - PM-12 Insider Threat Program: The detailed monitoring of user behavior within SaaS and modern applications contributes to an effective insider threat program by identifying potential malicious activities or policy violations from within the organization.
 
 ### Enable Conditional Access integration with Microsoft Defender for Cloud Apps
 
 **Is Conditional Access integrated with Microsoft Defender for Cloud Apps?**
 
 - Legacy: Conditional Access is not integrated with Microsoft Defender for Cloud Apps, leaving the organization's cloud applications and data exposed to potential security risks. There's no systematic approach to monitor or control access based on the evolving threat landscape, resulting in a static and vulnerable security posture. Without this integration, the organization misses out on advanced security analytics and real-time threat detection, making it difficult to enforce adaptive access policies that respond to assessed risks.
+
     - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
         - Absence of Conditional Access policies informed by threat intelligence.
         - No evidence of adaptive security measures based on user behavior and risk assessment.
         - Increased incidents of security breaches due to unmonitored application access.
+
 - Initial: Initial steps are taken to integrate Conditional Access with Microsoft Defender for Cloud Apps, providing a basic level of security monitoring and response capabilities. At this stage, Conditional Access policies begin to leverage some signals from Defender for Cloud Apps to inform access decisions, but the implementation is limited and does not fully utilize the potential of cloud-based threat intelligence. The organization starts to see benefits in terms of improved visibility into access patterns and potential threats, but the coverage is not comprehensive.
     - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
         - Implementation of Conditional Access policies that begin to leverage threat signals.
         - Partial coverage and utilization of threat intelligence for security monitoring.
         - Some improvements in detecting suspicious activities, with gaps in comprehensive threat response.
+
 - Advanced: The integration between Conditional Access and Microsoft Defender for Cloud Apps is expanded, enabling more sophisticated security controls based on a wider array of signals from user behavior and threat intelligence. Conditional Access policies are dynamically adjusted based on detailed risk assessments, and the organization employs conditional access to enforce security policies more granely. This tier sees improved security outcomes through better detection of suspicious activities and the ability to respond more effectively to identified risks, although there may still be areas for further optimization.
     - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
         - Use of a wide array of signals from user behavior and threat intelligence for Conditional Access.
         - Evidence of dynamic and granular enforcement of security policies.
         - Decrease in successful security breaches due to enhanced detection and response capabilities.
+
 - Optimal: A fully integrated Conditional Access and Microsoft Defender for Cloud Apps system is in place, offering comprehensive and adaptive security measures that cover all aspects of access and threat response. This level of integration ensures that Conditional Access policies are informed by real-time, detailed threat intelligence from Defender for Cloud Apps, enabling the organization to implement dynamic and context-aware access controls. The optimal tier represents the highest standard of security, with the ability to detect, analyze, and respond to threats in real-time, significantly reducing the risk of unauthorized access and data breaches while maintaining a seamless user experience.
     - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
         - Comprehensive coverage and use of real-time threat intelligence for adaptive access controls.
