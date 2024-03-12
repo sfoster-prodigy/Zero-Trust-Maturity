@@ -385,22 +385,33 @@ Questions in the following sections are designed to help us understand a clients
 
 - Legacy: Devices are not consistently registered with Microsoft Entra ID, leading to a lack of control over access from vulnerable or compromised devices. This absence of device registration and management exposes the organization to increased security risks, with no effective mechanism to restrict access based on the device's security posture.
     - Indicators:
-        - 
+        - Devices can access corporate resources without undergoing a registration process, lacking verification of their security posture.
+        - Increased risk of data breaches and cyberattacks due to unauthorized or compromised devices gaining access to sensitive information.
+        - Challenges in enforcing security policies and compliance standards, affecting the organization's overall security strategy.
 
 - Initial: Some devices are registered with Microsoft Entra ID, but the process is not comprehensive or uniformly enforced across the organization. While there is an attempt to restrict access from vulnerable devices, the lack of a consistent and thorough device management strategy results in gaps in security coverage and potential access by compromised devices.
     - Indicators:
-        - 
+        - Partial deployment of device registration requirements, focusing on higher-risk devices or critical access points.
+        - Initial improvements in security posture by restricting access from some unregistered or compromised devices, though not uniformly applied across all access scenarios.
+        - Some enhancement in the organization’s ability to manage and control device access, with ongoing efforts to expand device registration requirements.
 
 - Advanced: A majority of devices are registered with Microsoft Entra ID, and there are structured processes in place to manage device security and restrict access from those identified as vulnerable or compromised. While comprehensive measures are taken to ensure device compliance, occasional lapses in enforcement or updates may still occur, indicating room for further optimization.
     - Indicators:
-        - 
+        - Comprehensive adoption of device registration policies, facilitating control over device access to corporate resources.
+        - Enhanced security measures in place, supported by the ability to restrict access from vulnerable and compromised devices effectively.
+        - Significant progress toward a robust device management and access control framework, bolstered by consistent enforcement of device registration.
 
 - Optimal: All devices are comprehensively registered with Microsoft Entra ID, ensuring a robust framework to restrict access from any vulnerable or compromised devices effectively. The organization employs a proactive and dynamic approach to device management, leveraging continuous monitoring, real-time threat intelligence, and automated compliance checks to maintain optimal security posture and minimize risks.
     - Indicators:
-        - 
+        - Strategic and universal application of device registration requirements, covering all devices without exception.
+        - Comprehensive management of device access security, enhancing organizational resilience against cyber threats and unauthorized access.
+        - Full alignment with device security best practices and compliance requirements, supported by an effective and well-managed device registration and access control framework.
 
 - Relevance to NIST SP 800-53 Revision 5: 
-    - 
+    - CM-8 Information System Component Inventory: Enforcing device registration supports maintaining an accurate inventory of devices accessing the system, essential for effective configuration management and security.
+    - AC-3 Access Enforcement: Device registration and compliance checks before granting access align with the need to enforce approved authorizations for system access, based on device security posture.
+    - IA-3 Device Identification and Authentication: Requiring devices to register with Microsoft Entra ID facilitates device identification and authentication, ensuring that only authorized devices can access corporate resources.
+    - SC-7 Boundary Protection: Device registration policies contribute to boundary protection by controlling the flow of traffic between devices on the network and corporate resources, ensuring that only secure and compliant devices can connect.
 
 - Products covered in this section:
     - Microsoft Intune
@@ -411,37 +422,67 @@ Questions in the following sections are designed to help us understand a clients
 
 **Is there a system in place to evaluate the health and compliance of devices before granting access to corporate resources, leveraging Microsoft Entra ID capabilities?**
 
-- Legacy: There is no established system for evaluating the health and compliance of devices. As a result, devices may access corporate resources without any assessment of their security posture, significantly increasing the risk of exposing the organization to vulnerabilities and breaches through compromised or non-compliant devices.
+- Legacy: The organization does not evaluate the health and compliance of devices before granting access to corporate resources. This lack of assessment can lead to security vulnerabilities by allowing potentially compromised or non-compliant devices to access sensitive information.
     - Indicators:
-        - 
+        - Absence of a proactive device health and compliance assessment mechanism.
+        - Increased risk of data breaches and security incidents due to vulnerable devices accessing corporate resources.
+        - Challenges in maintaining a secure IT environment and enforcing device security policies.
 
-- Initial: A basic system exists for evaluating device health and compliance, but it is not comprehensive or fully leveraged. While some devices are assessed for compliance, the process lacks depth and consistency, potentially allowing vulnerable devices to access corporate resources.
+- Initial: Initial efforts have been made to assess the health and compliance of certain devices using Microsoft Entra ID capabilities, with a focus on critical systems or higher-risk devices. While this phase marks the beginning of enhanced device security management, comprehensive and systematic assessments across all devices may still be under development.
     - Indicators:
-        - 
+        - Partial implementation of device health and compliance assessments, targeting specific devices or access scenarios.
+        - Initial improvements in security posture by identifying and restricting access from some non-compliant or compromised devices, though not uniformly applied.
+        - Some enhancement in the organization’s approach to device security, with ongoing efforts to expand and standardize health and compliance assessments.
 
-- Advanced: A structured system is in place to evaluate the health and compliance of devices using Microsoft Entra ID capabilities. Most devices are assessed before access is granted, reducing the risk of exposure from vulnerable devices. However, continuous improvements and tighter integration could further enhance security.
+- Advanced: A system for evaluating the health and compliance of all devices attempting to access corporate resources is broadly implemented, leveraging Microsoft Entra ID capabilities to enforce access control based on device security status. This advanced tier reflects a mature approach to device management, ensuring a high level of security and compliance.
     - Indicators:
-        - 
+        - Comprehensive deployment of health and compliance assessments for devices, facilitating informed access control decisions.
+        - Enhanced protection against unauthorized or risky device access, supported by consistent enforcement of device compliance policies.
+        - Significant progress toward a secure and compliant device environment, bolstered by thorough and systematic device assessments.
 
-- Optimal: A comprehensive and fully integrated system is established to evaluate the health and compliance of all devices leveraging Microsoft Entra ID capabilities. This system ensures rigorous assessments and real-time compliance checks, effectively restricting access from vulnerable devices and significantly enhancing the organization's security posture.
+- Optimal: The implementation of a device health and compliance assessment system, integrated with Microsoft Entra ID, is fully developed, operationalized, and integrated into the organization's overall security strategy. This optimal scenario ensures the highest level of device security and access control, with all devices evaluated for compliance before accessing corporate resources.
     - Indicators:
-        - 
+        - Strategic and universal application of device health and compliance assessments, covering all devices without exception.
+        - Comprehensive management of device security and compliance, enhancing organizational resilience against threats.
+        - Full alignment with security best practices and regulatory requirements, supported by an effective and well-managed device assessment and access control framework.
 
-- Relevance to NIST SP 800-53 Revision 5: 
-    - 
+- Relevance to NIST SP 800-53 Revision 5: The implementation of a system to evaluate device health and compliance before granting access aligns with several NIST SP 800-53 Rev5 controls, emphasizing the importance of secure device management
+    - CM-2 Baseline Configuration: Assessing device compliance ensures that devices adhere to the baseline configurations required for secure operation, aligning with the control's emphasis on maintaining security baselines.
+    - CM-8 Information System Component Inventory: Evaluating device health and compliance contributes to the accurate inventory management of system components, ensuring that only secure and compliant devices can access corporate resources.
+    - AC-17 Remote Access: The process of assessing device health and compliance before allowing remote access aligns with the control's requirements for securing remote connections, ensuring that remote devices meet organizational security standards.
+    - SI-7 Software, Firmware, and Information Integrity: Evaluating device health includes assessing the integrity of software and firmware, ensuring that devices are free from unauthorized changes or compromises.
 
-**Are devices managed using hybrid join, Microsoft Entra join, and MDM through Intune for seamless access and security policy integration across all user devices?**
+**Has the organization managed devices using hybrid join, Microsoft Entra join, and MDM through Intune for seamless access and security policy integration across all user devices?**
 
-- Legacy: Hybrid join and Microsoft Entra join, alongside mobile device management (MDM) through Intune, are not effectively utilized, if at all. This lack of utilization results in a disjointed approach to managing access and security policies across devices, leading to inconsistent security postures and potential vulnerabilities in device management and access control.
+- Legacy: The organization has not implemented comprehensive device management strategies, such as hybrid join, Microsoft Entra join, or mobile device management (MDM) through Intune. This lack of advanced device management may lead to inconsistent security policies and challenges in ensuring seamless access across devices.
+    - Indicators:
+        - Limited to no use of advanced device management solutions, resulting in disparate access controls and security policies across devices.
+        - Increased risk of security vulnerabilities due to inconsistent policy enforcement and device oversight.
+        - Challenges in providing a unified user experience and maintaining comprehensive security across all devices.
 
-- Initial: There is a basic implementation of hybrid join, Microsoft Entra join, and MDM through Intune. However, these tools are underutilized or not fully integrated, leading to a piecemeal approach in managing access and security policies. While some devices may be managed and secured, comprehensive coverage and policy consistency across all user devices are not achieved.
+- Initial: Initial efforts have been made to adopt device management strategies, including implementing hybrid join, Microsoft Entra join, or Intune MDM for certain device categories or user groups. While this phase marks the beginning of enhanced device management, comprehensive integration and policy consistency may still be under development.
+    - Indicators:
+        - Partial adoption of device management solutions, focusing on key device categories or critical access points.
+        - Initial improvements in device security and access management, though not uniformly applied across the organization.
+        - Some enhancement in the organization's approach to device policy integration, with ongoing efforts to extend and standardize device management practices.
 
-- Advanced: Hybrid join, Microsoft Entra join, and MDM through Intune are utilized to a significant extent, providing a structured approach to managing access and security policies across user devices. While there is good coverage and integration, occasional challenges in policy consistency or enforcement may arise, indicating areas for further refinement and optimization.
+- Advanced: The management of devices using hybrid join, Microsoft Entra join, and MDM through Intune is fully developed, operationalized, and integrated into the organization's overall security and access management strategy. This optimal scenario ensures the highest level of security, efficiency, and user experience, with seamless policy integration across all devices.
+    - Indicators:
+        - Comprehensive deployment of advanced device management strategies, facilitating integrated security policies and seamless access across all user devices.
+        - Enhanced security posture and user experience, supported by consistent policy enforcement and device oversight.
+        - Significant progress toward a robust and unified device management framework, bolstered by thorough integration of management solutions.
 
 - Optimal: The organization leverages hybrid join, Microsoft Entra join, and MDM through Intune comprehensively, ensuring a seamless and fully integrated approach to managing access and security policies across all user devices. This optimal use includes advanced policy enforcement, real-time compliance checks, and automated remediation actions, ensuring consistent security posture and compliance across the device ecosystem.
+    - Indicators:
+        - Strategic and universal application of hybrid join, Microsoft Entra join, and MDM through Intune for device management, covering all user devices without exception.
+        - Comprehensive and proactive management of device access and security policies, enhancing organizational agility, security resilience, and compliance.
+        - Full alignment with device management best practices and regulatory requirements, supported by an effective, adaptive, and well-managed device policy integration framework.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - CM-2 Baseline Configuration: Ensuring devices are managed and configured according to baseline security standards is essential for maintaining the integrity and security of organizational resources.
+    - AC-3 Access Enforcement: Integrated device management solutions facilitate the enforcement of access controls, ensuring that device access to corporate resources is governed by consistent security policies.
+    - CM-7 Least Functionality: Device management through Intune and other mechanisms supports the principle of least functionality by controlling software installation and execution based on organizational policies.
+    - CM-8 Information System Component Inventory: Managing devices with Intune and similar solutions contributes to maintaining an accurate inventory of system components, crucial for effective security and operational management.
 
 ### Analytics Improve Visibility
 
@@ -449,149 +490,138 @@ Questions in the following sections are designed to help us understand a clients
 
 **Is logging and reporting configured to capture detailed information on authentication, authorization, and provisioning events?**
 
-- Legacy: Logging and reporting mechanisms are either not configured or are minimally implemented, resulting in a lack of visibility into authentication, authorization, and provisioning activities. This gap hinders the ability to effectively monitor and respond to security incidents.
+- Legacy: The organization has minimal or no logging and reporting mechanisms for authentication, authorization, and provisioning events. This lack of detailed logging can hinder the ability to audit and review access controls and identity management activities, potentially increasing security risks.
     - Indicators
-        - Sparse or non-existent logging of critical security events.
-        - Limited ability to audit or review access decisions and provisioning changes.
-        - Increased risk due to lack of insight into potentially malicious activities or configuration errors.
+        - Limited to no detailed logs of identity management events, resulting in insufficient visibility into authentication and authorization activities.
+        - Challenges in detecting and responding to security incidents due to the lack of comprehensive event logging.
+        - Inability to perform effective audits and compliance checks related to identity and access management processes.
 
-- Initial: Basic logging and reporting are in place, capturing some information on authentication, authorization, and provisioning. While this provides a level of visibility, it may not be sufficiently detailed or comprehensive to support robust security analysis.
+- Initial: Initial efforts have been made to implement logging and reporting for some authentication, authorization, and provisioning events. While this phase marks the beginning of enhanced visibility into identity management activities, comprehensive logging and integration of reporting mechanisms across all systems may still be under development.
     - Indicators
-        - Partial coverage of event logging, with significant activities recorded but lacking granularity.
-        - Some capability for security analysis and incident response, though with limitations.
-        - Moderate improvement in visibility, but with room for enhancement in detail and coverage.
+        - Partial implementation of logging and reporting mechanisms, focusing on high-priority systems or critical events.
+        - Initial improvements in the ability to audit and review identity management activities, though coverage may be incomplete.
+        - Some enhancement in the organization’s security posture and compliance capabilities, with ongoing efforts to expand and standardize logging and reporting.
 
-- Advanced: Detailed logging and reporting are configured for most authentication, authorization, and provisioning events, providing a high level of visibility. This advanced implementation supports effective security monitoring and incident response but may exclude some less critical systems.
+- The organization has broadly implemented logging and reporting mechanisms to capture detailed information on authentication, authorization, and provisioning events across most systems and applications. This advanced tier reflects a mature approach to identity management visibility, ensuring significant coverage and depth of logged information.
     - Indicators
-        - Comprehensive logging of most security-relevant events with detailed information.
-        - Enhanced capability for in-depth security analysis and proactive incident management.
-        - Significantly improved visibility into security operations, with minor gaps remaining.
+        - Comprehensive deployment of logging and reporting solutions, facilitating in-depth visibility into identity and access management events.
+        - Enhanced ability to detect, investigate, and respond to security incidents, supported by detailed and accessible logs.
+        - Significant progress toward robust compliance and auditing capabilities, bolstered by the systematic collection and analysis of event data.
 
-- Optimal: Logging and reporting are fully optimized, capturing detailed and comprehensive information on all authentication, authorization, and provisioning activities across the organization. This optimal configuration ensures maximum visibility, supporting the highest standards of security monitoring and analysis.
+- Optimal: The configuration of logging and reporting mechanisms for capturing detailed information on all authentication, authorization, and provisioning events is fully developed, operationalized, and integrated into the organization’s overall security and compliance strategy. This optimal scenario ensures the highest level of visibility, enabling proactive security management and compliance oversight.
     - Indicators
-        - Universal and detailed logging of all security events without exceptions.
-        - Full capability for granular security analysis, auditing, and proactive incident response.
-        - Maximized visibility and control over security operations, eliminating blind spots in monitoring and analysis.
+        - Strategic and universal application of logging and reporting mechanisms, covering all identity management events without exception.
+        - Comprehensive management of logged information, enhancing organizational resilience against threats and compliance with regulatory requirements.
+        - Full alignment with best practices for security and compliance monitoring, supported by an effective, adaptive, and well-managed logging framework.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - AU-2 Event Logging: Configuring detailed logging for identity management events supports the requirements for capturing, monitoring, and analyzing events that could affect the organization’s security posture.
+    - AU-6 Audit Review, Analysis, and Reporting: Comprehensive reporting mechanisms facilitate the review, analysis, and reporting of audit records, enabling the organization to respond to audit findings and mitigate identified issues effectively.
+    - AC-2 Account Management: Detailed logging of provisioning events aids in the management of user accounts, supporting the control’s emphasis on monitoring the creation, modification, enabling, disabling, and removal of accounts.
+    - AU-12 Audit Generation: The capability to generate detailed audit logs for critical identity management activities aligns with the requirement to produce audit records that can help the organization detect, understand, and recover from attacks.
 
 ## Identities and access privileges are managed with identity governance
 
 ### Secure privileged access with Privileged Identity Management
 
-**Is Privileged Identity Management utilized to control and monitor access to privileged operations and roles?**
+**Has the organization utilized Privileged Identity Management to control and monitor access to privileged operations and roles?**
     
-- Legacy: No utilization of Privileged Identity Management (PIM) tools or processes. Privileged accounts are managed manually, leading to significant security risks due to the lack of oversight and control over these critical access points.
+- Legacy: The organization lacks a formalized system for managing privileged identities. Privileged accounts are managed manually or using basic tools, leading to potential security risks due to inadequate control and monitoring of privileged access.
     - Indicators
-        - Manual management of privileged accounts without automated controls or oversight.
-        - Increased risk of unauthorized access to critical systems and data through privileged accounts.
-        - Lack of auditing and real-time monitoring for privileged account activities.
+        - Absence of a dedicated solution for privileged access management, resulting in inconsistent and potentially insecure handling of privileged accounts.
+        - Increased risk of unauthorized access and security breaches due to inadequate oversight of privileged operations.
+        - Challenges in enforcing least privilege and just-in-time access principles, impacting the organization's overall security posture.
 
-- Initial: Partial utilization of Privileged Identity Management for certain critical roles or systems. While some privileged accounts are under PIM control, comprehensive coverage across all privileged roles and operations is lacking, leading to inconsistent security enforcement.
+- Initial: Initial steps have been made to implement Privileged Identity Management for certain high-risk roles or operations. While this phase marks the beginning of adopting PIM practices, comprehensive coverage and integration across all privileged roles may still be under development.
     - Indicators
-        - Selective application of PIM controls, leaving gaps in privileged account management.
-        - Moderate improvement in securing privileged access but with notable vulnerabilities due to incomplete coverage.
-        - Some level of auditing and monitoring for privileged activities, though not universally applied.
-
-- Advanced: Advanced utilization of Privileged Identity Management, covering a broad spectrum of privileged roles and operations. Most privileged accounts are managed through PIM, significantly enhancing security, though minor exceptions may exist for legacy or specialized systems.
+        - Partial deployment of PIM solutions, focusing on critical systems or high-risk roles.
+        - Initial improvements in privileged access control and monitoring, though not uniformly applied across the organization.
+        - Some enhancement in the organization’s ability to manage and oversee privileged identities, with ongoing efforts to extend PIM practices.
+- Advanced: Privileged Identity Management is broadly implemented across the organization, significantly improving the control and oversight of privileged access. This advanced tier reflects a mature approach to privileged access management, ensuring that privileged operations and roles are closely monitored and controlled.
     - Indicators
-        - Broad coverage of privileged accounts under PIM control, with comprehensive policies and procedures.
-        - Significant reduction in risks associated with privileged access, with enhanced auditing and real-time monitoring capabilities.
-        - Occasional exceptions for certain privileged roles or operations, with plans for future inclusion.
+        - Comprehensive adoption of PIM solutions, facilitating robust management of all privileged accounts and operations.
+        - Enhanced security measures in place, supported by consistent enforcement of privileged access policies.
+        - Significant progress toward minimizing the risk of unauthorized privileged access, bolstered by the systematic application of PIM practices.
 
-- Optimal: Full utilization of Privileged Identity Management across all privileged roles and operations without exceptions. This optimal state ensures the highest level of security and control over privileged access, with sophisticated monitoring, auditing, and real-time response mechanisms.
+- Optimal: The deployment of Privileged Identity Management practices is fully developed, operationalized, and integrated into the organization’s overall security and access management strategy. This optimal scenario ensures the highest level of security for privileged operations and roles, with rigorous control and monitoring mechanisms in place.
     - Indicators
-        - Universal application of PIM controls across all privileged accounts, systems, and data.
-        - Maximum security posture for privileged access, with zero trust enforcement and adaptive controls.
-        - Comprehensive auditing, real-time monitoring, and automated response to any suspicious privileged activities.
+        - Strategic and universal application of PIM practices, covering all privileged roles and operations without exception.
+        - Comprehensive and proactive management of privileged access, enhancing organizational resilience against threats.
+        - Full alignment with best practices for privileged access management and compliance requirements, supported by an effective and well-managed PIM framework.
 
-### Restrict user consent to applications
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - AC-2 Account Management: Implementing PIM supports the management of user accounts, specifically focusing on the oversight and control of privileged accounts in line with principles of least privilege and separation of duties.
+    - AC-6 Least Privilege: PIM practices enforce the principle of least privilege by ensuring that users are provided access only to the resources and information necessary for their roles.
+    - AU-9 Protection of Audit Information: PIM contributes to the protection of audit information by monitoring and controlling access to audit logs, especially by privileged users, ensuring the integrity of audit data.
+    - AC-17 Remote Access: PIM can enhance the security of remote access to privileged functions by enforcing multi-factor authentication and just-in-time access controls, mitigating the risk of unauthorized access to sensitive operations.
 
-**Are user consents to applications being restricted to manage and prevent unnecessary data exposure?**
+### Protecting Organizational Data in Modern Applications
 
-- Legacy: No mechanisms in place to restrict user consent for applications, allowing users to grant application permissions without oversight. This lack of control leads to potential over-privileging and unauthorized data access.
+**Has the organization implemented measures to manage user consent effectively, including restricting and reviewing consent requests, to protect organizational data from unnecessary exposure in modern applications?**
+
+- Legacy: The organization lacks formal measures for managing user consent, allowing unrestricted consent grants that could lead to unnecessary data exposure through modern applications. This absence of consent governance poses significant risks to data privacy and security.
     - Indicators
-        - Users can consent to any application without administrative oversight.
-        - High risk of unauthorized data access due to lack of application vetting.
-        - Potential for over-privileging of applications with no checks in place.
+        - Unregulated user consent process, permitting applications to access organizational data without adequate oversight.
+        - Increased vulnerability to data breaches and privacy violations due to unchecked application permissions.
+        - Challenges in ensuring data is shared with applications in a controlled and secure manner.
 
-- Initial: Basic restrictions on user consent for applications are introduced, such as allowing consent only for apps from verified publishers and for selected permissions. While this introduces a layer of control, it's applied selectively, leaving gaps that could still allow unauthorized applications to access data without comprehensive oversight.
+- Initial: Initial efforts have been made to manage user consent more effectively, with some restrictions and review processes implemented for consent requests. While this phase marks progress toward better consent management, a comprehensive and systematic approach across all applications may still be under development.
     - Indicators
-        - Approval is required for certain high-risk permissions, but not uniformly enforced.
-        - Some level of administrative oversight, but inconsistencies leave gaps in protection.
-        - Applications can still access data without comprehensive scrutiny or consistent policy application.
+        - Partial implementation of consent restrictions and review mechanisms, focusing on more sensitive or critical applications.
+        - Initial steps toward mitigating data exposure risks associated with application access, though not yet fully realized.
+        - Some improvement in consent governance practices, with ongoing efforts to enhance oversight and control over consent requests.
 
-- Advanced: Advanced mechanisms for restricting user consent are employed, including the admin consent workflow, which enables users to request administrator approval for application permissions directly. Education on the permissions and consent framework for administrators, along with auditing and monitoring of apps and permissions, enhances security. However, the system might still have exceptions for certain business-critical or legacy applications.
+- Advanced: The organization has broadly implemented measures to manage user consent effectively, including comprehensive restrictions and regular reviews of consent requests. This advanced tier reflects a mature approach to consent management, ensuring that data exposure through applications is minimized and controlled.
     - Indicators
-        - Detailed education and training for administrators on permissions and consent.
-        - Auditing and monitoring of applications and permissions to identify and mitigate risks.
-        - Business-critical and legacy applications may have exceptions, requiring careful management.
-- Optimal: A comprehensive and proactive approach to controlling user consent for applications is established, ensuring thorough vetting and approval of all applications before access is granted. This includes proactive administrator consent for high-usage applications, stringent evaluation of applications for tenant-wide admin consent, and limiting user access even when admin consent has been granted. This tier represents the pinnacle of preventing unauthorized data access and ensuring adherence to strict organizational policies and security standards.
+        - Systematic enforcement of user consent restrictions and thorough review processes for managing consent requests across all applications.
+        - Enhanced data protection measures in place, supported by vigilant oversight of application access permissions.
+        - Significant progress toward safeguarding organizational data from unnecessary exposure, bolstered by proactive and strategic consent management practices.
+
+- Optimal: Measures for managing user consent, including restricting and reviewing consent requests, are fully developed, operationalized, and integrated into the organization's overall data protection strategy. This optimal scenario ensures the highest level of organizational data protection from unnecessary exposure in modern applications.
     - Indicators
-        - Proactive granting of administrator consent for trusted, high-usage applications.
-        - Stringent evaluation and approval process for tenant-wide admin consent to applications.
-        - User access to applications is limited, even with admin consent, through mechanisms like requiring user assignment.
-        - Use of advanced tools for auditing and monitoring consent-related activities, ensuring continuous oversight and compliance.
+        - Strategic and universal application of consent management measures, covering all consent requests and applications without exception.
+        - Comprehensive and adaptive management of user consent processes, enhancing organizational resilience against data privacy and security threats.
+        - Full alignment with data protection best practices and regulatory requirements, supported by an effective, efficient, and well-managed consent governance framework.
 
-**Are successful application authorizations monitored?**
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - AC-3 Access Enforcement: Effective consent management enforces approved authorizations for accessing organizational data, ensuring that access by applications is controlled and aligns with policy.
+    - CM-7 Least Functionality: By limiting application permissions through managed consent, organizations enforce the principle of least functionality, reducing unnecessary data access and exposure.
+    - AR-5 Privacy Impact Assessment: Managing and reviewing consent requests contribute to privacy impact assessments by identifying and mitigating risks associated with data access by applications.
+    - IP-2 Consent: Effective consent management practices ensure that consent is obtained in accordance with organizational policies, legal requirements, and user expectations, safeguarding personal and sensitive information.
 
-- Legacy: No mechanisms are in place to monitor successful application consent authorizations, leaving organizations blind to which applications users are granting access. This lack of visibility and control significantly increases the risk of unauthorized data access and potential data breaches, as there is no system to track or review the consents given across the organization.
+### Optimizing request, approvals and recertifications with entitlement management
+
+**Has the organization streamlined its access request, approval, and recertification process by centralizing authentication through Microsoft Entra ID, using Entitlement Management for access packages, and enabling self-service paradigms for group and application access?**
+
+- Legacy: The organization relies on manual, decentralized processes for access request, approval, and recertification, leading to inefficiencies and potential security gaps. This lack of centralized and automated access management may result in delayed access provisioning and increased risk of inappropriate access.
+    - Indicators:
+        - Manual and disjointed processes for handling access requests and approvals, causing delays and potential oversight errors.
+        - Limited ability to efficiently recertify access, potentially allowing outdated or excessive permissions to persist.
+        - Challenges in managing access at scale, impacting both security and user productivity.
+
+- Initial: Initial steps have been made to centralize authentication and begin integrating Entitlement Management for managing access packages. While this phase marks progress towards streamlined access management, the comprehensive adoption of self-service paradigms and full integration of access recertification processes may still be under development.
     - Indicators
-        - Users can grant consent to any application without oversight.
-        - No centralized tracking or review of application consents.
-        - Increased risk of unauthorized data access and potential breaches.
+        - Partial implementation of Microsoft Entra ID for centralized authentication and initial use of Entitlement Management for some access scenarios.
+        - Beginning to introduce self-service access requests for groups and applications, though not widely adopted or fully automated.
+        - Some improvement in the efficiency and security of the access management process, with ongoing efforts to enhance and expand capabilities.
 
-- Initial: Basic monitoring of application consent authorizations is introduced, enabling organizations to track and review consents for a subset of applications, typically focusing on those deemed high-risk or high-impact. While this represents a step toward better consent management, it remains limited in scope and depth, often relying on manual review processes and lacking real-time monitoring capabilities.
-    - Indicators
-        - Tracking and review of consents for high-risk or high-impact applications.
-        - Manual review processes for a subset of applications.
-        - Limited scope and depth in monitoring, with significant gaps remaining.
+- Advanced: The organization has broadly implemented Microsoft Entra ID and Entitlement Management, significantly streamlining the access request, approval, and recertification process. Self-service paradigms for group and application access are widely enabled, improving operational efficiency and user autonomy.
+    - Indicators:
+        - Comprehensive use of Microsoft Entra ID and Entitlement Management to centralize and automate access management across the organization.
+        - Widespread adoption of self-service access paradigms, facilitating efficient and user-driven request and approval processes.
+        - Enhanced security and compliance posture through systematic and automated recertification of access permissions, reducing the risk of inappropriate access.
 
-- Advanced: Comprehensive mechanisms for monitoring application consent authorizations are employed, including automated tools and processes for tracking, reviewing, and auditing consents across all applications. This approach enhances visibility and control over application consents, allowing for timely detection and remediation of unauthorized or risky consents. However, there may still be challenges in fully automating the review process for all types of applications, particularly those with complex consent requirements.
-    - Indicators
-        - Automated tools and processes for tracking, reviewing, and auditing consents.
-        - Enhanced visibility and control over application consents.
-        - Timely detection and remediation of unauthorized or risky consents, though some automation challenges persist.
+- Optimal: The optimization of access management through centralization with Microsoft Entra ID, comprehensive utilization of Entitlement Management, and full enablement of self-service access paradigms is fully developed, operationalized, and integrated into the organization’s overall identity and access strategy. This optimal scenario ensures the highest level of efficiency, security, and user empowerment in managing access.
+    - Indicators:
+        - Strategic and universal application of centralized authentication, access packages, and self-service paradigms, covering all access needs without exception.
+        - Comprehensive management of access lifecycle, from request to recertification, enhancing organizational agility and security resilience.
+        - Full alignment with access management best practices and compliance requirements, supported by an effective, adaptive, and user-friendly access governance framework.
 
-- Optimal: A proactive and fully integrated approach to monitoring application consent authorizations is established, leveraging advanced analytics, real-time monitoring, and automated remediation processes. This tier ensures that all application consents are continuously reviewed and validated against organizational policies and security standards, with immediate action taken on any unauthorized or suspicious consent activities. This comprehensive strategy represents the highest level of control and security in managing application consent authorizations, minimizing the risk of data exposure and unauthorized access to the fullest extent possible.
-    - Indicators
-        - Advanced analytics and real-time monitoring of all application consents.
-        - Automated remediation processes for unauthorized or suspicious consent activities.
-        - Continuous review and validation of consents against organizational policies and security standards.
-        - Minimized risk of data exposure and unauthorized access through comprehensive control and security measures.
-
-### Manage entitlement
-
-**Is there a comprehensive system in place for managing entitlements that ensures users have appropriate access rights to resources based on their roles and responsibilities?**
-
-- Legacy: No comprehensive system is in place for managing entitlements. Users often have inappropriate access rights, leading to potential security risks and operational inefficiencies.
-
-- Initial: A basic system exists for managing entitlements, but it lacks the depth to ensure users always have access rights aligned with their roles. While there are attempts to match access with responsibilities, inconsistencies and gaps remain.
-
-- Advanced: There is a structured system for managing entitlements, ensuring users have access rights that largely match their roles and responsibilities. Regular improvements are made, but opportunities for further refinement exist to achieve optimal alignment and security.
-
-- Optimal: A comprehensive and fully optimized system for managing entitlements is in place, guaranteeing access rights are perfectly aligned with user roles and responsibilities. The system ensures high operational efficiency and security, with access rights dynamically adjusted as roles change.
-
-**Is the process for granting, modifying, and revoking access rights streamlined and automated to minimize delays and reduce the risk of manual errors?**
-
-- Legacy: The process for granting, modifying, and revoking access rights is manual and cumbersome, leading to significant delays and a high risk of errors.
-
-- Initial: Some efforts are made to streamline and automate the access rights management process, but these are partial and not fully effective. Delays and manual errors are reduced but not eliminated.
-
-- Advanced: The process for managing access rights is significantly streamlined and automated, leading to reduced delays and a lower risk of manual errors. While highly effective, there's still room for further enhancements in automation and process efficiency.
-
-- Optimal: A fully optimized and automated process for managing access rights is in place, minimizing delays and virtually eliminating the risk of manual errors. The process is highly efficient, ensuring timely and accurate granting, modifying, and revoking of access rights.
-
-**Are there mechanisms in place for monitoring and reporting on entitlement management to detect and respond to unauthorized access attempts or non-compliance with policies?**
-
-- Legacy: There are no mechanisms in place for monitoring and reporting on entitlement management, leaving unauthorized access attempts and non-compliance issues undetected.
-
-- Initial: Basic mechanisms for monitoring and reporting on entitlement management exist but lack the depth and automation needed for effective oversight and response to unauthorized access or non-compliance.
-
-- Advanced: Structured mechanisms are in place for monitoring and reporting on entitlement management, providing a good level of oversight and enabling responses to unauthorized access attempts or non-compliance. While effective, there's potential for further optimization and automation.
-
-- Optimal: Comprehensive and fully automated mechanisms for monitoring and reporting on entitlement management are established, ensuring exceptional oversight and rapid response to any unauthorized access attempts or policy non-compliance. The system is optimized for efficiency and effectiveness.
+- Relevance to NIST SP 800-53 Revision 5: The streamlining of the access request, approval, and recertification process through Microsoft Entra ID and Entitlement Management aligns with several NIST SP 800-53 Rev5 controls, emphasizing the importance of efficient and secure access management
+    - AC-2 Account Management: Centralized and automated access management supports the control's requirements for managing user accounts, ensuring access is granted based on approved authorizations.
+    - AC-3 Access Enforcement: Utilizing Entitlement Management to define and enforce access packages aligns with the need to control access to organizational resources based on approved authorizations.
+    - IA-2 Identification and Authentication (Organizational Users): Centralizing authentication through Microsoft Entra ID ensures that users are uniquely identified and authenticated, enhancing security controls.
+    - AC-25 Access Reviews: The automated recertification process facilitated by Entitlement Management supports the periodic review and validation of access permissions, ensuring they remain appropriate over time.
 
 ### Use passwordless authentication to reduce the risk of phishing and password attacks
 
@@ -604,6 +634,9 @@ Questions in the following sections are designed to help us understand a clients
 - Advanced: Passwordless authentication is implemented using a variety of technologies, including Windows Hello, Microsoft Authenticator, and possibly FIDO2, among others. The implementation covers a significant portion of the organization, substantially reducing the risk associated with phishing and password attacks. However, there may be areas or user groups within the organization that are not fully covered, indicating room for broader implementation and integration.
 
 - Optimal: The organization has fully implemented passwordless authentication, utilizing a comprehensive range of technologies such as Windows Hello, Microsoft Authenticator, and FIDO2 across all areas. This widespread implementation ensures maximum protection against phishing and password attacks, significantly enhancing the security posture by eliminating reliance on passwords and reducing the risk of such attacks to nearly zero.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
 
 ## User, device, location, and behavior is analyzed in real time to determine risk and deliver ongoing protection
 
@@ -619,6 +652,9 @@ Questions in the following sections are designed to help us understand a clients
 
 - Optimal: The organization employs a comprehensive and fully integrated strategy for deploying Microsoft Entra Password Protection, perfectly tailored to meet stringent security policies and ensure user compliance. Advanced measures are in place to prevent any weak or compromised password usage, significantly enhancing the organization's security posture.
 
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
 ### Enable Identity Protection
 
 **Is Identity Protection enabled to provide granular session/user risk signals for investigating risk and confirming or dismissing compromise signals?**
@@ -631,6 +667,9 @@ Questions in the following sections are designed to help us understand a clients
 
 - Optimal: A comprehensive and fully tailored strategy is in place for utilizing Microsoft Identity Protection, with risk policies customized to fit precisely within the organization's risk management framework. This approach ensures the highest level of detection and mitigation of identity threats, significantly bolstering the organization's security posture.
 
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
 ### Enable Microsoft Defender for Cloud Apps integration with Identity Protection
 
 **Are threat signals from Microsoft Defender for Cloud Apps integrated with Identity Protection to improve detection and response to suspicious user behaviors?**
@@ -642,6 +681,9 @@ Questions in the following sections are designed to help us understand a clients
 - Advanced: A structured strategy is in place for integrating Microsoft Defender for Cloud Apps with Identity Protection, leveraging shared signals and data to enhance threat detection. While significant improvements are seen, the strategy could be further refined for maximum security posture enhancement.
 
 - Optimal: The organization employs a comprehensive and fully optimized strategy for integrating Microsoft Defender for Cloud Apps with Identity Protection. This integration maximizes the utilization of shared signals and data, significantly bolstering the organization's security posture with advanced threat detection capabilities.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
 
 ### Enable Conditional Access integration with Microsoft Defender for Cloud Apps
 
@@ -668,7 +710,7 @@ Questions in the following sections are designed to help us understand a clients
         - Seamless user experience with robust protection against unauthorized access and data breaches.
         - Significant reduction in incidents of security breaches, demonstrating effective threat detection and response.
 
-- **Relevance to NIST SP 800-53 Revision 5:**
+- Relevance to NIST SP 800-53 Revision 5:
     - 
 
 ### Enable restricted session for use in access decisions
@@ -701,7 +743,7 @@ Questions in the following sections are designed to help us understand a clients
         - Integrated policies for consistent enforcement across Microsoft 365 applications
         - Highest level of security with operational flexibility
 
-- **Relevance to NIST SP 800-53 Revision 5:**
+- Relevance to NIST SP 800-53 Revision 5:
     - 
 
 ## Integrate threat signals from other security solutions to improve detection, protection, and response
