@@ -4,7 +4,7 @@
 
 ## Microsoft Zero Trust Maturity Level Discovery Questions
 
-Questions in the following sections are designed to help us understand a clients current Zero Trust maturity level following the Microsoft Zero Trust Maturity framework. The following 
+Questions in the following sections are designed to help us determine a clients current maturity level following the Microsoft Zero Trust Security Model framework.
 
 ## Identities
 
@@ -13,7 +13,9 @@ Questions in the following sections are designed to help us understand a clients
 ### Connect all of your users to Microsoft Entra ID and federate with on-premises identity systems
 
 **Has the organization integrated Microsoft Entra ID with existing on-premises identity systems to ensure seamless user access across environments?**
-    
+
+#### Scoring:
+
 - **Legacy:** Cloud identity is not federated with on-premises Active Directory using Microsoft Entra Connect. Users manage separate identities for cloud and on-premises environments, leading to inefficiencies and increased security risks due to the lack of centralized identity management.
     - Indicators:
         - Separate management of identities for cloud and on-premises access.
@@ -49,8 +51,11 @@ Questions in the following sections are designed to help us understand a clients
     - Microsoft Entra Seamless SSO
     - Microsoft Entra Connect
 
+- **Summary:**
+At the "Advanced" maturity level, the organization has successfully integrated cloud identity with on-premises Active Directory through Microsoft Entra Connect, utilizing password hash synchronization to enable seamless access across environments. This strategic deployment enhances both user experience by allowing the use of on-premises credentials for cloud services and security by facilitating rapid cloud authentication. The approach demonstrates a significant advancement in managing identities efficiently, reducing the potential for security breaches, and aligning with key NIST guidelines such as AC-2, IA-2, AC-17, and AC-14. This level of integration is a testament to the organization's commitment to optimizing identity and access management practices, significantly improving the authentication process's speed and security.
+
 - **Recommendations:**
-    - 
+    - **Advanced to Optimal:** To reach the "Optimal" maturity level, the organization is recommended to fully integrate cloud and on-premises identities by leveraging the comprehensive capabilities of Microsoft Entra Connect. This includes not only maintaining password hash synchronization but also implementing seamless Single Sign-On (SSO) and robust Conditional Access policies. These policies should dynamically adapt authentication requirements based on user behavior, location, device health, and other risk factors. Expanding the deployment to include these additional features will provide a superior user experience and further enhance security. Emphasizing the development of Conditional Access policies that account for real-time assessments of risk will ensure a more adaptive and secure access management framework. This holistic approach will pave the way for achieving the highest standards of security and efficiency in identity management.
 
 **Is the organization utilizing Microsoft Entra ID to protect against security threats like brute force, DDoS, and password spray attacks through specific authentication options?**
 
@@ -85,7 +90,9 @@ Questions in the following sections are designed to help us understand a clients
     - A-4 Identifier Management: Utilizing Microsoft Entra ID aids in managing identifiers by ensuring they are properly issued, maintained, and retired, supporting secure authentication practices.
 
 - **Products covered:**
-    - 
+    - Microsoft Entra ID
+    - Microsoft Entra Multi-factor Authentication
+    - Microsoft Entra Conditional Access
 
 - **Recommendations:**
     - 
