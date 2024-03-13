@@ -97,8 +97,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - Microsfot Entra Identity Protection
 
 - **Recommendations:**
-    - **Initial to Advanced:** 
-
+    - 
 
 **Has the organization identified and excluded unnecessary on-premises identities, such as service accounts or privileged roles, from cloud federation?**
 
@@ -295,7 +294,6 @@ At the "Advanced" maturity level, the organization has successfully integrated c
 - **Products covered:**
     - Microsoft Entra ID
     - Microsoft Entra Multi-factor Authentication
-    - Microsoft Entra 
 
 - **Recommendations:**
     - 
@@ -570,6 +568,8 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - CM-8 Information System Component Inventory: Managing devices with Intune and similar solutions contributes to maintaining an accurate inventory of system components, crucial for effective security and operational management.
 
 - **Products covered:**
+    - Microsoft Entra ID
+    - Microsoft Entra Connect
     - Microsoft Intune
 
 - **Recommendations:**
@@ -624,7 +624,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
 
 ### Secure privileged access with Privileged Identity Management
 
-**Has the organization utilized Privileged Identity Management to control and monitor access to privileged operations and roles?**
+**Is the organization utilizing Privileged Identity Management to control and monitor access to privileged operations and roles?**
     
 - **Legacy:** The organization lacks a formalized system for managing privileged identities. Privileged accounts are managed manually or using basic tools, leading to potential security risks due to inadequate control and monitoring of privileged access.
     - Indicators
@@ -943,7 +943,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
 
 - **Products covered:**
     - Microsoft Defender for Cloud Apps
-    - Microsoft Defender for Cloud Apps Conditional Access
+    - Microsoft Entra Conditional Access
 
 - **Recommendations:**
     - 
@@ -1068,7 +1068,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
 
 - **Products covered:**
     - Microsoft Defender for Endpoint
-    - Conditional Access in Microsoft Defender for Endpoint
+    - Microsoft Entra Conditional Access
 
 - **Recommendations:**
     - 
