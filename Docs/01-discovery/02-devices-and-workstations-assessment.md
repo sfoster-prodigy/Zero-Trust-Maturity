@@ -11,33 +11,48 @@ Questions in the following sections are designed to help us understand a clients
 ### Endpoints are registered with a cloud identity providers
 
 #### Register corporate devices with Microsoft Entra ID
-  - Are corporate devices joined to or registerd with Microsoft Entra ID via Microsoft Entra join or Microsoft Entra Hybrid join?
-    - Legacy: Corporate devices are not joined to Microsoft Entra, relying solely on traditional, on-premises domain join methods. This approach neglects the benefits of integrating with cloud services for identity and access management, leaving device authentication and policy enforcement confined to less secure, conventional methods. The absence of Microsoft Entra's advanced security features in device management leaves the network exposed to potential breaches, as it does not leverage cloud identity for verifying device integrity and user access.
-      - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
+
+**Are corporate devices joined to or registered with Microsoft Entra ID via Microsoft Entra join or Microsoft Entra Hybrid join?**
+- Legacy: Corporate devices are not joined to Microsoft Entra, relying solely on traditional, on-premises domain join methods. This approach neglects the benefits of integrating with cloud services for identity and access management, leaving device authentication and policy enforcement confined to less secure, conventional methods. The absence of Microsoft Entra's advanced security features in device management leaves the network exposed to potential breaches, as it does not leverage cloud identity for verifying device integrity and user access.
+    - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
         - Sole reliance on traditional domain join methods, without leveraging Microsoft Entra for device management.
         - Increased security risks due to the absence of cloud identity provider integration for authentication and policy enforcement.
         - Lack of centralized management for devices, leading to inconsistencies in security policies and updates.
 
-    - Initial: Some corporate devices begin to be joined to Microsoft Entra, either through Microsoft Entra Join for direct cloud integration or Microsoft Entra Hybrid Join for mixed environments. However, this integration is not yet comprehensive, covering only a portion of the device fleet. This partial adoption signifies an initial step towards enhancing security but falls short of fully utilizing Microsoft Entra's capabilities to assess and enforce device compliance and security policies. As a result, the system remains vulnerable to unauthorized access due to inconsistent application of cloud-based identity verification and conditional access policies across all devices.
-      - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
+- Initial: Some corporate devices begin to be joined to Microsoft Entra, either through Microsoft Entra Join for direct cloud integration or Microsoft Entra Hybrid Join for mixed environments. However, this integration is not yet comprehensive, covering only a portion of the device fleet. This partial adoption signifies an initial step towards enhancing security but falls short of fully utilizing Microsoft Entra's capabilities to assess and enforce device compliance and security policies. As a result, the system remains vulnerable to unauthorized access due to inconsistent application of cloud-based identity verification and conditional access policies across all devices.
+    - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
         - Selective application of Microsoft Entra Join or Microsoft Entra Hybrid Join, indicating the start of cloud integration.'
         - Moderate improvement in device security and management through initial cloud identity integration.
         - Partial alignment with Zero Trust principles, with some devices still not fully managed through Microsoft Entra.
 
-    - Advanced: A significant portion of corporate devices are now joined to Microsoft Entra, utilizing both Microsoft Entra Join and Microsoft Entra Hybrid Join to accommodate different operational needs. This advanced level of integration marks a substantial improvement in security posture, as more devices are managed through cloud-based identity and access controls. However, gaps still exist in ensuring all devices meet the organization's security standards before granting access to resources. While the system has enhanced its defense against unauthorized access by leveraging cloud identity, the absence of universal enforcement of compliance and health checks leaves room for potential security risks.
-      - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
+- Advanced: A significant portion of corporate devices are now joined to Microsoft Entra, utilizing both Microsoft Entra Join and Microsoft Entra Hybrid Join to accommodate different operational needs. This advanced level of integration marks a substantial improvement in security posture, as more devices are managed through cloud-based identity and access controls. However, gaps still exist in ensuring all devices meet the organization's security standards before granting access to resources. While the system has enhanced its defense against unauthorized access by leveraging cloud identity, the absence of universal enforcement of compliance and health checks leaves room for potential security risks.
+    - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
         - Broad implementation of Microsoft Entra Join and Microsoft Entra Hybrid Join, achieving a higher level of cloud integration.
         - Significant reduction in security risks through enhanced cloud-based authentication and policy management.
         - Near-universal coverage of devices under Microsoft Entra management, though some exceptions may exist due to legacy constraints.
 
-    - Optimal: All corporate devices are fully integrated with Microsoft Entra, with a strategic application of either Microsoft Entra Join or Microsoft Entra Hybrid Join based on the specific needs of each device and operational scenario. This optimal integration ensures that no device is exempt from strict compliance and security policy enforcement, leveraging Microsoft Entra's full suite of cloud identity and access management capabilities. Every device's health status and compliance are rigorously verified before access to resources is granted, minimizing the risk of unauthorized access and securing the organizational network against potential threats. This comprehensive approach to device management epitomizes the highest standard of security, aligning perfectly with Zero Trust principles by assuming no implicit trust and verifying every access request based on device integrity and user identity.
-      - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
+- Optimal: All corporate devices are fully integrated with Microsoft Entra, with a strategic application of either Microsoft Entra Join or Microsoft Entra Hybrid Join based on the specific needs of each device and operational scenario. This optimal integration ensures that no device is exempt from strict compliance and security policy enforcement, leveraging Microsoft Entra's full suite of cloud identity and access management capabilities. Every device's health status and compliance are rigorously verified before access to resources is granted, minimizing the risk of unauthorized access and securing the organizational network against potential threats. This comprehensive approach to device management epitomizes the highest standard of security, aligning perfectly with Zero Trust principles by assuming no implicit trust and verifying every access request based on device integrity and user identity.
+    - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
         - Universal application of Microsoft Entra Join and Microsoft Entra Hybrid Join across all corporate devices, ensuring no device is left unmanaged.
         - Maximum security and management efficiency, with comprehensive cloud-based control over device access and policies.
         - Complete alignment with Zero Trust security principles, leveraging advanced cloud identity management features to secure and manage corporate devices.
 
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - IA-2 Identification and Authentication (Organizational Users): Utilizing Microsoft Entra ID for device management supports the identification and authentication requirements by ensuring that devices accessing organizational resources are properly authenticated and managed.
+    - AC-2 Account Management: The integration of devices with Microsoft Entra ID aids in the effective management of user accounts associated with those devices, ensuring that access rights are granted according to user role and device compliance.
+    - CM-8 Information System Component Inventory: Joining devices to Microsoft Entra ID contributes to maintaining an accurate inventory of information system components, as device identities and statuses can be centrally managed and monitored.
+    - SC-13 Cryptographic Protection: Microsoft Entra ID's use of cryptographic protocols for device registration and authentication aligns with the need for cryptographic protection of information, ensuring secure communication between devices and identity providers.
+
+- **Products covered:**
+    - Microsoft Entra ID
+    - Microsoft Entra Connect
+
+- **Recommendations:**
+    - 
+
 #### Register personal Windows devices with Microsoft Entra ID
-  - Are personal Windows devices registered with Microsoft Entra ID?
+
+**Are personal Windows devices registered with Microsoft Entra ID?**
     - Legacy: Personal Windows devices access corporate resources without being registered with Microsoft Entra ID. This lack of registration indicates minimal security controls, exposing the organization to increased risks of unauthorized access and potential data breaches.
       - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
         - Use of personal devices for corporate data access without the security and policy enforcement that comes with Microsoft Entra ID registration.
@@ -61,6 +76,18 @@ Questions in the following sections are designed to help us understand a clients
         - Universal registration of personal Windows devices with Microsoft Entra ID, ensuring comprehensive identity verification and policy enforcement.
         - Full implementation of the most stringent security policies and access controls for registered personal devices, mirroring the security standards of fully managed devices.
         - Strategic and comprehensive application of security measures, including rigorous conditional access policies and compliance enforcement, securing corporate data accessed by personal devices to the fullest extent possible through registration.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - AC-3 Access Enforcement: Registering personal devices with Microsoft Entra ID supports the enforcement of access controls, ensuring that only authorized devices can access organizational resources.
+    - AC-17 Remote Access: The registration process contributes to securing remote access by validating personal devices before allowing connectivity to corporate networks and data.
+    - IA-2 Identification and Authentication (Organizational Users): Device registration aids in the identification and authentication process by associating devices with user identities, enhancing the security of authentication mechanisms.
+    - PL-8 Security and Privacy Architectures: Registration of personal devices with Microsoft Entra ID is part of the organization's security and privacy architecture, addressing the management of remote access and the use of personal devices.
+
+- **Products covered:**
+    - Microsoft Entra ID
+
+- **Recommendations:**
+    - 
 
 #### Enable and configure Windows Hello for Business
   - Is Windows hello for Business enabled and configured for windows devices?
@@ -87,6 +114,15 @@ Questions in the following sections are designed to help us understand a clients
         - Universal deployment of Windows Hello for Business with comprehensive use of all its features.
         - Maximum security with zero reliance on passwords, fully embracing multi-factor and biometric authentication.
         - Comprehensive policy enforcement and management, ensuring consistent application of security settings across all devices, supported by real-time monitoring and response mechanisms for authentication attempts.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
+- **Products covered:**
+    - Windows Hello for Business
+
+- **Recommendations:**
+    - 
 
 ### Access is only granted to cloud-managed and compliant endpoints and apps
 #### Create a compliance policy with Microsoft Intune (all platforms)
@@ -115,6 +151,15 @@ Questions in the following sections are designed to help us understand a clients
         - Comprehensive use of all Intune features for compliance policy management, including advanced device health checks, system security settings, and data protection policies.
         - Maximum security and compliance posture, supported by real-time monitoring, automated remediation actions for noncompliance, and full integration with the Microsoft security ecosystem.
 
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
+- **Products covered:**
+    - 
+
+- **Recommendations:**
+    - 
+
 #### Automate notification email and add additional remediation actions for noncompliant devices in Intune (all platforms)
   - Are automated email notifications and remediation actions configured and enabled for non-compliant devices in Intune?
     - Legacy: No automated processes in place for managing non-compliant devices. Organizations rely solely on manual checks and communications, leading to delayed responses and increased risk of security breaches due to non-compliant devices remaining unaddressed.
@@ -140,6 +185,15 @@ Questions in the following sections are designed to help us understand a clients
         - Full deployment of automated email notifications, providing immediate alerts and detailed remediation steps to both IT administrators and end-users.
         - Comprehensive suite of automated remediation actions configured for all types of non-compliance, ensuring immediate response to secure devices.
         - Maximum efficiency in compliance management, with minimal need for manual intervention, supported by detailed reporting and analytics on compliance status and remediation actions.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
+- **Products covered:**
+    - 
+
+- **Recommendations:**
+    - 
 
 - **Are automated email notifications and remediation actions configured and enabled for non-compliant devices in Intune?**
 
@@ -167,6 +221,14 @@ Questions in the following sections are designed to help us understand a clients
       - A complete suite of automated remediation actions, allowing for instant response to any form of non-compliance.
       - Peak efficiency in compliance management, virtually eliminating the need for manual intervention, supported by exhaustive reporting and analytics.
 
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
+- **Products covered:**
+    - 
+
+- **Recommendations:**
+    - 
 
 ### Data loss prevention (DLP) policies are enforced for corporate devices and BYOD
 
@@ -196,6 +258,15 @@ Questions in the following sections are designed to help us understand a clients
         - Complete realization of the most advanced security policies and access controls for all devices, aligning with the highest security benchmarks.
         - Strategic enforcement of security measures, incorporating exhaustive conditional access rules and compliance mandates, safeguarding corporate data accessed via Windows devices to the utmost degree permissible through configuration.
 
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
+- **Products covered:**
+    - 
+
+- **Recommendations:**
+    - 
+
 #### Ensure updates are deployed automatically to endpoints
   - Is Windows Updates for Business configured and enabled for automated update management?
     - **Legacy:** Windows devices are managed through on-premises update management solutions, or updates are applied manually, without leveraging the automation and cloud-based features of Windows Updates for Business. This approach reflects traditional update practices, which may not provide the agility and security benefits of modern, automated update management systems. The reliance on legacy methods can lead to inconsistent update deployments, increased administrative overhead, and potential security vulnerabilities due to delayed patching.
@@ -221,6 +292,15 @@ Questions in the following sections are designed to help us understand a clients
         - Universal configuration and utilization of Windows Updates for Business, ensuring all devices receive timely and consistent updates.
         - Strategic management of the update process, with advanced features like update deferral and bandwidth optimization fully leveraged to suit organizational needs.
         - Comprehensive mitigation of risks associated with outdated software, through a proactive and automated update management strategy that ensures the highest levels of security and compliance.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
+- **Products covered:**
+    - 
+
+- **Recommendations:**
+    - 
 
 #### Ensure devices are encrypted
   - Are Windows 10 and later devices encrypted with BitLocker and MacOS devices encrypted with FileVault?
@@ -248,6 +328,14 @@ Questions in the following sections are designed to help us understand a clients
         - Strategic and effective management of encryption policies, keys, and recovery mechanisms, facilitating both security and operational efficiency.
         - Comprehensive mitigation of risks associated with data exposure, through proactive and uniform encryption practices that secure sensitive data across all Windows and MacOS devices.
 
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
+- **Products covered:**
+    - 
+
+- **Recommendations:**
+    - 
 
 #### Create application protection policies to protect corporate data at the app-level
   - Are application protection policies leveraged to protect corporate data at the app-level with Intune?
@@ -309,6 +397,15 @@ Questions in the following sections are designed to help us understand a clients
         - Full exploitation of Microsoft Sentinel's advanced analytics, threat detection, and automated response capabilities, optimizing the organization's security operations.
         - Proactive and efficient management of security threats and incidents, underpinned by comprehensive log data analysis and real-time monitoring, significantly enhancing the organization's overall security posture.
 
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
+- **Products covered:**
+    - 
+
+- **Recommendations:**
+    - 
+
 ### Access control is gated on endpoint risk for both corporate devices and BYOD
 
 #### Corporate Windows devices are enrolled with a cloud enrollment service such as DEP, Android Enterprise, or Windows AutoPilot
@@ -337,6 +434,15 @@ Questions in the following sections are designed to help us understand a clients
         - Full realization of operational efficiencies, scalability, and security enhancements offered by automated cloud-based device management.
         - Strategic and proactive management of the device lifecycle, from deployment to retirement, supported by comprehensive insights and controls provided by Windows Autopilot, ensuring a robust and agile IT infrastructure.
 
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
+- **Products covered:**
+    - 
+
+- **Recommendations:**
+    - 
+
   - **Are corporate iOS and iPadOS devices enrolled with the Apple Device Enrollment Program (DEP) cloud enrollment service?**
     - Legacy: Corporate iOS and iPadOS devices are configured and managed manually, bypassing the automation and security benefits provided by cloud enrollment services like the Apple Device Enrollment Program (DEP). This manual approach to device provisioning leads to increased operational burdens and potential inconsistencies in security and configuration settings across devices.
       - Indicators:
@@ -361,6 +467,15 @@ Questions in the following sections are designed to help us understand a clients
         - Universal and strategic enrollment of corporate iOS and iPadOS devices in DEP, eliminating the need for manual device setup and management.
         - Full realization of the benefits offered by DEP, including operational efficiencies, enhanced security posture, and standardized device configurations across the entire mobile device fleet.
         - Proactive and comprehensive management of the mobile device lifecycle, supported by DEP's advanced features, ensuring devices are always ready for business use while maintaining high security and compliance standards.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
+- **Products covered:**
+    - 
+
+- **Recommendations:**
+    - 
 
   - **Are corporate Android devices enrolled with the Android Enterprise cloud enrollment service?**
     - **Legacy:** Corporate Android devices are set up and managed manually, foregoing the benefits of automated enrollment and management offered by cloud services like Android Enterprise. This traditional method results in increased administrative effort, potential inconsistencies in device configurations, and gaps in security policy enforcement across the fleet.
@@ -387,25 +502,11 @@ Questions in the following sections are designed to help us understand a clients
         - Full realization of operational efficiencies, security enhancements, and compliance benefits offered by automated cloud-based device management.
         - Proactive and comprehensive management of the Android device lifecycle, from deployment to retirement, supported by comprehensive insights and controls provided by Android Enterprise, ensuring a robust and agile IT infrastructure.
 
-### Example
-  - Is Conditional Access configured in Microsoft Defender for Endpoint to utilize health signals from Windows machines for access decisions?
-    - Legacy: There is no Conditional Access configured within Microsoft Defender for Endpoint to utilize health signals from Windows machines, leaving access decisions solely on basic authentication methods. This absence of advanced security measures leaves the system vulnerable to unauthorized access, as it does not consider the health status of devices attempting to access resources.
-      - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - The absence of Conditional Access policies in Microsoft Defender for Endpoint.
-        - No integration or consideration of device health signals when making access decisions.
-        - Sole reliance on traditional authentication methods without additional security checks.
-    - Initial: Initial steps towards implementing Conditional Access in Microsoft Defender for Endpoint are taken, with basic policies that utilize some health signals from Windows machines for access decisions. While this introduces a fundamental level of security, it's applied in a limited scope, potentially overlooking nuanced threats and sophisticated attack vectors.
-      - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - Initial implementation of Conditional Access policies that may include simple rules based on location or user group but lack comprehensive device health considerations.
-        - Some use of health signals from Windows machines in access decisions, but applied selectively and not as part of a broader security strategy.
-        - Minimal integration with other security solutions, providing a basic level of threat detection and response.
-    - Advanced: Conditional Access policies within Microsoft Defender for Endpoint are further refined, incorporating a wider range of health signals from Windows machines to inform access decisions. This includes integration with other security solutions to enhance detection and response capabilities. However, some scenarios may still rely on default or less stringent policies for certain applications or user groups, leaving marginal vulnerabilities.
-      - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - Advanced Conditional Access policies that utilize a broader range of health signals from Windows machines, including integration with other security solutions for enhanced detection and response.
-        - Increased administrative control over Conditional Access policies, including the ability to customize policies based on specific security needs and risk assessments.
-        - Use of real-time threat detection and integration with Microsoft Defender for Endpoint for dynamic access decisions based on device health.
-    - Optimal: A comprehensive Conditional Access strategy is fully integrated within Microsoft Defender for Endpoint, leveraging all available health signals from Windows machines to make informed and dynamic access decisions. This approach includes real-time threat detection, adaptive access policies, and stringent compliance checks, ensuring that only devices in optimal health status can access organizational resources. This tier exemplifies the highest standard of security and operational efficiency, minimizing the risk of data breaches and unauthorized access through meticulous device health assessment and policy enforcement.
-      - Indicators Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - Full integration of Conditional Access within Microsoft Defender for Endpoint, leveraging all available health signals from Windows machines for making informed access decisions.
-        - Dynamic and real-time assessment of device health status, with adaptive access policies that respond to the latest threat intelligence and security analyses.
-        - Strict adherence to security policies and compliance standards, with thorough vetting of device health and security posture before granting access.
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - 
+
+- **Products covered:**
+    - 
+
+- **Recommendations:**
+    - 
