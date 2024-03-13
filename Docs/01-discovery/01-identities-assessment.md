@@ -48,7 +48,8 @@ Questions in the following sections are designed to help us determine a clients 
 
 - **Products covered:**
     - Microsoft Entra ID
-    - Microsoft Entra Seamless SSO
+    - Microsoft Entra Seemless Single Sign-on
+    - Microsoft Entra Conditional Access
     - Microsoft Entra Connect
 
 - **Summary:**
@@ -93,9 +94,10 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - Microsoft Entra ID
     - Microsoft Entra Multi-factor Authentication
     - Microsoft Entra Conditional Access
+    - Microsfot Entra Identity Protection
 
 - **Recommendations:**
-    - 
+    - **Initial to Advanced:** 
 
 
 **Has the organization identified and excluded unnecessary on-premises identities, such as service accounts or privileged roles, from cloud federation?**
@@ -105,7 +107,6 @@ At the "Advanced" maturity level, the organization has successfully integrated c
         - Inclusion of all on-premises identities in cloud federation without assessment of necessity or risk.
         - Potential security risks due to federated service accounts or privileged roles that are not required in the cloud environment.
         - Challenges in managing federated identities effectively, impacting the overall security posture and access control.
-
  
 - **Initial:** Some effort is made to identify unnecessary on-premises identities for exclusion from cloud federation, but the approach is manual and lacks comprehensive coverage. Basic guidelines exist for determining which identities to federate, but these are not applied consistently or thoroughly.
     - Indicators:
@@ -132,6 +133,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - CM-2 Baseline Configuration: The process of identifying and excluding unnecessary federated identities contributes to maintaining a secure baseline configuration, ensuring that only approved identities have access within the federated environment.
 
 - **Products covered:**
+    - Microsoft Entra Identity Governance
     - Microsoft Entra ID
     - Microsoft Entra Connect
 
@@ -182,25 +184,25 @@ At the "Advanced" maturity level, the organization has successfully integrated c
 
 **Has the organization integrated both modern and legacy applications with Microsoft Entra ID for single sign-on and consistent identity and access management?**
 
-- Legacy: Neither modern nor legacy applications are integrated with Microsoft Entra ID for single sign-on (SSO) or identity and access management. Applications operate in silos, each with its own access management protocols, leading to inconsistent user experiences and heightened security risks.
+- **Legacy:** Neither modern nor legacy applications are integrated with Microsoft Entra ID for single sign-on (SSO) or identity and access management. Applications operate in silos, each with its own access management protocols, leading to inconsistent user experiences and heightened security risks.
     - Indicators:
         - Separate identity management systems for different applications, leading to varied user authentication experiences and potential security gaps.
         - Increased administrative overhead and potential for error in managing multiple access control systems.
         - Challenges in achieving a streamlined access management process and ensuring comprehensive security coverage for all applications.
 
-- Initial: Modern applications are partially integrated with Microsoft Entra ID for SSO, but legacy applications remain disconnected, leading to a split in the user experience and access management. Efforts to unify identity management are underway, but not all applications are covered.
+- **Initial:** Modern applications are partially integrated with Microsoft Entra ID for SSO, but legacy applications remain disconnected, leading to a split in the user experience and access management. Efforts to unify identity management are underway, but not all applications are covered.
     - Indicators:
         - Partial deployment of SSO and identity management through Microsoft Entra ID, focusing on a subset of modern applications.
         - Initial improvements in user access management and security for integrated applications, though legacy systems may remain isolated.
         - Some enhancement in the organization's approach to identity and access management, with ongoing efforts to extend Microsoft Entra ID integration.
 
-- Advanced: Both modern and many legacy applications are integrated with Microsoft Entra ID for SSO and consistent identity and access management. Efforts include using application proxies or wrappers for legacy applications to fit them into the SSO ecosystem, improving overall security and user experience.
+- **Advanced:** Both modern and many legacy applications are integrated with Microsoft Entra ID for SSO and consistent identity and access management. Efforts include using application proxies or wrappers for legacy applications to fit them into the SSO ecosystem, improving overall security and user experience.
     - Indicators:
         - Comprehensive adoption of Microsoft Entra ID for SSO and access management, including efforts to integrate legacy applications through adapters or connectors.
         - Enhanced security measures in place, supported by consistent application of identity and access policies across all applications.
         - Significant progress toward minimizing security risks and administrative overhead, bolstered by the centralized management of user identities and access.
 
-- Optimal: Every application, both modern and legacy, is fully integrated with Microsoft Entra ID for seamless SSO and consistent identity and access management across the entire application portfolio. Advanced solutions, including custom integration for the most challenging legacy applications, ensure a unified and secure user experience.
+- **Optimal:** Every application, both modern and legacy, is fully integrated with Microsoft Entra ID for seamless SSO and consistent identity and access management across the entire application portfolio. Advanced solutions, including custom integration for the most challenging legacy applications, ensure a unified and secure user experience.
     - Indicators:
         - Strategic and universal application of Microsoft Entra ID for identity and access management across the entire application landscape.
         - Comprehensive and proactive management of access security, enhancing organizational agility, security resilience, and compliance.
@@ -213,33 +215,32 @@ At the "Advanced" maturity level, the organization has successfully integrated c
         - IA-8 Identification and Authentication (Non-Organizational Users): For applications accessed by non-organizational users, integration with Microsoft Entra ID can provide robust mechanisms for identifying and authenticating these users according to established policies.
 
 - **Products covered:**
-    - 
+    - Microsoft Entra ID
 
 - **Recommendations:**
     - 
 
-
 **Has the organization integrated all identity and access management functions into Microsoft Entra ID to ensure a seamless and secure user experience across the entire application portfolio, with advanced security measures applied consistently?**
 
-- Legacy: Multiple, disparate IAM engines are in use across the environment without any efforts towards consolidation. This leads to fragmented identity and access management practices, creating inefficiencies and potential security vulnerabilities due to inconsistent policy enforcement and user experiences.
+- **Legacy:** Multiple, disparate IAM engines are in use across the environment without any efforts towards consolidation. This leads to fragmented identity and access management practices, creating inefficiencies and potential security vulnerabilities due to inconsistent policy enforcement and user experiences.
     - Indicators:
         - Separate identity management solutions for different applications or services, leading to varied user authentication experiences and potential security gaps.
         - Increased complexity and potential for error in managing access controls across multiple systems.
         - Challenges in ensuring a cohesive and secure user experience, affecting the overall effectiveness of identity and access management.
 
-- Initial: Initial efforts to consolidate IAM engines have begun, focusing on integrating some systems with Microsoft Entra ID. While some applications now benefit from unified access management, others remain outside this integrated environment, resulting in a partial enhancement of security and user experience.
+- **Initial:** Initial efforts to consolidate IAM engines have begun, focusing on integrating some systems with Microsoft Entra ID. While some applications now benefit from unified access management, others remain outside this integrated environment, resulting in a partial enhancement of security and user experience.
     - Indicators:
         - Partial deployment of Microsoft Entra ID for identity and access management, focusing on high-priority applications or systems.
         - Initial improvements in user access management and security for integrated applications, though not uniformly applied across the entire portfolio.
         - Some enhancement in the organization’s identity management strategy, with ongoing efforts to extend Microsoft Entra ID integration across all functions.
 
-- Advanced: Significant progress has been made in consolidating IAM engines, with the majority now integrated into a unified Microsoft Entra ID environment. This consolidation covers most modern and legacy applications, greatly enhancing security and user experience through consistent access management practices.
+- **Advanced:** Significant progress has been made in consolidating IAM engines, with the majority now integrated into a unified Microsoft Entra ID environment. This consolidation covers most modern and legacy applications, greatly enhancing security and user experience through consistent access management practices.
     - Indicators:
         - Comprehensive adoption of Microsoft Entra ID for identity and access management functions, facilitating a unified user experience and consistent security measures.
         - Enhanced security posture through the systematic application of advanced identity and access controls across all applications and systems.
         - Significant progress toward a holistic identity and access management approach, bolstered by the integration of Microsoft Entra ID across the entire portfolio.
 
-- Optimal: A fully consolidated IAM environment has been achieved, with all identity and access management functions integrated into Microsoft Entra ID. This ensures a seamless and secure user experience across the entire application portfolio, with advanced security measures applied consistently.
+- **Optimal:** A fully consolidated IAM environment has been achieved, with all identity and access management functions integrated into Microsoft Entra ID. This ensures a seamless and secure user experience across the entire application portfolio, with advanced security measures applied consistently.
     - Indicators:
         - Strategic and universal application of Microsoft Entra ID for comprehensive identity and access management across the organization.
         - Comprehensive management of user identities and access, enhancing organizational agility, security resilience, and compliance.
@@ -252,7 +253,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - IA-8 Identification and Authentication (Non-Organizational Users): For applications accessed by non-organizational users, Microsoft Entra ID can provide comprehensive mechanisms for identification and authentication in line with established policies.
 
 - **Products covered:**
-    - 
+    - Microsoft Entra ID
 
 - **Recommendations:**
     - 
@@ -292,7 +293,9 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - IA-11 Re-authentication: Requiring MFA at re-authentication events ensures that the security of the authentication session is maintained, aligning with the control's emphasis on re-establishing authentication assurances periodically.
 
 - **Products covered:**
-    - 
+    - Microsoft Entra ID
+    - Microsoft Entra Multi-factor Authentication
+    - Microsoft Entra 
 
 - **Recommendations:**
     - 
@@ -330,7 +333,8 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - IA-8 Identification and Authentication (Non-Organizational Users): For applications accessed by non-organizational users, the adoption of modern authentication can provide comprehensive mechanisms for identification and authentication in line with established policies.
 
 - **Products covered:**
-    - 
+    - Microsoft Entra ID
+    - Microsoft Entra Identity Protection
 
 - **Recommendations:**
     - 
@@ -371,7 +375,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - IA-5 Authenticator Management: Conditional Access policies that require multifactor authentication based on specific conditions align with the control's requirements for effective management of authentication mechanisms.
 
 - **Products covered:**
-    - 
+    - Microsoft Entra Conditional Access
 
 - **Recommendations:**
     - 
@@ -409,7 +413,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - CA-7 Continuous Monitoring: Oversight of the remediation process contributes to continuous monitoring efforts, ensuring that access control policies and procedures are effectively supporting organizational operations and security requirements.
 
 - **Products covered:**
-    - 
+    - Microsoft Entra Conditional Access
 
 - **Recommendations:**
     - 
@@ -447,7 +451,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - SA-11 Developer Security Testing and Evaluation: Testing and customizing Conditional Access policies involve security testing and evaluation practices similar to those applied in development processes, ensuring that policies are effective and do not introduce new vulnerabilities.
 
 - **Products covered:**
-    - 
+    - Microsoft Entra Conditional Acccess
 
 - **Recommendations:**
     - 
@@ -489,7 +493,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
 - **Products covered in this section:**
     - Microsoft Intune
     - Microsoft Entra ID
-    - Microsoft Entra Connect
+    - Microsoft Entra ID Conditional Access
 
 - **Recommendations:**
     - 
@@ -527,7 +531,8 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - SI-7 Software, Firmware, and Information Integrity: Evaluating device health includes assessing the integrity of software and firmware, ensuring that devices are free from unauthorized changes or compromises.
 
 - **Products covered:**
-    - 
+    - Microsoft Intune
+    - Microsoft Entra Conditional Access
 
 - **Recommendations:**
     - 
@@ -565,12 +570,12 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - CM-8 Information System Component Inventory: Managing devices with Intune and similar solutions contributes to maintaining an accurate inventory of system components, crucial for effective security and operational management.
 
 - **Products covered:**
-    - 
+    - Microsoft Intune
 
 - **Recommendations:**
     - 
 
-### Analytics Improve Visibility
+## Analytics Improve Visibility
 
 ### Configure your logging and reporting to improve visibility
 
@@ -607,7 +612,10 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - AU-12 Audit Generation: The capability to generate detailed audit logs for critical identity management activities aligns with the requirement to produce audit records that can help the organization detect, understand, and recover from attacks.
 
 - **Products covered:**
-    - 
+    - Azure Monitor
+    - Microsoft Entra Identity Governance
+    - Microsoft Entra ID
+    - Microsoft Defender for Cloud Apps
 
 - **Recommendations:**
     - 
@@ -648,7 +656,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - AC-17 Remote Access: PIM can enhance the security of remote access to privileged functions by enforcing multi-factor authentication and just-in-time access controls, mitigating the risk of unauthorized access to sensitive operations.
 
 - **Products covered:**
-    - 
+    - Microsoft Entra Privileged Identity Management
 
 - **Recommendations:**
     - 
@@ -688,7 +696,9 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - IP-2 Consent: Effective consent management practices ensure that consent is obtained in accordance with organizational policies, legal requirements, and user expectations, safeguarding personal and sensitive information.
 
 - **Products covered:**
-    - 
+    - Microsoft Entra Permissions Management
+    - Microsoft Defender for Cloud Apps
+    - Microsoft Entra Identity Governance
 
 - **Recommendations:**
     - 
@@ -728,7 +738,8 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - AC-25 Access Reviews: The automated recertification process facilitated by Entitlement Management supports the periodic review and validation of access permissions, ensuring they remain appropriate over time.
 
 - **Products covered:**
-    - 
+    - Microsoft Entra ID
+    - Microsoft Entitlement Management
 
 - **Recommendations:**
     - 
@@ -768,7 +779,8 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - SC-13 Cryptographic Protection: Many passwordless authentication solutions leverage cryptographic methods to ensure the integrity and confidentiality of the authentication process, aligning with the control’s emphasis on cryptographic protection.
 
 - **Products covered:**
-    - 
+    - Windows Hello for Business
+    - Microsoft Authenticator
 
 - **Recommendations:**
     - 
@@ -809,7 +821,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - SC-13 Cryptographic Protection: While not directly related to cryptographic protection, strong password policies enforced by Microsoft Entra Password Protection contribute to the overall security of cryptographic systems by protecting against unauthorized access.
 
 - **Products covered:**
-    - 
+    - Microsoft Entra Password Protection
 
 - **Recommendations:**
     - 
@@ -849,7 +861,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - IR-4 Incident Handling: Enhanced security insights from Identity Protection improve the organization's incident handling capabilities by enabling quicker identification, analysis, and response to incidents related to identity risks.
 
 - **Products covered:**
-    - 
+    - Microsoft Entra Identity Protection
 
 - **Recommendations:**
     - 
@@ -889,7 +901,8 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - PM-12 Insider Threat Program: The detailed monitoring of user behavior within SaaS and modern applications contributes to an effective insider threat program by identifying potential malicious activities or policy violations from within the organization.
 
 - **Products covered:**
-    - 
+    - Microsoft Defender for Cloud Apps
+    - Microsoft Entra Identity Protection
 
 - **Recommendations:**
     - 
@@ -906,7 +919,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
 
 - **Initial:** Initial efforts have been made to deploy Defender for Cloud Apps for session monitoring in SaaS applications, with some integration of Conditional Access policies. Efforts to extend these controls to on-premises applications may be in the early stages, indicating progress toward a more integrated security approach.
     - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
-        - Partial implementation of Defender for Cloud Apps for monitoring SaaS application sessions, with Conditional Access integration beginning to take shape.\
+        - Partial implementation of Defender for Cloud Apps for monitoring SaaS application sessions, with Conditional Access integration beginning to take shape.
         - Initial steps toward extending session monitoring and policy enforcement capabilities to on-premises applications, though not fully realized.
         - Some improvement in session security and policy compliance, with ongoing efforts to enhance and expand integrated monitoring and enforcement.
 
@@ -929,7 +942,8 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - CM-7 Least Functionality: By enforcing Conditional Access policies based on session monitoring, organizations can ensure that software, applications, and services are restricted to necessary functions, reducing the attack surface.
 
 - **Products covered:**
-    - 
+    - Microsoft Defender for Cloud Apps
+    - Microsoft Defender for Cloud Apps Conditional Access
 
 - **Recommendations:**
     - 
@@ -969,7 +983,8 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - AC-20 Use of External Information Systems: The configuration allows organizations to manage the risks associated with accessing organizational data from external systems, providing a mechanism to securely interact with SharePoint Online and Exchange Online from unknown endpoints.
 
 - **Products covered:**
-    - 
+    - SharePoint Online
+    - Exchange Online
 
 - **Recommendations:**
     - 
@@ -1011,7 +1026,8 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - PE-6 Monitoring Physical Access: While primarily focused on logical access, the integration of signals for risk assessment can also support physical security measures by identifying potential security breaches that may have both physical and logical security implications.
 
 - **Products covered:**
-    - 
+    - Microsoft Entra ID
+    - Microsoft Defender for Identity
 
 - **Recommendations:**
     - 
@@ -1051,7 +1067,8 @@ At the "Advanced" maturity level, the organization has successfully integrated c
     - SC-7 Boundary Protection: Dynamic risk level adjustments based on real-time threat detection contribute to boundary protection by controlling access to the network and system resources based on current threat intelligence and risk assessments.
 
 - **Products covered:**
-    - 
+    - Microsoft Defender for Endpoint
+    - Conditional Access in Microsoft Defender for Endpoint
 
 - **Recommendations:**
     - 
