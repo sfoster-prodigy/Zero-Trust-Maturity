@@ -12,7 +12,7 @@ Questions in the following sections are designed to help us understand a clients
 
 #### Register corporate devices with Microsoft Entra ID
 
-**Are corporate devices joined to or registered with Microsoft Entra ID via Microsoft Entra join or Microsoft Entra Hybrid join?**
+**Are corporate devices joined to or registered with Microsoft Entra ID via Microsoft Entra join or Microsoft Entra Hybrid join?** (Score Advanced)
 - Legacy: Corporate devices are not joined to Microsoft Entra, relying solely on traditional, on-premises domain join methods. This approach neglects the benefits of integrating with cloud services for identity and access management, leaving device authentication and policy enforcement confined to less secure, conventional methods. The absence of Microsoft Entra's advanced security features in device management leaves the network exposed to potential breaches, as it does not leverage cloud identity for verifying device integrity and user access.
     - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
         - Sole reliance on traditional domain join methods, without leveraging Microsoft Entra for device management.
@@ -52,7 +52,7 @@ Questions in the following sections are designed to help us understand a clients
 
 #### Register personal Windows devices with Microsoft Entra ID
 
-**Are personal Windows devices registered with Microsoft Entra ID?**
+**Are personal Windows devices registered with Microsoft Entra ID?** (Score Initial)
     - Legacy: Personal Windows devices access corporate resources without being registered with Microsoft Entra ID. This lack of registration indicates minimal security controls, exposing the organization to increased risks of unauthorized access and potential data breaches.
       - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
         - Use of personal devices for corporate data access without the security and policy enforcement that comes with Microsoft Entra ID registration.
@@ -91,7 +91,7 @@ Questions in the following sections are designed to help us understand a clients
 
 #### Enable and configure Windows Hello for Business
 
-**Is Windows hello for Business enabled and configured for windows devices?**
+**Is Windows hello for Business enabled and configured for windows devices?** (Score Legacy)
 
 - Legacy: No utilization of Windows Hello for Business, with organizations relying solely on traditional password-based authentication methods. This approach lacks the security benefits of modern authentication mechanisms, leaving devices more vulnerable to common cyber threats.
     - Indicators: 
@@ -125,6 +125,8 @@ Questions in the following sections are designed to help us understand a clients
 
 - **Products covered:**
     - Windows Hello for Business
+    - Microsoft Intune
+    - Microsoft Endpoint Configuration Manager
 
 - **Recommendations:**
     - 
@@ -132,7 +134,7 @@ Questions in the following sections are designed to help us understand a clients
 ### Access is only granted to cloud-managed and compliant endpoints and apps
 #### Create a compliance policy with Microsoft Intune (all platforms)
 
-**Are compliance policies in place for all device platforms with Microsoft Intune?**
+**Are compliance policies in place for all device platforms with Microsoft Intune?** (Score Legacy)
     
 - Legacy: No implementation of compliance policies across device platforms using Microsoft Intune, with organizations possibly relying on manual configurations or disparate, non-integrated tools for device management. This approach lacks the centralized control and visibility offered by Intune, making it difficult to ensure devices meet security and compliance standards.
     - Indicators
@@ -159,17 +161,21 @@ Questions in the following sections are designed to help us understand a clients
         - Maximum security and compliance posture, supported by real-time monitoring, automated remediation actions for noncompliance, and full integration with the Microsoft security ecosystem.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - CM-2 Baseline Configuration: Implementing compliance policies in Microsoft Intune supports the establishment and enforcement of baseline configurations for devices, ensuring they adhere to organizational security standards.
+    - CM-7 Least Functionality: Compliance policies help ensure devices operate with the least functionality necessary for their roles, reducing the attack surface by preventing unauthorized features or functions.
+    - CM-8 Information System Component Inventory: Utilizing Microsoft Intune for compliance policy enforcement aids in maintaining an accurate inventory of system components, as compliance status provides insights into the security posture of each device.
+    - SI-2 Flaw Remediation: Compliance policies can mandate regular updates and patches as part of their criteria, supporting timely flaw remediation to maintain device security and functionality.
 
 - **Products covered:**
-    - 
+    - Microsoft Intune
+    - Microsoft Endpoint Configuration Manager
 
 - **Recommendations:**
     - 
 
 #### Automate notification email and add additional remediation actions for noncompliant devices in Intune (all platforms)
 
-**Are automated email notifications and remediation actions configured and enabled for non-compliant devices in Intune?**
+**Are automated email notifications and remediation actions configured and enabled for non-compliant devices in Intune?** (Score Legacy)
 
 - Legacy: No automated processes in place for managing non-compliant devices. Organizations rely solely on manual checks and communications, leading to delayed responses and increased risk of security breaches due to non-compliant devices remaining unaddressed.
     - Indicators
@@ -196,45 +202,13 @@ Questions in the following sections are designed to help us understand a clients
         - Maximum efficiency in compliance management, with minimal need for manual intervention, supported by detailed reporting and analytics on compliance status and remediation actions.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - CA-7 Continuous Monitoring: The automation of notifications and remediations supports the continuous monitoring of security controls by providing real-time awareness of compliance statuses and facilitating immediate actions to address identified issues.
+    - SI-4 Information System Monitoring: Automated email notifications for non-compliance enhance the organization's system monitoring capabilities by alerting relevant stakeholders to potential security risks.
+    - IR-4 Incident Handling: The configuration of automated remediation actions enables the organization to respond more effectively to incidents by rapidly addressing non-compliance that could indicate or lead to security incidents.
+    - CM-4 Security Impact Analysis: Automated remediation actions can be part of conducting security impact analyses, ensuring that changes in device compliance are evaluated and addressed promptly to maintain security and operational integrity.
 
 - **Products covered:**
-    - 
-
-- **Recommendations:**
-    - 
-
-**Are automated email notifications and remediation actions configured and enabled for non-compliant devices in Intune?**
-
-- **Legacy:** Automated processes for managing non-compliant devices are absent. This stage represents a critical vulnerability, as organizations depend entirely on manual efforts for identifying and addressing non-compliance, leading to delayed responses and increased security risks.
-    - **Indicators:**
-      - No automated email notifications for non-compliance, leaving significant gaps in timely communication.
-      - Reliance on manual tracking and remediation efforts, introducing inefficiencies and potential for oversight.
-      - A complete lack of automated interventions for non-compliant devices, heavily relying on ad-hoc manual processes.
-
-- **Initial:** Begins with the setup of automated email notifications for non-compliant devices in Intune, marking the first step towards leveraging automation for security compliance. However, comprehensive automated remediation actions are not fully established, emphasizing primarily on notifications.
-    - **Indicators:**
-      - Implementation of basic automated email alerts for non-compliance, aimed at IT administrators and device users.
-      - Minimal or absent automated remediation processes, necessitating manual intervention for compliance resolution.
-      - Early efforts in streamlining compliance management, albeit with continued reliance on manual remediation methods.
-
-- **Advanced:** This stage sees the advanced configuration of automated email notifications alongside the introduction of some automated remediation actions for non-compliant devices in Intune. It indicates a proactive shift towards automation, incorporating actions like automatic device lock or password resets for certain compliance failures.
-    - **Indicators:**
-      - Comprehensive automated email notifications, delivering detailed non-compliance reports and corrective advice.
-      - Implementation of specific automated remediation actions, enhancing the efficiency of compliance management.
-      - A balanced approach to managing device compliance, blending automated solutions with manual oversight for complex scenarios.
-
-- **Optimal:** Represents the fullest integration of Intune's automated email notifications and remediation capabilities for non-compliant devices. At this pinnacle, the system operates with full automation, providing real-time alerts, comprehensive self-remediation guidance for users, and enforcing compliance policies autonomously.
-    - **Indicators:**
-      - Universal deployment of automated notifications, ensuring immediate and detailed alerts for both IT staff and users.
-      - A complete suite of automated remediation actions, allowing for instant response to any form of non-compliance.
-      - Peak efficiency in compliance management, virtually eliminating the need for manual intervention, supported by exhaustive reporting and analytics.
-
-- **Relevance to NIST SP 800-53 Revision 5:**
-    - 
-
-- **Products covered:**
-    - 
+    - Microsoft Intune
 
 - **Recommendations:**
     - 
@@ -242,7 +216,7 @@ Questions in the following sections are designed to help us understand a clients
 ### Data loss prevention (DLP) policies are enforced for corporate devices and BYOD
 #### Apply recommended security settings
 
-**Are recommended security settings applied to Windows 10 and later devices to protect corporate data?**
+**Are recommended security settings applied to Windows 10 and later devices to protect corporate data?** (Score Initial)
 
 - Legacy: Windows 10 and later devices operate without the application of Microsoft-recommended security settings. This gap indicates a foundational lapse in security practices, leaving the organization vulnerable to threats due to insufficient protection mechanisms.
     - Indicators
@@ -269,53 +243,101 @@ Questions in the following sections are designed to help us understand a clients
         - Strategic enforcement of security measures, incorporating exhaustive conditional access rules and compliance mandates, safeguarding corporate data accessed via Windows devices to the utmost degree permissible through configuration.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - CM-2 Baseline Configuration: Implementing recommended security settings supports the establishment of secure baseline configurations for devices, ensuring they are configured in accordance with organizational security requirements.
+    - CM-6 Configuration Settings: The application of security best practices and settings aligns with the control's requirements for managing the security configuration of information systems, promoting effective security and risk management.
+    - CM-7 Least Functionality: Applying recommended security settings contributes to enforcing the principle of least functionality, disabling unnecessary software, services, and features to minimize potential attack vectors.
+    - SC-28 Protection of Information at Rest: Ensuring devices are configured with recommended security settings enhances the protection of corporate data stored on these devices, including the use of encryption and access controls.
 
 - **Products covered:**
-    - 
+    - Microsoft Intune
+    - Microsoft Endpoint Configuration Manager
 
 - **Recommendations:**
     - 
 
-#### Ensure updates are deployed automatically to endpoints
+#### Utilizing Windows Updates for Business and Intune for Windows 10 Update Management
 
-**Is Windows Updates for Business configured and enabled for automated update management?**
-    - **Legacy:** Windows devices are managed through on-premises update management solutions, or updates are applied manually, without leveraging the automation and cloud-based features of Windows Updates for Business. This approach reflects traditional update practices, which may not provide the agility and security benefits of modern, automated update management systems. The reliance on legacy methods can lead to inconsistent update deployments, increased administrative overhead, and potential security vulnerabilities due to delayed patching.
-      - **Indicators:**
+**"Has the organization implemented Windows Updates for Business to streamline the update management process for Windows 10 devices, configuring update rings in Intune and managing feature updates to meet compliance requirements?**
+
+- **Legacy:** Windows devices are managed through on-premises update management solutions, or updates are applied manually, without leveraging the automation and cloud-based features of Windows Updates for Business. This approach reflects traditional update practices, which may not provide the agility and security benefits of modern, automated update management systems. The reliance on legacy methods can lead to inconsistent update deployments, increased administrative overhead, and potential security vulnerabilities due to delayed patching.
+      - Indicators:
         - Absence of a structured and automated approach to managing Windows updates, leading to potential delays in critical security patching.
         - Increased risk exposure due to the reliance on manual intervention for updates, resulting in potential inconsistencies and overlooked updates.
         - Lack of assurance that all devices are operating on the latest software versions, increasing the organizational risk profile.
 
-    - **Initial:** Initial steps are taken to configure Windows Updates for Business for some devices, introducing a basic level of automated update management. This phase marks the beginning of a shift towards more consistent and reliable update practices, though not yet fully comprehensive across the device fleet.
-      - **Indicators:**
+- **Initial:** Initial steps are taken to configure Windows Updates for Business for some devices, introducing a basic level of automated update management. This phase marks the beginning of a shift towards more consistent and reliable update practices, though not yet fully comprehensive across the device fleet.
+      - Indicators:**
         - A portion of the device fleet is enrolled in Windows Updates for Business, starting the transition towards automated update management.
         - Despite these initial configurations, comprehensive coverage and the full utilization of Windows Updates for Business capabilities are not yet achieved.
         - Some improvement in update consistency and security posture, with automated updates beginning to reduce the window of vulnerability.
 
-    - **Advanced:** A significant number of devices are configured with Windows Updates for Business, significantly enhancing the organization's approach to update management. This advanced tier indicates a mature update strategy, with increased automation and consistency in applying updates across the device fleet.
+- **Advanced:** A significant number of devices are configured with Windows Updates for Business, significantly enhancing the organization's approach to update management. This advanced tier indicates a mature update strategy, with increased automation and consistency in applying updates across the device fleet.
       - **Indicators:**
         - Broad adoption of Windows Updates for Business across the device fleet, leading to more consistent application of updates.
         - Enhanced control over the update process, with the ability to schedule updates and manage bandwidth, improving operational efficiency.
         - Noticeable reduction in the risks associated with outdated software, through improved compliance with security updates and patches.
 
-    - **Optimal:** Windows Updates for Business is fully configured and enabled across all Windows devices within the organization, achieving the highest level of automated update management. This optimal scenario ensures that every device consistently receives updates as soon as they are available, minimizing the risk of security vulnerabilities and maximizing operational efficiency.
+- **Optimal:** Windows Updates for Business is fully configured and enabled across all Windows devices within the organization, achieving the highest level of automated update management. This optimal scenario ensures that every device consistently receives updates as soon as they are available, minimizing the risk of security vulnerabilities and maximizing operational efficiency.
       - **Indicators:**
         - Universal configuration and utilization of Windows Updates for Business, ensuring all devices receive timely and consistent updates.
         - Strategic management of the update process, with advanced features like update deferral and bandwidth optimization fully leveraged to suit organizational needs.
         - Comprehensive mitigation of risks associated with outdated software, through a proactive and automated update management strategy that ensures the highest levels of security and compliance.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - SI-2 Flaw Remediation: Automated update management through Windows Updates for Business supports the timely remediation of software flaws by applying patches and updates as soon as they are available, reducing the window of vulnerability.
+    - CM-3 Configuration Change Control: Automating update deployment helps ensure that changes to software configurations, including security patches and updates, are managed in a controlled manner, maintaining the integrity and security of information systems.
+    - SI-3 Malware Protection: Regular and automated application of updates can include enhancements to malware protection mechanisms, ensuring systems are equipped to defend against the latest malware threats.
+    - CM-7 Least Functionality: Automated updates can also remove outdated or unnecessary software components, contributing to the principle of least functionality by reducing the attack surface of information systems.
 
 - **Products covered:**
-    - 
+    - Windows Updates for Business
 
 - **Recommendations:**
     - 
 
-#### Ensure devices are encrypted
+#### Configuring Automatic Updates for Corporate-Enrolled iOS Devices 
 
-**Are Windows 10 and later devices encrypted with BitLocker and MacOS devices encrypted with FileVault?**
+**Has the organization configured automatic iOS update policies for corporate-enrolled devices to simplify the update management experience and ensure compliance with required security levels?**
+
+- **Legacy:** The organization lacks a formal policy for automating iOS updates on corporate-enrolled devices, leading to inconsistent application of updates and potential vulnerabilities due to outdated software.
+    - **Indicators:**
+        - Manual process for updating iOS devices, resulting in delays or inconsistencies in applying critical security updates.
+        - Increased risk of security breaches and non-compliance due to outdated operating systems and applications.
+        - Challenges in maintaining device security and compliance across the iOS device fleet.
+
+- **Initial:** Initial efforts have been made to configure automatic iOS update policies for a subset of corporate-enrolled devices. While this phase marks progress towards streamlined update management, comprehensive and uniform application of update policies across all iOS devices may still be in development.
+    - Indicators:
+        - Partial deployment of automatic iOS update policies, targeting high-priority or high-risk devices.
+        - Initial improvements in the timeliness and consistency of iOS updates, though not achieved organization-wide.
+        - Some enhancement in security posture and compliance for iOS devices, with ongoing efforts to expand and optimize automatic update policies.
+
+- **Advanced:** Automatic iOS update policies are broadly configured and enabled across the organization, significantly improving security and compliance by ensuring timely and consistent application of updates. This advanced tier reflects a mature approach to iOS update management, ensuring devices are protected against known vulnerabilities.
+    - Indicators:
+        - Comprehensive application of automatic iOS update policies, covering all corporate-enrolled iOS devices.
+        - Enhanced capability to quickly mitigate vulnerabilities through automated application of security patches and updates.
+        - Significant progress toward achieving a robust, organization-wide security framework for iOS devices, bolstered by systematic update management.
+
+- **Optimal:** The configuration of automatic iOS update policies for corporate-enrolled devices is fully operationalized and integrated into the organization’s overall security strategy. This optimal scenario ensures the highest level of device security and compliance, leveraging automation to maintain up-to-date software and protect against vulnerabilities.
+    - Indicators:
+        - Strategic and universal enforcement of automatic update policies, ensuring all corporate-enrolled iOS devices receive timely updates.
+        - Comprehensive management of software updates and security patches, enhancing organizational resilience against potential threats.
+        - Full alignment with security best practices and compliance requirements for mobile devices, supported by an effective and well-managed update policy framework.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - SI-2 Flaw Remediation: Automated iOS update policies support the timely remediation of identified software flaws by applying patches and updates as soon as they become available, thereby reducing the window of vulnerability.
+    - CM-3 Configuration Change Control: Automating the deployment of iOS updates ensures that changes to device configurations, including security updates, are managed in a controlled manner, maintaining the security and integrity of devices.
+    - SI-3 Malware Protection: Regular and automated updates can include enhancements to malware protection mechanisms, ensuring that devices are equipped with the latest defenses against malware threats.
+    - CM-7 Least Functionality: Through automatic updates, unnecessary or unsafe software components can be removed or updated, contributing to the enforcement of the principle of least functionality by minimizing potential attack surfaces.
+
+- **Products covered:**
+    - Microsoft Intune
+
+- **Recommendations:**
+    - 
+
+#### Securing Devices with Encryption
+
+**Has the organization implemented encryption on its devices by configuring BitLocker for Windows 10 and FileVault for macOS to enhance data security and meet business needs?**
 
 - Legacy: Devices operate without full-disk encryption, relying on either no encryption or partial, inconsistent encryption practices. This approach leaves sensitive data vulnerable to unauthorized access, especially in the event of device loss or theft. Windows devices are not utilizing BitLocker, and MacOS devices are not taking advantage of FileVault, reflecting a significant gap in data protection measures.
     - Indicators
@@ -342,7 +364,10 @@ Questions in the following sections are designed to help us understand a clients
         - Comprehensive mitigation of risks associated with data exposure, through proactive and uniform encryption practices that secure sensitive data across all Windows and MacOS devices.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - SC-28 (Protection of Information at Rest): Configuring BitLocker and FileVault directly supports the requirement to protect information at rest through cryptographic mechanisms, ensuring that sensitive data is encrypted and access is restricted to authorized users only.
+    - MP-5 (Media Protection): Encryption of device storage using BitLocker and FileVault contributes to media protection policies by safeguarding data on digital media, reducing the risk of unauthorized information disclosure.
+    - SC-12 (Cryptographic Key Establishment and Management): The management features of BitLocker and FileVault for encryption keys align with the control's requirements for key establishment and management, ensuring the security and integrity of cryptographic keys.
+    - AC-3 (Access Enforcement): Encryption enhances access enforcement by adding a layer of data protection that requires authentication before decrypting and accessing the stored information.
 
 - **Products covered:**
     - 
