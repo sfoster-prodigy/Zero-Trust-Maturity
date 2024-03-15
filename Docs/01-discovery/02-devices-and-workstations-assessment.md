@@ -218,25 +218,25 @@ Questions in the following sections are designed to help us understand a clients
 
 **Are recommended security settings applied to Windows 10 and later devices to protect corporate data?** (Score Initial)
 
-- Legacy: Windows 10 and later devices operate without the application of Microsoft-recommended security settings. This gap indicates a foundational lapse in security practices, leaving the organization vulnerable to threats due to insufficient protection mechanisms.
+- **Legacy:** Windows 10 and later devices operate without the application of Microsoft-recommended security settings. This gap indicates a foundational lapse in security practices, leaving the organization vulnerable to threats due to insufficient protection mechanisms.
     - Indicators
         - Deployment of Windows 10 and later devices without the security enhancements provided by recommended settings.
         - Increased exposure to cybersecurity threats due to the lack of essential security configurations and controls.
         - Inadequate oversight over the security configuration of devices, potentially leading to gaps in protection against unauthorized access and data compromise.
 
-- Initial: Initial efforts are made to configure Windows 10 and later devices with Microsoft-recommended security settings, laying the groundwork for enhanced security. This phase marks the beginning of adopting a structured approach to device security, although not yet fully comprehensive.
+- **Initial:** Initial efforts are made to configure Windows 10 and later devices with Microsoft-recommended security settings, laying the groundwork for enhanced security. This phase marks the beginning of adopting a structured approach to device security, although not yet fully comprehensive.
     - Indicators:
         - A growing number of devices being configured with recommended security settings, establishing a basic level of protection.
         - Despite these initial steps, a holistic approach to device security and policy enforcement remains underdeveloped, limiting the effectiveness of implemented controls.
         - Some improvement in the security landscape, with registered devices beginning to benefit from enhanced access management and basic security policies.
 
-- Advanced: A significant portion of Windows 10 and later devices are configured with Microsoft-recommended security settings, advancing the organization's security posture. This tier reflects a more mature approach to security, with an increased focus on comprehensive device policy enforcement and identity verification.
+- **Advanced:** A significant portion of Windows 10 and later devices are configured with Microsoft-recommended security settings, advancing the organization's security posture. This tier reflects a more mature approach to security, with an increased focus on comprehensive device policy enforcement and identity verification.
     - Indicators:
         - Widespread application of recommended security settings across Windows devices, markedly improving the organization's defense mechanisms.
         - Enhanced monitoring and control over device access, with the implementation of more sophisticated security policies and compliance requirements.
         - Notable advancements in applying rigorous security measures to devices, including conditional access and more stringent policy applications, strengthening the overall security framework.
 
-- Optimal: All Windows 10 and later devices in the organization are configured with the full spectrum of Microsoft-recommended security settings, achieving the highest standard of security achievable through configuration alone. This optimal condition ensures that every device adheres to stringent security policies and access controls, mirroring the protection levels of fully managed corporate devices.
+- **Optimal:** All Windows 10 and later devices in the organization are configured with the full spectrum of Microsoft-recommended security settings, achieving the highest standard of security achievable through configuration alone. This optimal condition ensures that every device adheres to stringent security policies and access controls, mirroring the protection levels of fully managed corporate devices.
     - Indicators:
         - Universal application of recommended security settings across all Windows devices, ensuring robust identity verification and comprehensive policy enforcement.
         - Complete realization of the most advanced security policies and access controls for all devices, aligning with the highest security benchmarks.
@@ -257,7 +257,7 @@ Questions in the following sections are designed to help us understand a clients
 
 #### Utilizing Windows Updates for Business and Intune for Windows 10 Update Management
 
-**"Has the organization implemented Windows Updates for Business to streamline the update management process for Windows 10 devices, configuring update rings in Intune and managing feature updates to meet compliance requirements?**
+**"Has the organization implemented Windows Updates for Business to streamline the update management process for Windows 10 devices, configuring update rings in Intune and managing feature updates to meet compliance requirements?** (Score Legacy)
 
 - **Legacy:** Windows devices are managed through on-premises update management solutions, or updates are applied manually, without leveraging the automation and cloud-based features of Windows Updates for Business. This approach reflects traditional update practices, which may not provide the agility and security benefits of modern, automated update management systems. The reliance on legacy methods can lead to inconsistent update deployments, increased administrative overhead, and potential security vulnerabilities due to delayed patching.
       - Indicators:
@@ -297,7 +297,7 @@ Questions in the following sections are designed to help us understand a clients
 
 #### Configuring Automatic Updates for Corporate-Enrolled iOS Devices 
 
-**Has the organization configured automatic iOS update policies for corporate-enrolled devices to simplify the update management experience and ensure compliance with required security levels?**
+**Has the organization configured automatic iOS update policies for corporate-enrolled devices to simplify the update management experience and ensure compliance with required security levels?** (Score Legacy)
 
 - **Legacy:** The organization lacks a formal policy for automating iOS updates on corporate-enrolled devices, leading to inconsistent application of updates and potential vulnerabilities due to outdated software.
     - **Indicators:**
@@ -337,221 +337,280 @@ Questions in the following sections are designed to help us understand a clients
 
 #### Securing Devices with Encryption
 
-**Has the organization implemented encryption on its devices by configuring BitLocker for Windows 10 and FileVault for macOS to enhance data security and meet business needs?**
+**Has the organization implemented encryption on its macOS devices by configuring FileVault to enhance data security and meet business needs?** (Score N/A)
 
-- Legacy: Devices operate without full-disk encryption, relying on either no encryption or partial, inconsistent encryption practices. This approach leaves sensitive data vulnerable to unauthorized access, especially in the event of device loss or theft. Windows devices are not utilizing BitLocker, and MacOS devices are not taking advantage of FileVault, reflecting a significant gap in data protection measures.
+- **Legacy:** Devices operate without full-disk encryption, relying on either no encryption or partial, inconsistent encryption practices. This approach leaves sensitive data vulnerable to unauthorized access, especially in the event of device loss or theft. MacOS devices are not taking advantage of FileVault, reflecting a significant gap in data protection measures.
     - Indicators
         - Absence of a standardized approach to device encryption, with many devices left unprotected or inconsistently secured.
-        - Increased risk of data breaches and non-compliance with data protection regulations due to the lack of effective encryption on Windows and MacOS devices.
-        - Operational challenges in managing data protection, with potential gaps in securing sensitive information across the device fleet.
+        - Increased risk of data breaches and non-compliance with data protection regulations due to the lack of effective encryption on MacOS devices.
+        - perational challenges in managing data protection, with potential gaps in securing sensitive information across the device fleet.
 
-- Initial: Initial steps are taken to implement BitLocker encryption on Windows 10 and later devices and FileVault encryption on MacOS devices for a subset of the device fleet. This phase marks the beginning of adopting encryption standards, though not yet fully comprehensive or consistently applied across all devices.
+- **Initial:** Initial steps are taken to implement FileVault encryption on MacOS devices for a subset of the device fleet. This phase marks the beginning of adopting encryption standards, though not yet fully comprehensive or consistently applied across all devices.
     - Indicators:
-        - A portion of the device fleet is encrypted with BitLocker for Windows devices and FileVault for MacOS devices, establishing a basic level of data protection.
+        - A portion of the device fleet is encrypted with FileVault for MacOS devices, establishing a basic level of data protection.
         - Despite these initial steps, a comprehensive encryption strategy covering all devices and data is not yet in place, limiting the overall effectiveness of data protection measures.
         - Some improvement in the security posture related to data protection, with initial efforts reducing the risk of unauthorized data access on encrypted devices.
 
-- Advanced: A significant number of Windows and MacOS devices are encrypted with BitLocker and FileVault, respectively, enhancing the organization's data protection capabilities. This advanced tier reflects a more mature approach to encryption, with the majority of devices secured and policies more consistently applied, though some areas may still require attention for full coverage.
+- **Advanced:** A significant number of MacOS devices are encrypted with FileVault, enhancing the organization's data protection capabilities. This advanced tier reflects a more mature approach to encryption, with the majority of devices secured and policies more consistently applied, though some areas may still require attention for full coverage.
     - Indicators:
-        - Broad implementation of BitLocker and FileVault encryption across the device fleet, significantly improving data protection.
+        - Broad implementation of FileVault encryption across the device fleet, significantly improving data protection.
         - Enhanced management of encryption keys and recovery information, ensuring that encrypted devices remain accessible to authorized users while securing data from unauthorized access.
         - Noticeable reduction in the potential impact of data breaches, with most sensitive data protected by strong encryption methods.
 
-- Optimal: BitLocker and FileVault are fully deployed and actively managed across all Windows 10 and later devices and MacOS devices, respectively, achieving the highest level of data protection through encryption. This optimal scenario ensures comprehensive coverage, with all devices encrypted and encryption policies consistently enforced, minimizing the risk of unauthorized data access and supporting compliance with data protection standards.
+- **Optimal:** FileVault is fully deployed and actively managed across all MacOS devices, achieving the highest level of data protection through encryption. This optimal scenario ensures comprehensive coverage, with all devices encrypted and encryption policies consistently enforced, minimizing the risk of unauthorized data access and supporting compliance with data protection standards.
     - Indicators:
-        - Universal deployment of BitLocker and FileVault encryption, ensuring that every device is protected by full-disk encryption without exceptions.
+        - Universal deployment of FileVault encryption, ensuring that every device is protected by full-disk encryption without exceptions.
         - Strategic and effective management of encryption policies, keys, and recovery mechanisms, facilitating both security and operational efficiency.
-        - Comprehensive mitigation of risks associated with data exposure, through proactive and uniform encryption practices that secure sensitive data across all Windows and MacOS devices.
+        - Comprehensive mitigation of risks associated with data exposure, through proactive and uniform encryption practices that secure sensitive data across all MacOS devices.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - SC-28 (Protection of Information at Rest): Configuring BitLocker and FileVault directly supports the requirement to protect information at rest through cryptographic mechanisms, ensuring that sensitive data is encrypted and access is restricted to authorized users only.
-    - MP-5 (Media Protection): Encryption of device storage using BitLocker and FileVault contributes to media protection policies by safeguarding data on digital media, reducing the risk of unauthorized information disclosure.
-    - SC-12 (Cryptographic Key Establishment and Management): The management features of BitLocker and FileVault for encryption keys align with the control's requirements for key establishment and management, ensuring the security and integrity of cryptographic keys.
+    - SC-28 (Protection of Information at Rest): Configuring FileVault directly supports the requirement to protect information at rest through cryptographic mechanisms, ensuring that sensitive data is encrypted and access is restricted to authorized users only.
+    - MP-5 (Media Protection): Encryption of device storage using FileVault contributes to media protection policies by safeguarding data on digital media, reducing the risk of unauthorized information disclosure.
+    - SC-12 (Cryptographic Key Establishment and Management): The management features of FileVault for encryption keys align with the control's requirements for key establishment and management, ensuring the security and integrity of cryptographic keys.
     - AC-3 (Access Enforcement): Encryption enhances access enforcement by adding a layer of data protection that requires authentication before decrypting and accessing the stored information.
 
 - **Products covered:**
-    - 
+    - Microsoft Intune
+    - FileVault
 
 - **Recommendations:**
     - 
 
-#### Create application protection policies to protect corporate data at the app-level
+**Has the organization implemented encryption on its devices by configuring BitLocker for Windows 10 and 11 to enhance data security and meet business needs?** (Score Initial)
 
-**Are application protection policies leveraged to protect corporate data at the app-level with Intune?**
+- **Legacy:** Devices operate without full-disk encryption, relying on either no encryption or partial, inconsistent encryption practices. This approach leaves sensitive data vulnerable to unauthorized access, especially in the event of device loss or theft. Windows devices are not utilizing BitLocker, reflecting a significant gap in data protection measures.
+    - Indicators:
+        - Absence of a standardized approach to device encryption, with many devices left unprotected or inconsistently secured.
+        - Increased risk of data breaches and non-compliance with data protection regulations due to the lack of effective encryption on Windows devices.
+        - Operational challenges in managing data protection, with potential gaps in securing sensitive information across the device fleet.
+- **Initial:** Initial steps are taken to implement BitLocker encryption on Windows 10 and later devices for a subset of the device fleet. This phase marks the beginning of adopting encryption standards, though not yet fully comprehensive or consistently applied across all devices.
+    - Indicators:
+        - A portion of the device fleet is encrypted with BitLocker for Windows devices, establishing a basic level of data protection.
+        - Despite these initial steps, a comprehensive encryption strategy covering all devices and data is not yet in place, limiting the overall effectiveness of data protection measures.
+        - Some improvement in the security posture related to data protection, with initial efforts reducing the risk of unauthorized data access on encrypted devices.
 
-- Legacy: Corporate data is accessed and handled by applications without specific application protection policies in place. This approach signifies a fundamental gap in data security, leaving sensitive information exposed to potential leaks and unauthorized access due to the lack of app-level controls. Organizations might rely on generic or platform-level security measures that do not fully address the unique risks associated with specific applications.
+- **Advanced:** A significant number of Windows devices are encrypted with BitLocker, enhancing the organization's data protection capabilities. This advanced tier reflects a more mature approach to encryption, with the majority of devices secured and policies more consistently applied, though some areas may still require attention for full coverage.
+    - Indicators:
+        - Broad implementation of BitLocker encryption across the device fleet, significantly improving data protection.
+        - Enhanced management of encryption keys and recovery information, ensuring that encrypted devices remain accessible to authorized users while securing data from unauthorized access.
+        - Noticeable reduction in the potential impact of data breaches, with most sensitive data protected by strong encryption methods.
+
+- **Optimal:** BitLocker is fully deployed and actively managed across all Windows 10 and later devices, achieving the highest level of data protection through encryption. This optimal scenario ensures comprehensive coverage, with all devices encrypted and encryption policies consistently enforced, minimizing the risk of unauthorized data access and supporting compliance with data protection standards.
+    - Indicators:
+        - Universal deployment of BitLocker encryption, ensuring that every device is protected by full-disk encryption without exceptions.
+        - Strategic and effective management of encryption policies, keys, and recovery mechanisms, facilitating both security and operational efficiency.
+        - Comprehensive mitigation of risks associated with data exposure, through proactive and uniform encryption practices that secure sensitive data across all Windows devices.
+
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - SC-28 (Protection of Information at Rest): Configuring BitLocker directly supports the requirement to protect information at rest through cryptographic mechanisms, ensuring that sensitive data is encrypted and access is restricted to authorized users only.
+    - MP-5 (Media Protection): Encryption of device storage using BitLocker contributes to media protection policies by safeguarding data on digital media, reducing the risk of unauthorized information disclosure.
+    - SC-12 (Cryptographic Key Establishment and Management): The management features of BitLocker for encryption keys align with the control's requirements for key establishment and management, ensuring the security and integrity of cryptographic keys.
+    - AC-3 (Access Enforcement): Encryption enhances access enforcement by adding a layer of data protection that requires authentication before decrypting and accessing the stored information.
+
+- **Products covered:**
+    - Microsoft Intune
+    - BitLocker
+
+- Recommendations:
+
+#### Implementing Application Protection Policies (APP) to protect corporate data at the app-level
+
+**Has the organization implemented app protection policies in Intune to protect corporate data at the app level, adopting a tiered configuration approach ranging from basic to high data protection?** (Score Legacy)
+
+- **Legacy:** Corporate data is accessed and handled by applications without specific application protection policies in place. This approach signifies a fundamental gap in data security, leaving sensitive information exposed to potential leaks and unauthorized access due to the lack of app-level controls. Organizations might rely on generic or platform-level security measures that do not fully address the unique risks associated with specific applications.
     - Indicators
         - Absence of targeted application protection policies, resulting in inconsistent security measures across different apps.
         - Increased vulnerability to data leaks and breaches due to the lack of app-specific security controls and encryption.
         - Challenges in enforcing data protection standards across applications, leading to potential non-compliance and security risks.
 
-- Initial: Initial efforts to implement application protection policies are underway, focusing on essential apps that access corporate data. This stage marks the beginning of a more focused approach to app-level data protection, though comprehensive coverage and advanced policy configurations may still be in development.
+- **Initial:** Initial efforts to implement application protection policies are underway, focusing on essential apps that access corporate data. This stage marks the beginning of a more focused approach to app-level data protection, though comprehensive coverage and advanced policy configurations may still be in development.
     - Indicators:
         - Partial deployment of application protection policies, primarily targeting high-priority apps.
         - Basic configurations of app-level data protection measures, such as data encryption and access controls, are in place, offering a foundational level of security.
         - Some improvement in controlling data access and preventing unauthorized data sharing, though a fully integrated app protection strategy is not yet realized.
 
-- Advanced: A broad range of applications are covered by comprehensive application protection policies, significantly enhancing data security at the app level. This advanced tier reflects a mature approach to app-level security, with detailed policy configurations tailored to the specific risks and requirements of different applications.
+- **Advanced:** A broad range of applications are covered by comprehensive application protection policies, significantly enhancing data security at the app level. This advanced tier reflects a mature approach to app-level security, with detailed policy configurations tailored to the specific risks and requirements of different applications.
     - Indicators:
         - Widespread implementation of application protection policies, encompassing a diverse set of apps that access or manage corporate data.
         - Enhanced app-level security measures, including advanced encryption, access management, and conditional use policies, are systematically applied.\
         - Notable reduction in the risk of data breaches and unauthorized access, supported by robust app-level controls and monitoring of data handling practices.
 
-- Optimal: Application protection policies are comprehensively deployed and meticulously managed across all relevant applications, ensuring the highest level of data protection at the app level. This optimal scenario guarantees that corporate data is consistently secured across all applications, with dynamic policies that adapt to evolving security threats and business needs.
+- **Optimal:** Application protection policies are comprehensively deployed and meticulously managed across all relevant applications, ensuring the highest level of data protection at the app level. This optimal scenario guarantees that corporate data is consistently secured across all applications, with dynamic policies that adapt to evolving security threats and business needs.
     - Indicators:
         - Universal and strategic deployment of application protection policies, ensuring that every app handling corporate data is governed by robust security controls.
         - Strategic management of app-level policies, with adaptive measures that respond to new threats and incorporate best practices for data security.
         - Comprehensive mitigation of app-related data security risks, through proactive and uniform application of protection measures, enhancing the overall security posture and compliance.
 
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - AC-4 Information Flow Enforcement: Application protection policies help enforce approved authorizations for controlling information flows within and between applications, ensuring that data is used and shared in compliance with security policies.
+    - SC-8 Transmission Confidentiality and Integrity: By applying protection policies, organizations can ensure the confidentiality and integrity of data transmitted between applications, aligning with the control’s requirements for secure data transmission.
+    - AC-3 Access Enforcement: Application protection policies contribute to access enforcement by restricting access to corporate data within applications based on user roles and conditions, preventing unauthorized use.
+    - SC-28 Protection of Information at Rest: App-level protection policies ensure that corporate data stored within applications is encrypted and protected against unauthorized access, supporting the control’s emphasis on securing data at rest.
+
 - Products and features covered:
     - Microsoft Intune
-      - Windows Autopatch
       - Application Protection Policies (APP)
-    - BitLocker
-    - FileVault
+
+
 ### Endpoint threat detection is used to monitor device risk
 
-#### Route endpoint logs and transactions to Microsoft Sentinel
+#### Integrating Intune data with Microsoft Sentinel for advanced reporting
  
-**Are endpoint logs and transactions routed to Microsoft Sentinel?**
+**Has the organization implemented the integration of Intune data with Microsoft Sentinel for enhanced reporting capabilities?** (Score Legacy)
 
-- Legacy: Endpoint logs and transactions are not systematically collected or analyzed. In this stage, organizations might rely on disparate or manual log review processes, if any, which significantly limits visibility into security events and potential threats. The lack of integration with centralized security information and event management (SIEM) solutions like Microsoft Sentinel results in missed opportunities for proactive threat detection and response.
+- **Legacy:** The organization does not have a centralized mechanism for monitoring and reporting on device management and security events. This may result in a fragmented security posture, where threats and compliance issues might not be identified promptly.
     - Indicators
-        - Absence of a centralized approach for collecting and analyzing endpoint logs and transactions.
-        - Limited ability to detect or respond to security incidents promptly due to the lack of comprehensive log data analysis.
-        - Increased risk of undetected security breaches and insufficient insights into endpoint security posture.
+        - Lack of integration between device management solutions (like Intune) and security information and event management (SIEM) systems.
+        - Increased risk due to delayed detection and response to security incidents.
+        - Challenges in achieving comprehensive visibility across the IT environment.
 
-- Initial: Initial efforts to route endpoint logs and transactions to a SIEM solution are underway, with some endpoint data being collected and analyzed. This stage marks the beginning of leveraging tools like Microsoft Sentinel for enhanced security monitoring, though comprehensive log coverage and advanced analytics capabilities may still be in development.
+- **Initial:** Initial efforts have been made to integrate Intune data with Microsoft Sentinel for some devices or specific use cases. This phase marks progress towards enhanced security insights, but the coverage and depth of integration may still be limited.
     - Indicators:
-        - Partial integration of endpoint logs and transactions with Microsoft Sentinel, covering key systems or areas of concern.
-        - Basic log analysis capabilities are utilized, providing foundational insights into security events and potential vulnerabilities.
-        - Some improvement in the organization's ability to detect and respond to incidents, though a fully optimized SIEM deployment is not yet achieved.
+        - Partial integration, possibly covering critical assets or focusing on high-priority security alerts.
+        - Some improvement in incident detection and response capabilities through limited SIEM insights.
+        - Ongoing efforts to expand the scope and depth of integration for more comprehensive security monitoring.
 
-- Advanced: A significant portion of endpoint logs and transactions are systematically routed to Microsoft Sentinel, enabling more comprehensive security monitoring and analysis. This advanced tier reflects a mature approach to log management, with enhanced analytics capabilities that support proactive threat detection, incident response, and security posture assessment.
+- **Advanced:** Intune data is broadly integrated with Microsoft Sentinel, providing a centralized view of device management and security events across the organization. This advanced tier reflects a proactive approach to security monitoring and incident response.
     - Indicators:
-        - Broad integration of endpoint logs and transactions with Microsoft Sentinel, facilitating a holistic view of the security landscape.
-        - Advanced use of analytics and threat detection capabilities within Microsoft Sentinel, enabling more effective identification of suspicious activities and potential threats.
-        - Significant improvements in the timeliness and effectiveness of security incident response, supported by detailed log insights and automated alerting mechanisms.
+        - Comprehensive integration enabling detailed security reporting and analytics across all managed devices.
+        - Enhanced capability for early detection of security threats and anomalies, supported by advanced analytics.
+        - Significant progress toward a cohesive security strategy, leveraging centralized logging and analysis for informed decision-making.
 
-- Optimal: Endpoint logs and transactions from across the entire organization are fully integrated with Microsoft Sentinel, achieving the highest level of security monitoring and analytics. This optimal scenario ensures comprehensive visibility into endpoint activities, leveraging the full capabilities of Microsoft Sentinel for advanced threat detection, incident response, and security posture enhancement.
+- **Optimal:** The integration of Intune data with Microsoft Sentinel is fully operationalized and leveraged for advanced security reporting, threat detection, and incident response across the entire organizational IT estate. This optimal scenario ensures a high level of operational resilience and security intelligence.
     - Indicators:
-        - Universal and strategic routing of all endpoint logs and transactions to Microsoft Sentinel, ensuring no gaps in log coverage.
-        - Full exploitation of Microsoft Sentinel's advanced analytics, threat detection, and automated response capabilities, optimizing the organization's security operations.
-        - Proactive and efficient management of security threats and incidents, underpinned by comprehensive log data analysis and real-time monitoring, significantly enhancing the organization's overall security posture.
+        - Strategic utilization of SIEM capabilities for real-time security monitoring and compliance reporting.
+        - Adaptive security measures informed by comprehensive analytics and threat intelligence.
+        - Full alignment with organizational security policies, best practices, and regulatory requirements, supported by a robust and dynamic security monitoring framework.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - SI-4 Information System Monitoring: Enhances the organization's capability to monitor systems for security-relevant events by leveraging data from Intune within Microsoft Sentinel, facilitating real-time awareness and response.
+    - AU-6 Audit Review, Analysis, and Reporting: Supports the review, analysis, and reporting of audit records by aggregating and analyzing Intune data within Microsoft Sentinel, improving the organization's ability to identify and respond to potential security incidents.
+    - IR-4 Incident Handling: Enables a more effective incident handling process by utilizing integrated security information from Intune and Microsoft Sentinel, providing insights necessary for rapid incident analysis and response.
+    - CA-7 Continuous Monitoring: Facilitates the continuous monitoring of security controls by integrating operational data from Intune with Microsoft Sentinel's analytical capabilities, enhancing the organization's security posture and compliance status.
 
 - **Products covered:**
-    - 
+    - Microsoft Intune
+    - Microsoft Sentinel
 
 - **Recommendations:**
     - 
 
 ### Access control is gated on endpoint risk for both corporate devices and BYOD
-#### Corporate Windows devices are enrolled with a cloud enrollment service such as DEP, Android Enterprise, or Windows AutoPilot
+#### Corporate devices are enrolled with a cloud enrollment service such as DEP, Android Enterprise, or Windows Autopilot
 
-**Are corporate Windows devices enrolled with the Windows Autopilot cloud enrollment service?**
+**Has the organization adopted Windows Autopilot as its cloud-based service for automating the deployment and setup of new Windows devices, eliminating the need for custom operating system imaging?** (Score Initial)
 
-- Legacy: Corporate Windows devices are set up and managed manually, without the use of cloud enrollment services like Windows Autopilot. This traditional approach involves significant manual effort for device setup, configuration, and ongoing management, leading to increased operational costs and potential inconsistencies in device provisioning and security configurations.
+- **Legacy:** Corporate Windows devices are set up and managed manually, without the use of cloud enrollment services like Windows Autopilot. This traditional approach involves significant manual effort for device setup, configuration, and ongoing management, leading to increased operational costs and potential inconsistencies in device provisioning and security configurations.
     - Indicators:
         - Absence of cloud-based enrollment and management for Windows devices, relying instead on manual processes.
         - Increased resource expenditure on device setup and management, with potential for configuration errors and inconsistencies.
         - Limited scalability and efficiency in deploying and managing corporate devices, impacting the organization's agility and security posture.
 
-- Initial: Initial steps have been taken to enroll some corporate Windows devices with Windows Autopilot, beginning the transition towards automated cloud-based device management. This stage marks the initial adoption of cloud enrollment services, though comprehensive enrollment of all devices and full utilization of Autopilot's capabilities may still be in progress.
+- **Initial:** Initial steps have been taken to enroll some corporate Windows devices with the use of a cloud enrollment service like Windows Autopilot, beginning the transition towards automated cloud-based device management. This stage marks the initial adoption of cloud enrollment services, though comprehensive enrollment of all devices and full utilization of Autopilot's capabilities may still be in progress.
     - Indicators:
         - Partial enrollment of corporate Windows devices in Windows Autopilot, focusing on a select group of devices or pilot deployment.
         - Initial reduction in manual setup and configuration efforts for enrolled devices, though not yet fully realized across the entire device fleet.
         - Some improvements in device deployment efficiency and consistency, but with room for further enhancement and broader adoption of cloud enrollment services.
 
-- Advanced: A significant number of corporate Windows devices are enrolled in Windows Autopilot, significantly improving the efficiency and consistency of device management. This advanced tier indicates a mature approach to device deployment, with the majority of devices benefiting from automated provisioning, configuration, and management through Windows Autopilot.
+- **Advanced:** A significant number of corporate Windows devices are enrolled in Windows Autopilot, significantly improving the efficiency and consistency of device management. This advanced tier indicates a mature approach to device deployment, with the majority of devices benefiting from automated provisioning, configuration, and management through Windows Autopilot.
     - Indicators:
         - Broad adoption of Windows Autopilot for corporate Windows devices, streamlining the deployment and management process.
         - Enhanced operational efficiency and consistency in device provisioning, with reduced manual intervention and lower risk of configuration errors.
         - Improved scalability and security posture through the standardized deployment and management of devices, leveraging cloud-based services for optimal device readiness and compliance.
 
-- Optimal: All corporate Windows devices are fully enrolled and managed through Windows Autopilot, achieving the highest level of automation, efficiency, and security in device deployment and management. This optimal scenario ensures comprehensive and consistent application of configurations, policies, and security settings across the entire device fleet, facilitated by the advanced capabilities of cloud enrollment services.
+- **Optimal:** All corporate Windows devices are fully enrolled and managed through Windows Autopilot, achieving the highest level of automation, efficiency, and security in device deployment and management. This optimal scenario ensures comprehensive and consistent application of configurations, policies, and security settings across the entire device fleet, facilitated by the advanced capabilities of cloud enrollment services.
     - Indicators:
         - Universal enrollment of corporate Windows devices in Windows Autopilot, eliminating manual setup and management processes.
         - Full realization of operational efficiencies, scalability, and security enhancements offered by automated cloud-based device management.
         - Strategic and proactive management of the device lifecycle, from deployment to retirement, supported by comprehensive insights and controls provided by Windows Autopilot, ensuring a robust and agile IT infrastructure.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - CM-2 Baseline Configuration: Windows Autopilot supports the establishment and enforcement of baseline configurations for devices, ensuring they are configured in accordance with organizational security standards from the moment of deployment.
+    - CM-4 Security Impact Analysis: Automating device setup with Windows Autopilot facilitates security impact analysis by applying known and trusted configurations, reducing the risk of deploying devices with potential security vulnerabilities.
+    - CM-9 Configuration Management Plan: Utilizing Windows Autopilot contributes to the configuration management plan by standardizing the deployment and setup processes for new devices, ensuring consistency with organizational security policies and procedures.
+    - SA-10 Developer Configuration Management: Although focused on system development, the principle of managing configurations to ensure security and integrity is applicable to Windows Autopilot’s role in automating device deployment with secure, standardized settings.
 
 - **Products covered:**
-    - 
+    - Microsoft Intune
+    - Windows Autopilot
 
 - **Recommendations:**
     - 
 
-**Are corporate iOS and iPadOS devices enrolled with the Apple Device Enrollment Program (DEP) cloud enrollment service?**
+**Has the organization utilized Microsoft Intune for cloud enrollment and configured Apple DEP to automatically enroll iOS and iPadOS devices, streamlining the device deployment process?** (Score Initial)
 
-- Legacy: Corporate iOS and iPadOS devices are configured and managed manually, bypassing the automation and security benefits provided by cloud enrollment services like the Apple Device Enrollment Program (DEP). This manual approach to device provisioning leads to increased operational burdens and potential inconsistencies in security and configuration settings across devices.
+- **Legacy:** The organization relies on manual processes for enrolling iOS and iPadOS devices, not utilizing cloud-based services like Microsoft Intune and Apple Device Enrollment Program (DEP) for automated enrollment. This approach may lead to inconsistencies in device management and potential security gaps.
     - Indicators:
         - Absence of automated cloud-based enrollment and management for iOS and iPadOS devices, with a reliance on time-consuming manual processes.
         - Increased resources and time spent on manual device setup, configuration, and management, leading to inefficiencies and potential for configuration disparities.
         - Limited ability to enforce standardized security policies and configurations across all corporate iOS and iPadOS devices, affecting the organization's overall security posture.
 
-- **Initial:** Initial steps have been taken to enroll some corporate iOS and iPadOS devices with the Apple Device Enrollment Program (DEP), initiating the shift towards automated and secure device management. This phase indicates the beginning of adopting cloud enrollment services, though not all devices may be enrolled, and the full suite of DEP features may not yet be leveraged.
+- **Initial:** Initial efforts have been made to adopt Microsoft Intune for cloud enrollment and configure Apple DEP for automatic enrollment of iOS and iPadOS devices in specific scenarios or for a subset of the device fleet. While this phase marks progress, comprehensive and uniform adoption across all devices may still be in development.
     - Indicators:
-        - Partial enrollment of corporate iOS and iPadOS devices in DEP, targeting a select subset of devices or conducting a pilot program.
-        - Initial reduction in the manual effort required for device provisioning and management for those devices enrolled in DEP.
-        - Some improvements in deployment efficiency and consistency for enrolled devices, though broader adoption and optimization of DEP capabilities are needed.
+        - Partial implementation of Microsoft Intune and Apple DEP, targeting high-priority devices or specific user groups.
+        - Initial improvements in deployment efficiency and consistency, though not achieved organization-wide.
+        - Some enhancement in the organization’s device management and security posture, with ongoing efforts to expand and optimize cloud-based enrollment.
 
-- **Advanced:** A significant portion of corporate iOS and iPadOS devices are enrolled in the Apple Device Enrollment Program (DEP), markedly improving the deployment and management process. This tier reflects an advanced approach to device management, with the majority of devices enjoying the benefits of automated provisioning and security configurations facilitated by DEP.
+- **Advanced:** Microsoft Intune and Apple DEP are broadly utilized for the automated enrollment of iOS and iPadOS devices, significantly improving the efficiency and security of the device deployment process. This advanced tier reflects a mature approach to device lifecycle management, leveraging cloud-based services to ensure consistent policies and configurations.
     - Indicators:
-        - Broad adoption of DEP for corporate iOS and iPadOS devices, streamlining the deployment and ongoing management process.
-        - Enhanced operational efficiency in device provisioning, with a significant reduction in manual setup requirements and a uniform application of security policies and configurations.
-        - Noticeable improvements in the organization's ability to manage and secure its mobile device fleet, leveraging DEP for better control over devices and ensuring compliance with corporate standards.
+        - Comprehensive deployment of Microsoft Intune and Apple DEP, ensuring automated and consistent enrollment for all iOS and iPadOS devices.
+        - Enhanced capability to quickly deploy and manage devices with standardized security settings and configurations.
+        - Significant progress toward a streamlined and secure device deployment and management process, bolstered by systematic adoption of cloud-based enrollment services.
 
-- **Optimal:** All corporate iOS and iPadOS devices are fully enrolled and managed through the Apple Device Enrollment Program (DEP), achieving the highest level of automation, efficiency, and security in mobile device deployment and management. This optimal scenario ensures that every device is automatically provisioned with the necessary configurations, policies, and security settings right from the start, minimizing operational burdens and maximizing device and data security.
+- **Optimal:** The utilization of Microsoft Intune and Apple DEP for cloud enrollment and automated device setup is fully operationalized and integrated into the organization’s overall IT and security strategy. This optimal scenario ensures the highest level of operational efficiency, security, and compliance in managing iOS and iPadOS devices.
     - Indicators:
-        - Universal and strategic enrollment of corporate iOS and iPadOS devices in DEP, eliminating the need for manual device setup and management.
-        - Full realization of the benefits offered by DEP, including operational efficiencies, enhanced security posture, and standardized device configurations across the entire mobile device fleet.
-        - Proactive and comprehensive management of the mobile device lifecycle, supported by DEP's advanced features, ensuring devices are always ready for business use while maintaining high security and compliance standards.
+        - Strategic and universal application of cloud-based enrollment services, covering the setup and management of all iOS and iPadOS devices.
+        - Comprehensive management of device deployment, leveraging automation to achieve consistent security standards and operational efficiencies.
+        - Full alignment with organizational objectives for device security, efficiency, and compliance, supported by an effective and adaptive device management framework.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - CM-2 Baseline Configuration: Utilizing cloud-based enrollment services supports the establishment of secure baseline configurations for devices, ensuring they are configured in accordance with organizational security requirements from initial setup.
+    - CM-8 Information System Component Inventory: Automated enrollment processes contribute to maintaining an accurate inventory of system components, as each device is registered and tracked within the organization's management platforms.
+    - IA-2 Identification and Authentication (Organizational Users): Cloud-based enrollment mechanisms aid in the secure identification and authentication of devices, associating them with user accounts and applying appropriate access controls.
+    - SA-10 Developer Configuration Management: While focused on system development, the principle of managing configurations securely is applicable to automated device enrollment, ensuring that devices are deployed with secure, standardized settings from the outset.
 
 - **Products covered:**
-    - 
+    - Apple Business Manager
+    - Microsoft Intune
 
 - **Recommendations:**
     - 
 
-**Are corporate Android devices enrolled with the Android Enterprise cloud enrollment service?**
+**Has the organization configured the Android Enterprise fully managed device solution in Microsoft Intune to enroll and manage corporate-owned Android devices?** (Score N/A)
 
-- **Legacy:** Corporate Android devices are set up and managed manually, foregoing the benefits of automated enrollment and management offered by cloud services like Android Enterprise. This traditional method results in increased administrative effort, potential inconsistencies in device configurations, and gaps in security policy enforcement across the fleet.
+- **Legacy:** The organization does not utilize a centralized device management solution for Android devices, leading to potential inconsistencies in security policies and configurations. This may result in security vulnerabilities and challenges in managing corporate data on Android devices.
     - Indicators:
-        - A reliance on manual processes for the setup, configuration, and ongoing management of Android devices, leading to operational inefficiencies.
-        - Increased risk of configuration errors and security policy discrepancies due to the absence of standardized, automated deployment processes.
-        - Challenges in ensuring all corporate Android devices are consistently secured and compliant with organizational policies, impacting the overall security posture.
+        - Absence of a unified management solution for Android devices, resulting in manual or inconsistent device setup and policy enforcement.
+        - Increased risk of data breaches and non-compliance due to varied security postures across Android devices.
+        - Challenges in efficiently deploying, configuring, and managing Android devices to meet business and security needs.
 
-- Initial: Initial efforts to enroll corporate Android devices with Android Enterprise are in progress, marking the beginning of the transition to automated cloud-based device management. While this phase indicates adoption of cloud enrollment services, comprehensive coverage of all devices and full utilization of Android Enterprise's management capabilities may still be developing.
+- **Initial:** Initial efforts have been made to adopt the Android Enterprise fully managed device solution with Microsoft Intune for a subset of corporate-owned Android devices. While this phase marks progress, comprehensive deployment and optimization across all Android devices may still be in development.
     - Indicators:
-        - Partial enrollment of corporate Android devices in Android Enterprise, possibly focusing on a subset of the device fleet or conducting a pilot program.
-        - Initial reduction in manual device management tasks for enrolled devices, though broader adoption and deeper integration with Android Enterprise features are needed.
-        - Some improvement in the consistency and security of device configurations, but with further work required to achieve full device fleet management and policy compliance.
+        - Partial implementation of Android Enterprise with Microsoft Intune, focusing on high-priority devices or specific user groups.
+        - Initial improvements in device management efficiency and security posture, though not achieved organization-wide.
+        - Some enhancement in the organization’s ability to enforce security policies and manage devices, with ongoing efforts to expand and standardize the use of Android Enterprise.
 
-- Advanced: A significant number of corporate Android devices are enrolled in Android Enterprise, significantly enhancing the efficiency, consistency, and security of device management. This advanced tier reflects a mature approach to device management, with the majority of devices benefitting from automated provisioning and comprehensive policy enforcement.
+- **Advanced:** Android Enterprise is broadly configured in Microsoft Intune, significantly improving the management and security of corporate-owned Android devices. This advanced tier reflects a mature approach to device management, ensuring consistent security policies and efficient device provisioning.
     - Indicators:
-        - Broad adoption of Android Enterprise for corporate Android devices, streamlining the deployment and ongoing management process.
-        - Enhanced operational efficiency and security through automated device provisioning, uniform policy application, and advanced management capabilities provided by Android Enterprise.
-        - Noticeable improvements in the organization's ability to secure and manage its Android device fleet, with increased control over device configurations and compliance with corporate standards.
+        - Comprehensive deployment of Android Enterprise within Microsoft Intune, covering all corporate-owned Android devices.
+        - Enhanced capability to enforce security policies, deploy apps, and manage configurations across Android devices.
+        - Significant progress toward a streamlined and secure device management process, bolstered by systematic use of Android Enterprise for corporate devices.
 
-- Optimal: All corporate Android devices are fully enrolled and managed through Android Enterprise, achieving the highest level of automation, efficiency, and security in mobile device deployment and management. This optimal scenario ensures comprehensive and consistent application of configurations, policies, and security settings across the entire Android device fleet, facilitated by the advanced capabilities of cloud enrollment services.
+- **Optimal:** The configuration of Android Enterprise fully managed device solution in Microsoft Intune for corporate-owned Android devices is fully operationalized and integrated into the organization’s overall IT and security strategy. This optimal scenario ensures the highest level of operational efficiency, security, and compliance in managing Android devices.
     - Indicators:
-        - Universal and strategic enrollment of corporate Android devices in Android Enterprise, eliminating manual setup and management processes.
-        - Full realization of operational efficiencies, security enhancements, and compliance benefits offered by automated cloud-based device management.
-        - Proactive and comprehensive management of the Android device lifecycle, from deployment to retirement, supported by comprehensive insights and controls provided by Android Enterprise, ensuring a robust and agile IT infrastructure.
+        - Strategic and universal application of Android Enterprise within Microsoft Intune, ensuring consistent device management practices across the organization.
+        - Comprehensive management of corporate-owned Android devices, leveraging automation to achieve consistent security standards and operational efficiencies.
+        - Full alignment with organizational objectives for device security, efficiency, and compliance, supported by an effective and adaptive device management framework.
 
 - **Relevance to NIST SP 800-53 Revision 5:**
-    - 
+    - CM-2 Baseline Configuration: Utilizing Android Enterprise supports the establishment of secure baseline configurations for devices, ensuring they are configured in accordance with organizational security requirements from the onset.
+    - CM-8 Information System Component Inventory: Android Enterprise integration with Microsoft Intune contributes to maintaining an accurate inventory of system components, as each device is registered and managed within the organizational management platform.
+    - IA-2 Identification and Authentication (Organizational Users): The solution aids in the secure identification and authentication of devices, associating them with corporate policies and ensuring appropriate access controls are applied.
+    - AC-3 Access Enforcement: Configuring corporate-owned Android devices with Android Enterprise ensures that access to corporate resources is strictly enforced according to organizational policies and user roles.
 
 - **Products covered:**
-    - 
+    - Android Enterprise
+    - Microsoft Intune
 
 - **Recommendations:**
     - 
