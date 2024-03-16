@@ -82,7 +82,7 @@ Questions in the following sections are designed to help us understand a clients
 
 #### Data Discovery, classification, and labeling
 
-**Is manual labeling for documents and containers leveraged and curated by subject matter experts?**
+**Is manual labeling for documents and containers leveraged and curated by subject matter experts?** (Legacy)
   
 - **Legacy:** The organization does not utilize manual labeling for documents and containers, resulting in a lack of precision in identifying and classifying sensitive data. This absence of expert curation leads to potential misclassification, inadequate data protection, and increased risk of data breaches.
       - Indicators: 
@@ -117,7 +117,7 @@ Questions in the following sections are designed to help us understand a clients
 - **Products covered:**
     - Microsoft Purview
 
-**Has the organization implemented a system for automated discovery and classification of business documents across the entire data estate?**
+**Has the organization implemented a system for automated discovery and classification of business documents across the entire data estate?** (Legacy)
   - **Legacy:** The organization does not utilize an automated system for the discovery and classification of business documents, leading to potential gaps in identifying and securing sensitive data. This lack of automation in data classification processes results in inefficiencies and increases the risk of data exposure due to manual errors or oversight.
       - Indicators:
           - Absence of automated discovery and classification systems for business documents.
@@ -151,7 +151,7 @@ Questions in the following sections are designed to help us understand a clients
 - **Products covered:**
     - Microsoft Purview
 
-**Has the organization implemented a system for automated discovery and classification of application data across the entire data estate?**
+**Has the organization implemented a system for automated discovery and classification of application data across the entire data estate?** (Legacy)
   - **Legacy:** The organization has not implemented an automated system for the discovery and classification of application data, leading to potential inefficiencies and security risks. This absence means sensitive application data may be inadequately protected, and compliance with data protection regulations may be compromised.
       - Indicators:
           - No deployment of automated discovery and classification systems for application data, resulting in manual or inconsistent data handling processes.
@@ -359,7 +359,7 @@ Questions in the following sections are designed to help us understand a clients
       - AC-22 Publicly Accessible Content: By integrating these tools, organizations can better manage and control the publication of information in SaaS applications, ensuring that sensitive data is not made publicly accessible without proper authorization.
 
 - **Products covered:**
-    - Microsoft Purview
+    - Microsoft Purview Information Protection
 
 #### Control access to data in IaaS/PaaS storage
 
@@ -394,13 +394,13 @@ Questions in the following sections are designed to help us understand a clients
       - AC-6 Least Privilege: Implementing access control policies in cloud environments embodies the principle of least privilege, ensuring that users are granted only the access necessary to perform their duties, minimizing the risk of unauthorized data exposure.
 
 - **Products covered:**
-    - Microsoft Purview DevOps
+    - Microsoft Purview DevOps Policies
 
 ### Prevent data leakage
 
 #### Data Loss Prevention
 
-**Has the organization implemented Microsoft Purview Data Loss Prevention to protect sensitive information from unauthorized movement, loss or leakage?**
+**Has the organization implemented Microsoft Purview Data Loss Prevention to protect sensitive information from unauthorized movement, loss or leakage?** (Score Legacy)
   - **Legacy:** The organization has not implemented Microsoft Purview DLP or similar solutions, leading to potential vulnerabilities where sensitive information might be exposed to unauthorized movement, loss, or leakage. This absence of DLP measures increases the risk of data breaches and non-compliance with data protection regulations.
       - Indicators:
           - No deployment of DLP solutions to monitor, detect, and respond to potential data leakage scenarios.
@@ -437,7 +437,7 @@ Questions in the following sections are designed to help us understand a clients
 ### Manage insider risks
 #### Insider Risk Management
 
-**Has the organization adopted Microsoft Purview Insider Risk Management to proactively identify and mitigate insider risks, leveraging its comprehensive analytics and integrated data protection capabilities?**
+**Has the organization adopted Microsoft Purview Insider Risk Management to proactively identify and mitigate insider risks, leveraging its comprehensive analytics and integrated data protection capabilities?** (Score Legacy)
 
   - **Legacy:** The organization has not implemented Microsoft Purview Insider Risk Management or similar solutions, leading to potential vulnerabilities in managing and mitigating insider risks. This lack of insider threat management measures increases the risk of data breaches and security incidents caused by internal actors.
       - Indicators: 
@@ -475,7 +475,7 @@ Questions in the following sections are designed to help us understand a clients
 ### Delete unnecessary sensitive information
 #### Data Lifecycle Management and Records Management
 
-**Has the organization deployed Microsoft Purview Records Management to oversee high-value items in adherence to business, legal, or regulatory record-keeping obligations, ensuring comprehensive management of records within its framework?**
+**Has the organization deployed Microsoft Purview Records Management to oversee high-value items in adherence to business, legal, or regulatory record-keeping obligations, ensuring comprehensive management of records within its framework?** (Score Legacy)
 
   - **Legacy:** The organization has not adopted Microsoft Purview Records Management, leading to potential gaps in effective record-keeping and compliance with business, legal, or regulatory obligations. This absence of a structured records management solution results in inefficiencies and risks associated with the handling of high-value records, potentially exposing the organization to compliance failures and operational challenges.
       - Indicators: 
@@ -511,7 +511,7 @@ Questions in the following sections are designed to help us understand a clients
     - Microsoft Purview
     - Microsoft Purview Records Management
 
-**Has the organization implemented Microsoft Purview Data Lifecycle Management to effectively manage data across its entire lifecycle, ensuring optimized data governance and compliance with regulatory requirements?**
+**Has the organization implemented Microsoft Purview Data Lifecycle Management to effectively manage data across its entire lifecycle, ensuring optimized data governance and compliance with regulatory requirements?** (Score Legacy)
 
   - **lagacy:** The organization lacks implementation of Microsoft Purview Data Lifecycle Management, leading to potential gaps in data governance and challenges in meeting compliance requirements. This absence of a structured data lifecycle management approach results in inefficiencies in handling data retention, disposition, and overall data management, potentially exposing the organization to risks related to data breaches and non-compliance.
       - Indicators:
@@ -543,8 +543,11 @@ Questions in the following sections are designed to help us understand a clients
       - RA-5 Vulnerability Scanning: Implementing a records management solution can contribute to identifying vulnerabilities related to improper records handling and storage, supporting continuous vulnerability assessment efforts.
       - PL-4 Rules of Behavior: Records management practices enforce rules of behavior for individuals accessing the system, detailing responsibilities and expected behavior regarding the handling of records.
 
+- **Products covered:**
+    - Microsoft Purview Data Lifecycle Management
+
 #### Data Sharing
-**Has the organization implemented Microsoft Purview Data Sharing to enable direct sharing of data with users and partners, thereby avoiding data duplication, while centrally managing these sharing activities from within Microsoft Purview?**
+**Has the organization implemented Microsoft Purview Data Sharing to enable direct sharing of data with users and partners, thereby avoiding data duplication, while centrally managing these sharing activities from within Microsoft Purview?** (Score Legacy)
 
   - **Legacy:** The organization does not utilize Microsoft Purview Data Sharing, resulting in potential data duplication and inefficient data management practices. This absence of a centralized data sharing solution leads to fragmented data ecosystems and increases the risk of data breaches due to the lack of consolidated oversight and control over data sharing processes.
       - Indicators: 
