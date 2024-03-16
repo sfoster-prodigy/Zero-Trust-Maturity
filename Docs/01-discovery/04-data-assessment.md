@@ -11,7 +11,7 @@ Questions in the following sections are designed to help us understand a clients
 ### Classify, label and discover sensitive data
 
 #### Data governance and strategy
-**Has the organization designed a robust and easy-to-understand data classification framework, including determining classification levels and associated security controls?**
+**Has the organization designed a robust and easy-to-understand data classification framework, including determining classification levels and associated security controls?** (Legacy)
   - **Legacy:** The organization lacks a formal data classification framework, leading to inconsistent handling of data and potential security and compliance risks. Without clear classification levels and associated security controls, sensitive data may not be adequately protected, and data management practices may be inefficient and non-compliant with regulatory requirements.
       - Indicators: The assessor should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal data management and protection posture.
           - Absence of a structured data classification framework, resulting in ad-hoc data handling and protection measures.
@@ -42,70 +42,80 @@ Questions in the following sections are designed to help us understand a clients
       - MP-4 Media Protection: Effective data classification supports media protection controls by specifying handling requirements for media containing sensitive information.
       - RA-2 Security Categorization: The framework aligns with security categorization efforts, assisting in the determination of security levels and controls required for information systems based on the types of data they process and store.
 
-**Has the organization developed and implemented a comprehensive Data Classification and Sensitivity Label Taxonomy to categorize and secure data in accordance with its sensitivity and confidentiality levels?**
+- **Products covered:**
+    - Microsoft Purview
+
+**Has the organization developed and implemented a comprehensive Data Classification and Sensitivity Label Taxonomy to categorize and secure data in accordance with its sensitivity and confidentiality levels?** (Legacy)
   - **Legacy:** The organization lacks a structured Data Classification and Sensitivity Label Taxonomy, leading to inconsistent data handling practices and potential security risks. Without a clear taxonomy, sensitive data may not be adequately protected, and data management practices may not comply with regulatory requirements, increasing the risk of data breaches and legal repercussions.
       - Indicators: The assessor should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal data categorization and protection posture.
           - Absence of a formalized Data Classification and Sensitivity Label Taxonomy, resulting in ad-hoc and inconsistent data handling and protection measures.
           - Increased risk of data mismanagement and breaches due to the lack of clear categorization and labeling of data based on its sensitivity and confidentiality.
           - Challenges in achieving data governance and compliance with regulatory standards, impacting the organization’s ability to safeguard sensitive information effectively.
 
-  - **Initial:** Initial efforts have been made to develop a Data Classification and Sensitivity Label Taxonomy, including basic categorization of data and the implementation of sensitivity labels for high-priority data types. While this phase marks the start of adopting structured data classification practices, comprehensive coverage of all data types and full optimization of the taxonomy may still be under development.
-      - Indicators: The assessor should evaluate the client environment against these indicators to ascertain the current tier of implementation and identify opportunities for advancement towards a more comprehensive and effective data classification strategy.
-          - Partial development and implementation of a Data Classification and Sensitivity Label Taxonomy, focusing on critical data sets or areas of significant regulatory concern.
-          - Initial improvements in data handling and security practices based on preliminary classification and labeling, though organization-wide adoption is not yet achieved.
-          - Some enhancement in the organization’s data governance and protection capabilities, but further work required for full taxonomy refinement and policy alignment.
+- **Initial:** Initial efforts have been made to develop a Data Classification and Sensitivity Label Taxonomy, including basic categorization of data and the implementation of sensitivity labels for high-priority data types. While this phase marks the start of adopting structured data classification practices, comprehensive coverage of all data types and full optimization of the taxonomy may still be under development.
+    - Indicators: The assessor should evaluate the client environment against these indicators to ascertain the current tier of implementation and identify opportunities for advancement towards a more comprehensive and effective data classification strategy.
+        - Partial development and implementation of a Data Classification and Sensitivity Label Taxonomy, focusing on critical data sets or areas of significant regulatory concern.
+        - Initial improvements in data handling and security practices based on preliminary classification and labeling, though organization-wide adoption is not yet achieved.
+        - Some enhancement in the organization’s data governance and protection capabilities, but further work required for full taxonomy refinement and policy alignment.
 
-  - **Advanced:** A comprehensive Data Classification and Sensitivity Label Taxonomy is extensively developed and implemented, significantly improving the organization's data management and security practices. This advanced tier reflects a mature approach to data classification, with detailed categorization, sensitivity labeling, and widespread adoption across the organization.
-      - Indicators: The assessor should evaluate the client environment against these indicators to gauge the current tier of implementation and strategize on enhancements towards achieving a fully optimized data classification framework.
-          - Broad adoption of a detailed Data Classification and Sensitivity Label Taxonomy, enabling effective and consistent data categorization and protection across the organization.
-          - Enhanced data protection and compliance posture, supported by comprehensive sensitivity labels and classification levels that are consistently applied.
-          - A noticeable reduction in data management inefficiencies and security risks, supported by clear categorization and secure handling of data according to its sensitivity.
+- **Advanced:** A comprehensive Data Classification and Sensitivity Label Taxonomy is extensively developed and implemented, significantly improving the organization's data management and security practices. This advanced tier reflects a mature approach to data classification, with detailed categorization, sensitivity labeling, and widespread adoption across the organization.
+    - Indicators: The assessor should evaluate the client environment against these indicators to gauge the current tier of implementation and strategize on enhancements towards achieving a fully optimized data classification framework.
+        - Broad adoption of a detailed Data Classification and Sensitivity Label Taxonomy, enabling effective and consistent data categorization and protection across the organization.
+        - Enhanced data protection and compliance posture, supported by comprehensive sensitivity labels and classification levels that are consistently applied.
+        - A noticeable reduction in data management inefficiencies and security risks, supported by clear categorization and secure handling of data according to its sensitivity.
 
-  - **Optimal:** The Data Classification and Sensitivity Label Taxonomy is fully developed, implemented, and operationalized across the organization, achieving the highest level of data categorization efficacy and security compliance. This optimal scenario ensures comprehensive and consistent application of classification levels and sensitivity labels, facilitating effective data protection, streamlined governance, and regulatory compliance.
-      - Indicators: The assessor should evaluate the client environment against these indicators to fully understand the extent of data classification practices and identify further areas for optimization.
-          - Universal and strategic implementation of a comprehensive Data Classification and Sensitivity Label Taxonomy, ensuring robust management of data sensitivity and confidentiality.
-          - Full realization of the benefits provided by a detailed classification and labeling strategy, including operational efficiencies, enhanced security posture, and adherence to regulatory standards.
-          - Proactive and comprehensive management of data based on its classification and sensitivity labels, underpinned by a clear taxonomy, automated workflows, and a unified governance strategy, significantly enhancing the organization's ability to manage and protect its data effectively.
+- **Optimal:** The Data Classification and Sensitivity Label Taxonomy is fully developed, implemented, and operationalized across the organization, achieving the highest level of data categorization efficacy and security compliance. This optimal scenario ensures comprehensive and consistent application of classification levels and sensitivity labels, facilitating effective data protection, streamlined governance, and regulatory compliance.
+    - Indicators: The assessor should evaluate the client environment against these indicators to fully understand the extent of data classification practices and identify further areas for optimization.
+        - Universal and strategic implementation of a comprehensive Data Classification and Sensitivity Label Taxonomy, ensuring robust management of data sensitivity and confidentiality.
+        - Full realization of the benefits provided by a detailed classification and labeling strategy, including operational efficiencies, enhanced security posture, and adherence to regulatory standards.
+        - Proactive and comprehensive management of data based on its classification and sensitivity labels, underpinned by a clear taxonomy, automated workflows, and a unified governance strategy, significantly enhancing the organization's ability to manage and protect its data effectively.
 
 
-  - **Relevance to NIST SP 800-53 Revision 5:**
-      - AC-1 Access Control Policies and Procedures: Establishing a data classification framework aids in defining access controls based on data sensitivity.
-      - SC-28 Protection of Information at Rest: Sensitivity labels play a crucial role in ensuring that data stored in systems is adequately protected according to its classification level.
-      - MP-4 Media Protection: Classifying data helps in applying appropriate media protection controls, ensuring that sensitive information is securely handled, stored, and disposed of.
-      - RA-2 Security Categorization: Data classification aligns with the process of security categorization, assisting organizations in determining the security level required for information systems based on the types of data processed and stored.
+- **Relevance to NIST SP 800-53 Revision 5:**
+    - AC-1 Access Control Policies and Procedures: Establishing a data classification framework aids in defining access controls based on data sensitivity.
+    - SC-28 Protection of Information at Rest: Sensitivity labels play a crucial role in ensuring that data stored in systems is adequately protected according to its classification level.
+    - MP-4 Media Protection: Classifying data helps in applying appropriate media protection controls, ensuring that sensitive information is securely handled, stored, and disposed of.
+    - RA-2 Security Categorization: Data classification aligns with the process of security categorization, assisting organizations in determining the security level required for information systems based on the types of data processed and stored.
 
+- Products covered:
+    - Microsoft Purview
 
 #### Data Discovery, classification, and labeling
+
 **Is manual labeling for documents and containers leveraged and curated by subject matter experts?**
-  - **Legacy:** The organization does not utilize manual labeling for documents and containers, resulting in a lack of precision in identifying and classifying sensitive data. This absence of expert curation leads to potential misclassification, inadequate data protection, and increased risk of data breaches.
+  
+- **Legacy:** The organization does not utilize manual labeling for documents and containers, resulting in a lack of precision in identifying and classifying sensitive data. This absence of expert curation leads to potential misclassification, inadequate data protection, and increased risk of data breaches.
       - Indicators: 
           - Absence of a structured process for manual labeling and expert curation.
           - Increased vulnerability to security risks due to potential misclassification of sensitive data.
           - Challenges in ensuring accurate data protection measures are applied, impacting compliance and data security.
 
-  - **Initial:** Initial efforts have been made to implement manual labeling for key documents and containers, with some involvement of subject matter experts in the classification process. While this phase marks the beginning of leveraging expert knowledge, comprehensive coverage and systematic labeling practices are still under development.
+- **Initial:** Initial efforts have been made to implement manual labeling for key documents and containers, with some involvement of subject matter experts in the classification process. While this phase marks the beginning of leveraging expert knowledge, comprehensive coverage and systematic labeling practices are still under development.
       - Indicators: 
           - Partial implementation of manual labeling, focusing on high-priority data or specific areas of sensitivity.
           - Initial improvements in data classification accuracy, though a consistent and organization-wide approach is not yet achieved.
           - Some enhancement in data protection based on expert-driven labeling, but further work required to standardize and expand the practice.
 
-  - **Advanced:** Manual labeling for documents and containers is widely leveraged, with subject matter experts playing a significant role in the classification and curation process. This advanced tier indicates a mature approach to data management, ensuring accurate identification and protection of sensitive information.
+- **Advanced:** Manual labeling for documents and containers is widely leveraged, with subject matter experts playing a significant role in the classification and curation process. This advanced tier indicates a mature approach to data management, ensuring accurate identification and protection of sensitive information.
       - Indicators: Manual labeling for documents and containers is fully integrated into the organization's data management practices, with subject matter experts ensuring the accurate and consistent classification of all sensitive data. This optimal scenario ensures the highest level of data protection and compliance with regulatory requirements.
           - Broad adoption of manual labeling processes, with subject matter experts actively involved in data classification.
           - Enhanced data protection and compliance posture, supported by precise classification and labeling of sensitive data.
           - Noticeable reduction in misclassification risks, supported by expert knowledge and systematic labeling practices.
 
-  - **Optimal:** 
+- **Optimal:** 
       - Indicators: 
           - Universal and strategic implementation of manual labeling, curated by subject matter experts across all data types and containers.
           - Comprehensive and consistent protection of sensitive data, underpinned by accurate classification and labeling.
           - Full compliance with data protection regulations, supported by an effective and expert-driven labeling system.
 
-  - **Relevance to NIST SP 800-53 Revision 5:**
+- **Relevance to NIST SP 800-53 Revision 5:**
       - AC-1 Access Control Policies and Procedures: Manual labeling supports the development of access control policies by clearly identifying sensitivity levels, facilitating the enforcement of appropriate access restrictions.
       - RA-2 Security Categorization: The involvement of subject matter experts in manual labeling aids in the accurate categorization of information, ensuring that security controls are appropriately tailored to protect sensitive data.
       - MP-4 Media Protection: Manual labeling of documents and containers contributes to effective media protection strategies by indicating the level of protection required for physical and electronic media.
       - SC-28 Protection of Information at Rest: Accurate labeling of data, including its classification level, supports the implementation of protective measures for information stored in systems, ensuring that data is encrypted and safeguarded in accordance with its sensitivity.
+
+- **Products covered:**
+    - Microsoft Purview
 
 **Has the organization implemented a system for automated discovery and classification of business documents across the entire data estate?**
   - **Legacy:** The organization does not utilize an automated system for the discovery and classification of business documents, leading to potential gaps in identifying and securing sensitive data. This lack of automation in data classification processes results in inefficiencies and increases the risk of data exposure due to manual errors or oversight.
@@ -138,6 +148,9 @@ Questions in the following sections are designed to help us understand a clients
       - SC-28 Protection of Information at Rest: Automated classification aids in applying protective measures for information stored in systems, ensuring data is encrypted and safeguarded according to its sensitivity.
       - CM-8 Information System Component Inventory: Automated discovery contributes to maintaining an accurate inventory of system components by identifying and classifying data assets across the data estate.
 
+- **Products covered:**
+    - Microsoft Purview
+
 **Has the organization implemented a system for automated discovery and classification of application data across the entire data estate?**
   - **Legacy:** The organization has not implemented an automated system for the discovery and classification of application data, leading to potential inefficiencies and security risks. This absence means sensitive application data may be inadequately protected, and compliance with data protection regulations may be compromised.
       - Indicators:
@@ -168,6 +181,9 @@ Questions in the following sections are designed to help us understand a clients
       - AC-1 Access Control Policies and Procedures: Automated discovery and classification facilitate the development of access control policies by identifying sensitivity levels, enabling the enforcement of appropriate access restrictions based on the classification of application data.
       - SC-28 Protection of Information at Rest: Automated classification aids in applying protective measures for application data stored in systems, ensuring it is encrypted and safeguarded in accordance with its sensitivity.
       - CM-8 Information System Component Inventory: Automated discovery contributes to maintaining an accurate inventory of system components, including application data, by identifying and classifying data assets across the data estate.
+
+- **Products covered:**
+    - Microsoft Purview
 
 ### Apply encryption, access control and content markings
 
@@ -203,6 +219,9 @@ Questions in the following sections are designed to help us understand a clients
       - MP-4 Media Protection: Information protection policies that include sensitivity labels help in applying appropriate media protection controls, ensuring that sensitive information is securely handled, stored, and disposed of.
       - SC-28 Protection of Information at Rest: Sensitivity labels play a crucial role in ensuring that data stored in systems is adequately protected according to its classification level, supporting the protection of information at rest.
 
+- **Products covered:**
+    - Microsoft Purview
+
 **Are markings and encryption applied to information that resides in or flows out to lesser trust environments internal or external to the organization?**
   - **Legacy:** The organization does not systematically apply markings or encryption to information shared with or stored in lesser trust environments. This lack of protective measures increases the risk of unauthorized access and potential data breaches, as sensitive information may be inadequately secured.
       - Indicators: 
@@ -234,6 +253,9 @@ Questions in the following sections are designed to help us understand a clients
       - SC-28 Protection of Information at Rest: Encryption plays a crucial role in the protection of information at rest, ensuring that data stored in lesser trust environments is adequately safeguarded.
       - MP-4 Media Protection: Applying content markings and encryption aids in the protection of sensitive information during media use, storage, and transport, particularly when media may be moved to or accessed from lesser trust environments.
 
+- **Products covered:**
+    - Microsoft Purview
+
 **Are there policies in place to control data movement?**
   - **Legacy:** The organization lacks formal policies to control data movement, resulting in unregulated data transfers that may expose sensitive information to unauthorized access and potential data breaches. This absence of data movement policies increases the risk of non-compliance with data protection regulations and standards.
       - Indicators: 
@@ -264,6 +286,9 @@ Questions in the following sections are designed to help us understand a clients
       - SC-8 Transmission Confidentiality and Integrity: Policies controlling data movement contribute to the protection of data during transmission, ensuring confidentiality and integrity through encryption and other protective measures.
       - MP-4 Media Protection: Data movement policies encompass the secure handling and transfer of media containing sensitive information, aligning with media protection requirements.
       - CM-8 Information System Component Inventory: Effective data movement policies aid in the management of the information system component inventory by controlling the transfer of data between system components.
+
+- **Products covered:**
+    - Microsoft Purview
 
 ### Control access to data
 
@@ -298,6 +323,9 @@ Questions in the following sections are designed to help us understand a clients
       - AC-4 Information Flow Enforcement: Using sensitivity labels to manage data sharing and collaboration aligns with information flow enforcement policies, controlling the flow of sensitive information within an organization and with external parties.
       - SC-8 Transmission Confidentiality and Integrity: Sensitivity labels contribute to the confidentiality and integrity of data during transmission by enforcing access controls and sharing restrictions, ensuring that data is protected when shared or accessed in collaborative platforms.
 
+- **Products covered:**
+    - Microsoft Purview
+
 #### Control access to data in SaaS applications
 
 **Is access controlled to data in SaaS applications with Microsoft Purview Information Protection integration with Microsoft Defender for Cloud Apps?**
@@ -330,6 +358,9 @@ Questions in the following sections are designed to help us understand a clients
       - AC-4 Information Flow Enforcement: The use of Microsoft Purview Information Protection and Microsoft Defender for Cloud Apps to manage access controls assists in controlling the flow of sensitive information within an organization and with external parties, in accordance with information flow policies.
       - AC-22 Publicly Accessible Content: By integrating these tools, organizations can better manage and control the publication of information in SaaS applications, ensuring that sensitive data is not made publicly accessible without proper authorization.
 
+- **Products covered:**
+    - Microsoft Purview
+
 #### Control access to data in IaaS/PaaS storage
 
 **Are access control policies leveraged to protect IaaS and PaaS resources that contain sensitive data?**
@@ -361,6 +392,9 @@ Questions in the following sections are designed to help us understand a clients
       - AC-3 Access Enforcement: Leveraging access control policies to manage permissions within IaaS and PaaS environments supports the enforcement of authorized access to sensitive data, ensuring that only approved users can access or manipulate the information.
       - AC-4 Information Flow Enforcement: These policies assist in controlling the flow of sensitive information within and between cloud resources, ensuring that data transfers comply with established security policies and regulations.
       - AC-6 Least Privilege: Implementing access control policies in cloud environments embodies the principle of least privilege, ensuring that users are granted only the access necessary to perform their duties, minimizing the risk of unauthorized data exposure.
+
+- **Products covered:**
+    - Microsoft Purview DevOps
 
 ### Prevent data leakage
 
@@ -397,8 +431,10 @@ Questions in the following sections are designed to help us understand a clients
       - SC-8 Transmission Confidentiality and Integrity: Microsoft Purview DLP supports the confidentiality and integrity of data during transmission by preventing unauthorized disclosure and modifications.
       - AC-4 Information Flow Enforcement: DLP practices enforce approved authorizations for controlling the flow of information within the system and between interconnected systems, ensuring data is handled and transferred in compliance with security policies.
 
-### Manage insider risks
+- **Products covered:**
+    - Microsoft Purview Data Loss Prevention
 
+### Manage insider risks
 #### Insider Risk Management
 
 **Has the organization adopted Microsoft Purview Insider Risk Management to proactively identify and mitigate insider risks, leveraging its comprehensive analytics and integrated data protection capabilities?**
@@ -433,8 +469,10 @@ Questions in the following sections are designed to help us understand a clients
       - AC-2 Account Management: Integrating insider risk management helps ensure that accounts are managed in accordance with users’ roles and responsibilities, reducing the risk of insider threats by enforcing principle of least privilege.
       - IR-4 Incident Handling: Insider risk management solutions enhance incident handling capabilities by providing tools to detect, respond to, and mitigate incidents involving insider threats.
 
-### Delete unnecessary sensitive information
+- **Products covered:**
+    - Microsoft Purview Insider Risk Management
 
+### Delete unnecessary sensitive information
 #### Data Lifecycle Management and Records Management
 
 **Has the organization deployed Microsoft Purview Records Management to oversee high-value items in adherence to business, legal, or regulatory record-keeping obligations, ensuring comprehensive management of records within its framework?**
@@ -468,6 +506,10 @@ Questions in the following sections are designed to help us understand a clients
       - SI-12 Information Handling and Retention: The system aids in handling and retaining information within the organization, ensuring compliance with information retention requirements specified by law, regulation, or policy.
       - RA-5 Vulnerability Scanning: Implementing a records management solution can contribute to identifying vulnerabilities related to improper records handling and storage, supporting continuous vulnerability assessment efforts.
       - PL-4 Rules of Behavior: Records management practices enforce rules of behavior for individuals accessing the system, detailing responsibilities and expected behavior regarding the handling of records.
+
+- **Products covered:**
+    - Microsoft Purview
+    - Microsoft Purview Records Management
 
 **Has the organization implemented Microsoft Purview Data Lifecycle Management to effectively manage data across its entire lifecycle, ensuring optimized data governance and compliance with regulatory requirements?**
 
