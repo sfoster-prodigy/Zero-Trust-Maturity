@@ -424,6 +424,8 @@ Questions in the following sections are designed to help us understand a clients
 
 - **Products covered:**
     - Microsoft Purview Data Policies
+    - Microsoft Purview Compliance Management
+    - Microsoft Purview Information Protection
 
 ### Prevent data leakage
 #### Data Loss Prevention
