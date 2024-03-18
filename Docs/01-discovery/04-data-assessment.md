@@ -11,7 +11,7 @@ Questions in the following sections are designed to help us understand a clients
 ### Classify, label and discover sensitive data
 #### Data governance and strategy
 
-**Has the organization designed a robust and easy-to-understand data classification framework, including determining classification levels and associated security controls?** (Legacy)
+**Has the organization designed a robust and easy-to-understand data classification framework, including determining classification levels and associated security controls?** (Score Legacy)
 
 - **Legacy:** The organization lacks a formal data classification framework, leading to inconsistent handling of data and potential security and compliance risks. Without clear classification levels and associated security controls, sensitive data may not be adequately protected, and data management practices may be inefficient and non-compliant with regulatory requirements.
     - Indicators: The assessor should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal data management and protection posture.
@@ -49,7 +49,7 @@ Questions in the following sections are designed to help us understand a clients
     - Microsoft Purview Compliance Manager
     - Microsoft Purview Data Map
 
-**Has the organization developed and implemented a comprehensive Data Classification and Sensitivity Label Taxonomy to categorize and secure data in accordance with its sensitivity and confidentiality levels?** (Legacy)
+**Has the organization developed and implemented a comprehensive Data Classification and Sensitivity Label Taxonomy to categorize and secure data in accordance with its sensitivity and confidentiality levels?** (Score Legacy)
 
 - **Legacy:** The organization lacks a structured Data Classification and Sensitivity Label Taxonomy, leading to inconsistent data handling practices and potential security risks. Without a clear taxonomy, sensitive data may not be adequately protected, and data management practices may not comply with regulatory requirements, increasing the risk of data breaches and legal repercussions.
     - Indicators: The assessor should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal data categorization and protection posture.
@@ -89,7 +89,7 @@ Questions in the following sections are designed to help us understand a clients
 
 #### Data Discovery, classification, and labeling
 
-**Is manual labeling for documents and containers leveraged and curated by subject matter experts?** (Legacy)
+**Is manual labeling for documents and containers leveraged and curated by subject matter experts?** (Score Legacy)
   
 - **Legacy:** The organization does not utilize manual labeling for documents and containers, resulting in a lack of precision in identifying and classifying sensitive data. This absence of expert curation leads to potential misclassification, inadequate data protection, and increased risk of data breaches.
     - Indicators: 
@@ -125,7 +125,7 @@ Questions in the following sections are designed to help us understand a clients
     - Microsoft Purview Information Protection
     - Microsoft Purview Data Catalog
 
-**Has the organization implemented a system for automated discovery and classification of business documents across the entire data estate?** (Legacy)
+**Has the organization implemented a system for automated discovery and classification of business documents across the entire data estate?** (Score Legacy)
 
 - **Legacy:** The organization does not utilize an automated system for the discovery and classification of business documents, leading to potential gaps in identifying and securing sensitive data. This lack of automation in data classification processes results in inefficiencies and increases the risk of data exposure due to manual errors or oversight.
     - Indicators:
@@ -162,7 +162,7 @@ Questions in the following sections are designed to help us understand a clients
     - Microsoft Purview Data Catalog
     - Microsoft Purview Information Protection
 
-**Has the organization implemented a system for automated discovery and classification of application data across the entire data estate?** (Legacy)
+**Has the organization implemented a system for automated discovery and classification of application data across the entire data estate?** (Score Legacy)
 
 - **Legacy:** The organization has not implemented an automated system for the discovery and classification of application data, leading to potential inefficiencies and security risks. This absence means sensitive application data may be inadequately protected, and compliance with data protection regulations may be compromised.
     - Indicators:
