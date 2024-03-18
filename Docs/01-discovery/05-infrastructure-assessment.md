@@ -14,7 +14,7 @@ Questions in the following sections are designed to help us understand a clients
 ### Workloads are monitored and alerted to abnormal behavior
 #### Activate Microsoft Defender for Cloud and its comprehensive protection plans 
 
-**Has the organization enabled Microsoft Defender for Cloud along with its specific protection plans for servers, storage, containers, SQL, and other supported resource types to enhance security measures?**
+**Has the organization enabled Microsoft Defender for Cloud along with its specific protection plans for servers, storage, containers, SQL, and other supported resource types to enhance security measures?** (Score Legacy)
 
 - Legacy: The organization has not implemented Microsoft Defender for Cloud or its specific protection plans, leading to potential vulnerabilities in cloud infrastructure and resources. This absence of comprehensive security monitoring and threat protection measures may result in increased risk of cyberattacks and security breaches.
     - Indicators:
@@ -46,7 +46,7 @@ Questions in the following sections are designed to help us understand a clients
     - SC-7 Boundary Protection: Microsoft Defender for Cloud enhances boundary protection controls by monitoring and protecting cloud resources from cyber threats, ensuring secure communications with external networks.
     - IR-4 Incident Handling: The solution supports incident handling processes by providing alerts and actionable insights on detected threats, enabling rapid response and remediation of security incidents in the cloud.
 
-**Has the organization implemented Microsoft Defender for Identity and Advanced Threat Analytics to enable signal collection for the identification, detection, and investigation of advanced threats, compromised identities, and malicious insider actions targeting the organization?**
+**Has the organization implemented Microsoft Defender for Identity and Advanced Threat Analytics to enable signal collection for the identification, detection, and investigation of advanced threats, compromised identities, and malicious insider actions targeting the organization?** (Score Legacy)
 - Legacy: The organization has not implemented Microsoft Defender for Identity or Advanced Threat Analytics, leading to potential gaps in the identification and mitigation of advanced threats and compromised identities. This lack of advanced threat detection capabilities increases the risk of undetected security breaches and insider threats.
     - Indicators:
         - Absence of advanced threat detection and identity protection solutions, resulting in limited visibility into security threats.
@@ -79,7 +79,7 @@ Questions in the following sections are designed to help us understand a clients
 
 #### Leverage Microsoft Sentinel for integrated SIEM and SOAR capabilities across the enterprise
 
-**Has the organization integrated signals from Defender for Cloud, Defender for Identity, Advanced Threat Analytics, and other monitoring systems with Microsoft Sentinel to provide the Security Operations Center (SOC) with a comprehensive, single-pane-of-glass view for monitoring security events across the enterprise?**
+**Has the organization integrated signals from Defender for Cloud, Defender for Identity, Advanced Threat Analytics, and other monitoring systems with Microsoft Sentinel to provide the Security Operations Center (SOC) with a comprehensive, single-pane-of-glass view for monitoring security events across the enterprise?** (Score Legacy)
 - Legacy: The organization has not integrated its security monitoring systems, including Defender for Cloud, Defender for Identity, Advanced Threat Analytics, with Microsoft Sentinel. This lack of integration results in siloed security monitoring efforts, potentially leading to missed threats and inefficient incident response due to fragmented visibility across the security landscape.
     - Indicators: 
         - Absence of centralized security event monitoring, leading to disjointed and less effective security operations.
@@ -110,32 +110,51 @@ Questions in the following sections are designed to help us understand a clients
     - AU-6 Audit Review, Analysis, and Reporting: The centralized view offered by Microsoft Sentinel facilitates the review, analysis, and reporting of audit records, contributing to effective audit management and analysis aligned with AU-6.
     - CA-7 Continuous Monitoring: The integration supports the establishment of a continuous monitoring strategy that assesses security controls and risks, leveraging Microsoft Sentinel's analytics and automation capabilities for real-time security insights.
 
+- Products covered:
+    - 
+
 ### Every workload is assigned an app identity—and configured and deployed consistently
 #### Every server and supported PaaS resource type (e.g. Azure SQL, KeyVault, etc.)  is assigned a managed identity
 
-**Has the organization assigned a managed identity to every server and supported PaaS resource type?**
-    - Legacy: 
-        - Indicators: 
-            - 
+**Has the organization assigned a managed identity to every server and supported PaaS resource type?** (Score Legacy)
 
-    - Initial: 
-        - Indicators: 
-            - 
+- Legacy: The organization does not utilize Azure Managed Identities, relying on traditional, manually managed credentials for authentication between services. This approach can lead to increased operational complexity and security risks due to potential mismanagement of credentials.
+    - Indicators: 
+        - Absence of managed identities, leading to reliance on less secure and more complex credential management practices.
+        - Increased risk of credential leaks or mismanagement, potentially resulting in unauthorized access.
+        - Challenges in automating and scaling secure access management for Azure resources.
 
-    - Advanced: 
-        - Indicators: 
-            - 
+- Initial: Initial efforts have been made to implement Azure Managed Identities for a subset of servers and PaaS resources. While this phase marks progress towards improved security and operational efficiency, comprehensive and consistent adoption across all Azure resources may still be in development.
+    - Indicators: 
+        - Partial adoption of managed identities, focusing on high-priority or pilot projects.
+        - Initial improvements in security and management of access credentials, though not uniformly applied across the Azure environment.
+        - Some enhancement in operational efficiency and security posture, with ongoing efforts to expand managed identity adoption.
 
-    - Optimal: 
-        - Indicators: 
-            - 
+- Advanced: Azure Managed Identities are broadly implemented for servers and supported PaaS resource types, significantly improving secure access management and reducing the operational burden of credential management. This advanced tier reflects a mature approach to identity and access management for Azure services.
+    - Indicators: 
+        - Comprehensive deployment of managed identities, covering most or all servers and PaaS resources.
+        - Enhanced security through the elimination of stored credentials, supported by automatic and secure access token management.
+        - Significant progress toward operational efficiency and reduced risk of credential-related security incidents, bolstered by the systematic use of managed identities.
 
-    - Relevance to NIST SP 800-53 Revision 5:
-        - 
+- Optimal: The assignment of Azure Managed Identities to every server and supported PaaS resource type is fully operationalized and integrated into the organization’s cloud security and management practices. This optimal scenario ensures the highest level of security and operational efficiency in managing access to Azure resources.
+    - Indicators: 
+        - Strategic and universal application of managed identities, ensuring secure and simplified access management across all Azure resources.
+        - Comprehensive and proactive management of access security, leveraging Azure's built-in identity management capabilities to automate credential lifecycles.
+        - Full alignment with best practices for cloud security and identity management, supported by an effective, adaptive, and well-managed identity framework.
+
+- Relevance to NIST SP 800-53 Revision 5:
+    - IA-2 Identification and Authentication (Organizational Users): Managed identities enhance the system's ability to uniquely identify and authenticate the entities interacting with Azure resources, reducing reliance on traditional credential management.
+    - IA-5 Authenticator Management: The automated management of authentication tokens by Azure Managed Identities supports the control's requirements for managing authenticators, including their issuance, lifecycle, revocation, and recovery.
+    - AC-2 Account Management: Azure Managed Identities contribute to effective account management by automating the access control mechanisms for Azure services, aligning with principles of least privilege and secure authentication.
+    - AC-6 Least Privilege: By enabling secure, automated access, managed identities help enforce the principle of least privilege, ensuring that Azure resources are accessible only by authorized entities with minimal rights necessary for their roles.
+
+- Products covered:
+    - Azure Managed Identities
 
 #### Implement and enforce policy-driven workloads and resources
 
-**Has the organization implemented and enforced policies that govern the creation of resources and workloads, including requirements for tagging, resource group assignments, and technical specifications such as allowed regions, VM types, disks, and network policies?**
+**Has the organization implemented and enforced policies that govern the creation of resources and workloads, including requirements for tagging, resource group assignments, and technical specifications such as allowed regions, VM types, disks, and network policies?** (Score Legacy)
+
 - **Legacy:** The organization lacks formalized policies governing the creation, configuration, and deployment of cloud resources and workloads. This absence of governance policies leads to inconsistent resource provisioning, potential misconfigurations, and increased security and compliance risks.
     - Indicators: 
         - No established policies for resource provisioning, leading to ad hoc and unregulated creation of cloud resources.
@@ -160,16 +179,20 @@ Questions in the following sections are designed to help us understand a clients
         - Comprehensive management and oversight of cloud resources, enhancing overall infrastructure security, compliance, and operational efficiency.
         - Full alignment with industry best practices and regulatory standards, underpinned by an effective and well-managed cloud governance framework.
 
-- Relevance to NIST SP 800-53 Revision 5:
+- **Relevance to NIST SP 800-53 Revision 5:**
     - M-2 Baseline Configuration: Governance policies support the establishment of baseline configurations for cloud resources, ensuring that systems are deployed consistently in accordance with organizational security standards.
     - CM-7 Least Functionality: By defining allowed regions, VM types, disks, and network policies, governance policies enforce the principle of least functionality, minimizing the attack surface by limiting resource capabilities to only those necessary for operational needs.
     - RA-5 Vulnerability Scanning: Governance policies that include technical specifications and configuration requirements facilitate vulnerability scanning by ensuring that resources are deployed in a manner that supports effective security assessments.
     - SA-10 Developer Configuration Management: The enforcement of resource creation policies supports developer configuration management by providing clear guidelines for the provisioning and deployment of cloud workloads, aligning with secure development practices.
 
+- **Products Covered:**
+    - 
+
 ### Human access to resources requires Just-In-Time
 #### Implement a protect the administrator program
 
-**Has the organization implemented a protect the administrator program, including measures such as granting just-in-time (JIT) access, auditing elevated permissions, creating high-value asset zones, and providing secure admin workstations, to enhance oversight and security of administrative permissions?**
+**Has the organization implemented a protect the administrator program, including measures such as granting just-in-time (JIT) access, auditing elevated permissions, creating high-value asset zones, and providing secure admin workstations, to enhance oversight and security of administrative permissions?** (Score Legacy)
+
 - **Legacy:** The organization lacks a comprehensive protect the administrator program. Administrative access is not tightly controlled, leading to potential security vulnerabilities due to the overprovisioning of permissions and inadequate monitoring of administrative activities.
     - Indicators:
         - Absence of just-in-time (JIT) access mechanisms and secure admin workstations.
@@ -194,11 +217,14 @@ Questions in the following sections are designed to help us understand a clients
         - Comprehensive management and security of administrative permissions, enhancing organizational resilience against security threats.
         - Full alignment with best practices and regulatory standards for administrative access, underpinned by an effective and well-managed security framework.
 
-- Relevance to NIST SP 800-53 Revision 5:
+- **Relevance to NIST SP 800-53 Revision 5:**
     - AC-2 Account Management: This control is supported by JIT access and the auditing of elevated permissions, ensuring that accounts are managed according to the least privilege and need-to-know principles.
     - AC-6 Least Privilege: Implementing JIT access helps enforce the principle of least privilege by granting administrative access only when needed, for a limited duration.
     - AC-17 Remote Access: Secure admin workstations are an aspect of controlling remote access, ensuring that administrative tasks are performed from systems with enhanced security.
     - AU-12 Audit Generation: The auditing of elevated permissions aligns with the requirement to generate audit records for key events, including the use of administrative privileges, to support effective analysis and monitoring.
+
+- **Products covered:**
+    - 
 
 ##### References
 https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elevated-privilege-accounts-at-microsoft/?OCID=InsideTrack_Search
@@ -207,7 +233,8 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
 ### Unauthorized deployments are blocked, and alert is triggered
 #### Leverage Azure Blueprints to control deployments and ensure compliance
 
-**Has the organization adopted Azure Blueprints to govern resource deployments, ensuring compliance with approved templates and policies, and to activate necessary alerts or actions in case of policy violations?**
+**Has the organization adopted the usage of Deployment Stacks and other governance solutions to properly govern resource deployments, ensuring compliance with approved templates and policies, and to activate necessary alerts or actions in case of policy violations?** (Score Legacy)
+
 - **Legacy:** The organization has not utilized Deployment Stacks or similar mechanisms to manage resource deployments. As a result, deployments may not consistently adhere to approved templates and policies, increasing the risk of non-compliance and security vulnerabilities.
     - Indicators: 
         - Absence of a structured approach to govern resource deployments, leading to ad hoc and potentially non-compliant provisioning practices.
@@ -232,16 +259,20 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
         - Comprehensive management and oversight of deployments, maximizing security, compliance, and operational efficiency.
         - Full alignment with industry best practices and regulatory standards, underpinned by an effective and automated deployment governance system.
 
-- Relevance to NIST SP 800-53 Revision 5:
+- **Relevance to NIST SP 800-53 Revision 5:**
     - CM-2 Baseline Configuration: Deployment Stacks support the establishment and enforcement of baseline configurations for IT resources, ensuring that systems are deployed in a secure and compliant manner.
     - CM-3 Configuration Change Control: Utilizing Deployment Stacks facilitates the management of changes to system configurations, helping to ensure that all changes comply with organizational policies and security requirements.
     - CM-4 Security Impact Analysis: Deployment Stacks can automate the analysis of security impacts associated with proposed changes or deployments, aligning with this control by ensuring that security considerations are systematically evaluated.
     - SA-10 Developer Configuration Management: The practice of governing resource deployments with Deployment Stacks supports configuration management within the development process, ensuring that security and compliance are integrated into the provisioning of IT resources.
 
+- **Products covered:**
+    - 
+
 ### Granular visibility and access control are available across workloads
 #### Metrics, logs, and scaling efficiency
 
-**Has the organization adopted metric and log collection capabilities, to support security operations, computing efficiency, and organizational objectives, particularly through the use of Virtual Machine Scale Sets for resource scaling?**
+**Has the organization adopted metric and log collection capabilities, to support security operations, computing efficiency, and organizational objectives, particularly through the use of Virtual Machine Scale Sets for resource scaling?** (Score Legacy)
+
 - **Legacy:** The organization lacks a comprehensive approach to metric and log collection, leading to gaps in visibility that could affect security operations, computing efficiency, and the achievement of organizational objectives. The absence of scalable solutions like Virtual Machine Scale Sets may result in inefficient resource utilization and response to demand fluctuations.
     - Indicators: 
         - Absence of systematic metric and log collection practices, impacting the organization’s ability to monitor and respond to security and operational events.
@@ -266,15 +297,18 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
         - Full realization of scalable cloud resource management using Virtual Machine Scale Sets, ensuring efficient adaptation to demand fluctuations.
         - Achievement of high computing efficiency, enhanced security posture, and organizational objectives, underpinned by effective and well-managed metric and log collection practices.
 
-- Relevance to NIST SP 800-53 Revision 5:
+- **Relevance to NIST SP 800-53 Revision 5:**
     - AU-6 Audit Review, Analysis, and Reporting: The comprehensive collection and analysis of metrics and logs support the review and analysis of audit records, facilitating the identification of security incidents and operational improvements.
     - CM-2 Baseline Configuration: Utilizing Virtual Machine Scale Sets contributes to maintaining the baseline configuration by allowing for the dynamic scaling of resources to meet the approved configuration states for different workloads.
     - SI-4 Information System Monitoring: Enhanced metric and log collection capabilities bolster information system monitoring efforts, enabling the detection of unauthorized access, use, and anomalies that may indicate cybersecurity events.
     - CA-7 Continuous Monitoring: The integration of scalable resource management with monitoring capabilities supports continuous monitoring strategies, allowing for the assessment of security controls and system performance against organizational objectives.
 
+- **Products covered:**
+    - 
+
 #### Role-Based Access Control (RBAC) for efficient permissions management across Workloads
 
-**Has the organization implemented Role-Based Access Control (RBAC) to manage access permissions uniformly across individual and group levels for diverse workloads, using both built-in and custom roles?**
+**Has the organization implemented Role-Based Access Control (RBAC) to manage access permissions uniformly across individual and group levels for diverse workloads, using both built-in and custom roles?** (Score Initial)
 
 - **Legacy:** The organization lacks a comprehensive RBAC system, leading to potential inconsistencies in access management and increased security risks due to overprivileged accounts or unauthorized access. This absence of structured access control may result in non-compliance with security policies and standards.
     - Indicators: 
@@ -300,7 +334,7 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
         - Comprehensive and consistent enforcement of access permissions, enhancing organizational security and operational efficiency.
         - Full alignment with access control best practices and regulatory standards, underpinned by an effective and well-managed RBAC framework.
 
-- Relevance to NIST SP 800-53 Revision 5:
+- **Relevance to NIST SP 800-53 Revision 5:**
     - AC-2 Account Management: RBAC supports the management of user accounts by ensuring access is granted based on roles that reflect the organization’s mission/business functions, minimizing the risk of excessive or unauthorized access.
     - AC-3 Access Enforcement: Utilizing RBAC to define roles based on job functions enables the enforcement of approved authorizations for accessing systems and data, in accordance with the principle of least privilege.
     - AC-6 Least Privilege: RBAC facilitates the enforcement of the least privilege principle, allowing users to access only the information and resources necessary for their duties.
@@ -309,7 +343,7 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
 ### User and resource access segmented for each workload
 #### Utilize VNets, NSGs, ASGs, and Azure Firewalls for enhanced workload access management
 
-**Has the organization leveraged Microsoft Azure's network segmentation capabilities, including Virtual Networks (VNets), VNet peering, Network Security Groups (NSGs), Application Security Groups (ASGs), and Azure Firewalls, to effectively isolate and manage access to workloads?**
+**Has the organization leveraged Microsoft Azure's network segmentation capabilities, including Virtual Networks (VNets), VNet peering, Network Security Groups (NSGs), Application Security Groups (ASGs), and Azure Firewalls, to effectively isolate and manage access to workloads?** (Score Advanced)
 - **Legacy:** The organization lacks comprehensive network segmentation strategies using Azure's networking capabilities. This absence of network segmentation may lead to increased risk of lateral movement in case of breaches and inefficient network access control, affecting the overall security posture.
     - Indicators:
         - Limited use or absence of VNets, NSGs, ASGs, Azure Firewalls, or VNet peering to segregate network traffic and control access.
