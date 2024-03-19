@@ -46,7 +46,11 @@ Questions in the following sections are designed to help us understand a clients
     - SC-7 Boundary Protection: Microsoft Defender for Cloud enhances boundary protection controls by monitoring and protecting cloud resources from cyber threats, ensuring secure communications with external networks.
     - IR-4 Incident Handling: The solution supports incident handling processes by providing alerts and actionable insights on detected threats, enabling rapid response and remediation of security incidents in the cloud.
 
+- **Products covered:
+    - Microsoft Defender for Cloud
+
 **Has the organization implemented Microsoft Defender for Identity and Advanced Threat Analytics to enable signal collection for the identification, detection, and investigation of advanced threats, compromised identities, and malicious insider actions targeting the organization?** (Score Legacy)
+
 - **Legacy:** The organization has not implemented Microsoft Defender for Identity or Advanced Threat Analytics, leading to potential gaps in the identification and mitigation of advanced threats and compromised identities. This lack of advanced threat detection capabilities increases the risk of undetected security breaches and insider threats.
     - Indicators:
         - Absence of advanced threat detection and identity protection solutions, resulting in limited visibility into security threats.
@@ -76,6 +80,10 @@ Questions in the following sections are designed to help us understand a clients
     - AU-6 Audit Review, Analysis, and Reporting: The signal collection and analysis capabilities of Microsoft Defender for Identity and Advanced Threat Analytics aid in the review and analysis of audit records, contributing to the identification of potential security incidents.
     - AC-2 Account Management: Implementing identity protection measures supports effective account management practices by identifying and responding to compromised credentials and insider threats, ensuring accounts are managed securely.
     - IR-4 Incident Handling: The solutions enhance incident handling processes by providing timely detection of and response to advanced threats, facilitating rapid containment, eradication, and recovery from incidents.
+
+- **Products covered:**
+    - Microsoft Defender for Identity
+    - Microsoft Entra Identity Protection
 
 #### Leverage Microsoft Sentinel for integrated SIEM and SOAR capabilities across the enterprise
 
@@ -112,10 +120,12 @@ Questions in the following sections are designed to help us understand a clients
     - CA-7 Continuous Monitoring: The integration supports the establishment of a continuous monitoring strategy that assesses security controls and risks, leveraging Microsoft Sentinel's analytics and automation capabilities for real-time security insights.
 
 - Products covered:
-    - 
+    - Microsoft Sentinel
+    - Microsoft Defender for Identity
+    - Microsoft Defender for Cloud
 
 ### Every workload is assigned an app identity—and configured and deployed consistently
-#### Every server and supported PaaS resource type (e.g. Azure SQL, KeyVault, etc.)  is assigned a managed identity
+#### Every server and supported PaaS resource type (e.g. Azure SQL, KeyVault, etc.) is assigned a managed identity
 
 **Has the organization assigned a managed identity to every server and supported PaaS resource type?** (Score Legacy)
 
@@ -187,7 +197,7 @@ Questions in the following sections are designed to help us understand a clients
     - SA-10 Developer Configuration Management: The enforcement of resource creation policies supports developer configuration management by providing clear guidelines for the provisioning and deployment of cloud workloads, aligning with secure development practices.
 
 - **Products Covered:**
-    - 
+    - Azure Policy
 
 ### Human access to resources requires Just-In-Time
 #### Implement a protect the administrator program
@@ -225,7 +235,8 @@ Questions in the following sections are designed to help us understand a clients
     - AU-12 Audit Generation: The auditing of elevated permissions aligns with the requirement to generate audit records for key events, including the use of administrative privileges, to support effective analysis and monitoring.
 
 - **Products covered:**
-    - 
+    - Microsoft Entra Privileged Identity Management
+    - Microsoft Defender for Cloud Just-in-time VM Access
 
 ##### References
 https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elevated-privilege-accounts-at-microsoft/?OCID=InsideTrack_Search
