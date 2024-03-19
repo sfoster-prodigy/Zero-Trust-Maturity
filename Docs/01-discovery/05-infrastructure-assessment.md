@@ -16,62 +16,62 @@ Questions in the following sections are designed to help us understand a clients
 
 **Has the organization enabled Microsoft Defender for Cloud along with its specific protection plans for servers, storage, containers, SQL, and other supported resource types to enhance security measures?** (Score Legacy)
 
-- Legacy: The organization has not implemented Microsoft Defender for Cloud or its specific protection plans, leading to potential vulnerabilities in cloud infrastructure and resources. This absence of comprehensive security monitoring and threat protection measures may result in increased risk of cyberattacks and security breaches.
+- **Legacy:** The organization has not implemented Microsoft Defender for Cloud or its specific protection plans, leading to potential vulnerabilities in cloud infrastructure and resources. This absence of comprehensive security monitoring and threat protection measures may result in increased risk of cyberattacks and security breaches.
     - Indicators:
         - No deployment of Microsoft Defender for Cloud to monitor and protect servers, storage, containers, SQL, and other resource types.
         - Increased vulnerability to cyber threats due to the lack of advanced security monitoring and response capabilities.
         - Challenges in maintaining a robust security posture for cloud resources, affecting overall cloud infrastructure protection.
 
-- Initial: Initial steps have been taken to enable Microsoft Defender for Cloud and some of its specific protection plans for critical resources. While this phase marks the beginning of adopting cloud security practices, comprehensive coverage and consistent application of protection plans across all supported resource types may still be under development.
+- **Initial:** Initial steps have been taken to enable Microsoft Defender for Cloud and some of its specific protection plans for critical resources. While this phase marks the beginning of adopting cloud security practices, comprehensive coverage and consistent application of protection plans across all supported resource types may still be under development.
     - Indicators:
         - Partial implementation of Microsoft Defender for Cloud, focusing on high-priority resources such as servers or SQL databases.
         - Initial improvements in security monitoring and threat detection for covered resources, though not fully realized across the entire cloud environment.
         - Some enhancement in the organization's cloud security capabilities, with ongoing efforts to expand and optimize the deployment of Microsoft Defender for Cloud protection plans.
 
-- Advanced: Microsoft Defender for Cloud and its specific protection plans are widely implemented, significantly improving security measures for servers, storage, containers, SQL, and other supported resource types. This advanced tier reflects a mature approach to cloud security, ensuring comprehensive monitoring, threat detection, and response across the cloud environment.
+- **Advanced:** Microsoft Defender for Cloud and its specific protection plans are widely implemented, significantly improving security measures for servers, storage, containers, SQL, and other supported resource types. This advanced tier reflects a mature approach to cloud security, ensuring comprehensive monitoring, threat detection, and response across the cloud environment.
     - Indicators:
         - Broad adoption of Microsoft Defender for Cloud, with specific protection plans activated for a wide range of resource types.
         - Enhanced security monitoring and proactive threat protection measures in place, supported by consistent and comprehensive coverage.
         - Significant progress toward securing the cloud infrastructure and resources, bolstered by advanced security analytics and threat intelligence.
 
-- Optimal: Microsoft Defender for Cloud and all its specific protection plans for supported resource types are fully developed, operationalized, and integrated into the organization’s overall cloud security strategy. This optimal scenario ensures the highest level of security monitoring, threat detection, and protection for the cloud environment.
+- **Optimal:** Microsoft Defender for Cloud and all its specific protection plans for supported resource types are fully developed, operationalized, and integrated into the organization’s overall cloud security strategy. This optimal scenario ensures the highest level of security monitoring, threat detection, and protection for the cloud environment.
     - Indicators:
         - Universal and strategic implementation of Microsoft Defender for Cloud, covering servers, storage, containers, SQL, and all other supported resources.
         - Comprehensive and consistent application of advanced security measures, enhancing protection against cyber threats across the cloud infrastructure.
         - Full compliance with security standards and regulations, underpinned by an effective and well-managed cloud security monitoring and response system.
 
-- Relevance to NIST SP 800-53 Revision 5:
+- **Relevance to NIST SP 800-53 Revision 5:**
     - SI-4 Information System Monitoring: Microsoft Defender for Cloud supports continuous security monitoring of cloud infrastructure and resources, aligning with the control for detecting unauthorized access, use, and anomalies.
     - RA-5 Vulnerability Scanning: The protection plans within Microsoft Defender for Cloud aid in conducting regular vulnerability scans of cloud resources, helping to identify and mitigate potential vulnerabilities in accordance with RA-5 requirements.
     - SC-7 Boundary Protection: Microsoft Defender for Cloud enhances boundary protection controls by monitoring and protecting cloud resources from cyber threats, ensuring secure communications with external networks.
     - IR-4 Incident Handling: The solution supports incident handling processes by providing alerts and actionable insights on detected threats, enabling rapid response and remediation of security incidents in the cloud.
 
 **Has the organization implemented Microsoft Defender for Identity and Advanced Threat Analytics to enable signal collection for the identification, detection, and investigation of advanced threats, compromised identities, and malicious insider actions targeting the organization?** (Score Legacy)
-- Legacy: The organization has not implemented Microsoft Defender for Identity or Advanced Threat Analytics, leading to potential gaps in the identification and mitigation of advanced threats and compromised identities. This lack of advanced threat detection capabilities increases the risk of undetected security breaches and insider threats.
+- **Legacy:** The organization has not implemented Microsoft Defender for Identity or Advanced Threat Analytics, leading to potential gaps in the identification and mitigation of advanced threats and compromised identities. This lack of advanced threat detection capabilities increases the risk of undetected security breaches and insider threats.
     - Indicators:
         - Absence of advanced threat detection and identity protection solutions, resulting in limited visibility into security threats.
         - Increased vulnerability to advanced threats, compromised identities, and malicious insider actions due to inadequate monitoring and detection capabilities.
         - Challenges in proactively securing the organization against targeted cyber attacks and insider threats, impacting overall security posture.
 
-- Initial: Initial efforts have been made to deploy Microsoft Defender for Identity and Advanced Threat Analytics for monitoring specific segments of the IT environment. While this phase marks the beginning of adopting advanced threat detection practices, comprehensive coverage and consistent application of these solutions across the organization may still be under development.
+- **Initial:** Initial efforts have been made to deploy Microsoft Defender for Identity and Advanced Threat Analytics for monitoring specific segments of the IT environment. While this phase marks the beginning of adopting advanced threat detection practices, comprehensive coverage and consistent application of these solutions across the organization may still be under development.
     - Indicators:
         - Partial implementation of Microsoft Defender for Identity and Advanced Threat Analytics, focusing on high-priority areas or specific user groups.
         - Initial improvements in detecting advanced threats and compromised identities, though organization-wide detection capabilities are not yet achieved.
         - Some enhancement in the organization's ability to respond to security incidents, with ongoing efforts to expand and optimize threat detection and identity protection strategies.
 
-- Advanced: Microsoft Defender for Identity and Advanced Threat Analytics are broadly implemented, significantly improving the organization's capability to detect, investigate, and respond to advanced threats, compromised identities, and insider actions. This advanced tier reflects a mature approach to security monitoring, ensuring comprehensive protection against sophisticated cyber threats.
+- **Advanced:** Microsoft Defender for Identity and Advanced Threat Analytics are broadly implemented, significantly improving the organization's capability to detect, investigate, and respond to advanced threats, compromised identities, and insider actions. This advanced tier reflects a mature approach to security monitoring, ensuring comprehensive protection against sophisticated cyber threats.
     - Indicators:
         - Broad adoption of Microsoft Defender for Identity and Advanced Threat Analytics, facilitating comprehensive signal collection and threat detection.
         - Enhanced security measures in place, supported by consistent and effective monitoring of user and entity behaviors.
         - Significant progress toward mitigating potential security breaches and insider threats, bolstered by robust detection and response capabilities.
 
-- Optimal: Microsoft Defender for Identity and Advanced Threat Analytics solutions are fully developed, operationalized, and integrated into the organization’s overall security and risk management strategies. This optimal scenario ensures the highest level of protection against advanced threats, compromised identities, and malicious insider actions.
+- **Optimal:** Microsoft Defender for Identity and Advanced Threat Analytics solutions are fully developed, operationalized, and integrated into the organization’s overall security and risk management strategies. This optimal scenario ensures the highest level of protection against advanced threats, compromised identities, and malicious insider actions.
     - Indicators:
         - Universal and strategic implementation of advanced threat detection and identity protection solutions across all IT environments.
         - Comprehensive and proactive management of security threats, enhancing organizational resilience against cyber attacks and insider threats.
         - Full compliance with security standards and regulations, underpinned by an effective and well-managed threat detection and response system.
 
-- Relevance to NIST SP 800-53 Revision 5:
+- **Relevance to NIST SP 800-53 Revision 5:**
     - SI-4 Information System Monitoring: These solutions support the continuous monitoring of information systems for unauthorized access, use, and anomalies, enhancing the detection of advanced threats and compromised identities.
     - AU-6 Audit Review, Analysis, and Reporting: The signal collection and analysis capabilities of Microsoft Defender for Identity and Advanced Threat Analytics aid in the review and analysis of audit records, contributing to the identification of potential security incidents.
     - AC-2 Account Management: Implementing identity protection measures supports effective account management practices by identifying and responding to compromised credentials and insider threats, ensuring accounts are managed securely.
@@ -80,31 +80,32 @@ Questions in the following sections are designed to help us understand a clients
 #### Leverage Microsoft Sentinel for integrated SIEM and SOAR capabilities across the enterprise
 
 **Has the organization integrated signals from Defender for Cloud, Defender for Identity, Advanced Threat Analytics, and other monitoring systems with Microsoft Sentinel to provide the Security Operations Center (SOC) with a comprehensive, single-pane-of-glass view for monitoring security events across the enterprise?** (Score Legacy)
-- Legacy: The organization has not integrated its security monitoring systems, including Defender for Cloud, Defender for Identity, Advanced Threat Analytics, with Microsoft Sentinel. This lack of integration results in siloed security monitoring efforts, potentially leading to missed threats and inefficient incident response due to fragmented visibility across the security landscape.
+
+- **Legacy:** The organization has not integrated its security monitoring systems, including Defender for Cloud, Defender for Identity, Advanced Threat Analytics, with Microsoft Sentinel. This lack of integration results in siloed security monitoring efforts, potentially leading to missed threats and inefficient incident response due to fragmented visibility across the security landscape.
     - Indicators: 
         - Absence of centralized security event monitoring, leading to disjointed and less effective security operations.
         - Increased risk of delayed threat detection and response due to the lack of a unified monitoring view.
         - Challenges in managing and correlating security events across various platforms and systems, impacting the overall effectiveness of the SOC.
 
-- Initial: Initial steps have been made to integrate some security monitoring systems with Microsoft Sentinel, providing the SOC with improved visibility into security events within selected environments. While this phase marks the beginning of consolidating security event monitoring, full integration and comprehensive visibility across all enterprise systems may still be under development.
+- **Initial:** Initial steps have been made to integrate some security monitoring systems with Microsoft Sentinel, providing the SOC with improved visibility into security events within selected environments. While this phase marks the beginning of consolidating security event monitoring, full integration and comprehensive visibility across all enterprise systems may still be under development.
     - Indicators: 
         - Partial integration of security monitoring systems with Microsoft Sentinel, focusing on high-priority areas or specific security solutions.
         - Initial improvements in centralized monitoring and incident response capabilities, though comprehensive enterprise-wide visibility is not yet achieved.
         - Some enhancement in the SOC’s ability to detect and respond to security threats, with ongoing efforts to expand the scope of integration with Microsoft Sentinel.
 
-- Advanced: A broad range of security monitoring systems, including Defender for Cloud, Defender for Identity, and Advanced Threat Analytics, are integrated with Microsoft Sentinel, significantly improving the SOC's visibility and response capabilities across the enterprise. This advanced tier reflects a mature approach to security event monitoring, ensuring effective threat detection and incident management through a unified platform.
+- **Advanced:** A broad range of security monitoring systems, including Defender for Cloud, Defender for Identity, and Advanced Threat Analytics, are integrated with Microsoft Sentinel, significantly improving the SOC's visibility and response capabilities across the enterprise. This advanced tier reflects a mature approach to security event monitoring, ensuring effective threat detection and incident management through a unified platform.
     - Indicators: 
         - Broad integration of security monitoring systems with Microsoft Sentinel, facilitating comprehensive visibility into security events across the enterprise.
         - Enhanced SOC efficiency and effectiveness in threat detection, analysis, and response, supported by a single-pane-of-glass monitoring view.
         - Significant progress toward optimizing security operations and incident management, bolstered by integrated analytics and automated response capabilities.
 
-- Optimal: The organization has fully integrated Microsoft Defender for Cloud, Defender for Identity, Advanced Threat Analytics, and other monitoring systems with Microsoft Sentinel, achieving a comprehensive and unified view for monitoring security events across the entire enterprise. This optimal scenario ensures the highest level of operational efficiency and effectiveness in the SOC, leveraging advanced analytics and automation for proactive security management.
+- **Optimal:** The organization has fully integrated Microsoft Defender for Cloud, Defender for Identity, Advanced Threat Analytics, and other monitoring systems with Microsoft Sentinel, achieving a comprehensive and unified view for monitoring security events across the entire enterprise. This optimal scenario ensures the highest level of operational efficiency and effectiveness in the SOC, leveraging advanced analytics and automation for proactive security management.
     - Indicators: 
         - Universal and strategic integration of all relevant security monitoring systems with Microsoft Sentinel, covering all aspects of the enterprise security landscape.
         - Comprehensive and consistent operational visibility, enabling proactive and efficient security threat detection, investigation, and response.
         - Full realization of SOC capabilities in managing enterprise security, underpinned by an effective, centralized security event monitoring and management system.
 
-- Relevance to NIST SP 800-53 Revision 5:
+- **Relevance to NIST SP 800-53 Revision 5:**
     - SI-4 Information System Monitoring: Integrating diverse security signals into Microsoft Sentinel supports the continuous monitoring of information systems for unauthorized access, use, anomalies, and other cybersecurity-related events, aligning with SI-4 requirements.
     - IR-4 Incident Handling: The consolidation of security event monitoring with Microsoft Sentinel enhances the organization's incident handling capabilities by providing a centralized platform for incident detection, analysis, response, and reporting.
     - AU-6 Audit Review, Analysis, and Reporting: The centralized view offered by Microsoft Sentinel facilitates the review, analysis, and reporting of audit records, contributing to effective audit management and analysis aligned with AU-6.
@@ -118,31 +119,31 @@ Questions in the following sections are designed to help us understand a clients
 
 **Has the organization assigned a managed identity to every server and supported PaaS resource type?** (Score Legacy)
 
-- Legacy: The organization does not utilize Azure Managed Identities, relying on traditional, manually managed credentials for authentication between services. This approach can lead to increased operational complexity and security risks due to potential mismanagement of credentials.
+- **Legacy:** The organization does not utilize Azure Managed Identities, relying on traditional, manually managed credentials for authentication between services. This approach can lead to increased operational complexity and security risks due to potential mismanagement of credentials.
     - Indicators: 
         - Absence of managed identities, leading to reliance on less secure and more complex credential management practices.
         - Increased risk of credential leaks or mismanagement, potentially resulting in unauthorized access.
         - Challenges in automating and scaling secure access management for Azure resources.
 
-- Initial: Initial efforts have been made to implement Azure Managed Identities for a subset of servers and PaaS resources. While this phase marks progress towards improved security and operational efficiency, comprehensive and consistent adoption across all Azure resources may still be in development.
+- **Initial:** Initial efforts have been made to implement Azure Managed Identities for a subset of servers and PaaS resources. While this phase marks progress towards improved security and operational efficiency, comprehensive and consistent adoption across all Azure resources may still be in development.
     - Indicators: 
         - Partial adoption of managed identities, focusing on high-priority or pilot projects.
         - Initial improvements in security and management of access credentials, though not uniformly applied across the Azure environment.
         - Some enhancement in operational efficiency and security posture, with ongoing efforts to expand managed identity adoption.
 
-- Advanced: Azure Managed Identities are broadly implemented for servers and supported PaaS resource types, significantly improving secure access management and reducing the operational burden of credential management. This advanced tier reflects a mature approach to identity and access management for Azure services.
+- **Advanced:** Azure Managed Identities are broadly implemented for servers and supported PaaS resource types, significantly improving secure access management and reducing the operational burden of credential management. This advanced tier reflects a mature approach to identity and access management for Azure services.
     - Indicators: 
         - Comprehensive deployment of managed identities, covering most or all servers and PaaS resources.
         - Enhanced security through the elimination of stored credentials, supported by automatic and secure access token management.
         - Significant progress toward operational efficiency and reduced risk of credential-related security incidents, bolstered by the systematic use of managed identities.
 
-- Optimal: The assignment of Azure Managed Identities to every server and supported PaaS resource type is fully operationalized and integrated into the organization’s cloud security and management practices. This optimal scenario ensures the highest level of security and operational efficiency in managing access to Azure resources.
+- **Optimal:** The assignment of Azure Managed Identities to every server and supported PaaS resource type is fully operationalized and integrated into the organization’s cloud security and management practices. This optimal scenario ensures the highest level of security and operational efficiency in managing access to Azure resources.
     - Indicators: 
         - Strategic and universal application of managed identities, ensuring secure and simplified access management across all Azure resources.
         - Comprehensive and proactive management of access security, leveraging Azure's built-in identity management capabilities to automate credential lifecycles.
         - Full alignment with best practices for cloud security and identity management, supported by an effective, adaptive, and well-managed identity framework.
 
-- Relevance to NIST SP 800-53 Revision 5:
+- **Relevance to NIST SP 800-53 Revision 5:**
     - IA-2 Identification and Authentication (Organizational Users): Managed identities enhance the system's ability to uniquely identify and authenticate the entities interacting with Azure resources, reducing reliance on traditional credential management.
     - IA-5 Authenticator Management: The automated management of authentication tokens by Azure Managed Identities supports the control's requirements for managing authenticators, including their issuance, lifecycle, revocation, and recovery.
     - AC-2 Account Management: Azure Managed Identities contribute to effective account management by automating the access control mechanisms for Azure services, aligning with principles of least privilege and secure authentication.
@@ -344,32 +345,36 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
 #### Utilize VNets, NSGs, ASGs, and Azure Firewalls for enhanced workload access management
 
 **Has the organization leveraged Microsoft Azure's network segmentation capabilities, including Virtual Networks (VNets), VNet peering, Network Security Groups (NSGs), Application Security Groups (ASGs), and Azure Firewalls, to effectively isolate and manage access to workloads?** (Score Advanced)
+
 - **Legacy:** The organization lacks comprehensive network segmentation strategies using Azure's networking capabilities. This absence of network segmentation may lead to increased risk of lateral movement in case of breaches and inefficient network access control, affecting the overall security posture.
     - Indicators:
         - Limited use or absence of VNets, NSGs, ASGs, Azure Firewalls, or VNet peering to segregate network traffic and control access.
         - Increased vulnerability to internal and external threats due to the lack of effective isolation between different workloads.
         - Challenges in managing access and ensuring secure communication within Azure environments, potentially leading to non-compliance with security policies.
 
-- Initial: Initial efforts have been made to adopt Azure network segmentation capabilities for certain critical workloads, using VNets, NSGs, and possibly Azure Firewalls. This phase marks the beginning of leveraging Azure's networking features for security, though comprehensive segmentation and access control across all workloads may still be developing.
+- **Initial:** Initial efforts have been made to adopt Azure network segmentation capabilities for certain critical workloads, using VNets, NSGs, and possibly Azure Firewalls. This phase marks the beginning of leveraging Azure's networking features for security, though comprehensive segmentation and access control across all workloads may still be developing.
     - Indicators: 
         - Partial implementation of network segmentation practices, focusing on high-priority or sensitive workloads.
         - Initial improvements in workload isolation and access management, though not consistently applied across the entire Azure environment.
         - Some enhancement in the organization’s ability to prevent unauthorized access and reduce the attack surface, with ongoing efforts to expand network segmentation strategies.
 
-- Advanced: Azure's network segmentation capabilities are broadly implemented across the organization's Azure environment, significantly improving workload isolation and security. This advanced tier reflects a mature approach to network segmentation, with VNets, NSGs, ASGs, Azure Firewalls, and VNet peering effectively managing access and reducing potential attack vectors.
+- **Advanced:** Azure's network segmentation capabilities are broadly implemented across the organization's Azure environment, significantly improving workload isolation and security. This advanced tier reflects a mature approach to network segmentation, with VNets, NSGs, ASGs, Azure Firewalls, and VNet peering effectively managing access and reducing potential attack vectors.
     - Indicators: 
         - Comprehensive adoption of Azure network segmentation features, facilitating robust isolation and controlled access to workloads.
         - Enhanced security posture through effective use of VNets, NSGs, ASGs, and Azure Firewalls to enforce granular access controls.
         - Significant progress toward minimizing risks associated with network access and inter-workload communication, supported by advanced segmentation practices.
 
-- Optimal: Network segmentation capabilities in Azure are fully developed, operationalized, and integrated into the organization’s overall network security strategy. This optimal scenario ensures the highest level of workload isolation, access management, and security across the Azure environment.
+- **Optimal:** Network segmentation capabilities in Azure are fully developed, operationalized, and integrated into the organization’s overall network security strategy. This optimal scenario ensures the highest level of workload isolation, access management, and security across the Azure environment.
     - Indicators:
         - Strategic and universal application of network segmentation features to ensure comprehensive isolation and access control across all Azure workloads.
         - Comprehensive management of network traffic, enhancing organizational resilience against network-based threats.
         - Full alignment with network security best practices and compliance requirements, underpinned by a well-managed and effective Azure network segmentation framework.
 
-- Relevance to NIST SP 800-53 Revision 5:
+- **Relevance to NIST SP 800-53 Revision 5:**
     - SC-7 Boundary Protection: Utilizing VNets, NSGs, and Azure Firewalls supports the enforcement of boundary protections, controlling the flow of information between networks under different levels of trust.
     - AC-4 Information Flow Enforcement: Network segmentation practices, such as the use of ASGs and VNet peering, aid in enforcing approved authorizations for controlling the flow of information within the system and between interconnected systems.
     - SC-32 Network Segmentation: The strategic implementation of network segmentation using Azure's capabilities directly supports the principles of network segmentation, enhancing security by isolating system components into separate security zones.
     - AC-3 Access Enforcement: The application of NSGs and ASGs enables the enforcement of approved access decisions to resources and services, aligning with the requirement to restrict access based on the application of policy rules.
+
+- **Products covered:**
+    - 
