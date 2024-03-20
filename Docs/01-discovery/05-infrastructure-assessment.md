@@ -243,7 +243,7 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
 
 
 ### Unauthorized deployments are blocked, and alert is triggered
-#### Leverage Azure Blueprints to control deployments and ensure compliance
+#### Leverage governance to control deployments and ensure compliance
 
 **Has the organization adopted the usage of Deployment Stacks and other governance solutions to properly govern resource deployments, ensuring compliance with approved templates and policies, and to activate necessary alerts or actions in case of policy violations?** (Score Legacy)
 
@@ -278,7 +278,7 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
     - SA-10 Developer Configuration Management: The practice of governing resource deployments with Deployment Stacks supports configuration management within the development process, ensuring that security and compliance are integrated into the provisioning of IT resources.
 
 - **Products covered:**
-    - 
+    - Azure Deployment Stacks
 
 ### Granular visibility and access control are available across workloads
 #### Metrics, logs, and scaling efficiency
@@ -316,7 +316,7 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
     - CA-7 Continuous Monitoring: The integration of scalable resource management with monitoring capabilities supports continuous monitoring strategies, allowing for the assessment of security controls and system performance against organizational objectives.
 
 - **Products covered:**
-    - 
+    - Azure Virtual Machine Scale Sets
 
 #### Role-Based Access Control (RBAC) for efficient permissions management across Workloads
 
@@ -352,10 +352,14 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
     - AC-6 Least Privilege: RBAC facilitates the enforcement of the least privilege principle, allowing users to access only the information and resources necessary for their duties.
     - AC-16 Security Attributes: The use of RBAC, incorporating security attributes into roles, supports the application of access controls that are enforced based on the combined attributes of the user (e.g., group membership) and the resource.
 
+- **Products covered:**
+    - Microsoft Entra Role-Based Access Control
+    - Microsoft Entra Privileged Identity Management
+
 ### User and resource access segmented for each workload
 #### Utilize VNets, NSGs, ASGs, and Azure Firewalls for enhanced workload access management
 
-**Has the organization leveraged Microsoft Azure's network segmentation capabilities, including Virtual Networks (VNets), VNet peering, Network Security Groups (NSGs), Application Security Groups (ASGs), and Azure Firewalls, to effectively isolate and manage access to workloads?** (Score Advanced)
+**Has the organization leveraged Microsoft Azure's network segmentation capabilities, including Virtual Networks (VNets), VNet peering, Network Security Groups (NSGs), Application Security Groups (ASGs), and Azure Firewalls, to effectively isolate and manage access to workloads?** (Score Initial)
 
 - **Legacy:** The organization lacks comprehensive network segmentation strategies using Azure's networking capabilities. This absence of network segmentation may lead to increased risk of lateral movement in case of breaches and inefficient network access control, affecting the overall security posture.
     - Indicators:
@@ -388,4 +392,8 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
     - AC-3 Access Enforcement: The application of NSGs and ASGs enables the enforcement of approved access decisions to resources and services, aligning with the requirement to restrict access based on the application of policy rules.
 
 - **Products covered:**
-    - 
+    - Azure Network Security Group
+    - Application Security Gorup
+    - Azure Virtual Network
+    - Virtual Network Peering
+    - Azure Firewall
