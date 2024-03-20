@@ -393,7 +393,7 @@ https://www.microsoft.com/insidetrack/blog/improving-security-by-protecting-elev
 
 - **Products covered:**
     - Azure Network Security Group
-    - Application Security Gorup
+    - Application Security Group
     - Azure Virtual Network
     - Virtual Network Peering
     - Azure Firewall

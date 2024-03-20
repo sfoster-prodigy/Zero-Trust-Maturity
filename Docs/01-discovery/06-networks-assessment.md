@@ -11,7 +11,7 @@ Questions in the following sections are designed to help us understand a clients
 ### Fully distributed ingress/egress cloud micro-perimeters and deeper micro-segmentation
 #### Applications are partitioned to different Azure Virtual Networks (VNets) and connected using a hub-spoke model
 
-**Has the organization established a central Azure Virtual Network (VNet) to configure the security posture for inter-application connectivity and interconnected the application VNets in a hub-and-spoke architecture?**
+**Has the organization established a central Azure Virtual Network (VNet) to configure the security posture for inter-application connectivity and interconnected the application VNets in a hub-and-spoke architecture?** (Score Initial)
 
 - **Legacy:** The organization does not utilize a hub-and-spoke network architecture in Azure, leading to potentially less efficient and secure inter-application connectivity. This absence of a centralized network configuration model may result in increased complexity and reduced security posture due to decentralized management of network traffic and security policies.
     - Indicators: 
@@ -42,6 +42,10 @@ Questions in the following sections are designed to help us understand a clients
     - AC-4 Information Flow Enforcement: Azure Firewall aids in enforcing approved authorizations for controlling the flow of information within the system and between interconnected systems, in accordance with information flow policies.
     - SI-4 Information System Monitoring: The firewall's capabilities to inspect and log traffic contribute to information system monitoring requirements, enabling the detection of unauthorized activities and potential cybersecurity threats.
     - SC-5 Denial of Service Protection: Azure Firewall can provide denial of service protection mechanisms that manage and mitigate risks associated with denial of service attacks.
+
+- **Products covered:**
+    - 
+
 
 **Has the organization deployed Azure Firewall in the hub VNet to inspect and control traffic flow between the various Virtual Networks (VNets) in accordance with the hub-spoke model?**
 
@@ -75,6 +79,9 @@ Questions in the following sections are designed to help us understand a clients
     - SI-4 Information System Monitoring: Azure Firewall's capabilities to inspect and log traffic contribute to the information system monitoring requirements, enabling the detection of unauthorized activities and potential cybersecurity threats.
     - SC-5 Denial of Service Protection: Azure Firewall can provide denial of service protection mechanisms that manage and mitigate risks associated with denial of service attacks.
 
+- **Products covered:**
+    - 
+
 **Has the organization partitioned applications into different Azure Virtual Networks (VNets), creating dedicated virtual networks for various applications or application components?**
 - **Legacy:** The organization has not adopted network segmentation strategies using Azure Virtual Networks (VNets), leading to a flat network topology that could increase the risk of lateral movement in the event of a compromise. This absence of segmentation may result in less effective isolation of application components, potentially exposing sensitive applications to unnecessary risk.
     - Indicators: 
@@ -105,6 +112,9 @@ Questions in the following sections are designed to help us understand a clients
     - AC-4 Information Flow Enforcement: Network segmentation through Azure VNets aids in enforcing approved authorizations for controlling the flow of information within the system and between interconnected systems, in accordance with information flow policies.
     - SC-32 Network Segmentation: The strategic implementation of network segmentation using Azure VNets directly supports this control, enhancing security by isolating system components into separate security zones, thereby reducing the risk of unauthorized access to sensitive information.
     - SC-2 Application Partitioning: Partitioning applications into different Azure VNets helps in isolating and protecting individual applications or application components, ensuring that security and functionality are not compromised by interactions between components.
+
+- **Products covered:**
+    - 
 
 ### Machine learning-based threat protection and filtering with context-based signals
 #### Leverage Azure Web Application Firewall (WAF) for Comprehensive Protection
@@ -141,6 +151,9 @@ Questions in the following sections are designed to help us understand a clients
     - SC-5 Denial of Service Protection: Azure WAF includes features for bot protection and can mitigate denial of service attacks, supporting the availability of web services.
     - SI-4 Information System Monitoring: The capability of Azure WAF to log and monitor web traffic aids in the detection of unauthorized activities, anomalies, and security events, contributing to comprehensive information system monitoring.
 
+- **Products covered:**
+    - 
+
 #### Implement Azure Firewall for Layer 4 Threat Intelligence-Based Filtering
 **Has the organization implemented Azure Firewall for threat intelligence-based filtering at Layer 4, deploying and configuring it within the hub VNet to inspect and control traffic across all endpoints, regardless of HTTP status, and enabled threat intelligence features for traffic analysis?**
 
@@ -174,6 +187,9 @@ Questions in the following sections are designed to help us understand a clients
     - SI-3 Malicious Code Protection: The threat intelligence-based filtering features of Azure Firewall contribute to protecting against malware and other forms of malicious code by analyzing traffic for known threat indicators.
     - RA-5 Vulnerability Scanning: Enabled threat intelligence features aid in identifying vulnerabilities and threats by analyzing network traffic patterns, supporting vulnerability management processes.
 
+- **Products covered:**
+    - 
+
 #### Enhance security with Azure DDoS protection
 **Has the organization enhanced its security posture by activating Azure DDoS Protection Standard to monitor Azure-hosted application traffic, utilize ML-based frameworks for detecting volumetric traffic floods, and implement automatic mitigations, including configuring alerts for DDoS protection metrics?**
 
@@ -206,6 +222,9 @@ Questions in the following sections are designed to help us understand a clients
     - SI-4 Information System Monitoring: The use of ML-based frameworks for detecting DDoS traffic and configuring alerts contributes to the monitoring of information systems for unauthorized access, use, anomalies, and cybersecurity threats, enhancing system monitoring efforts.
     - SC-7 Boundary Protection: Deploying Azure DDoS Protection Standard acts as a boundary protection mechanism, monitoring and controlling communications at the network's external and internal boundaries to prevent unauthorized traffic flows that could lead to DDoS attacks.
     - RA-5 Vulnerability Scanning: While primarily focused on vulnerabilities, Azure DDoS Protection's monitoring and analysis capabilities can aid in identifying potential DDoS vulnerabilities and traffic patterns that may indicate an impending attack, supporting the organization's vulnerability management processes.
+
+- **Products covered:**
+    - 
 
 ### All traffic is encrypted
 #### Enforcing HTTPS-Only Communication with Azure Front Door
@@ -242,6 +261,8 @@ Questions in the following sections are designed to help us understand a clients
     - AC-17 Remote Access: The implementation of HTTPS enforcement relates to secure remote access to the organization's services, providing secure communication channels for remote users accessing internet-facing web applications.
     - SC-13 Cryptographic Protection: The use of HTTPS involves cryptographic protocols to secure communications over the network, supporting the requirements for applying cryptographic protection to information deemed sensitive or at risk.
 
+- **Products covered:**
+    - 
 
 #### Utilizing Azure VPN Gateway for Secure Employee and Partner Access
 
@@ -277,6 +298,9 @@ Questions in the following sections are designed to help us understand a clients
     - SC-13 Cryptographic Protection: The use of Azure VPN Gateway involves cryptographic protocols to secure remote communications, aligning with the requirements for cryptographic protection of information.
     - AC-4 Information Flow Enforcement: Azure VPN Gateway aids in enforcing approved authorizations for controlling the flow of information within the organization and to external partners, ensuring that remote access communications comply with established information flow policies.
 
+- **Products covered:**
+    - 
+
 #### Encrypted Connections through Azure Bastion for SSH and RDP
 
 **Has the organization implemented secure access to Azure virtual machines through encrypted communication using Azure Bastion, including SSH connections for Linux VMs and RDP for Windows VMs?**
@@ -310,6 +334,9 @@ Questions in the following sections are designed to help us understand a clients
     - SC-8 Transmission Confidentiality and Integrity: Using Azure Bastion for encrypted SSH/RDP connections ensures that data transmitted during remote access sessions is protected, maintaining the confidentiality and integrity of data in transit.
     - SC-13 Cryptographic Protection: The encryption of SSH and RDP communications via Azure Bastion aligns with requirements for applying cryptographic protection to information deemed sensitive or at risk during transmission.
     - AC-4 Information Flow Enforcement: Azure Bastion aids in enforcing approved authorizations for controlling the flow of information within the system and between interconnected systems, ensuring compliance with established information flow policies during remote VM access.
+
+- **Products covered:**
+    - 
 
 ### Discontinue legacy network security technology
 #### Moving Beyond Legacy NIDS/NIPS in Cloud Environments
@@ -346,6 +373,9 @@ Questions in the following sections are designed to help us understand a clients
     - SI-3 Malicious Code Protection: Modern cloud security services offer capabilities to protect against malware and other forms of malicious code, addressing the limitations of signature-based detection with more adaptive and behavior-based analysis techniques.
     - RA-5 Vulnerability Scanning: Cloud service providers often include advanced vulnerability scanning tools that can identify and mitigate vulnerabilities more effectively than traditional NIDS/NIPS, supporting the organization's vulnerability management process.
 
+- **Products covered:**
+    - 
+
 #### The Diminishing Effectiveness of Network-Based DLP and the Shift Away from SSL-Bridging
 
 **Has the organization recognized the decreasing effectiveness of network-based Data Loss Prevention (DLP) due to network-level encryption and moved away from relying on SSL-bridging techniques, while exploring alternative security measures for data protection in the cloud environment?**
@@ -380,3 +410,6 @@ Questions in the following sections are designed to help us understand a clients
     - MP-4 Media Protection: Modern data protection measures that adapt to encrypted environments support the safeguarding of sensitive information during electronic storage and transmission.
     - SC-28 Protection of Information at Rest: The shift towards modern data protection methods includes ensuring that data at rest in cloud environments is securely encrypted, aligning with the control requirements for data protection.
     - AC-4 Information Flow Enforcement: Modern data protection solutions facilitate the enforcement of approved authorizations for controlling the flow of sensitive information within the system and across interconnected systems, accommodating the constraints posed by encrypted traffic.
+
+- **Products covered:**
+    - 
