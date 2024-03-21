@@ -9,8 +9,15 @@ Questions in the following sections are designed to help us understand a clients
 ## Infrastructure
 ### Centralized management of all virtual machines and servers on which workloads are running
 #### Multicloud and on-premises governance with Azure Arc
+
+
+
 #### Apply security baselines through Azure Policy, including application of in-guest policies
+
+
 #### Endpoint Protection and Vulnerability Management through Defender XDR
+
+
 ### Workloads are monitored and alerted to abnormal behavior
 #### Activate Microsoft Defender for Cloud and its comprehensive protection plans 
 
