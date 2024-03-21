@@ -44,10 +44,10 @@ Questions in the following sections are designed to help us understand a clients
     - SC-5 Denial of Service Protection: Azure Firewall can provide denial of service protection mechanisms that manage and mitigate risks associated with denial of service attacks.
 
 - **Products covered:**
-    - 
+    - Azure Virtual Network Manager
+    - Azure Virtual Network
 
-
-**Has the organization deployed Azure Firewall in the hub VNet to inspect and control traffic flow between the various Virtual Networks (VNets) in accordance with the hub-spoke model?**
+**Has the organization deployed Azure Firewall in the hub VNet to inspect and control traffic flow between the various Virtual Networks (VNets) in accordance with the hub-spoke model?** (Advanced)
 
 - **Legacy:** The organization does not use Azure Firewall in the hub VNet, resulting in potential gaps in centralized traffic inspection and control. This lack of a centralized firewall may lead to insufficient security measures for traffic flowing between VNets, increasing the risk of cyber threats.
     - Indicators: 
@@ -80,7 +80,8 @@ Questions in the following sections are designed to help us understand a clients
     - SC-5 Denial of Service Protection: Azure Firewall can provide denial of service protection mechanisms that manage and mitigate risks associated with denial of service attacks.
 
 - **Products covered:**
-    - 
+    - Azure Firewall
+    - Azure Virtual Network
 
 **Has the organization partitioned applications into different Azure Virtual Networks (VNets), creating dedicated virtual networks for various applications or application components?**
 - **Legacy:** The organization has not adopted network segmentation strategies using Azure Virtual Networks (VNets), leading to a flat network topology that could increase the risk of lateral movement in the event of a compromise. This absence of segmentation may result in less effective isolation of application components, potentially exposing sensitive applications to unnecessary risk.
@@ -114,7 +115,9 @@ Questions in the following sections are designed to help us understand a clients
     - SC-2 Application Partitioning: Partitioning applications into different Azure VNets helps in isolating and protecting individual applications or application components, ensuring that security and functionality are not compromised by interactions between components.
 
 - **Products covered:**
-    - 
+    - Azure Virtual Network
+    - Azure Network Security Group
+    - Azure Application Security Group
 
 ### Machine learning-based threat protection and filtering with context-based signals
 #### Leverage Azure Web Application Firewall (WAF) for Comprehensive Protection
@@ -152,7 +155,7 @@ Questions in the following sections are designed to help us understand a clients
     - SI-4 Information System Monitoring: The capability of Azure WAF to log and monitor web traffic aids in the detection of unauthorized activities, anomalies, and security events, contributing to comprehensive information system monitoring.
 
 - **Products covered:**
-    - 
+    - Azure Web Application Firewall
 
 #### Implement Azure Firewall for Layer 4 Threat Intelligence-Based Filtering
 **Has the organization implemented Azure Firewall for threat intelligence-based filtering at Layer 4, deploying and configuring it within the hub VNet to inspect and control traffic across all endpoints, regardless of HTTP status, and enabled threat intelligence features for traffic analysis?**
@@ -188,7 +191,7 @@ Questions in the following sections are designed to help us understand a clients
     - RA-5 Vulnerability Scanning: Enabled threat intelligence features aid in identifying vulnerabilities and threats by analyzing network traffic patterns, supporting vulnerability management processes.
 
 - **Products covered:**
-    - 
+    - Azure Firewall
 
 #### Enhance security with Azure DDoS protection
 **Has the organization enhanced its security posture by activating Azure DDoS Protection Standard to monitor Azure-hosted application traffic, utilize ML-based frameworks for detecting volumetric traffic floods, and implement automatic mitigations, including configuring alerts for DDoS protection metrics?**
