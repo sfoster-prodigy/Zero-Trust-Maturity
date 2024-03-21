@@ -47,7 +47,7 @@ Questions in the following sections are designed to help us understand a clients
     - Azure Virtual Network Manager
     - Azure Virtual Network
 
-**Has the organization deployed Azure Firewall in the hub VNet to inspect and control traffic flow between the various Virtual Networks (VNets) in accordance with the hub-spoke model?** (Advanced)
+**Has the organization deployed Azure Firewall in the hub VNet to inspect and control traffic flow between the various Virtual Networks (VNets) in accordance with the hub-spoke model?** (Score Advanced)
 
 - **Legacy:** The organization does not use Azure Firewall in the hub VNet, resulting in potential gaps in centralized traffic inspection and control. This lack of a centralized firewall may lead to insufficient security measures for traffic flowing between VNets, increasing the risk of cyber threats.
     - Indicators: 
@@ -83,7 +83,8 @@ Questions in the following sections are designed to help us understand a clients
     - Azure Firewall
     - Azure Virtual Network
 
-**Has the organization partitioned applications into different Azure Virtual Networks (VNets), creating dedicated virtual networks for various applications or application components?**
+**Has the organization partitioned applications into different Azure Virtual Networks (VNets), creating dedicated virtual networks for various applications or application components?** (Score Initial)
+
 - **Legacy:** The organization has not adopted network segmentation strategies using Azure Virtual Networks (VNets), leading to a flat network topology that could increase the risk of lateral movement in the event of a compromise. This absence of segmentation may result in less effective isolation of application components, potentially exposing sensitive applications to unnecessary risk.
     - Indicators: 
           - Applications and their components reside within a single or a few large networks without adequate segmentation, increasing potential attack surfaces.
@@ -122,7 +123,7 @@ Questions in the following sections are designed to help us understand a clients
 ### Machine learning-based threat protection and filtering with context-based signals
 #### Leverage Azure Web Application Firewall (WAF) for Comprehensive Protection
 
-**Has the organization implemented cloud-native filtering and protection for known threats by activating Azure Web Application Firewall (WAF) for endpoints with HTTP/S traffic, using the default or OWASP top 10 protection rulesets, enabling bot protection rules, and adding custom rules to guard against specific business-related threats?**
+**Has the organization implemented cloud-native filtering and protection for known threats by activating Azure Web Application Firewall (WAF) for endpoints with HTTP/S traffic, using the default or OWASP top 10 protection rulesets, enabling bot protection rules, and adding custom rules to guard against specific business-related threats?** (Score Legacy)
 
 - **Legacy:** The organization has not implemented Azure WAF or similar web application protection measures. This absence of a web application firewall results in increased exposure to common web vulnerabilities and threats, potentially compromising the security of HTTP/S endpoints.
     - Indicators: 
@@ -158,7 +159,8 @@ Questions in the following sections are designed to help us understand a clients
     - Azure Web Application Firewall
 
 #### Implement Azure Firewall for Layer 4 Threat Intelligence-Based Filtering
-**Has the organization implemented Azure Firewall for threat intelligence-based filtering at Layer 4, deploying and configuring it within the hub VNet to inspect and control traffic across all endpoints, regardless of HTTP status, and enabled threat intelligence features for traffic analysis?**
+
+**Has the organization implemented Azure Firewall for threat intelligence-based filtering at Layer 4, deploying and configuring it within the hub VNet to inspect and control traffic across all endpoints, regardless of HTTP status, and enabled threat intelligence features for traffic analysis?** (Score Initial)
 
 - **Legacy:** The organization has not implemented Azure Firewall or its threat intelligence-based filtering capabilities. This lack of advanced network security measures can result in increased exposure to known threats and reduced capability to respond to emerging cybersecurity challenges effectively.
     - Indicators: 
@@ -194,7 +196,8 @@ Questions in the following sections are designed to help us understand a clients
     - Azure Firewall
 
 #### Enhance security with Azure DDoS protection
-**Has the organization enhanced its security posture by activating Azure DDoS Protection Standard to monitor Azure-hosted application traffic, utilize ML-based frameworks for detecting volumetric traffic floods, and implement automatic mitigations, including configuring alerts for DDoS protection metrics?**
+
+**Has the organization enhanced its security posture by activating Azure DDoS Protection Standard to monitor Azure-hosted application traffic, utilize ML-based frameworks for detecting volumetric traffic floods, and implement automatic mitigations, including configuring alerts for DDoS protection metrics?** (Score Legacy)
 
 - **Legacy:** The organization lacks Azure DDoS Protection Standard or similar DDoS protection measures, leading to potential vulnerabilities to DDoS attacks. This absence of DDoS protection can result in increased risk of service disruption and compromised application availability.
     - Indicators: 
@@ -227,12 +230,12 @@ Questions in the following sections are designed to help us understand a clients
     - RA-5 Vulnerability Scanning: While primarily focused on vulnerabilities, Azure DDoS Protection's monitoring and analysis capabilities can aid in identifying potential DDoS vulnerabilities and traffic patterns that may indicate an impending attack, supporting the organization's vulnerability management processes.
 
 - **Products covered:**
-    - 
+    - Azure DDoS Protection
 
 ### All traffic is encrypted
-#### Enforcing HTTPS-Only Communication with Azure Front Door
+#### Enforcing HTTPS-only communication with Azure Front Door
 
-**Has the organization secured its internet-facing web applications by enforcing HTTPS-only communication, redirecting HTTP traffic to HTTPS using Azure Front Door?**
+**Has the organization secured its internet-facing web applications by enforcing HTTPS-only communication, redirecting HTTP traffic to HTTPS using Azure Front Door?** (Score Legacy)
 
 - **Legacy:** The organization has not enforced HTTPS-only communication for its internet-facing web applications, potentially allowing traffic over unsecured HTTP. This lack of enforced secure communication protocols increases the risk of data interception and compromises the confidentiality and integrity of data in transit.
     - Indicators: 
@@ -265,11 +268,11 @@ Questions in the following sections are designed to help us understand a clients
     - SC-13 Cryptographic Protection: The use of HTTPS involves cryptographic protocols to secure communications over the network, supporting the requirements for applying cryptographic protection to information deemed sensitive or at risk.
 
 - **Products covered:**
-    - 
+    - Azure Front Door
 
-#### Utilizing Azure VPN Gateway for Secure Employee and Partner Access
+#### Utilizing Azure VPN Gateway for secure employee and partner access
 
-**Has the organization facilitated secure access for remote employees and partners by implementing the Azure VPN Gateway, ensuring encryption for point-to-site traffic?**
+**Has the organization facilitated secure access for remote employees and partners by implementing the Azure VPN Gateway, ensuring encryption for point-to-site traffic?** (Score Advanced)
 
 - **Legacy:** The organization has not implemented Azure VPN Gateway or similar technologies for remote access, leading to potential risks associated with unsecured remote connections. This lack of secure remote access infrastructure increases the risk of data interception and compromises the confidentiality and integrity of data in transit.
     - Indicators: 
@@ -302,11 +305,48 @@ Questions in the following sections are designed to help us understand a clients
     - AC-4 Information Flow Enforcement: Azure VPN Gateway aids in enforcing approved authorizations for controlling the flow of information within the organization and to external partners, ensuring that remote access communications comply with established information flow policies.
 
 - **Products covered:**
-    - 
+    - Azure VPN Gateway
+
+#### Utilizing ExpressRoute to encrypt traffic between on-premises and cloud
+
+**Has the organization implemented ExpressRoute to encrypt traffic between on-premises networks and cloud environments, enhancing security and connectivity?** (Score Legacy)
+
+- **Legacy:** The organization relies on public internet connections for traffic between on-premises networks and cloud environments. This approach may not provide the desired level of security or performance, potentially exposing data to greater risk during transmission.
+    - Indicator: 
+        - Use of public internet for cloud connectivity, leading to potential security vulnerabilities and inconsistent network performance.
+        - Increased risk of data interception or exposure during transit.
+        - Challenges in achieving high levels of reliability and security for cloud-based applications and data transfers.
+
+- **Initial:** Initial efforts have been made to implement ExpressRoute for critical connections or specific scenarios. While this phase marks progress toward enhanced network security and performance, comprehensive deployment across all relevant connections may still be in development.
+    - Indicator: 
+        - Partial adoption of ExpressRoute, focusing on high-priority connections or specific operational areas.
+        - Initial improvements in network security and connectivity, though not uniformly applied across the organization.
+        - Some enhancement in the organization’s ability to securely and reliably connect to cloud services, with ongoing efforts to expand ExpressRoute implementation.
+
+- **Advanced:** ExpressRoute is broadly implemented for connections between on-premises networks and Microsoft cloud services, significantly enhancing network security and performance. This advanced tier reflects a mature approach to secure and reliable cloud connectivity.
+    - Indicator: 
+        - Comprehensive deployment of ExpressRoute, ensuring secure and high-performance connections for all relevant network traffic.
+        - Enhanced network security through private connectivity, minimizing exposure to public internet risks.
+        - Significant progress toward reliable and secure access to cloud services, bolstered by the systematic use of ExpressRoute for cloud connectivity.
+
+- **Optimal:** The implementation of ExpressRoute for encrypting traffic between on-premises networks and cloud environments is fully operationalized and integrated into the organization’s overall network and security strategy. This optimal scenario ensures the highest level of security, performance, and reliability for cloud connectivity.
+    - Indicator: 
+        - Strategic and universal application of ExpressRoute, covering all connections to Microsoft cloud services without exception.
+        - Comprehensive management of network connectivity, leveraging ExpressRoute to achieve optimal security and performance standards.
+        - Full alignment with organizational objectives for secure, reliable, and high-performance cloud connectivity, supported by an effective and adaptive network strategy.
+
+- **Relevance to NIST SP 800-53 Revision 5:** 
+    - SC-8 (Transmission Confidentiality and Integrity): ExpressRoute enhances the confidentiality and integrity of information transmitted between on-premises environments and the cloud by providing a secure, private connection that bypasses the public internet.
+    - AC-4 (Information Flow Enforcement): The use of ExpressRoute supports the enforcement of approved authorizations for controlling information flows between networks, ensuring that data is transmitted securely and in accordance with organizational policies.
+    - SC-7 (Boundary Protection): ExpressRoute contributes to boundary protection by effectively segregating organizational traffic from public internet traffic, establishing a clear boundary around sensitive data transfers.
+    - SC-23 (Data in Transit Protection): By facilitating encrypted connections, ExpressRoute ensures that data in transit is protected against unauthorized disclosure and alteration, aligning with the control’s requirements for safeguarding transmitted data.
+
+- **Products covered:** 
+    - Azure ExpressRoute
 
 #### Encrypted Connections through Azure Bastion for SSH and RDP
 
-**Has the organization implemented secure access to Azure virtual machines through encrypted communication using Azure Bastion, including SSH connections for Linux VMs and RDP for Windows VMs?**
+**Has the organization implemented secure access to Azure virtual machines through encrypted communication using Azure Bastion, including SSH connections for Linux VMs and RDP for Windows VMs?** (Score Legacy)
 
 - **Legacy:** The organization has not utilized Azure Bastion for securing access to Azure virtual machines. This absence of a centralized, secure access solution may lead to reliance on less secure methods for remote access, increasing the risk of exposure to cyber threats and compromising the confidentiality and integrity of data in transit.
     - Indicators: 
@@ -339,12 +379,12 @@ Questions in the following sections are designed to help us understand a clients
     - AC-4 Information Flow Enforcement: Azure Bastion aids in enforcing approved authorizations for controlling the flow of information within the system and between interconnected systems, ensuring compliance with established information flow policies during remote VM access.
 
 - **Products covered:**
-    - 
+    - Azure Bastion
 
 ### Discontinue legacy network security technology
 #### Moving Beyond Legacy NIDS/NIPS in Cloud Environments
 
-**Has the organization moved beyond the use of legacy Network Intrusion Detection/Prevention Systems (NIDS/NIPS), considering the major cloud service providers' capabilities to filter common network layer attacks and the limitations of signature-based detection methods?**
+**Has the organization moved beyond the use of legacy Network Intrusion Detection/Prevention Systems (NIDS/NIPS), considering the major cloud service providers' capabilities to filter common network layer attacks and the limitations of signature-based detection methods?** (Score Initial)
 
 - **Legacy:** The organization predominantly relies on traditional NIDS/NIPS for network security, without fully leveraging the advanced security features offered by major cloud service providers. This reliance on legacy systems may lead to gaps in security coverage due to the limitations of signature-based detection and the evolving nature of cyber threats.
     - Indicators: 
@@ -381,7 +421,7 @@ Questions in the following sections are designed to help us understand a clients
 
 #### The Diminishing Effectiveness of Network-Based DLP and the Shift Away from SSL-Bridging
 
-**Has the organization recognized the decreasing effectiveness of network-based Data Loss Prevention (DLP) due to network-level encryption and moved away from relying on SSL-bridging techniques, while exploring alternative security measures for data protection in the cloud environment?**
+**Has the organization recognized the decreasing effectiveness of network-based Data Loss Prevention (DLP) due to network-level encryption and moved away from relying on SSL-bridging techniques, while exploring alternative security measures for data protection in the cloud environment?** (Score Initial)
 
 
 - **Legacy:** The organization primarily relies on traditional network-based DLP solutions, including SSL-bridging techniques, for data protection. This reliance may result in decreased effectiveness in identifying and preventing data loss due to the increasing use of end-to-end encryption, which obscures data content at the network layer.
