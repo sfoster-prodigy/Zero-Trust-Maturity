@@ -14,8 +14,6 @@ Questions in the following sections are designed to help us determine a clients 
 
 **Has the organization integrated Microsoft Entra ID with existing on-premises identity systems to ensure seamless user access across environments?**
 
-#### Scoring:
-
 - **Legacy:** Cloud identity is not federated with on-premises Active Directory using Microsoft Entra Connect. Users manage separate identities for cloud and on-premises environments, leading to inefficiencies and increased security risks due to the lack of centralized identity management.
     - Indicators:
         - Separate management of identities for cloud and on-premises access.
@@ -51,12 +49,6 @@ Questions in the following sections are designed to help us determine a clients 
     - Microsoft Entra Seemless Single Sign-on
     - Microsoft Entra Conditional Access
     - Microsoft Entra Connect
-
-- **Summary:**
-At the "Advanced" maturity level, the organization has successfully integrated cloud identity with on-premises Active Directory through Microsoft Entra Connect, utilizing password hash synchronization to enable seamless access across environments. This strategic deployment enhances both user experience by allowing the use of on-premises credentials for cloud services and security by facilitating rapid cloud authentication. The approach demonstrates a significant advancement in managing identities efficiently, reducing the potential for security breaches, and aligning with key NIST guidelines such as AC-2, IA-2, AC-17, and AC-14. This level of integration is a testament to the organization's commitment to optimizing identity and access management practices, significantly improving the authentication process's speed and security.
-
-- **Recommendations:**
-    - **Advanced to Optimal:** To reach the "Optimal" maturity level, the organization is recommended to fully integrate cloud and on-premises identities by leveraging the comprehensive capabilities of Microsoft Entra Connect. This includes not only maintaining password hash synchronization but also implementing seamless Single Sign-On (SSO) and robust Conditional Access policies. These policies should dynamically adapt authentication requirements based on user behavior, location, device health, and other risk factors. Expanding the deployment to include these additional features will provide a superior user experience and further enhance security. Emphasizing the development of Conditional Access policies that account for real-time assessments of risk will ensure a more adaptive and secure access management framework. This holistic approach will pave the way for achieving the highest standards of security and efficiency in identity management.
 
 **Is the organization utilizing Microsoft Entra ID to protect against security threats like brute force, DDoS, and password spray attacks through specific authentication options?**
 
@@ -99,7 +91,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
 - **Recommendations:**
     - 
 
-**Has the organization identified and excluded unnecessary on-premises identities, such as service accounts or privileged roles, from cloud federation?**
+**Has the organization identified and excluded unnecessary on-premises identities, such as service accounts or privileged roles, from cloud federation?** (Score Initial)
 
 - **Legacy:** Unnecessary on-premises identities are not systematically identified or excluded from cloud federation. There is no clear strategy or process in place for assessing which on-premises identities should be federated to the cloud, resulting in potential security vulnerabilities and management inefficiencies.
     - Indicators:
@@ -181,7 +173,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
 
 ### Integrate all your applications with Microsoft Entra ID:
 
-**Has the organization integrated both modern and legacy applications with Microsoft Entra ID for single sign-on and consistent identity and access management?**
+**Has the organization integrated both modern and legacy applications with Microsoft Entra ID for single sign-on and consistent identity and access management?** (Score Initial)
 
 - **Legacy:** Neither modern nor legacy applications are integrated with Microsoft Entra ID for single sign-on (SSO) or identity and access management. Applications operate in silos, each with its own access management protocols, leading to inconsistent user experiences and heightened security risks.
     - Indicators:
@@ -219,7 +211,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
 - **Recommendations:**
     - 
 
-**Has the organization integrated all identity and access management functions into Microsoft Entra ID to ensure a seamless and secure user experience across the entire application portfolio, with advanced security measures applied consistently?**
+**Has the organization integrated all identity and access management functions into Microsoft Entra ID to ensure a seamless and secure user experience across the entire application portfolio, with advanced security measures applied consistently?** (Score Initial)
 
 - **Legacy:** Multiple, disparate IAM engines are in use across the environment without any efforts towards consolidation. This leads to fragmented identity and access management practices, creating inefficiencies and potential security vulnerabilities due to inconsistent policy enforcement and user experiences.
     - Indicators:
@@ -259,7 +251,7 @@ At the "Advanced" maturity level, the organization has successfully integrated c
 
 ### Verify explicitly with strong authentication:
 
-**Has the organization fully deployed and enforced Microsoft Entra multifactor authentication (MFA) across the entire organization without exception?**
+**Has the organization fully deployed and enforced Microsoft Entra multifactor authentication (MFA) across the entire organization without exception?** (Score Advanced)
 
 - Legacy: The organization has not implemented Microsoft Entra MFA, relying solely on traditional single-factor authentication methods. This lack of MFA can lead to increased vulnerability to account compromise and unauthorized access, undermining the organization’s overall security posture.
     - Indicators:
