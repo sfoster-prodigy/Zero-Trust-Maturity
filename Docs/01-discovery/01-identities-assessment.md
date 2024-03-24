@@ -12,7 +12,7 @@ Questions in the following sections are designed to help us determine a clients 
 
 ### Connect all of your users to Microsoft Entra ID and federate with on-premises identity systems
 
-**Has the organization integrated Microsoft Entra ID with existing on-premises identity systems to ensure seamless user access across environments?**
+**Has the organization integrated Microsoft Entra ID with existing on-premises identity systems to ensure seamless user access across environments?** (Score Advanced)
 
 - **Legacy:** Cloud identity is not federated with on-premises Active Directory using Microsoft Entra Connect. Users manage separate identities for cloud and on-premises environments, leading to inefficiencies and increased security risks due to the lack of centralized identity management.
     - Indicators:
@@ -50,9 +50,9 @@ Questions in the following sections are designed to help us determine a clients 
     - Microsoft Entra Conditional Access
     - Microsoft Entra Connect
 
-**Is the organization utilizing Microsoft Entra ID to protect against security threats like brute force, DDoS, and password spray attacks through specific authentication options?**
+**Is the organization utilizing Microsoft Entra ID to protect against security threats like brute force, DDoS, and password spray attacks through specific authentication options?** (Score Initial)
 
-- **Legacy:** The organization has not leveraged Microsoft Entra ID's advanced authentication features to protect against common security threats. Reliance on basic or outdated authentication methods may leave the organization vulnerable to brute force, DDoS, and password spray attacks.
+- **Legacy:** The organization has not leveraged Microsoft Entra ID's advanced authentication features (e.g., MFA, Conditional Access) to protect against common security threats. Reliance on basic or outdated authentication methods may leave the organization vulnerable to brute force, DDoS, and password spray attacks.
     - Indicators:
         - Limited use of advanced authentication mechanisms, increasing susceptibility to common attack vectors.
         - Increased risk of unauthorized access due to reliance on single-factor or weak authentication methods.
@@ -133,7 +133,7 @@ Questions in the following sections are designed to help us determine a clients 
 
 ### Establish your Identity Foundation with Microsoft Entra ID:
 
-**Has the organization ensured that all access requests pass through Microsoft Entra ID to leverage its policy decision points for enforcing access policies?**
+**Has the organization ensured that all access requests pass through Microsoft Entra ID to leverage its policy decision points for enforcing access policies?** (Score Advanced)
 
 - **Legacy:** Access requests are not consistently managed or enforced through Microsoft Entra ID. There is no centralized control over access requests, leading to fragmented security policies and potential vulnerabilities in access management.
     - Indicators:
@@ -290,7 +290,7 @@ Questions in the following sections are designed to help us determine a clients 
 - **Recommendations:**
     - 
 
-**Has the organization blocked all legacy authentication methods, fully embraced modern authentication protocols without exceptions, and enforced strict access policies that require secure authentication mechanisms to eliminate the risks associated with legacy methods?**
+**Has the organization blocked all legacy authentication methods, fully embraced modern authentication protocols without exceptions, and enforced strict access policies that require secure authentication mechanisms to eliminate the risks associated with legacy methods?** (Score Initial)
 
 - **Legacy:** The organization continues to allow legacy authentication methods, exposing itself to increased security risks such as credential theft and replay attacks. This reliance on outdated authentication mechanisms undermines the security posture and increases vulnerability.
     - Indicators:
