@@ -332,7 +332,7 @@ Questions in the following sections are designed to help us determine a clients 
 ## Conditional Access Policies Gate Access and Provide Remediation Activities
 ### Tailoring Policies for Flexible, Automated Access Control
 
-**Has the organization implemented Microsoft Entra Conditional Access to analyze signals like user, device, and location, applying flexible, automated access controls such as multifactor authentication and customizing policies beyond security defaults for improved access policy enforcement?**
+**Has the organization implemented Microsoft Entra Conditional Access to analyze signals like user, device, and location, applying flexible, automated access controls such as multifactor authentication and customizing policies beyond security defaults for improved access policy enforcement?** ()
 
 - **Legacy:** The organization relies on static access controls without context-aware enforcement mechanisms. This approach may result in either overly permissive access or unnecessary access restrictions, potentially impacting both security and user productivity.
     - Indicators:
@@ -655,7 +655,7 @@ Questions in the following sections are designed to help us determine a clients 
 
 ### Protecting Organizational Data in Modern Applications
 
-**Has the organization implemented measures to manage user consent effectively, including restricting and reviewing consent requests, to protect organizational data from unnecessary exposure in modern applications?**
+**Has the organization implemented measures to manage user consent effectively, including restricting and reviewing consent requests, to protect organizational data from unnecessary exposure in modern applications?** (Score Advanced)
 
 - **Legacy:** The organization lacks formal measures for managing user consent, allowing unrestricted consent grants that could lead to unnecessary data exposure through modern applications. This absence of consent governance poses significant risks to data privacy and security.
     - Indicators
@@ -731,7 +731,7 @@ Questions in the following sections are designed to help us determine a clients 
 
 - **Products covered:**
     - Microsoft Entra ID
-    - Microsoft Entitlement Management
+    - Microsoft Entra Entitlement Management
 
 - **Recommendations:**
     - 
