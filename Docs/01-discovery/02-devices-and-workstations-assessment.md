@@ -13,6 +13,7 @@ Questions in the following sections are designed to help us understand a clients
 #### Register corporate devices with Microsoft Entra ID
 
 **Are corporate devices joined to or registered with Microsoft Entra ID via Microsoft Entra join or Microsoft Entra Hybrid join?** (Score Advanced)
+
 - Legacy: Corporate devices are not joined to Microsoft Entra, relying solely on traditional, on-premises domain join methods. This approach neglects the benefits of integrating with cloud services for identity and access management, leaving device authentication and policy enforcement confined to less secure, conventional methods. The absence of Microsoft Entra's advanced security features in device management leaves the network exposed to potential breaches, as it does not leverage cloud identity for verifying device integrity and user access.
     - Indicators: Assessors should evaluate the client environment against these indicators to determine the current tier of implementation and identify areas for improvement towards achieving an optimal security posture.
         - Sole reliance on traditional domain join methods, without leveraging Microsoft Entra for device management.

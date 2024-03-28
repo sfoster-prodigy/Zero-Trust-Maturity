@@ -197,7 +197,7 @@ Questions in the following sections are designed to help us understand a clients
 
 #### Enhance security with Azure DDoS protection
 
-**Has the organization enhanced its security posture by activating Azure DDoS Protection Standard to monitor Azure-hosted application traffic, utilize ML-based frameworks for detecting volumetric traffic floods, and implement automatic mitigations, including configuring alerts for DDoS protection metrics?** (Score Legacy)
+**Has the organization enhanced its security posture by activating Azure DDoS Protection to monitor Azure-hosted application traffic, utilize ML-based frameworks for detecting volumetric traffic floods, and implement automatic mitigations, including configuring alerts for DDoS protection metrics?** (Score Legacy)
 
 - **Legacy:** The organization lacks Azure DDoS Protection Standard or similar DDoS protection measures, leading to potential vulnerabilities to DDoS attacks. This absence of DDoS protection can result in increased risk of service disruption and compromised application availability.
     - Indicators: 
